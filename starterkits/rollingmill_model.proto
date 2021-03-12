@@ -1,0 +1,120 @@
+syntax = "proto3";
+package DynStacking.RollingMill.DataModel;
+
+message Arrival {
+int32 Vehicle = 1;
+Stack Load = 2;
+TimeStamp ArrivalEstimate = 3;
+}
+message Block {
+int32 Id = 1;
+int32 Sequence = 2;
+MillTypes Type = 3;
+int32 ProgramId = 4;
+TimeStamp Arrived = 5;
+bool Rolled = 6;
+}
+message Crane {
+int32 Id = 1;
+Stack Load = 2;
+double GirderPosition = 3;
+double HoistLevel = 4;
+int32 CraneCapacity = 5;
+double Width = 6;
+double MinPosition = 7;
+double MaxPosition = 8;
+}
+message CraneMove {
+int32 Id = 1;
+MoveType Type = 2;
+int32 PickupLocationId = 3;
+int32 DropoffLocationId = 4;
+int32 Amount = 7;
+TimeStamp ReleaseTime = 8;
+TimeStamp DueDate = 9;
+int32 RequiredCraneId = 10;
+repeated int32 ProtobufPredecessorIds = 11 [packed = false];
+}
+message CraneSchedule {
+int32 ScheduleNr = 1;
+repeated CraneScheduleActivity Activities = 2;
+}
+message CraneScheduleActivity {
+int32 MoveId = 1;
+int32 CraneId = 2;
+int32 Priority = 3;
+}
+message Location {
+int32 Id = 1;
+double GirderPosition = 2;
+int32 MaxHeight = 3;
+Stack Stack = 4;
+StackTypes Type = 5;
+MillTypes MillType = 6;
+}
+enum MillTypes {
+A = 0;
+B = 1;
+}
+message MoveRequest {
+int32 Id = 1;
+int32 TargetLocationId = 2;
+int32 BlockId = 3;
+TimeStamp DueDate = 4;
+}
+enum MoveType {
+MoveToPickup = 0;
+PickupAndDropoff = 1;
+}
+message Performance {
+int32 CraneManipulations = 1;
+double ServiceLevelMean = 2;
+double LeadTimeMean = 3;
+int32 DeliveredBlocks = 4;
+int32 TotalBlocksOnTime = 5;
+double TardinessMean = 6;
+double ShuffleBufferUtilizationMean = 7;
+double SortedBufferUtilizationMean = 8;
+double ShuffleCraneUtilizationMean = 9;
+double HandoverCraneUtilizationMean = 10;
+double MillAUtilizationMean = 11;
+double MillBUtilizationMean = 12;
+int32 RollingProgramMessups = 13;
+double BlockedMillTime = 14;
+}
+message PlannedCraneMoves {
+int32 SequenceNr = 1;
+repeated CraneMove Moves = 2;
+}
+message Stack {
+repeated Block BottomToTop = 1;
+}
+enum StackTypes {
+ArrivalStack = 0;
+ShuffleBuffer = 1;
+SortedBuffer = 2;
+HandoverStack = 3;
+}
+message TimeStamp {
+int64 MilliSeconds = 1;
+}
+message Uncertainties {
+repeated double ArrivalIntervals = 1 [packed = false];
+repeated double CraneMoveTimes = 2 [packed = false];
+repeated double MillBlockIntervals = 3 [packed = false];
+}
+message World {
+TimeStamp Now = 1;
+int32 Height = 2;
+double Width = 3;
+repeated Location Locations = 4;
+repeated Block BlocksAtSlabYard = 5;
+repeated Arrival ArrivalsFromSlabYard = 6;
+PlannedCraneMoves CraneMoves = 7;
+repeated MoveRequest MoveRequests = 8;
+CraneSchedule CraneSchedule = 9;
+Crane ShuffleCrane = 10;
+Crane HandoverCrane = 11;
+Performance KPIs = 12;
+Uncertainties ObservationData = 13;
+}

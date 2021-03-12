@@ -1,0 +1,13 @@
+[package]
+name = "dynstack"
+version = "0.1.0"
+authors = ["Raggl Sebastian <sebastian.raggl@fh-hagenberg.at>"]
+edition = "2018"
+build = "build.rs"
+
+[dependencies]
+zmq = {version="0.9", features=["vendored"]}
+protobuf = "2.8"
+
+[build-dependencies]
+protoc-rust = "2.8"

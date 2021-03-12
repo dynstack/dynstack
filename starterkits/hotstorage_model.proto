@@ -1,0 +1,69 @@
+syntax = "proto3";
+package DynStacking.HotStorage.DataModel;
+
+message Block {
+int32 Id = 1;
+TimeStamp Release = 2;
+TimeStamp Due = 3;
+bool Ready = 4;
+}
+message Crane {
+int32 Id = 1;
+int32 LocationId = 2;
+Block Load = 3;
+CraneSchedule Schedule = 4;
+double GirderPosition = 5;
+double HoistPosition = 6;
+}
+message CraneMove {
+int32 BlockId = 1;
+int32 SourceId = 2;
+int32 TargetId = 3;
+int32 Sequence = 4;
+bool EmptyMove = 5;
+}
+message CraneSchedule {
+repeated CraneMove Moves = 1;
+int32 SequenceNr = 2;
+}
+message Handover {
+int32 Id = 1;
+bool Ready = 2;
+Block Block = 3;
+}
+message Performance {
+int32 CraneManipulations = 1;
+double ServiceLevelMean = 2;
+double LeadTimeMean = 3;
+int32 DeliveredBlocks = 4;
+int32 TotalBlocksOnTime = 5;
+double BlockedArrivalTime = 6;
+double TardinessMean = 7;
+double BufferUtilizationMean = 8;
+double CraneUtilizationMean = 9;
+double HandoverUtilizationMean = 10;
+double UpstreamUtilizationMean = 11;
+}
+message Stack {
+int32 Id = 1;
+int32 MaxHeight = 2;
+repeated Block BottomToTop = 3;
+}
+message TimeStamp {
+int64 MilliSeconds = 1;
+}
+message Uncertainties {
+repeated double ArrivalIntervals = 1 [packed = false];
+repeated double CraneMoveTimes = 2 [packed = false];
+repeated double HandoverReadyIntervals = 3 [packed = false];
+}
+message World {
+TimeStamp Now = 1;
+Stack Production = 2;
+repeated Stack Buffers = 3;
+Handover Handover = 4;
+Crane Crane = 5;
+Performance KPIs = 6;
+Uncertainties ObservationData = 7;
+repeated CraneMove InvalidMoves = 8;
+}

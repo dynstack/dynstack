@@ -1,0 +1,7 @@
+**/__pycache__
+rust/target
+protoc.exe
+csharp/obj
+csharp/bin
+cpp/build
+**/.vs/*
