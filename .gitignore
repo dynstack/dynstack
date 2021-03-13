@@ -1,0 +1,10 @@
+**/bin/*
+**/obj/*
+*.suo
+*.user
+**/*.DotSettings
+**/Properties/launchSettings.json
+
+*.db
+*.ipch
+.vs/
