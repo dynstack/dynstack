@@ -9,9 +9,6 @@ namespace DynStack.DataModel.HS {
     [ProtoMember(2)] public int BufferMaxHeight { get; set; }
     [ProtoMember(3)] public int BufferCount { get; set; }
 
-    [ProtoMember(4)] public double MaxGirderPos { get; set; }
-    [ProtoMember(5)] public double MaxHoistPos { get; set; }
-
     [ProtoMember(6)] public TimeSpan SimulationDuration { get; set; }
     [ProtoMember(7)] public TimeSpan CheckInterval { get; set; }
     [ProtoMember(8)] public TimeSpan MinClearTime { get; set; }

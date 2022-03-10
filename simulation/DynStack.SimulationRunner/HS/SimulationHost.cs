@@ -70,9 +70,6 @@ namespace DynStack.SimulationRunner.HS {
 
     public static Settings DefaultSettings {
       get => new Settings() {
-        MaxGirderPos = 1.0, // rel. pos -> [0.0, 1.0]
-        MaxHoistPos = 1.0, // rel. pos -> [0.0, 1.0]
-
         BufferCount = 3,
         ProductionMaxHeight = 3,
         BufferMaxHeight = 12,

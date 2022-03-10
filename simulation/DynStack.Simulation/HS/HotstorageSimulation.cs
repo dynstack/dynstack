@@ -77,11 +77,11 @@ namespace DynStack.Simulation.HS {
     }
 
     private double CalculateGirderPosition(int locationId) {
-      return (double)locationId / (settings.BufferCount + 1) * settings.MaxGirderPos;
+      return (double)locationId / (settings.BufferCount + 1);
     }
 
     private double CalculateHoistPosition(int level) {
-      return (double)level / (settings.BufferMaxHeight + 1) * settings.MaxGirderPos;
+      return (double)level / (settings.BufferMaxHeight + 1);
     }
 
     public HotstorageSimulation(Settings set) {
@@ -240,16 +240,17 @@ namespace DynStack.Simulation.HS {
 
       World.Now = Now;
 
-      if (moveStart == null) return World;
+      var pos = fromPos;
+      var moveLength = toPos - pos;
+      if (moveLength == 0) return World;
 
       var elapsed = Now - moveStart;
-      var moveLength = toPos - fromPos;
-      var pos = fromPos + moveLength * Math.Min(elapsed.TotalMilliseconds / moveDuration.TotalMilliseconds, 1.0);
+      if (moveDuration.TotalMilliseconds > 0)
+        pos += moveLength * elapsed.TotalMilliseconds / moveDuration.TotalMilliseconds;
 
       switch (moveDirection) {
         case MoveDirection.Horizontal: World.Crane.GirderPosition = pos; break;
         case MoveDirection.Vertical: World.Crane.HoistPosition = pos; break;
-        default: throw new ArgumentOutOfRangeException(nameof(moveDirection), "The specified move direction does not exist.");
       }
 
       return World;
@@ -384,8 +385,9 @@ namespace DynStack.Simulation.HS {
 
       yield return sim.Timeout(moveDuration);
 
-      World.Crane.LocationId = targetLocationId;
       World.Crane.GirderPosition = toPos;
+      World.Crane.LocationId = targetLocationId;
+      fromPos = toPos;
       //sim.Log($"{Now} Crane moved to location {World.Crane.LocationId}");
       OnWorldChanged();
     }
@@ -415,7 +417,10 @@ namespace DynStack.Simulation.HS {
       }
       BufferUtilization.UpdateTo(World.Buffers.Sum(x => x.Height) / (double)World.Buffers.Sum(x => x.MaxHeight));
       World.KPIs.BufferUtilizationMean = BufferUtilization.Mean;
+      
       World.Crane.HoistPosition = toPos;
+      fromPos = toPos;
+
       OnWorldChanged();
     }
 
