@@ -37,14 +37,6 @@ namespace DynStacking {
       } else {
         optType = OptimizerType.ModelBased;
       }
-      bool runSynchronously = false;
-      if (args.Length >= 4) {
-        if (args[3] == "sync") {
-          runSynchronously = true;
-        } else {
-          runSynchronously = false;
-        }
-      }
 
       Console.WriteLine(optType);
 
@@ -60,7 +52,6 @@ namespace DynStacking {
           var answer = planner.PlanMoves(request[2], optType);
 
           var msg = new NetMQMessage();
-          //msg.Append(request[0]);
           msg.AppendEmptyFrame();
           msg.Append("crane");
           if (answer != null)
