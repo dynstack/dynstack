@@ -7,11 +7,12 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace DynStack.Simulation.HS {
-  public class SynchronousSimRunnerPolicy : IPolicy {
+namespace DynStack.SimulationRunner.HS {
+  public class SynchronousSimRunnerPolicy : DynStack.Simulation.HS.IPolicy, IDisposable {
 
     private string url = "";
     private Guid simId = Guid.Empty;
+    private INetMQSocket requestSocket;
 
     public SynchronousSimRunnerPolicy(string url, string id) {
       this.url = url;
@@ -20,12 +21,10 @@ namespace DynStack.Simulation.HS {
       requestSocket.Bind(url);
     }
 
-    ~SynchronousSimRunnerPolicy() {
+    public void Dispose() {
       if (!requestSocket.IsDisposed)
         requestSocket.Dispose();
     }
-
-    private INetMQSocket requestSocket;
 
     public CraneSchedule GetSchedule(World world) {
       using (var worldStream = new MemoryStream()) {
@@ -38,7 +37,7 @@ namespace DynStack.Simulation.HS {
 
         while (retriesLeft > 0) {
           requestSocket.SendFrameEmpty(true);
-          requestSocket.SendFrame($"skip {world.SimSleep}", true);
+          requestSocket.SendFrame($"world", true);
           requestSocket.SendFrame(bytes, false);
 
           NetMQMessage answer = new NetMQMessage();

@@ -57,7 +57,7 @@ namespace DynStack.SimulationRunner.Common {
             //else logger.WriteLine($"Discarded outgoing {msg[1].ConvertToString()} message.");
           };
 
-          if (!options.Sync)
+          if (!options.RunSync || options.Connect)
             poller.RunAsync();
 
           if (!string.IsNullOrEmpty(options.SettingsPath)) {
@@ -71,7 +71,7 @@ namespace DynStack.SimulationRunner.Common {
           }
           var result = false;
           try {
-            if (!options.Sync) {
+            if (!options.RunSync) {
               result = await RunSimulationAsync(await _settingsReceived.Task, options.PolicyRun);
               // wait until the outgoing queue is cleared
               var remaining = Outgoing.Count;
@@ -81,7 +81,7 @@ namespace DynStack.SimulationRunner.Common {
                 remaining = Outgoing.Count;
               }
             } else {
-              result = RunSimulation(await _settingsReceived.Task, options.SyncUrl, options.Id);
+              result = RunSimulation(await _settingsReceived.Task, options.SyncURL, options.Id);
             }
           } finally {
             poller.Stop();

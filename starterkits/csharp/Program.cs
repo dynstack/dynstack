@@ -23,7 +23,7 @@ namespace DynStacking {
   class Program {
     static void Main(string[] args) {
       if (args.Length < 3) {
-        Console.WriteLine("Requieres 3 arguments: SOCKET SIM_ID PROBLEM");
+        Console.WriteLine("Requires 3 arguments: SOCKET SIM_ID PROBLEM");
         return;
       }
       var socketAddr = args[0];

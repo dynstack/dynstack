@@ -519,14 +519,13 @@ namespace DynStack.Simulation.HS {
       _worldChanged = true;
     }
     private IEnumerable<Event> WorldUpdates() {
+      var updateInterval = 1000L; // must be > 1
       while (true) {
         // uncomment if you prefer world updates only for changes
         //if (_worldChanged) {
-        if (World.SimSleep > 0) {
-          World.SimSleep -= (int)TimeSpan.FromSeconds(1).TotalMilliseconds;
-          if (World.SimSleep < 0) {
-            World.SimSleep = 0;
-          }
+        if (World.PolicyTime > 0) {
+          // Simulate that the policy took a certain time to calculate
+          World.PolicyTime = Math.Max(World.PolicyTime - updateInterval, 0L); // milliseconds
         }
 
         World.Now = Now;
@@ -535,25 +534,22 @@ namespace DynStack.Simulation.HS {
         World.KPIs.UpstreamUtilizationMean = UpstreamUtilization.Mean;
         World.KPIs.BlockedArrivalTime = (1 - UpstreamUtilization.Mean) * (sim.Now - sim.StartDate).TotalSeconds;
 
-        CraneSchedule schedule = null;
-        var sw = new Stopwatch();
 
-        if (World.SimSleep == 0) {
-          sw.Start();
-          schedule = policy?.GetSchedule(World);
+        if (World.PolicyTime == 0) {
+          var sw = Stopwatch.StartNew();
+          var schedule = policy?.GetSchedule(World);
           sw.Stop();
-          World.SimSleep = sw.ElapsedMilliseconds;
+          World.PolicyTime = SimulateAsync ? sw.ElapsedMilliseconds : 1L;
+          
+          if (schedule != null) {
+            sim.Process(Crane(schedule, World.PolicyTime));
+          }
         }
-
-        if (SimulateAsync) {
-          if (schedule != null) sim.Process(Crane(schedule, sw.ElapsedMilliseconds));
-        } else
-          if (schedule != null) sim.Process(Crane(schedule, 1));
         WorldChanged?.Invoke(this, EventArgs.Empty);
         World.InvalidMoves.Clear();
         _worldChanged = false;
         //}
-        yield return sim.Timeout(TimeSpan.FromSeconds(1));
+        yield return sim.Timeout(TimeSpan.FromMilliseconds(updateInterval));
       }
     }
 
