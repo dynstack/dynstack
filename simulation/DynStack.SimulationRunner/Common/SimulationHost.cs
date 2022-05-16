@@ -57,7 +57,8 @@ namespace DynStack.SimulationRunner.Common {
             //else logger.WriteLine($"Discarded outgoing {msg[1].ConvertToString()} message.");
           };
 
-          poller.RunAsync();
+          if (!options.Sync)
+            poller.RunAsync();
 
           if (!string.IsNullOrEmpty(options.SettingsPath)) {
             if (options.SettingsPath.Equals("Default", StringComparison.OrdinalIgnoreCase)) {
