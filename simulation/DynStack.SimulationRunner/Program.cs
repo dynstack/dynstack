@@ -46,6 +46,20 @@ it will run the simulation using default settings.")]
 ""Console"" (default) means you log to stdout.
 Any other input is treated as a filename.")]
     public string Log { get; set; }
+
+    [Option("runSync", Required = false, Default = false, HelpText =
+@"Determines whether the simulation should be run using the synchronous method.")]
+    public bool Sync { get; set; }
+
+    [Option("syncUrl", Required = false, Default = "tcp://localhost:2222", HelpText =
+@"The URL that connects to a remote solver using the Req/Res Pattern.")]
+    public string SyncUrl { get; set; }
+
+    [Option("simulateAsync", Required = false, Default = false, HelpText =
+@"Only has an effect when simulation is run using the synchronous method.
+  ""true"" means the simulation runs synchronously, but simulates asynchronicity
+  ""false"" means the simulation runs synchronously")]
+    public bool SimulateAsync { get; set; }
   }
 
   public class Program {
@@ -59,7 +73,7 @@ Any other input is treated as a filename.")]
         Logger.WriteLine(e);
         throw;
       } finally {
-        NetMQConfig.Cleanup();
+        NetMQConfig.Cleanup(false);
         Logger.Dispose();
       }
     }

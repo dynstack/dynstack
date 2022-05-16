@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
@@ -39,18 +40,18 @@ namespace DynStack.Simulation.HS {
     public TimeSeriesMonitor CraneUtilization { get; private set; }
     public TimeSeriesMonitor HandoverUtilization { get; private set; }
     public TimeSeriesMonitor UpstreamUtilization { get; private set; }
-
+    public bool SimulateAsync { get; set; }
     public void SetLogger(TextWriter logger) {
       sim.Logger = logger;
     }
 
     public TimeStamp Now => ToTimeStamp(sim.Now);
-    
+
     public async Task<World> RunAsync() {
       sim.Process(OrderGenerator());
       if (World.Handover.Block != null)
         sim.Process(OrderCompletion());
-      
+
       OnWorldChanged();
       await sim.RunAsync(settings.SimulationDuration);
 
@@ -69,6 +70,28 @@ namespace DynStack.Simulation.HS {
 
       OnWorldChanged(kpichange: true);
 
+      return World;
+    }
+
+    public World Run() {
+      sim.Process(OrderGenerator());
+      if (World.Handover.Block != null)
+        sim.Process(OrderCompletion());
+
+      OnWorldChanged();
+      sim.Run(settings.SimulationDuration);
+      World.KPIs.CraneUtilizationMean = CraneUtilization.Mean;
+      World.KPIs.HandoverUtilizationMean = HandoverUtilization.Mean;
+      World.KPIs.UpstreamUtilizationMean = UpstreamUtilization.Mean;
+      World.KPIs.BlockedArrivalTime = (1 - UpstreamUtilization.Mean) * (sim.Now - sim.StartDate).TotalSeconds;
+
+      var remainingBlocks = World.BlocksInSystem();
+      foreach (var block in remainingBlocks) {
+        Tardiness.Add((Now - block.Due).TotalSeconds);
+        World.KPIs.TardinessMean = Tardiness.Mean;
+      }
+
+      OnWorldChanged(kpichange: true);
       return World;
     }
 
@@ -417,7 +440,7 @@ namespace DynStack.Simulation.HS {
       }
       BufferUtilization.UpdateTo(World.Buffers.Sum(x => x.Height) / (double)World.Buffers.Sum(x => x.MaxHeight));
       World.KPIs.BufferUtilizationMean = BufferUtilization.Mean;
-      
+
       World.Crane.HoistPosition = toPos;
       fromPos = toPos;
 
@@ -499,16 +522,36 @@ namespace DynStack.Simulation.HS {
       while (true) {
         // uncomment if you prefer world updates only for changes
         //if (_worldChanged) {
-          World.Now = Now;
-          World.KPIs.CraneUtilizationMean = CraneUtilization.Mean;
-          World.KPIs.HandoverUtilizationMean = HandoverUtilization.Mean;
-          World.KPIs.UpstreamUtilizationMean = UpstreamUtilization.Mean;
-          World.KPIs.BlockedArrivalTime = (1 - UpstreamUtilization.Mean) * (sim.Now - sim.StartDate).TotalSeconds;
-          var schedule = policy?.GetSchedule(World);
+        if (World.SimSleep > 0) {
+          World.SimSleep -= (int)TimeSpan.FromSeconds(1).TotalMilliseconds;
+          if (World.SimSleep < 0) {
+            World.SimSleep = 0;
+          }
+        }
+
+        World.Now = Now;
+        World.KPIs.CraneUtilizationMean = CraneUtilization.Mean;
+        World.KPIs.HandoverUtilizationMean = HandoverUtilization.Mean;
+        World.KPIs.UpstreamUtilizationMean = UpstreamUtilization.Mean;
+        World.KPIs.BlockedArrivalTime = (1 - UpstreamUtilization.Mean) * (sim.Now - sim.StartDate).TotalSeconds;
+
+        CraneSchedule schedule = null;
+        var sw = new Stopwatch();
+
+        if (World.SimSleep == 0) {
+          sw.Start();
+          schedule = policy?.GetSchedule(World);
+          sw.Stop();
+          World.SimSleep = sw.ElapsedMilliseconds;
+        }
+
+        if (SimulateAsync) {
+          if (schedule != null) sim.Process(Crane(schedule, sw.ElapsedMilliseconds));
+        } else
           if (schedule != null) sim.Process(Crane(schedule, 1));
-          WorldChanged?.Invoke(this, EventArgs.Empty);
-          World.InvalidMoves.Clear();
-          _worldChanged = false;
+        WorldChanged?.Invoke(this, EventArgs.Empty);
+        World.InvalidMoves.Clear();
+        _worldChanged = false;
         //}
         yield return sim.Timeout(TimeSpan.FromSeconds(1));
       }

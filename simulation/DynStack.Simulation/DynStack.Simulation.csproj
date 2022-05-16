@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="NetMQ" Version="4.0.1.6" />
     <PackageReference Include="SimSharp" Version="3.3.2" />
   </ItemGroup>
 
