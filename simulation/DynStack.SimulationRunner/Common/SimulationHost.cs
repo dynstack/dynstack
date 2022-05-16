@@ -57,7 +57,8 @@ namespace DynStack.SimulationRunner.Common {
             //else logger.WriteLine($"Discarded outgoing {msg[1].ConvertToString()} message.");
           };
 
-          poller.RunAsync();
+          if (!options.RunSync || options.Connect)
+            poller.RunAsync();
 
           if (!string.IsNullOrEmpty(options.SettingsPath)) {
             if (options.SettingsPath.Equals("Default", StringComparison.OrdinalIgnoreCase)) {
@@ -70,13 +71,17 @@ namespace DynStack.SimulationRunner.Common {
           }
           var result = false;
           try {
-            result = await RunSimulationAsync(await _settingsReceived.Task, options.PolicyRun);
-            // wait until the outgoing queue is cleared
-            var remaining = Outgoing.Count;
-            while (remaining > 0) {
-              await Task.Delay(1000, token);
-              if (Outgoing.Count == remaining) break; // assume nobody is listening for world states
-              remaining = Outgoing.Count;
+            if (!options.RunSync) {
+              result = await RunSimulationAsync(await _settingsReceived.Task, options.PolicyRun);
+              // wait until the outgoing queue is cleared
+              var remaining = Outgoing.Count;
+              while (remaining > 0) {
+                await Task.Delay(1000, token);
+                if (Outgoing.Count == remaining) break; // assume nobody is listening for world states
+                remaining = Outgoing.Count;
+              }
+            } else {
+              result = RunSimulation(await _settingsReceived.Task, options.SyncURL, options.Id);
             }
           } finally {
             poller.Stop();
@@ -116,6 +121,7 @@ namespace DynStack.SimulationRunner.Common {
 
     protected abstract Task OnCraneMessageReceived(byte[] payload);
 
+    protected abstract bool RunSimulation(byte[] settingsBuf, string url, string id, bool simulateAsync = true, bool useIntegratedPolicy = false);
     protected abstract Task<bool> RunSimulationAsync(byte[] settingsBuf, bool withPolicy);
     protected abstract Task StopAsync();
 

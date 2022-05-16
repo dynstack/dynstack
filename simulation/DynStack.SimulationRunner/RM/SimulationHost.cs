@@ -69,6 +69,10 @@ namespace DynStack.SimulationRunner.RM {
       }
     }
 
+    protected override bool RunSimulation(byte[] settingsBuf, string url, string id, bool simulateAsync = true, bool useIntegratedPolicy = false) {
+      throw new NotImplementedException("synchronous mode is not implemented for RM environment.");
+    }
+
     public static Settings DefaultSettings {
       get => new Settings() {
         ArrivalStackPositions = new List<double> { 1, 2, 3 },

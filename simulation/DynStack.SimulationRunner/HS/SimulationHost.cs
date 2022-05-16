@@ -68,6 +68,22 @@ namespace DynStack.SimulationRunner.HS {
       }
     }
 
+    protected override bool RunSimulation(byte[] settingsBuf, string url, string id, bool simulateAsync = true, bool useIntegratedPolicy = false) {
+      var settings = Serializer.Deserialize<Settings>(settingsBuf.AsSpan());
+      if (useIntegratedPolicy)
+        sim = new HotstorageSimulation(settings, new RuleBasedCranePolicy());
+      else
+        sim = new HotstorageSimulation(settings, new SynchronousSimRunnerPolicy(url, id));
+
+      sim.SetLogger(Logger);
+      sim.SimulateAsync = simulateAsync;
+      sim.WorldChanged += OnWorldChanged;
+      Logger.WriteLine("Starting sim");
+      sim.Run();
+
+      return !aborted;
+    }
+
     public static Settings DefaultSettings {
       get => new Settings() {
         BufferCount = 3,

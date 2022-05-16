@@ -3,9 +3,6 @@ using System.Linq;
 using DynStack.DataModel.HS;
 
 namespace DynStack.Simulation.HS {
-  public interface IPolicy {
-    CraneSchedule GetSchedule(World world);
-  }
 
   public class RuleBasedCranePolicy : IPolicy {
     private int seqNr = 0;

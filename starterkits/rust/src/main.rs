@@ -59,6 +59,8 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         if let Some(message) = response{
             println!("send");
             socket.send_multipart(vec![Vec::new(), "crane".as_bytes().to_vec(), message], 0)?;
+        } else {
+            socket.send_multipart(vec![Vec::new(), "crane".as_bytes().to_vec(), Vec::new()], 0)?;
         }
 
     }

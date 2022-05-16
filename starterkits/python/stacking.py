@@ -39,5 +39,7 @@ if __name__ == "__main__":
             print("send")
             msg = plan.SerializeToString()
             socket.send_multipart([b"", b"crane", msg])
+        else:
+            socket.send_multipart([b"", b"crane", b""])
             
 

@@ -29,6 +29,7 @@ namespace DynStack.DataModel.HS {
     [ProtoMember(6)] public Performance KPIs { get; set; }
     [ProtoMember(7)] public Uncertainties ObservationData { get; set; }
     [ProtoMember(8)] public List<CraneMove> InvalidMoves { get; set; }
+    public long PolicyTime { get; set; } = 0;
 
     public IEnumerable<Block> BlocksInSystem() {
       return Production.BottomToTop.Concat(Buffers.SelectMany(x => x.BottomToTop)).Concat(new[] { Handover.Block, Crane.Load }).Where(x => x != null && !x.Delivered);

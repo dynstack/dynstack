@@ -3,6 +3,8 @@ using System.Text;
 using NetMQ;
 using NetMQ.Sockets;
 using Google.Protobuf;
+using DynStacking.HotStorage.DataModel;
+using System.Diagnostics;
 
 namespace DynStacking {
   public enum OptimizerType {
@@ -21,19 +23,21 @@ namespace DynStacking {
   class Program {
     static void Main(string[] args) {
       if (args.Length < 3) {
-        Console.WriteLine("Requeries 2 arguments: SOCKET SIM_ID PROBLEM");
+        Console.WriteLine("Requires 3 arguments: SOCKET SIM_ID PROBLEM");
         return;
       }
       var socketAddr = args[0];
       var identity = new UTF8Encoding().GetBytes(args[1]);
-      IPlanner planner = args[2] == "HS" ? new HotStorage.Planner() : new RollingMill.Planner();
+      //IPlanner planner = args[2] == "HS" ? new HotStorage.Planner() : new RollingMill.Planner();
+      IPlanner planner = args[2] == "HS" ? new csharp.HS_Sync.SyncHSPlanner() : new RollingMill.Planner();
 
       OptimizerType optType;
       if (args.Length > 2) {
-        optType = OptimizerType.ModelBased;
-      } else {
         optType = OptimizerType.RuleBased;
+      } else {
+        optType = OptimizerType.ModelBased;
       }
+
       Console.WriteLine(optType);
 
       using (var socket = new DealerSocket()) {
@@ -41,26 +45,23 @@ namespace DynStacking {
         socket.Connect(socketAddr);
         Console.WriteLine("Connected");
 
-
         while (true) {
+          Console.WriteLine("Waiting for request...");
+          var request = socket.ReceiveMultipartBytes();
+          Console.WriteLine("Incoming request");
+          var answer = planner.PlanMoves(request[2], optType);
 
-          var answer = planner.PlanMoves(socket.ReceiveMultipartBytes()[2], optType);
-
-          if (answer != null) {
-            var msg = new NetMQMessage();
-            msg.AppendEmptyFrame();
-            msg.Append("crane");
+          var msg = new NetMQMessage();
+          msg.AppendEmptyFrame();
+          msg.Append("crane");
+          if (answer != null)
             msg.Append(answer);
-            socket.SendMultipartMessage(msg);
-          }
+          else
+            msg.AppendEmptyFrame();
 
+          socket.SendMultipartMessage(msg);
         }
-
       }
-
     }
-
-
-
   }
 }

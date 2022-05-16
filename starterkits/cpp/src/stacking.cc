@@ -69,7 +69,15 @@ int main(int argc, char* argv[]) {
             if (!zmq::send_multipart(socket, msg)) {
                 return -1;
             }
-
+        } else {
+            std::array<zmq::const_buffer, 3> msg = {
+                zmq::str_buffer(""),
+                zmq::str_buffer("crane"),
+                zmq::str_buffer("")
+            };
+            if (!zmq::send_multipart(socket, msg)) {
+                return -1;
+            }
         }
     }
     return 0;

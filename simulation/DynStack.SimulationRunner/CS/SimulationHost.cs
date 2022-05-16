@@ -66,6 +66,10 @@ namespace DynStack.SimulationRunner.CS {
       }
     }
 
+    protected override bool RunSimulation(byte[] settingsBuf, string url, string id, bool simulateAsync = true, bool useIntegratedPolicy = false) {
+      throw new NotImplementedException("synchronous mode is not implemented for CS environment.");
+    }
+
     public static World DefaultSettings {
       get => WorldBuilder.Build(6, 110, Enumerable.Range(0, 19).Select(x => (pos: 10 + x * 5 + 0.5, maxheight: 5)),
         Enumerable.Range(0, 4).Select(x => (pos: x * 20.0 + 10, width: 1.0)));
