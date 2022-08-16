@@ -4,7 +4,7 @@ In this repository you find the simulation environments and policies to get star
 
 If you intend to do research using DynStack we refer to the following papers. We're happy to also include your paper, please contact us at dynstack@adaptop.at.
 
-* Beham, A., Leitner, S., Karder, J., Werth, B., Wagner, S. 2022. DynStack - A Benchmarking Framework for Dynamic Optimization Problems in Warehouse Operations. In Proceedings of the 2022 Genetic and Evolutionary Computation Conference Companion (GECCO '22). Association for Computing Machinery (to appear)
+* Beham, A., Leitner, S., Karder, J., Werth, B., Wagner, S. 2022. DynStack - A Benchmarking Framework for Dynamic Optimization Problems in Warehouse Operations. In Proceedings of the 2022 Genetic and Evolutionary Computation Conference Companion (GECCO '22). Association for Computing Machinery, pp. 1984-1991. https://dl.acm.org/doi/10.1145/3520304.3533957
 * Karder, J. A., Beham, A., Werth, B., Wagner, S., Affenzeller, M. 2022. Integrated Machine Learning in Open-Ended Crane Scheduling: Learning Movement Speeds and Service Times. In Procedia Computer Science (Vol. 200, pp. 1031) https://www.sciencedirect.com/science/article/pii/S1877050922003118
 * Beham, A., Raggl, S., Karder, J., Werth, B., Wagner, S. 2022. Dynamic Warehouse Environments for Crane Stacking and Scheduling. Procedia Computer Science, 200, 1461-1470. https://doi.org/10.1016/j.procs.2022.01.347
 * Werth, B.; Karder, J.; Beham, A.; Wagner, S. 2021. Dynamic landscape analysis for open-ended stacking. In Proceedings of the 2021 Genetic and Evolutionary Computation Conference Companion (GECCO '21). Association for Computing Machinery, pp. 1700-1707. https://dl.acm.org/doi/10.1145/3449726.3463153
