@@ -57,12 +57,10 @@ def plan_handover_crane(world, plan):
         mov.Type = MoveType.PickupAndDropoff
         mov.ReleaseTime.MilliSeconds = world.Now.MilliSeconds
         mov.PickupLocationId = src.Id
-        mov.PickupGirderPosition = src.GirderPosition
 
         if could_take_top_n > 0:
             amount = min(could_take_top_n, world.HandoverCrane.CraneCapacity)
             mov.DropoffLocationId = req.TargetLocationId
-            mov.DropoffGirderPosition = world.Locations[req.TargetLocationId].GirderPosition
             mov.RequiredCraneId = world.HandoverCrane.Id
             mov.Amount = amount
         else:
@@ -72,8 +70,7 @@ def plan_handover_crane(world, plan):
             tgt = next((tgt for tgt in buffer_stacks(world) if tgt.Id!=src.Id and remaining_capacity(tgt) >= amount), None)
             if tgt:
                 mov.DropoffLocationId = tgt.Id;
-                mov.DropoffGirderPosition = tgt.GirderPosition;
-                mov.RequiredCraneId = world.get_HandoverCrane().Id;
+                mov.RequiredCraneId = world.HandoverCrane.Id;
                 mov.Amount = amount;
             else:
                 continue
@@ -84,7 +81,7 @@ def plan_handover_crane(world, plan):
 def plan_shuffle_crane(world, plan):
     dont_use = [loc for mov in plan.Moves for loc in (mov.PickupLocationId, mov.DropoffLocationId) ]
     move_id = len(plan.Moves)
-    src = min(arrival_stacks(world), key = lambda loc: min(block.Sequence for block in loc.Stack.BottomToTop))
+    src = min(arrival_stacks(world), key = lambda loc: min((block.Sequence for block in loc.Stack.BottomToTop), default=1000000000))
 
     amount = min(size_of(src), world.ShuffleCrane.CraneCapacity)
     if amount == 0:
@@ -97,9 +94,7 @@ def plan_shuffle_crane(world, plan):
         mov.Type = MoveType.PickupAndDropoff
         mov.ReleaseTime.MilliSeconds = world.Now.MilliSeconds
         mov.PickupLocationId = src.Id
-        mov.PickupGirderPosition = src.GirderPosition
         mov.DropoffLocationId = tgt.Id
-        mov.DropoffGirderPosition = tgt.GirderPosition
         mov.RequiredCraneId = world.ShuffleCrane.Id
         mov.Amount = amount
         plan.Moves.append(mov)
@@ -134,12 +129,10 @@ fn plan_handover_crane(world: &World, plan: &mut PlannedCraneMoves) {
         mov.Type = MoveType::PickupAndDropoff;
         mov.set_ReleaseTime(world.get_Now().clone());
         mov.PickupLocationId = src.Id;
-        mov.PickupGirderPosition = src.GirderPosition;
 
         if could_take_top_n > 0 {
             let amount = std::cmp::min(could_take_top_n, world.get_HandoverCrane().CraneCapacity);
             mov.DropoffLocationId = req.TargetLocationId;
-            mov.DropoffGirderPosition = world.get_Locations()[req.TargetLocationId as usize].GirderPosition;
             mov.RequiredCraneId = world.get_HandoverCrane().Id;
             mov.Amount = amount as i32;
         } else {
@@ -148,7 +141,6 @@ fn plan_handover_crane(world: &World, plan: &mut PlannedCraneMoves) {
             let amount = std::cmp::min(must_relocate, world.get_HandoverCrane().CraneCapacity);
             if let Some(tgt) = buffer_stacks(world).find(|tgt|tgt.Id!=src.Id && remaining_capacity(tgt) >= amount){
                 mov.DropoffLocationId = tgt.Id;
-                mov.DropoffGirderPosition = tgt.GirderPosition;
                 mov.RequiredCraneId = world.get_HandoverCrane().Id;
                 mov.Amount = amount as i32;
             }else{
@@ -176,9 +168,7 @@ fn plan_shuffle_crane(world: &World, plan: &mut PlannedCraneMoves) {
         mov.Type = MoveType::PickupAndDropoff;
         mov.set_ReleaseTime(world.get_Now().clone());
         mov.PickupLocationId = src.Id;
-        mov.PickupGirderPosition = src.GirderPosition;
         mov.DropoffLocationId = tgt.Id;
-        mov.DropoffGirderPosition = tgt.GirderPosition;
         mov.RequiredCraneId = world.get_ShuffleCrane().Id;
         mov.Amount = amount as i32;
         plan.mut_Moves().push(mov);
