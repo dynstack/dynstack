@@ -327,8 +327,17 @@ namespace DynStack.Simulation.CS {
     }
 
     private bool ValidateSolution(CraneSchedulingSolution sol) {
-      var isValid = true;
+      if (sol.CustomMoves == null) {
+        Environment.Log("custom moves is null");
+        return false;
+      }
 
+      if (sol.Schedule == null) {
+        Environment.Log("schedule is null");
+        return false;
+      }
+
+      var isValid = true;
       var validMoveIds = new HashSet<int>();
       var invalidMoveIds = new HashSet<int>();
       var duplicateMoveIds = new HashSet<int>();
@@ -339,6 +348,12 @@ namespace DynStack.Simulation.CS {
       var locations = World.Locations.ToDictionary(x => x.Id);
 
       foreach (var move in sol.CustomMoves) {
+        if (move == null) {
+          Environment.Log("custom moves contain null values");
+          isValid = false;
+          break;
+        }
+
         if (move.Id < 0) invalidMoveIds.Add(move.Id);
         else if (!validMoveIds.Add(move.Id)) duplicateMoveIds.Add(move.Id);
         if (move.Amount != move.MovedBlockIds.Count
@@ -386,12 +401,21 @@ namespace DynStack.Simulation.CS {
       }
 
       var craneLookup = World.Cranes.ToDictionary(x => x.Id);
-      var moveLookup = World.CraneMoves.Concat(sol.CustomMoves).ToDictionary(x => x.Id);
+      var moveLookup = World.CraneMoves.ToDictionary(x => x.Id);
+      foreach (var move in sol.CustomMoves) moveLookup[move.Id] = move;
 
       foreach (var a in sol.Schedule.Activities) {
-        if (!craneLookup.TryGetValue(a.CraneId, out var crane)) continue;
-        if (!moveLookup.TryGetValue(a.MoveId, out var move)) continue;
+        if (!craneLookup.TryGetValue(a.CraneId, out var crane)) {
+          Environment.Log($"solution contains invalid schedule: crane {a.CraneId} is unknown");
+          isValid = false;
+          break;
+        }
 
+        if (!moveLookup.TryGetValue(a.MoveId, out var move)) {
+          Environment.Log($"solution contains invalid schedule: move {a.MoveId} is unknown");
+          isValid = false;
+          break;
+        }
 
         if (!crane.CanReach(locations[move.PickupLocationId].GirderPosition)) {
           Environment.Log($"solution contains invalid assignments: crane {crane.Id} cannot reach pickup position {move.PickupGirderPosition} of move {move.Id}");
