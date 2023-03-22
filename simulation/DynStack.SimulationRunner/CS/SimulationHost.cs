@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
@@ -15,13 +16,19 @@ namespace DynStack.SimulationRunner.CS {
     public SimulationHost() { }
 
     protected override async Task<bool> RunSimulationAsync(byte[] settingsBuf, bool withPolicy = false) {
-      var settings = Serializer.Deserialize<World>(settingsBuf.AsSpan());
-      var sim = new CraneSchedulingSimulation(settings);
-      sim.SetLogger(Logger);
+      var settings = Serializer.Deserialize<Settings>(settingsBuf.AsSpan());
 
-      await sim.RunAsync(TimeSpan.FromMinutes(60));
+      sim = new CraneSchedulingSimulation(settings);
+      sim.SetLogger(Logger);
+      sim.WorldChanged += Sim_WorldChanged;
+
+      await sim.RunAsync();
       Logger.WriteLine("Run completed");
       return !aborted;
+    }
+
+    private void Sim_WorldChanged(object sender, EventArgs e) {
+      PublishWorldState(((CraneSchedulingSimulation)sender).GetEstimatedWorldState());
     }
 
     protected override Task StopAsync() {
@@ -32,14 +39,14 @@ namespace DynStack.SimulationRunner.CS {
 
     protected override async Task OnCraneMessageReceived(byte[] payload) {
       await Task.Delay(200);
-      CraneSchedule schedule = null;
+      CraneSchedulingSolution sol = null;
       try {
-        schedule = Serializer.Deserialize<CraneSchedule>(payload.AsSpan());
+        sol = Serializer.Deserialize<CraneSchedulingSolution>(payload.AsSpan());
       } catch (Exception ex) {
         Logger.WriteLine(ex.ToString());
       }
-      if (schedule == null) return;
-      sim.SetCraneScheduleAsync(schedule);
+      if (sol == null) return;
+      await sim.SetSolutionAsync(sol);
     }
 
     private void OnWorldChanged(object sender, EventArgs e) {
@@ -70,9 +77,42 @@ namespace DynStack.SimulationRunner.CS {
       throw new NotImplementedException("synchronous mode is not implemented for CS environment.");
     }
 
-    public static World DefaultSettings {
-      get => WorldBuilder.Build(6, 110, Enumerable.Range(0, 19).Select(x => (pos: 10 + x * 5 + 0.5, maxheight: 5)),
-        Enumerable.Range(0, 4).Select(x => (pos: x * 20.0 + 10, width: 1.0)));
+    public static Settings DefaultSettings {
+      get => new Settings() {
+        Seed = 40,
+        SimulationDuration = TimeSpan.FromHours(1.0),
+        Height = 8,
+        Width = 400,
+        MaxHeightForArrival = 5,
+        MaxHeightForBuffer = 5,
+        MaxHeightForHandover = 5,
+        ArrivalStackPositions = new List<double> { 40, 50, 60, 240, 250, 260 },
+        BufferStackPositions = Enumerable.Range(0, 400 + 1).Select(x => (double)x).ToList(),
+        HandoverStackPositions = new List<double> { 140, 150, 160, 340, 350, 360 },
+        BlockClasses = 1,
+        BufferStackClasses = Enumerable.Repeat(1, 400 + 1).ToList(),
+        SafetyDistance = 15.0,
+        CraneMoveTimeMean = TimeSpan.FromSeconds(20),
+        CraneMoveTimeStd = TimeSpan.FromSeconds(20 * .1),
+        HoistMoveTimeMean = TimeSpan.FromSeconds(5),
+        HoistMoveTimeStd = TimeSpan.FromSeconds(5 * .1),
+        CraneManipulationTimeMean = TimeSpan.FromSeconds(3),
+        CraneManipulationTimeStd = TimeSpan.FromSeconds(3 * .1),
+        ArrivalTimeMean = TimeSpan.FromMinutes(2),
+        ArrivalTimeStd = TimeSpan.FromMinutes(2 * .2),
+        ArrivalCountMean = 3.0,
+        ArrivalCountStd = 0.75,
+        ArrivalServiceTimeMean = TimeSpan.FromSeconds(10),
+        ArrivalServiceTimeStd = TimeSpan.FromSeconds(10 * .2),
+        HandoverTimeMean = TimeSpan.FromMinutes(2),
+        HandoverTimeStd = TimeSpan.FromMinutes(2 * 0.2),
+        HandoverCountMean = 3.0,
+        HandoverCountStd = 0.75,
+        HandoverServiceTimeMean = TimeSpan.FromSeconds(10),
+        HandoverServiceTimeStd = TimeSpan.FromSeconds(10 * .2),
+        InitialBufferUtilization = 0.25
+      };
     }
+
   }
 }

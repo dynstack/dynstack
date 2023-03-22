@@ -2,20 +2,34 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using DynStack.DataModel.Common;
 using ProtoBuf;
 using ProtoBuf.Meta;
 
 namespace DynStack.DataModel.CS {
+  public class DatamodelExporter {
+    public static string GetDatamodel() {
+      var options = new SchemaGenerationOptions {
+        Syntax = ProtoSyntax.Proto3,
+        Types = { typeof(World), typeof(CraneSchedulingSolution) }
+      };
+      return Serializer.GetProto(options);
+    }
+  }
+  [ProtoContract] public enum StackTypes { [ProtoEnum] ArrivalStack, [ProtoEnum] Buffer, [ProtoEnum] HandoverStack }
+
+
   [ProtoContract]
-  public class World : IStackingWorld {
+  public class World : IWorld, IStackingWorld {
     [ProtoMember(1)] public TimeStamp Now { get; set; }
     [ProtoMember(2)] public int Height { get; set; }
     [ProtoMember(3)] public double Width { get; set; }
-    [ProtoMember(4)] public List<Location> Locations { get; set; }
+    [ProtoMember(4)] public List<Location> Locations { get; set; } = new List<Location>();
     [ProtoMember(5)] public List<CraneMove> CraneMoves { get; set; } = new List<CraneMove>();
-    [ProtoMember(6)] public List<Crane> Cranes { get; set; }
-    [ProtoMember(7)] public List<MoveRequest> MoveRequests { get; set; }
-    [ProtoMember(8)] public CraneSchedule CraneSchedule { get; set; }
+    [ProtoMember(6)] public List<Crane> Cranes { get; set; } = new List<Crane>();
+    [ProtoMember(7)] public List<MoveRequest> MoveRequests { get; set; } = new List<MoveRequest>();
+    [ProtoMember(8)] public CraneSchedule CraneSchedule { get; set; } = new CraneSchedule();
+    [ProtoMember(9)] public Performance KPIs { get; set; } = new Performance();
 
     /// <summary>
     /// All blocks that either reside at a stack or which are carried by a crane.
@@ -25,6 +39,10 @@ namespace DynStack.DataModel.CS {
       return Locations.Select(x => x.Stack.BottomToTop).Concat(Cranes.Select(x => x.Load.BottomToTop))
         .SelectMany(x => x);
     }
+
+    public IEnumerable<Location> ArrivalLocations => Locations.Where(x => x.Type == StackTypes.ArrivalStack);
+    public IEnumerable<Location> BufferLocations => Locations.Where(x => x.Type == StackTypes.Buffer);
+    public IEnumerable<Location> HandoverLocations => Locations.Where(x => x.Type == StackTypes.HandoverStack);
 
     public override string ToString() {
       var sb = new StringBuilder();
@@ -42,6 +60,7 @@ namespace DynStack.DataModel.CS {
         sb.AppendLine(craneOrder.Current.ToString());
         moreCranes = craneOrder.MoveNext();
       }
+      sb.AppendLine(KPIs.ToString());
       return sb.ToString();
     }
 
@@ -54,6 +73,7 @@ namespace DynStack.DataModel.CS {
     IEnumerable<IMove> IStackingWorld.Moves => CraneMoves;
     IEnumerable<IMoveRequest> IStackingWorld.MoveRequests => MoveRequests;
     ICraneSchedule IStackingWorld.CraneSchedule => CraneSchedule;
+    IPerformance IWorld.KPIs => KPIs;
 
     public string GetDataModel(ProtoSyntax syntax = ProtoSyntax.Proto3) {
       return RuntimeTypeModel.Default.GetSchema(GetType(), syntax);
@@ -147,6 +167,8 @@ namespace DynStack.DataModel.CS {
     [ProtoMember(2)] public double GirderPosition { get; set; }
     [ProtoMember(3)] public int MaxHeight { get; set; }
     [ProtoMember(4)] public Stack Stack { get; set; }
+    [ProtoMember(5)] public StackTypes Type { get; set; }
+    [ProtoMember(6)] public int Class { get; set; }
 
     public Block Topmost => Stack.Topmost;
     public int FreeHeight => MaxHeight - Stack.Size;
@@ -223,6 +245,7 @@ namespace DynStack.DataModel.CS {
   [ProtoContract]
   public class Block : IBlock {
     [ProtoMember(1)] public int Id { get; set; }
+    [ProtoMember(2)] public int Class { get; set; }
 
     #region IBlock members
     int IBlock.Id => Id;
@@ -288,13 +311,20 @@ namespace DynStack.DataModel.CS {
     int ICraneSchedule.ScheduleNr => ScheduleNr;
     int ICraneSchedule.Tasks => _activities.Count;
 
-    IEnumerable<(int index, int moveId, int craneId, int priority)> ICraneSchedule.TaskSequence =>
-      _activities.OrderBy(x => x.Priority).Select((v, i) => (i, v.MoveId, v.CraneId, v.Priority));
+    IEnumerable<(int index, int moveId, int craneId, int priority, CraneScheduleActivityState state)> ICraneSchedule.TaskSequence =>
+      _activities.OrderBy(x => x.Priority).Select((v, i) => (i, v.MoveId, v.CraneId, v.Priority, v.State));
 
-    int ICraneSchedule.Add(int moveId, int craneId, int priority) {
+    int ICraneSchedule.Add(int moveId, int craneId, int priority, CraneScheduleActivityState state) {
       if (((ICraneSchedule)this).ContainsMove(moveId)) throw new ArgumentException($"{moveId} already contained in schedule.", nameof(moveId));
-      _activities.Add(new CraneScheduleActivity() { MoveId = moveId, CraneId = craneId, Priority = priority });
+      _activities.Add(new CraneScheduleActivity() { MoveId = moveId, CraneId = craneId, Priority = priority, State = state });
       return _activities.Count - 1;
+    }
+    void ICraneSchedule.Insert(int index, int moveId, int craneId, int priority, CraneScheduleActivityState state) {
+      if (index == _activities.Count) ((ICraneSchedule)this).Add(moveId, craneId, priority, state);
+      else {
+        if (((ICraneSchedule)this).ContainsMove(moveId)) throw new ArgumentException($"{moveId} already contained in schedule.", nameof(moveId));
+        _activities.Insert(index, new CraneScheduleActivity() { MoveId = moveId, CraneId = craneId, Priority = priority, State = state });
+      }
     }
 
     void ICraneSchedule.Remove(int moveId) {
@@ -304,6 +334,16 @@ namespace DynStack.DataModel.CS {
           break;
         }
       }
+    }
+
+    void ICraneSchedule.UpdateState(int moveId, CraneScheduleActivityState newState) {
+      var activity = _activities.Single(x => x.MoveId == moveId);
+      activity.State = newState;
+    }
+
+    void ICraneSchedule.UpdateCrane(int moveId, int craneId) {
+      var activity = _activities.Single(x => x.MoveId == moveId);
+      activity.CraneId = craneId;
     }
 
     void ICraneSchedule.Clear() {
@@ -321,6 +361,7 @@ namespace DynStack.DataModel.CS {
     [ProtoMember(1)] public int MoveId { get; set; }
     [ProtoMember(2)] public int CraneId { get; set; }
     [ProtoMember(3)] public int Priority { get; set; }
+    [ProtoMember(4)] public CraneScheduleActivityState State { get; set; }
   }
 
   [ProtoContract]
@@ -335,7 +376,6 @@ namespace DynStack.DataModel.CS {
     [ProtoMember(8)] public TimeStamp ReleaseTime { get; set; }
     [ProtoMember(9)] public TimeStamp DueDate { get; set; }
     [ProtoMember(10)] public int? RequiredCraneId { get; set; }
-    [ProtoMember(11)] public int? DirectSuccessorId { get; set; }
     private HashSet<int> _predecessorIds = new HashSet<int>();
     [ProtoMember(12)]
     private List<int> ProtobufPredecessorIds {
@@ -352,11 +392,27 @@ namespace DynStack.DataModel.CS {
         else _predecessorIds = value;
       }
     }
+    private List<int> _movedBlockIds = new List<int>();
+    [ProtoMember(13)]
+    private List<int> ProtobufMovedBlockIds {
+      get => _movedBlockIds.ToList();
+      set {
+        if (value == null) _movedBlockIds = new List<int>();
+        else _movedBlockIds = new List<int>(value);
+      }
+    }
+    public List<int> MovedBlockIds {
+      get => _movedBlockIds;
+      set {
+        if (value == null) _movedBlockIds = new List<int>();
+        else _movedBlockIds = value;
+      }
+    }
 
     public int Predecessors => PredecessorIds.Count;
 
 
-    public void IsFinished(int moveId) {
+    public void RemoveFromPredecessors(int moveId) {
       _predecessorIds.Remove(moveId);
     }
 
@@ -378,14 +434,23 @@ namespace DynStack.DataModel.CS {
     int IMove.DropoffLocationId => DropoffLocationId;
     double IMove.DropoffGirderPosition => DropoffGirderPosition;
     int IMove.Amount => Amount;
+    IList<int> IMove.MovedBlockIds => MovedBlockIds;
     TimeStamp IMove.ReleaseTime => ReleaseTime;
     TimeStamp IMove.DueDate => DueDate;
     int? IMove.RequiredCraneId => RequiredCraneId;
     ISet<int> IMove.PredecessorIds => PredecessorIds;
     int IMove.Predecessors => Predecessors;
 
-    void IMove.RemoveFromPredecessors(int pred) => IsFinished(pred);
+    void IMove.RemoveFromPredecessors(int pred) => RemoveFromPredecessors(pred);
     #endregion
+  }
+
+  [ProtoContract]
+  public class CraneSchedulingSolution {
+    [ProtoMember(1)] public List<CraneMove> CustomMoves { get; set; } = new List<CraneMove>();
+    [ProtoMember(2)] public CraneSchedule Schedule { get; set; } = new CraneSchedule();
+    public CraneSchedulingSolution() { }
+    public int Count => CustomMoves?.Count ?? 0;
   }
 
   [ProtoContract]
@@ -401,5 +466,93 @@ namespace DynStack.DataModel.CS {
     int IMoveRequest.BlockId => BlockId;
     TimeStamp IMoveRequest.DueDate => DueDate;
     #endregion
+  }
+
+  [ProtoContract]
+  public class Performance : IPerformance, IComparable<Performance> {
+    [ProtoMember(1)] public int CraneManipulations { get; set; }
+    [ProtoMember(2)] public int UpstreamBlocks { get; set; }
+    [ProtoMember(3)] public int DownstreamBlocks { get; set; }
+    [ProtoMember(4)] public int DeliveryErrors { get; set; }
+    [ProtoMember(5)] public double TotalGirderDistance { get; set; }
+    [ProtoMember(6)] public double TotalHoistDistance { get; set; }
+    [ProtoMember(7)] public int ServicedUpstreamVehicles { get; set; }
+    [ProtoMember(8)] public int ServicedDownstreamVehicles { get; set; }
+    [ProtoMember(9)] public double UpstreamServiceTime { get; set; }
+    [ProtoMember(10)] public double DownstreamServiceTime { get; set; }
+    [ProtoMember(11)] public int ParkingUpstreamVehicles { get; set; }
+    [ProtoMember(12)] public int ParkingDownstreamVehicles { get; set; }
+    [ProtoMember(13)] public double UpstreamParkingTime { get; set; }
+    [ProtoMember(14)] public double DownstreamParkingTime { get; set; }
+    [ProtoMember(15)] public double MaxParkingDuration { get; set; }
+
+
+    public static string[] ObjectiveNames => new[] {
+      "Errors",
+      "I/O Blocks",
+      "Max Parking Duration",
+      "Mean Service Time",
+      "Mean Parking Time",
+      "Moves",
+      "Distance"
+    };
+    public static bool[] Maximization => new[] {
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false
+    };
+    public object[] ObjectiveValues => new object[] {
+      DeliveryErrors,
+      UpstreamBlocks + DownstreamBlocks,
+      MaxParkingDuration,
+      (UpstreamServiceTime + DownstreamServiceTime) / (ServicedUpstreamVehicles + ServicedDownstreamVehicles),
+      (UpstreamParkingTime + DownstreamParkingTime) / (ParkingUpstreamVehicles + ParkingDownstreamVehicles),
+      CraneManipulations,
+      TotalGirderDistance
+    };
+
+    public Performance() { }
+
+    public override string ToString() {
+      var sb = new StringBuilder();
+      sb.AppendLine($"Delivery Errors: {DeliveryErrors}");
+      sb.AppendLine($"Upstream Blocks: {UpstreamBlocks}");
+      sb.AppendLine($"Downstream Blocks: {DownstreamBlocks}");
+      sb.AppendLine($"Max Parking Duration : {MaxParkingDuration}");
+      sb.AppendLine($"Upstream Service Time: {TimeSpan.FromSeconds(UpstreamServiceTime)}");
+      sb.AppendLine($"Serviced Upstream Vehicles: {ServicedUpstreamVehicles}");
+      sb.AppendLine($"Downstream Service Time: {TimeSpan.FromSeconds(DownstreamServiceTime)}");
+      sb.AppendLine($"Serviced Downstream Vehicles: {ServicedDownstreamVehicles}");
+      sb.AppendLine($"Upstream Parking Time: {TimeSpan.FromSeconds(UpstreamParkingTime)}");
+      sb.AppendLine($"Parking Upstream Vehicles: {ParkingUpstreamVehicles}");
+      sb.AppendLine($"Downstream Parking Time: {TimeSpan.FromSeconds(DownstreamParkingTime)}");
+      sb.AppendLine($"Parking Downstream Vehicles: {ParkingDownstreamVehicles}");
+      sb.AppendLine($"Manipulations: {CraneManipulations}");
+      sb.AppendLine($"Total Girder Distance: {TotalGirderDistance}");
+      return sb.ToString();
+    }
+
+    public int CompareTo(Performance other) {
+      if (other == null) return 1;
+
+      for (int i = 0; i < Maximization.Length; i++) {
+        var a = (IComparable)ObjectiveValues[i];
+        var b = (IComparable)other.ObjectiveValues[i];
+        var res = Maximization[i] ? b.CompareTo(a) : a.CompareTo(b);
+        if (res != 0) return res;
+      }
+
+      return 0;
+    }
+
+    public int CompareTo(object obj) {
+      if (obj is null) return 1;
+      if (obj is Performance other) return this.CompareTo(other);
+      throw new ArgumentException($"Cannot compare object of type {GetType().FullName} to object of type {obj.GetType().FullName}");
+    }
   }
 }

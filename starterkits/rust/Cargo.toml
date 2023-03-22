@@ -6,7 +6,7 @@ edition = "2018"
 build = "build.rs"
 
 [dependencies]
-zmq = {version="0.9", features=["vendored"]}
+zmq = "0.10"
 protobuf = "2.8"
 
 [build-dependencies]

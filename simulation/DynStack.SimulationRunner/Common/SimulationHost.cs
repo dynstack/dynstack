@@ -122,6 +122,7 @@ namespace DynStack.SimulationRunner.Common {
     protected abstract Task OnCraneMessageReceived(byte[] payload);
 
     protected abstract bool RunSimulation(byte[] settingsBuf, string url, string id, bool simulateAsync = true, bool useIntegratedPolicy = false);
+
     protected abstract Task<bool> RunSimulationAsync(byte[] settingsBuf, bool withPolicy);
     protected abstract Task StopAsync();
 

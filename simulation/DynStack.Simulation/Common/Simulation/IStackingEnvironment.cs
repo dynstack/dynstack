@@ -21,6 +21,6 @@ namespace DynStack.Simulation {
     SimSharp.Event AtLeastReactionTime(IEnumerable<SimSharp.Event> generator, int priority = 0);
 
     int HeightBetween(double girderPosition, double targetPosition);
-    void MoveFinished(int id, bool success);
+    void MoveFinished(int moveId, int craneId, TimeStamp started, (int, int, int) hoistDistances, CraneMoveTermination result);
   }
 }

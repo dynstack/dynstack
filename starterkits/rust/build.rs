@@ -19,4 +19,13 @@ fn main() {
         },
     })
     .expect("protoc");
+	protoc_rust::run(protoc_rust::Args {
+        out_dir: "src/cranescheduling",
+        input: &["../cranescheduling_model.proto"],
+        includes: &[".."],
+        customize: Customize {
+            ..Default::default()
+        },
+    })
+    .expect("protoc");
 }

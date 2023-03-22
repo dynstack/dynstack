@@ -7,7 +7,7 @@
 
   <ItemGroup>
     <PackageReference Include="CommandLineParser" Version="2.8.0" />
-    <PackageReference Include="NetMQ" Version="4.0.1.8" />
+    <PackageReference Include="NetMQ" Version="4.0.1.6" />
   </ItemGroup>
 
   <ItemGroup>
@@ -17,5 +17,10 @@
   <ItemGroup>
     <Folder Include="Properties\" />
   </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Condition="$(Configuration)==Debug" Command="dotnet publish --no-build -o ../DynStack.Middleware/$(OutDir)" />
+    <Exec Condition="$(Configuration)==Release" Command="dotnet publish --no-build -c Release -o ../DynStack.Middleware/$(OutDir)" />
+  </Target>
 
 </Project>

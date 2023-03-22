@@ -20,7 +20,9 @@ namespace DynStack.Simulation {
     int Predecessors { get; }
     bool RaiseHoistAfterService { get; }
     ICraneAgent Assigned { get; set; }
+    IList<int> MovedBlocks { get; }
 
+    Event Started { get; }
     Event Finished { get; }
 
     void RemoveFromPredecessors(int moveId);
@@ -41,6 +43,7 @@ namespace DynStack.Simulation {
     public int? RequiredCraneId => _move.RequiredCraneId;
     public ISet<int> PredecessorIds => _move.PredecessorIds;
     public int Predecessors => _move.Predecessors;
+    public IList<int> MovedBlocks => _move.MovedBlockIds;
 
     public bool RaiseHoistAfterService { get; private set; }
 
@@ -54,12 +57,14 @@ namespace DynStack.Simulation {
       }
     }
 
+    public Event Started { get; private set; }
     public Event Finished { get; private set; }
 
     public CraneMoveEvent(SimSharp.Simulation environment, IMove move, bool raiseHoistAfterService = false) {
       _move = move;
       RaiseHoistAfterService = raiseHoistAfterService;
 
+      Started = new Event(environment);
       Finished = new Event(environment);
     }
 

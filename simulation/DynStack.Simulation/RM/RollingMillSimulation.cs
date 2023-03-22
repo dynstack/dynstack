@@ -615,9 +615,9 @@ namespace DynStack.Simulation.RM {
         _moveEvents.Add(new CraneMoveEvent(sim, m));
         change = true;
       }
-      foreach (var m in _moveEvents.Where(x => !set.Contains(x.Id)).ToList()) {
-        _moveEvents.Remove(m);
-        World.CraneMoves.Moves.RemoveAll(x => x.Id == m.Id);
+      foreach (var m in _moveEvents.Select((v, i) => (move: v, index: i)).Where(x => !set.Contains(x.move.Id)).ToList()) {
+        _moveEvents.RemoveAt(m.index);
+        World.CraneMoves.Moves.RemoveAt(m.index);
         change = true;
       }
       // sanity check, remove any non-existing predecessors
@@ -627,9 +627,12 @@ namespace DynStack.Simulation.RM {
       if (change) _scheduler?.Schedule();
     }
 
-    public void MoveFinished(int id, bool success) {
-      _moveEvents.RemoveAll(x => x.Id == id);
-      World.CraneMoves.Moves.RemoveAll(x => x.Id == id);
+
+    public void MoveFinished(int moveId, int craneId, TimeStamp started, (int, int, int) hoistDistances, CraneMoveTermination result) {
+      var index = World.CraneMoves.Moves.Select((mv, idx) => (mv, idx)).Single(x => x.mv.Id == moveId).idx;
+      if (World.CraneMoves.Moves[index].Id != _moveEvents[index].Id) throw new InvalidOperationException("Moves not in sync.");
+      _moveEvents.RemoveAt(index);
+      World.CraneMoves.Moves.RemoveAt(index);
       _zoneControl.MoveUpdate();
       _scheduler?.Schedule();
     }

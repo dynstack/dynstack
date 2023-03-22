@@ -1,10 +1,7 @@
-﻿using System;
-using System.Text;
-using NetMQ;
+﻿using NetMQ;
 using NetMQ.Sockets;
-using Google.Protobuf;
-using DynStacking.HotStorage.DataModel;
-using System.Diagnostics;
+using System;
+using System.Text;
 
 namespace DynStacking {
   public enum OptimizerType {
@@ -13,7 +10,8 @@ namespace DynStacking {
   }
   public enum ProblemType {
     HotStorage,
-    RollingMill
+    RollingMill,
+    CraneScheduling
   }
 
   interface IPlanner {
@@ -29,7 +27,17 @@ namespace DynStacking {
       var socketAddr = args[0];
       var identity = new UTF8Encoding().GetBytes(args[1]);
       //IPlanner planner = args[2] == "HS" ? new HotStorage.Planner() : new RollingMill.Planner();
-      IPlanner planner = args[2] == "HS" ? new csharp.HS_Sync.SyncHSPlanner() : new RollingMill.Planner();
+      IPlanner planner = args[2] switch {
+        "HS" => new csharp.HS_Sync.SyncHSPlanner(),
+        "RM" => new RollingMill.Planner(),
+        "CS" => new CraneScheduling.Planner(),
+        _ => null
+      };
+
+      if (planner == null) {
+        Console.WriteLine($"Invalid problem: {args[2]}");
+        return;
+      }
 
       OptimizerType optType;
       if (args.Length > 2) {

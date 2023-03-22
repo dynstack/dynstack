@@ -27,6 +27,10 @@ add_executable(stacking
   "src/rollingmill/heuristic.cc"
   "src/rollingmill/rollingmill_model.pb.cc"
   "src/rollingmill/rollingmill_model.pb.h"
+  "src/cranescheduling/heuristic.h"
+  "src/cranescheduling/heuristic.cc"
+  "src/cranescheduling/cranescheduling_model.pb.cc"
+  "src/cranescheduling/cranescheduling_model.pb.h"
   )
 target_link_libraries(stacking PRIVATE protobuf::libprotoc protobuf::libprotobuf protobuf::libprotobuf-lite)
 target_link_libraries(stacking PRIVATE cppzmq cppzmq-static)

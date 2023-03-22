@@ -3,6 +3,7 @@ import sys
 
 import hotstorage;
 import rollingmill;
+import cranescheduling;
 
 if __name__ == "__main__":
     if len(sys.argv) < 3:
@@ -13,13 +14,15 @@ if __name__ == "__main__":
         print("rule based stacking")
         [_, addr, id, problem] = sys.argv
         use_heuristic = True
-        is_rollingmill = problem=="RM"
     else:
         [_, addr, id, problem, _] = sys.argv
         print("model based stacking")
         use_heuristic = False
-        is_rollingmill = problem=="RM"
     
+    if not any(problem in x for x in ["HS", "RM", "CS"]):
+        print("unknown problem: {}", problem)
+        exit(2)
+
     context = zmq.Context()
     socket = context.socket(zmq.DEALER)
     socket.setsockopt_string(zmq.IDENTITY, id)
@@ -30,10 +33,15 @@ if __name__ == "__main__":
         msg = socket.recv_multipart()
         print("recv")
         plan = None
-        if is_rollingmill:
+        if problem == "RM":
             plan = rollingmill.plan_moves(msg[2])
-        else:
+        elif problem == "HS":
             plan = hotstorage.plan_moves(msg[2], use_heuristic)
+        elif problem == "CS":
+            plan = cranescheduling.plan_moves(msg[2])
+        else:
+            print("unknown problem: {}", problem)
+            break
 
         if plan:
             print("send")

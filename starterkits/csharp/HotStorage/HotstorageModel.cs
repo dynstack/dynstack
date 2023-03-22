@@ -85,26 +85,30 @@ namespace DynStacking.HotStorage.DataModel {
   }
   #region Messages
   public sealed partial class Block : pb::IMessage<Block>
-#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
-#endif
+  #endif
   {
     private static readonly pb::MessageParser<Block> _parser = new pb::MessageParser<Block>(() => new Block());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Block> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::DynStacking.HotStorage.DataModel.HotstorageModelReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Block() {
       OnConstruction();
     }
@@ -112,6 +116,7 @@ namespace DynStacking.HotStorage.DataModel {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Block(Block other) : this() {
       id_ = other.id_;
       release_ = other.release_ != null ? other.release_.Clone() : null;
@@ -121,6 +126,7 @@ namespace DynStacking.HotStorage.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Block Clone() {
       return new Block(this);
     }
@@ -129,6 +135,7 @@ namespace DynStacking.HotStorage.DataModel {
     public const int IdFieldNumber = 1;
     private int id_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Id {
       get { return id_; }
       set {
@@ -140,6 +147,7 @@ namespace DynStacking.HotStorage.DataModel {
     public const int ReleaseFieldNumber = 2;
     private global::DynStacking.HotStorage.DataModel.TimeStamp release_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::DynStacking.HotStorage.DataModel.TimeStamp Release {
       get { return release_; }
       set {
@@ -151,6 +159,7 @@ namespace DynStacking.HotStorage.DataModel {
     public const int DueFieldNumber = 3;
     private global::DynStacking.HotStorage.DataModel.TimeStamp due_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::DynStacking.HotStorage.DataModel.TimeStamp Due {
       get { return due_; }
       set {
@@ -162,6 +171,7 @@ namespace DynStacking.HotStorage.DataModel {
     public const int ReadyFieldNumber = 4;
     private bool ready_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Ready {
       get { return ready_; }
       set {
@@ -170,11 +180,13 @@ namespace DynStacking.HotStorage.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Block);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Block other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -190,6 +202,7 @@ namespace DynStacking.HotStorage.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Id != 0) hash ^= Id.GetHashCode();
@@ -203,15 +216,17 @@ namespace DynStacking.HotStorage.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
-#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
-#else
+    #else
       if (Id != 0) {
         output.WriteRawTag(8);
         output.WriteInt32(Id);
@@ -231,11 +246,12 @@ namespace DynStacking.HotStorage.DataModel {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
-#endif
+    #endif
     }
 
-#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Id != 0) {
         output.WriteRawTag(8);
@@ -257,9 +273,10 @@ namespace DynStacking.HotStorage.DataModel {
         _unknownFields.WriteTo(ref output);
       }
     }
-#endif
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Id != 0) {
@@ -281,6 +298,7 @@ namespace DynStacking.HotStorage.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Block other) {
       if (other == null) {
         return;
@@ -307,10 +325,11 @@ namespace DynStacking.HotStorage.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
-#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
-#else
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -341,68 +360,73 @@ namespace DynStacking.HotStorage.DataModel {
           }
         }
       }
-#endif
+    #endif
     }
 
-#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch (tag) {
+        switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-              Id = input.ReadInt32();
-              break;
-            }
+            Id = input.ReadInt32();
+            break;
+          }
           case 18: {
-              if (release_ == null) {
-                Release = new global::DynStacking.HotStorage.DataModel.TimeStamp();
-              }
-              input.ReadMessage(Release);
-              break;
+            if (release_ == null) {
+              Release = new global::DynStacking.HotStorage.DataModel.TimeStamp();
             }
+            input.ReadMessage(Release);
+            break;
+          }
           case 26: {
-              if (due_ == null) {
-                Due = new global::DynStacking.HotStorage.DataModel.TimeStamp();
-              }
-              input.ReadMessage(Due);
-              break;
+            if (due_ == null) {
+              Due = new global::DynStacking.HotStorage.DataModel.TimeStamp();
             }
+            input.ReadMessage(Due);
+            break;
+          }
           case 32: {
-              Ready = input.ReadBool();
-              break;
-            }
+            Ready = input.ReadBool();
+            break;
+          }
         }
       }
     }
-#endif
+    #endif
 
   }
 
   public sealed partial class Crane : pb::IMessage<Crane>
-#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
-#endif
+  #endif
   {
     private static readonly pb::MessageParser<Crane> _parser = new pb::MessageParser<Crane>(() => new Crane());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Crane> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::DynStacking.HotStorage.DataModel.HotstorageModelReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Crane() {
       OnConstruction();
     }
@@ -410,6 +434,7 @@ namespace DynStacking.HotStorage.DataModel {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Crane(Crane other) : this() {
       id_ = other.id_;
       locationId_ = other.locationId_;
@@ -421,6 +446,7 @@ namespace DynStacking.HotStorage.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Crane Clone() {
       return new Crane(this);
     }
@@ -429,6 +455,7 @@ namespace DynStacking.HotStorage.DataModel {
     public const int IdFieldNumber = 1;
     private int id_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Id {
       get { return id_; }
       set {
@@ -440,6 +467,7 @@ namespace DynStacking.HotStorage.DataModel {
     public const int LocationIdFieldNumber = 2;
     private int locationId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int LocationId {
       get { return locationId_; }
       set {
@@ -451,6 +479,7 @@ namespace DynStacking.HotStorage.DataModel {
     public const int LoadFieldNumber = 3;
     private global::DynStacking.HotStorage.DataModel.Block load_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::DynStacking.HotStorage.DataModel.Block Load {
       get { return load_; }
       set {
@@ -462,6 +491,7 @@ namespace DynStacking.HotStorage.DataModel {
     public const int ScheduleFieldNumber = 4;
     private global::DynStacking.HotStorage.DataModel.CraneSchedule schedule_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::DynStacking.HotStorage.DataModel.CraneSchedule Schedule {
       get { return schedule_; }
       set {
@@ -473,6 +503,7 @@ namespace DynStacking.HotStorage.DataModel {
     public const int GirderPositionFieldNumber = 5;
     private double girderPosition_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double GirderPosition {
       get { return girderPosition_; }
       set {
@@ -484,6 +515,7 @@ namespace DynStacking.HotStorage.DataModel {
     public const int HoistPositionFieldNumber = 6;
     private double hoistPosition_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double HoistPosition {
       get { return hoistPosition_; }
       set {
@@ -492,11 +524,13 @@ namespace DynStacking.HotStorage.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Crane);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Crane other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -514,6 +548,7 @@ namespace DynStacking.HotStorage.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Id != 0) hash ^= Id.GetHashCode();
@@ -529,15 +564,17 @@ namespace DynStacking.HotStorage.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
-#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
-#else
+    #else
       if (Id != 0) {
         output.WriteRawTag(8);
         output.WriteInt32(Id);
@@ -565,11 +602,12 @@ namespace DynStacking.HotStorage.DataModel {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
-#endif
+    #endif
     }
 
-#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Id != 0) {
         output.WriteRawTag(8);
@@ -599,9 +637,10 @@ namespace DynStacking.HotStorage.DataModel {
         _unknownFields.WriteTo(ref output);
       }
     }
-#endif
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Id != 0) {
@@ -629,6 +668,7 @@ namespace DynStacking.HotStorage.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Crane other) {
       if (other == null) {
         return;
@@ -661,10 +701,11 @@ namespace DynStacking.HotStorage.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
-#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
-#else
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -703,76 +744,81 @@ namespace DynStacking.HotStorage.DataModel {
           }
         }
       }
-#endif
+    #endif
     }
 
-#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch (tag) {
+        switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-              Id = input.ReadInt32();
-              break;
-            }
+            Id = input.ReadInt32();
+            break;
+          }
           case 16: {
-              LocationId = input.ReadInt32();
-              break;
-            }
+            LocationId = input.ReadInt32();
+            break;
+          }
           case 26: {
-              if (load_ == null) {
-                Load = new global::DynStacking.HotStorage.DataModel.Block();
-              }
-              input.ReadMessage(Load);
-              break;
+            if (load_ == null) {
+              Load = new global::DynStacking.HotStorage.DataModel.Block();
             }
+            input.ReadMessage(Load);
+            break;
+          }
           case 34: {
-              if (schedule_ == null) {
-                Schedule = new global::DynStacking.HotStorage.DataModel.CraneSchedule();
-              }
-              input.ReadMessage(Schedule);
-              break;
+            if (schedule_ == null) {
+              Schedule = new global::DynStacking.HotStorage.DataModel.CraneSchedule();
             }
+            input.ReadMessage(Schedule);
+            break;
+          }
           case 41: {
-              GirderPosition = input.ReadDouble();
-              break;
-            }
+            GirderPosition = input.ReadDouble();
+            break;
+          }
           case 49: {
-              HoistPosition = input.ReadDouble();
-              break;
-            }
+            HoistPosition = input.ReadDouble();
+            break;
+          }
         }
       }
     }
-#endif
+    #endif
 
   }
 
   public sealed partial class CraneMove : pb::IMessage<CraneMove>
-#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
-#endif
+  #endif
   {
     private static readonly pb::MessageParser<CraneMove> _parser = new pb::MessageParser<CraneMove>(() => new CraneMove());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<CraneMove> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::DynStacking.HotStorage.DataModel.HotstorageModelReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CraneMove() {
       OnConstruction();
     }
@@ -780,6 +826,7 @@ namespace DynStacking.HotStorage.DataModel {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CraneMove(CraneMove other) : this() {
       blockId_ = other.blockId_;
       sourceId_ = other.sourceId_;
@@ -790,6 +837,7 @@ namespace DynStacking.HotStorage.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CraneMove Clone() {
       return new CraneMove(this);
     }
@@ -798,6 +846,7 @@ namespace DynStacking.HotStorage.DataModel {
     public const int BlockIdFieldNumber = 1;
     private int blockId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int BlockId {
       get { return blockId_; }
       set {
@@ -809,6 +858,7 @@ namespace DynStacking.HotStorage.DataModel {
     public const int SourceIdFieldNumber = 2;
     private int sourceId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int SourceId {
       get { return sourceId_; }
       set {
@@ -820,6 +870,7 @@ namespace DynStacking.HotStorage.DataModel {
     public const int TargetIdFieldNumber = 3;
     private int targetId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int TargetId {
       get { return targetId_; }
       set {
@@ -831,6 +882,7 @@ namespace DynStacking.HotStorage.DataModel {
     public const int SequenceFieldNumber = 4;
     private int sequence_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Sequence {
       get { return sequence_; }
       set {
@@ -842,6 +894,7 @@ namespace DynStacking.HotStorage.DataModel {
     public const int EmptyMoveFieldNumber = 5;
     private bool emptyMove_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool EmptyMove {
       get { return emptyMove_; }
       set {
@@ -850,11 +903,13 @@ namespace DynStacking.HotStorage.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as CraneMove);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(CraneMove other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -871,6 +926,7 @@ namespace DynStacking.HotStorage.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (BlockId != 0) hash ^= BlockId.GetHashCode();
@@ -885,15 +941,17 @@ namespace DynStacking.HotStorage.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
-#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
-#else
+    #else
       if (BlockId != 0) {
         output.WriteRawTag(8);
         output.WriteInt32(BlockId);
@@ -917,11 +975,12 @@ namespace DynStacking.HotStorage.DataModel {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
-#endif
+    #endif
     }
 
-#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (BlockId != 0) {
         output.WriteRawTag(8);
@@ -947,9 +1006,10 @@ namespace DynStacking.HotStorage.DataModel {
         _unknownFields.WriteTo(ref output);
       }
     }
-#endif
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (BlockId != 0) {
@@ -974,6 +1034,7 @@ namespace DynStacking.HotStorage.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(CraneMove other) {
       if (other == null) {
         return;
@@ -997,10 +1058,11 @@ namespace DynStacking.HotStorage.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
-#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
-#else
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1029,66 +1091,71 @@ namespace DynStacking.HotStorage.DataModel {
           }
         }
       }
-#endif
+    #endif
     }
 
-#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch (tag) {
+        switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-              BlockId = input.ReadInt32();
-              break;
-            }
+            BlockId = input.ReadInt32();
+            break;
+          }
           case 16: {
-              SourceId = input.ReadInt32();
-              break;
-            }
+            SourceId = input.ReadInt32();
+            break;
+          }
           case 24: {
-              TargetId = input.ReadInt32();
-              break;
-            }
+            TargetId = input.ReadInt32();
+            break;
+          }
           case 32: {
-              Sequence = input.ReadInt32();
-              break;
-            }
+            Sequence = input.ReadInt32();
+            break;
+          }
           case 40: {
-              EmptyMove = input.ReadBool();
-              break;
-            }
+            EmptyMove = input.ReadBool();
+            break;
+          }
         }
       }
     }
-#endif
+    #endif
 
   }
 
   public sealed partial class CraneSchedule : pb::IMessage<CraneSchedule>
-#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
-#endif
+  #endif
   {
     private static readonly pb::MessageParser<CraneSchedule> _parser = new pb::MessageParser<CraneSchedule>(() => new CraneSchedule());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<CraneSchedule> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::DynStacking.HotStorage.DataModel.HotstorageModelReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CraneSchedule() {
       OnConstruction();
     }
@@ -1096,6 +1163,7 @@ namespace DynStacking.HotStorage.DataModel {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CraneSchedule(CraneSchedule other) : this() {
       moves_ = other.moves_.Clone();
       sequenceNr_ = other.sequenceNr_;
@@ -1103,6 +1171,7 @@ namespace DynStacking.HotStorage.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CraneSchedule Clone() {
       return new CraneSchedule(this);
     }
@@ -1113,6 +1182,7 @@ namespace DynStacking.HotStorage.DataModel {
         = pb::FieldCodec.ForMessage(10, global::DynStacking.HotStorage.DataModel.CraneMove.Parser);
     private readonly pbc::RepeatedField<global::DynStacking.HotStorage.DataModel.CraneMove> moves_ = new pbc::RepeatedField<global::DynStacking.HotStorage.DataModel.CraneMove>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::DynStacking.HotStorage.DataModel.CraneMove> Moves {
       get { return moves_; }
     }
@@ -1121,6 +1191,7 @@ namespace DynStacking.HotStorage.DataModel {
     public const int SequenceNrFieldNumber = 2;
     private int sequenceNr_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int SequenceNr {
       get { return sequenceNr_; }
       set {
@@ -1129,11 +1200,13 @@ namespace DynStacking.HotStorage.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as CraneSchedule);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(CraneSchedule other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1141,12 +1214,13 @@ namespace DynStacking.HotStorage.DataModel {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!moves_.Equals(other.moves_)) return false;
+      if(!moves_.Equals(other.moves_)) return false;
       if (SequenceNr != other.SequenceNr) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= moves_.GetHashCode();
@@ -1158,15 +1232,17 @@ namespace DynStacking.HotStorage.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
-#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
-#else
+    #else
       moves_.WriteTo(output, _repeated_moves_codec);
       if (SequenceNr != 0) {
         output.WriteRawTag(16);
@@ -1175,11 +1251,12 @@ namespace DynStacking.HotStorage.DataModel {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
-#endif
+    #endif
     }
 
-#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       moves_.WriteTo(ref output, _repeated_moves_codec);
       if (SequenceNr != 0) {
@@ -1190,9 +1267,10 @@ namespace DynStacking.HotStorage.DataModel {
         _unknownFields.WriteTo(ref output);
       }
     }
-#endif
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += moves_.CalculateSize(_repeated_moves_codec);
@@ -1206,6 +1284,7 @@ namespace DynStacking.HotStorage.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(CraneSchedule other) {
       if (other == null) {
         return;
@@ -1218,10 +1297,11 @@ namespace DynStacking.HotStorage.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
-#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
-#else
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1238,54 +1318,59 @@ namespace DynStacking.HotStorage.DataModel {
           }
         }
       }
-#endif
+    #endif
     }
 
-#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch (tag) {
+        switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-              moves_.AddEntriesFrom(ref input, _repeated_moves_codec);
-              break;
-            }
+            moves_.AddEntriesFrom(ref input, _repeated_moves_codec);
+            break;
+          }
           case 16: {
-              SequenceNr = input.ReadInt32();
-              break;
-            }
+            SequenceNr = input.ReadInt32();
+            break;
+          }
         }
       }
     }
-#endif
+    #endif
 
   }
 
   public sealed partial class Handover : pb::IMessage<Handover>
-#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
-#endif
+  #endif
   {
     private static readonly pb::MessageParser<Handover> _parser = new pb::MessageParser<Handover>(() => new Handover());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Handover> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::DynStacking.HotStorage.DataModel.HotstorageModelReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Handover() {
       OnConstruction();
     }
@@ -1293,6 +1378,7 @@ namespace DynStacking.HotStorage.DataModel {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Handover(Handover other) : this() {
       id_ = other.id_;
       ready_ = other.ready_;
@@ -1301,6 +1387,7 @@ namespace DynStacking.HotStorage.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Handover Clone() {
       return new Handover(this);
     }
@@ -1309,6 +1396,7 @@ namespace DynStacking.HotStorage.DataModel {
     public const int IdFieldNumber = 1;
     private int id_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Id {
       get { return id_; }
       set {
@@ -1320,6 +1408,7 @@ namespace DynStacking.HotStorage.DataModel {
     public const int ReadyFieldNumber = 2;
     private bool ready_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Ready {
       get { return ready_; }
       set {
@@ -1331,6 +1420,7 @@ namespace DynStacking.HotStorage.DataModel {
     public const int BlockFieldNumber = 3;
     private global::DynStacking.HotStorage.DataModel.Block block_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::DynStacking.HotStorage.DataModel.Block Block {
       get { return block_; }
       set {
@@ -1339,11 +1429,13 @@ namespace DynStacking.HotStorage.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Handover);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Handover other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1358,6 +1450,7 @@ namespace DynStacking.HotStorage.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Id != 0) hash ^= Id.GetHashCode();
@@ -1370,15 +1463,17 @@ namespace DynStacking.HotStorage.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
-#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
-#else
+    #else
       if (Id != 0) {
         output.WriteRawTag(8);
         output.WriteInt32(Id);
@@ -1394,11 +1489,12 @@ namespace DynStacking.HotStorage.DataModel {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
-#endif
+    #endif
     }
 
-#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Id != 0) {
         output.WriteRawTag(8);
@@ -1416,9 +1512,10 @@ namespace DynStacking.HotStorage.DataModel {
         _unknownFields.WriteTo(ref output);
       }
     }
-#endif
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Id != 0) {
@@ -1437,6 +1534,7 @@ namespace DynStacking.HotStorage.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Handover other) {
       if (other == null) {
         return;
@@ -1457,10 +1555,11 @@ namespace DynStacking.HotStorage.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
-#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
-#else
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1484,61 +1583,66 @@ namespace DynStacking.HotStorage.DataModel {
           }
         }
       }
-#endif
+    #endif
     }
 
-#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch (tag) {
+        switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-              Id = input.ReadInt32();
-              break;
-            }
+            Id = input.ReadInt32();
+            break;
+          }
           case 16: {
-              Ready = input.ReadBool();
-              break;
-            }
+            Ready = input.ReadBool();
+            break;
+          }
           case 26: {
-              if (block_ == null) {
-                Block = new global::DynStacking.HotStorage.DataModel.Block();
-              }
-              input.ReadMessage(Block);
-              break;
+            if (block_ == null) {
+              Block = new global::DynStacking.HotStorage.DataModel.Block();
             }
+            input.ReadMessage(Block);
+            break;
+          }
         }
       }
     }
-#endif
+    #endif
 
   }
 
   public sealed partial class Performance : pb::IMessage<Performance>
-#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
-#endif
+  #endif
   {
     private static readonly pb::MessageParser<Performance> _parser = new pb::MessageParser<Performance>(() => new Performance());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Performance> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::DynStacking.HotStorage.DataModel.HotstorageModelReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Performance() {
       OnConstruction();
     }
@@ -1546,6 +1650,7 @@ namespace DynStacking.HotStorage.DataModel {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Performance(Performance other) : this() {
       craneManipulations_ = other.craneManipulations_;
       serviceLevelMean_ = other.serviceLevelMean_;
@@ -1562,6 +1667,7 @@ namespace DynStacking.HotStorage.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Performance Clone() {
       return new Performance(this);
     }
@@ -1570,6 +1676,7 @@ namespace DynStacking.HotStorage.DataModel {
     public const int CraneManipulationsFieldNumber = 1;
     private int craneManipulations_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CraneManipulations {
       get { return craneManipulations_; }
       set {
@@ -1581,6 +1688,7 @@ namespace DynStacking.HotStorage.DataModel {
     public const int ServiceLevelMeanFieldNumber = 2;
     private double serviceLevelMean_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double ServiceLevelMean {
       get { return serviceLevelMean_; }
       set {
@@ -1592,6 +1700,7 @@ namespace DynStacking.HotStorage.DataModel {
     public const int LeadTimeMeanFieldNumber = 3;
     private double leadTimeMean_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double LeadTimeMean {
       get { return leadTimeMean_; }
       set {
@@ -1603,6 +1712,7 @@ namespace DynStacking.HotStorage.DataModel {
     public const int DeliveredBlocksFieldNumber = 4;
     private int deliveredBlocks_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int DeliveredBlocks {
       get { return deliveredBlocks_; }
       set {
@@ -1614,6 +1724,7 @@ namespace DynStacking.HotStorage.DataModel {
     public const int TotalBlocksOnTimeFieldNumber = 5;
     private int totalBlocksOnTime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int TotalBlocksOnTime {
       get { return totalBlocksOnTime_; }
       set {
@@ -1625,6 +1736,7 @@ namespace DynStacking.HotStorage.DataModel {
     public const int BlockedArrivalTimeFieldNumber = 6;
     private double blockedArrivalTime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double BlockedArrivalTime {
       get { return blockedArrivalTime_; }
       set {
@@ -1636,6 +1748,7 @@ namespace DynStacking.HotStorage.DataModel {
     public const int TardinessMeanFieldNumber = 7;
     private double tardinessMean_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double TardinessMean {
       get { return tardinessMean_; }
       set {
@@ -1647,6 +1760,7 @@ namespace DynStacking.HotStorage.DataModel {
     public const int BufferUtilizationMeanFieldNumber = 8;
     private double bufferUtilizationMean_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double BufferUtilizationMean {
       get { return bufferUtilizationMean_; }
       set {
@@ -1658,6 +1772,7 @@ namespace DynStacking.HotStorage.DataModel {
     public const int CraneUtilizationMeanFieldNumber = 9;
     private double craneUtilizationMean_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double CraneUtilizationMean {
       get { return craneUtilizationMean_; }
       set {
@@ -1669,6 +1784,7 @@ namespace DynStacking.HotStorage.DataModel {
     public const int HandoverUtilizationMeanFieldNumber = 10;
     private double handoverUtilizationMean_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double HandoverUtilizationMean {
       get { return handoverUtilizationMean_; }
       set {
@@ -1680,6 +1796,7 @@ namespace DynStacking.HotStorage.DataModel {
     public const int UpstreamUtilizationMeanFieldNumber = 11;
     private double upstreamUtilizationMean_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double UpstreamUtilizationMean {
       get { return upstreamUtilizationMean_; }
       set {
@@ -1688,11 +1805,13 @@ namespace DynStacking.HotStorage.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Performance);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Performance other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1715,6 +1834,7 @@ namespace DynStacking.HotStorage.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (CraneManipulations != 0) hash ^= CraneManipulations.GetHashCode();
@@ -1735,15 +1855,17 @@ namespace DynStacking.HotStorage.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
-#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
-#else
+    #else
       if (CraneManipulations != 0) {
         output.WriteRawTag(8);
         output.WriteInt32(CraneManipulations);
@@ -1791,11 +1913,12 @@ namespace DynStacking.HotStorage.DataModel {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
-#endif
+    #endif
     }
 
-#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (CraneManipulations != 0) {
         output.WriteRawTag(8);
@@ -1845,9 +1968,10 @@ namespace DynStacking.HotStorage.DataModel {
         _unknownFields.WriteTo(ref output);
       }
     }
-#endif
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (CraneManipulations != 0) {
@@ -1890,6 +2014,7 @@ namespace DynStacking.HotStorage.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Performance other) {
       if (other == null) {
         return;
@@ -1931,10 +2056,11 @@ namespace DynStacking.HotStorage.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
-#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
-#else
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1987,90 +2113,95 @@ namespace DynStacking.HotStorage.DataModel {
           }
         }
       }
-#endif
+    #endif
     }
 
-#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch (tag) {
+        switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-              CraneManipulations = input.ReadInt32();
-              break;
-            }
+            CraneManipulations = input.ReadInt32();
+            break;
+          }
           case 17: {
-              ServiceLevelMean = input.ReadDouble();
-              break;
-            }
+            ServiceLevelMean = input.ReadDouble();
+            break;
+          }
           case 25: {
-              LeadTimeMean = input.ReadDouble();
-              break;
-            }
+            LeadTimeMean = input.ReadDouble();
+            break;
+          }
           case 32: {
-              DeliveredBlocks = input.ReadInt32();
-              break;
-            }
+            DeliveredBlocks = input.ReadInt32();
+            break;
+          }
           case 40: {
-              TotalBlocksOnTime = input.ReadInt32();
-              break;
-            }
+            TotalBlocksOnTime = input.ReadInt32();
+            break;
+          }
           case 49: {
-              BlockedArrivalTime = input.ReadDouble();
-              break;
-            }
+            BlockedArrivalTime = input.ReadDouble();
+            break;
+          }
           case 57: {
-              TardinessMean = input.ReadDouble();
-              break;
-            }
+            TardinessMean = input.ReadDouble();
+            break;
+          }
           case 65: {
-              BufferUtilizationMean = input.ReadDouble();
-              break;
-            }
+            BufferUtilizationMean = input.ReadDouble();
+            break;
+          }
           case 73: {
-              CraneUtilizationMean = input.ReadDouble();
-              break;
-            }
+            CraneUtilizationMean = input.ReadDouble();
+            break;
+          }
           case 81: {
-              HandoverUtilizationMean = input.ReadDouble();
-              break;
-            }
+            HandoverUtilizationMean = input.ReadDouble();
+            break;
+          }
           case 89: {
-              UpstreamUtilizationMean = input.ReadDouble();
-              break;
-            }
+            UpstreamUtilizationMean = input.ReadDouble();
+            break;
+          }
         }
       }
     }
-#endif
+    #endif
 
   }
 
   public sealed partial class Stack : pb::IMessage<Stack>
-#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
-#endif
+  #endif
   {
     private static readonly pb::MessageParser<Stack> _parser = new pb::MessageParser<Stack>(() => new Stack());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Stack> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::DynStacking.HotStorage.DataModel.HotstorageModelReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Stack() {
       OnConstruction();
     }
@@ -2078,6 +2209,7 @@ namespace DynStacking.HotStorage.DataModel {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Stack(Stack other) : this() {
       id_ = other.id_;
       maxHeight_ = other.maxHeight_;
@@ -2086,6 +2218,7 @@ namespace DynStacking.HotStorage.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Stack Clone() {
       return new Stack(this);
     }
@@ -2094,6 +2227,7 @@ namespace DynStacking.HotStorage.DataModel {
     public const int IdFieldNumber = 1;
     private int id_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Id {
       get { return id_; }
       set {
@@ -2105,6 +2239,7 @@ namespace DynStacking.HotStorage.DataModel {
     public const int MaxHeightFieldNumber = 2;
     private int maxHeight_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int MaxHeight {
       get { return maxHeight_; }
       set {
@@ -2118,16 +2253,19 @@ namespace DynStacking.HotStorage.DataModel {
         = pb::FieldCodec.ForMessage(26, global::DynStacking.HotStorage.DataModel.Block.Parser);
     private readonly pbc::RepeatedField<global::DynStacking.HotStorage.DataModel.Block> bottomToTop_ = new pbc::RepeatedField<global::DynStacking.HotStorage.DataModel.Block>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::DynStacking.HotStorage.DataModel.Block> BottomToTop {
       get { return bottomToTop_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Stack);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Stack other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2137,11 +2275,12 @@ namespace DynStacking.HotStorage.DataModel {
       }
       if (Id != other.Id) return false;
       if (MaxHeight != other.MaxHeight) return false;
-      if (!bottomToTop_.Equals(other.bottomToTop_)) return false;
+      if(!bottomToTop_.Equals(other.bottomToTop_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Id != 0) hash ^= Id.GetHashCode();
@@ -2154,15 +2293,17 @@ namespace DynStacking.HotStorage.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
-#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
-#else
+    #else
       if (Id != 0) {
         output.WriteRawTag(8);
         output.WriteInt32(Id);
@@ -2175,11 +2316,12 @@ namespace DynStacking.HotStorage.DataModel {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
-#endif
+    #endif
     }
 
-#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Id != 0) {
         output.WriteRawTag(8);
@@ -2194,9 +2336,10 @@ namespace DynStacking.HotStorage.DataModel {
         _unknownFields.WriteTo(ref output);
       }
     }
-#endif
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Id != 0) {
@@ -2213,6 +2356,7 @@ namespace DynStacking.HotStorage.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Stack other) {
       if (other == null) {
         return;
@@ -2228,10 +2372,11 @@ namespace DynStacking.HotStorage.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
-#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
-#else
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2252,58 +2397,63 @@ namespace DynStacking.HotStorage.DataModel {
           }
         }
       }
-#endif
+    #endif
     }
 
-#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch (tag) {
+        switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-              Id = input.ReadInt32();
-              break;
-            }
+            Id = input.ReadInt32();
+            break;
+          }
           case 16: {
-              MaxHeight = input.ReadInt32();
-              break;
-            }
+            MaxHeight = input.ReadInt32();
+            break;
+          }
           case 26: {
-              bottomToTop_.AddEntriesFrom(ref input, _repeated_bottomToTop_codec);
-              break;
-            }
+            bottomToTop_.AddEntriesFrom(ref input, _repeated_bottomToTop_codec);
+            break;
+          }
         }
       }
     }
-#endif
+    #endif
 
   }
 
   public sealed partial class TimeStamp : pb::IMessage<TimeStamp>
-#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
-#endif
+  #endif
   {
     private static readonly pb::MessageParser<TimeStamp> _parser = new pb::MessageParser<TimeStamp>(() => new TimeStamp());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<TimeStamp> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::DynStacking.HotStorage.DataModel.HotstorageModelReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TimeStamp() {
       OnConstruction();
     }
@@ -2311,12 +2461,14 @@ namespace DynStacking.HotStorage.DataModel {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TimeStamp(TimeStamp other) : this() {
       milliSeconds_ = other.milliSeconds_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TimeStamp Clone() {
       return new TimeStamp(this);
     }
@@ -2325,6 +2477,7 @@ namespace DynStacking.HotStorage.DataModel {
     public const int MilliSecondsFieldNumber = 1;
     private long milliSeconds_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long MilliSeconds {
       get { return milliSeconds_; }
       set {
@@ -2333,11 +2486,13 @@ namespace DynStacking.HotStorage.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as TimeStamp);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(TimeStamp other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2350,6 +2505,7 @@ namespace DynStacking.HotStorage.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (MilliSeconds != 0L) hash ^= MilliSeconds.GetHashCode();
@@ -2360,15 +2516,17 @@ namespace DynStacking.HotStorage.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
-#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
-#else
+    #else
       if (MilliSeconds != 0L) {
         output.WriteRawTag(8);
         output.WriteInt64(MilliSeconds);
@@ -2376,11 +2534,12 @@ namespace DynStacking.HotStorage.DataModel {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
-#endif
+    #endif
     }
 
-#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (MilliSeconds != 0L) {
         output.WriteRawTag(8);
@@ -2390,9 +2549,10 @@ namespace DynStacking.HotStorage.DataModel {
         _unknownFields.WriteTo(ref output);
       }
     }
-#endif
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (MilliSeconds != 0L) {
@@ -2405,6 +2565,7 @@ namespace DynStacking.HotStorage.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(TimeStamp other) {
       if (other == null) {
         return;
@@ -2416,10 +2577,11 @@ namespace DynStacking.HotStorage.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
-#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
-#else
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2432,50 +2594,55 @@ namespace DynStacking.HotStorage.DataModel {
           }
         }
       }
-#endif
+    #endif
     }
 
-#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch (tag) {
+        switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-              MilliSeconds = input.ReadInt64();
-              break;
-            }
+            MilliSeconds = input.ReadInt64();
+            break;
+          }
         }
       }
     }
-#endif
+    #endif
 
   }
 
   public sealed partial class Uncertainties : pb::IMessage<Uncertainties>
-#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
-#endif
+  #endif
   {
     private static readonly pb::MessageParser<Uncertainties> _parser = new pb::MessageParser<Uncertainties>(() => new Uncertainties());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Uncertainties> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::DynStacking.HotStorage.DataModel.HotstorageModelReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Uncertainties() {
       OnConstruction();
     }
@@ -2483,6 +2650,7 @@ namespace DynStacking.HotStorage.DataModel {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Uncertainties(Uncertainties other) : this() {
       arrivalIntervals_ = other.arrivalIntervals_.Clone();
       craneMoveTimes_ = other.craneMoveTimes_.Clone();
@@ -2491,6 +2659,7 @@ namespace DynStacking.HotStorage.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Uncertainties Clone() {
       return new Uncertainties(this);
     }
@@ -2501,6 +2670,7 @@ namespace DynStacking.HotStorage.DataModel {
         = pb::FieldCodec.ForDouble(9);
     private readonly pbc::RepeatedField<double> arrivalIntervals_ = new pbc::RepeatedField<double>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<double> ArrivalIntervals {
       get { return arrivalIntervals_; }
     }
@@ -2511,6 +2681,7 @@ namespace DynStacking.HotStorage.DataModel {
         = pb::FieldCodec.ForDouble(17);
     private readonly pbc::RepeatedField<double> craneMoveTimes_ = new pbc::RepeatedField<double>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<double> CraneMoveTimes {
       get { return craneMoveTimes_; }
     }
@@ -2521,16 +2692,19 @@ namespace DynStacking.HotStorage.DataModel {
         = pb::FieldCodec.ForDouble(25);
     private readonly pbc::RepeatedField<double> handoverReadyIntervals_ = new pbc::RepeatedField<double>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<double> HandoverReadyIntervals {
       get { return handoverReadyIntervals_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Uncertainties);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Uncertainties other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2538,13 +2712,14 @@ namespace DynStacking.HotStorage.DataModel {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!arrivalIntervals_.Equals(other.arrivalIntervals_)) return false;
-      if (!craneMoveTimes_.Equals(other.craneMoveTimes_)) return false;
-      if (!handoverReadyIntervals_.Equals(other.handoverReadyIntervals_)) return false;
+      if(!arrivalIntervals_.Equals(other.arrivalIntervals_)) return false;
+      if(!craneMoveTimes_.Equals(other.craneMoveTimes_)) return false;
+      if(!handoverReadyIntervals_.Equals(other.handoverReadyIntervals_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= arrivalIntervals_.GetHashCode();
@@ -2557,26 +2732,29 @@ namespace DynStacking.HotStorage.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
-#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
-#else
+    #else
       arrivalIntervals_.WriteTo(output, _repeated_arrivalIntervals_codec);
       craneMoveTimes_.WriteTo(output, _repeated_craneMoveTimes_codec);
       handoverReadyIntervals_.WriteTo(output, _repeated_handoverReadyIntervals_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
-#endif
+    #endif
     }
 
-#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       arrivalIntervals_.WriteTo(ref output, _repeated_arrivalIntervals_codec);
       craneMoveTimes_.WriteTo(ref output, _repeated_craneMoveTimes_codec);
@@ -2585,9 +2763,10 @@ namespace DynStacking.HotStorage.DataModel {
         _unknownFields.WriteTo(ref output);
       }
     }
-#endif
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += arrivalIntervals_.CalculateSize(_repeated_arrivalIntervals_codec);
@@ -2600,6 +2779,7 @@ namespace DynStacking.HotStorage.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Uncertainties other) {
       if (other == null) {
         return;
@@ -2611,10 +2791,11 @@ namespace DynStacking.HotStorage.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
-#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
-#else
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2638,61 +2819,66 @@ namespace DynStacking.HotStorage.DataModel {
           }
         }
       }
-#endif
+    #endif
     }
 
-#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch (tag) {
+        switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10:
           case 9: {
-              arrivalIntervals_.AddEntriesFrom(ref input, _repeated_arrivalIntervals_codec);
-              break;
-            }
+            arrivalIntervals_.AddEntriesFrom(ref input, _repeated_arrivalIntervals_codec);
+            break;
+          }
           case 18:
           case 17: {
-              craneMoveTimes_.AddEntriesFrom(ref input, _repeated_craneMoveTimes_codec);
-              break;
-            }
+            craneMoveTimes_.AddEntriesFrom(ref input, _repeated_craneMoveTimes_codec);
+            break;
+          }
           case 26:
           case 25: {
-              handoverReadyIntervals_.AddEntriesFrom(ref input, _repeated_handoverReadyIntervals_codec);
-              break;
-            }
+            handoverReadyIntervals_.AddEntriesFrom(ref input, _repeated_handoverReadyIntervals_codec);
+            break;
+          }
         }
       }
     }
-#endif
+    #endif
 
   }
 
   public sealed partial class World : pb::IMessage<World>
-#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
-#endif
+  #endif
   {
     private static readonly pb::MessageParser<World> _parser = new pb::MessageParser<World>(() => new World());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<World> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::DynStacking.HotStorage.DataModel.HotstorageModelReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public World() {
       OnConstruction();
     }
@@ -2700,6 +2886,7 @@ namespace DynStacking.HotStorage.DataModel {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public World(World other) : this() {
       now_ = other.now_ != null ? other.now_.Clone() : null;
       production_ = other.production_ != null ? other.production_.Clone() : null;
@@ -2713,6 +2900,7 @@ namespace DynStacking.HotStorage.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public World Clone() {
       return new World(this);
     }
@@ -2721,6 +2909,7 @@ namespace DynStacking.HotStorage.DataModel {
     public const int NowFieldNumber = 1;
     private global::DynStacking.HotStorage.DataModel.TimeStamp now_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::DynStacking.HotStorage.DataModel.TimeStamp Now {
       get { return now_; }
       set {
@@ -2732,6 +2921,7 @@ namespace DynStacking.HotStorage.DataModel {
     public const int ProductionFieldNumber = 2;
     private global::DynStacking.HotStorage.DataModel.Stack production_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::DynStacking.HotStorage.DataModel.Stack Production {
       get { return production_; }
       set {
@@ -2745,6 +2935,7 @@ namespace DynStacking.HotStorage.DataModel {
         = pb::FieldCodec.ForMessage(26, global::DynStacking.HotStorage.DataModel.Stack.Parser);
     private readonly pbc::RepeatedField<global::DynStacking.HotStorage.DataModel.Stack> buffers_ = new pbc::RepeatedField<global::DynStacking.HotStorage.DataModel.Stack>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::DynStacking.HotStorage.DataModel.Stack> Buffers {
       get { return buffers_; }
     }
@@ -2753,6 +2944,7 @@ namespace DynStacking.HotStorage.DataModel {
     public const int HandoverFieldNumber = 4;
     private global::DynStacking.HotStorage.DataModel.Handover handover_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::DynStacking.HotStorage.DataModel.Handover Handover {
       get { return handover_; }
       set {
@@ -2764,6 +2956,7 @@ namespace DynStacking.HotStorage.DataModel {
     public const int CraneFieldNumber = 5;
     private global::DynStacking.HotStorage.DataModel.Crane crane_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::DynStacking.HotStorage.DataModel.Crane Crane {
       get { return crane_; }
       set {
@@ -2775,6 +2968,7 @@ namespace DynStacking.HotStorage.DataModel {
     public const int KPIsFieldNumber = 6;
     private global::DynStacking.HotStorage.DataModel.Performance kPIs_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::DynStacking.HotStorage.DataModel.Performance KPIs {
       get { return kPIs_; }
       set {
@@ -2786,6 +2980,7 @@ namespace DynStacking.HotStorage.DataModel {
     public const int ObservationDataFieldNumber = 7;
     private global::DynStacking.HotStorage.DataModel.Uncertainties observationData_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::DynStacking.HotStorage.DataModel.Uncertainties ObservationData {
       get { return observationData_; }
       set {
@@ -2799,16 +2994,19 @@ namespace DynStacking.HotStorage.DataModel {
         = pb::FieldCodec.ForMessage(66, global::DynStacking.HotStorage.DataModel.CraneMove.Parser);
     private readonly pbc::RepeatedField<global::DynStacking.HotStorage.DataModel.CraneMove> invalidMoves_ = new pbc::RepeatedField<global::DynStacking.HotStorage.DataModel.CraneMove>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::DynStacking.HotStorage.DataModel.CraneMove> InvalidMoves {
       get { return invalidMoves_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as World);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(World other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2818,16 +3016,17 @@ namespace DynStacking.HotStorage.DataModel {
       }
       if (!object.Equals(Now, other.Now)) return false;
       if (!object.Equals(Production, other.Production)) return false;
-      if (!buffers_.Equals(other.buffers_)) return false;
+      if(!buffers_.Equals(other.buffers_)) return false;
       if (!object.Equals(Handover, other.Handover)) return false;
       if (!object.Equals(Crane, other.Crane)) return false;
       if (!object.Equals(KPIs, other.KPIs)) return false;
       if (!object.Equals(ObservationData, other.ObservationData)) return false;
-      if (!invalidMoves_.Equals(other.invalidMoves_)) return false;
+      if(!invalidMoves_.Equals(other.invalidMoves_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (now_ != null) hash ^= Now.GetHashCode();
@@ -2845,15 +3044,17 @@ namespace DynStacking.HotStorage.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
-#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
-#else
+    #else
       if (now_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(Now);
@@ -2883,11 +3084,12 @@ namespace DynStacking.HotStorage.DataModel {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
-#endif
+    #endif
     }
 
-#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (now_ != null) {
         output.WriteRawTag(10);
@@ -2919,9 +3121,10 @@ namespace DynStacking.HotStorage.DataModel {
         _unknownFields.WriteTo(ref output);
       }
     }
-#endif
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (now_ != null) {
@@ -2951,6 +3154,7 @@ namespace DynStacking.HotStorage.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(World other) {
       if (other == null) {
         return;
@@ -2997,10 +3201,11 @@ namespace DynStacking.HotStorage.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
-#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
-#else
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -3059,72 +3264,73 @@ namespace DynStacking.HotStorage.DataModel {
           }
         }
       }
-#endif
+    #endif
     }
 
-#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch (tag) {
+        switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-              if (now_ == null) {
-                Now = new global::DynStacking.HotStorage.DataModel.TimeStamp();
-              }
-              input.ReadMessage(Now);
-              break;
+            if (now_ == null) {
+              Now = new global::DynStacking.HotStorage.DataModel.TimeStamp();
             }
+            input.ReadMessage(Now);
+            break;
+          }
           case 18: {
-              if (production_ == null) {
-                Production = new global::DynStacking.HotStorage.DataModel.Stack();
-              }
-              input.ReadMessage(Production);
-              break;
+            if (production_ == null) {
+              Production = new global::DynStacking.HotStorage.DataModel.Stack();
             }
+            input.ReadMessage(Production);
+            break;
+          }
           case 26: {
-              buffers_.AddEntriesFrom(ref input, _repeated_buffers_codec);
-              break;
-            }
+            buffers_.AddEntriesFrom(ref input, _repeated_buffers_codec);
+            break;
+          }
           case 34: {
-              if (handover_ == null) {
-                Handover = new global::DynStacking.HotStorage.DataModel.Handover();
-              }
-              input.ReadMessage(Handover);
-              break;
+            if (handover_ == null) {
+              Handover = new global::DynStacking.HotStorage.DataModel.Handover();
             }
+            input.ReadMessage(Handover);
+            break;
+          }
           case 42: {
-              if (crane_ == null) {
-                Crane = new global::DynStacking.HotStorage.DataModel.Crane();
-              }
-              input.ReadMessage(Crane);
-              break;
+            if (crane_ == null) {
+              Crane = new global::DynStacking.HotStorage.DataModel.Crane();
             }
+            input.ReadMessage(Crane);
+            break;
+          }
           case 50: {
-              if (kPIs_ == null) {
-                KPIs = new global::DynStacking.HotStorage.DataModel.Performance();
-              }
-              input.ReadMessage(KPIs);
-              break;
+            if (kPIs_ == null) {
+              KPIs = new global::DynStacking.HotStorage.DataModel.Performance();
             }
+            input.ReadMessage(KPIs);
+            break;
+          }
           case 58: {
-              if (observationData_ == null) {
-                ObservationData = new global::DynStacking.HotStorage.DataModel.Uncertainties();
-              }
-              input.ReadMessage(ObservationData);
-              break;
+            if (observationData_ == null) {
+              ObservationData = new global::DynStacking.HotStorage.DataModel.Uncertainties();
             }
+            input.ReadMessage(ObservationData);
+            break;
+          }
           case 66: {
-              invalidMoves_.AddEntriesFrom(ref input, _repeated_invalidMoves_codec);
-              break;
-            }
+            invalidMoves_.AddEntriesFrom(ref input, _repeated_invalidMoves_codec);
+            break;
+          }
         }
       }
     }
-#endif
+    #endif
 
   }
 

@@ -6,6 +6,8 @@
 #include "hotstorage/heuristic.h"
 #include "rollingmill/rollingmill_model.pb.h"
 #include "rollingmill/heuristic.h"
+#include "cranescheduling/cranescheduling_model.pb.h"
+#include "cranescheduling/heuristic.h"
 
 using std::cout;
 using std::endl;
@@ -18,6 +20,7 @@ using std::endl;
 enum class Problem {
     RollingMill,
     Hotstorage,
+    CraneScheduling,
 };
 
 
@@ -33,6 +36,8 @@ int main(int argc, char* argv[]) {
     auto problem = Problem::Hotstorage;
     if (std::string_view(argv[3]) == "RM") {
         problem = Problem::RollingMill;
+    } else if (std::string_view(argv[3]) == "CS") {
+        problem = Problem::CraneScheduling;
     }
 
     if (argc == 4) {}
@@ -56,6 +61,9 @@ int main(int argc, char* argv[]) {
             break;
         case Problem::RollingMill:
             answer = DynStacking::RollingMill::calculate_answer(msg[2].data(), msg[2].size());
+            break;
+        case Problem::CraneScheduling:
+            answer = DynStacking::CraneScheduling::calculate_answer(msg[2].data(), msg[2].size());
             break;
 
         }

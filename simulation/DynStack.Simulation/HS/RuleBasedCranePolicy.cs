@@ -3,7 +3,6 @@ using System.Linq;
 using DynStack.DataModel.HS;
 
 namespace DynStack.Simulation.HS {
-
   public class RuleBasedCranePolicy : IPolicy {
     private int seqNr = 0;
 

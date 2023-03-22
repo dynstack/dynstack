@@ -12,7 +12,7 @@ namespace DynStack.SimulationRunner {
       HelpText = "The simulation id that the simulation should identify as.")]
     public string Id { get; set; }
     [Option("sim", Required = true,
-      HelpText = "The simulation to start, either HS (=hotstorage) or RM (=rollingmill).")]
+      HelpText = "The simulation to start, either HS (=hotstorage), RM (=rollingmill) or CS (=cranescheduling).")]
     public SimulationType SimType { get; set; }
     [Option("url", Default = "tcp://localhost:8080", Required = true, HelpText =
 @"The address which is used to communicate with the simulation in asynchronous
@@ -44,28 +44,27 @@ it will run the simulation using default settings.")]
 ""Console"" (default) means you log to stdout.
 Any other input is treated as a filename.")]
     public string Log { get; set; }
-
     [Option("syncurl", Required = false, HelpText =
 @"When a URL is given, e.g., tcp://localhost:8081, then the simulation and policy
-  run in synchronized mode. This means that the world state that the policy receives
-  through this address is the latest and does not change while the policy is
-  calculating. In this mode the simulation runs at the fastest possible pace, only
-  pausing to await the policies' decisions. Policies have to reply to each world
-  message with either an empty message or with a message containing action(s).
-  The message format is multi-part with id in the first frame, followed by empty
-  frame, a topic, and finally the protocol buffer payload.")]
+run in synchronized mode. This means that the world state that the policy receives
+through this address is the latest and does not change while the policy is
+calculating. In this mode the simulation runs at the fastest possible pace, only
+pausing to await the policies' decisions. Policies have to reply to each world
+message with either an empty message or with a message containing action(s).
+The message format is multi-part with id in the first frame, followed by empty
+frame, a topic, and finally the protocol buffer payload.")]
     public string SyncURL { get; set; }
     public bool RunSync => !string.IsNullOrEmpty(SyncURL);
 
     [Option("simulateasync", Required = false, Default = false, HelpText =
 @"Only allowed together with ""syncurl"" - when the simulation is run in synchronous
-  mode. With this option, the action from the policy is delayed to appear in the
-  simulation. The delay is equal to the wall clock time that the policy was measured
-  to run. In this case, the simulation will not call the policy for every world
-  update, but only after the measured time has passed in the simulation.
-  ""true"" means the policy's decision are delayed in simulated time equal to the
-           amount of wall clock time that the policy took to compute.
-  ""false"" (default) means the policy's decisions are effective immediately.")]
+mode. With this option, the action from the policy is delayed to appear in the
+simulation. The delay is equal to the wall clock time that the policy was measured
+to run. In this case, the simulation will not call the policy for every world
+update, but only after the measured time has passed in the simulation.
+""true"" means the policy's decision are delayed in simulated time equal to the
+         amount of wall clock time that the policy took to compute.
+""false"" (default) means the policy's decisions are effective immediately.")]
     public bool SimulateAsync { get; set; }
   }
 

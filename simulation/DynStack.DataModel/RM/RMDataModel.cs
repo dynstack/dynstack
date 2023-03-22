@@ -327,13 +327,20 @@ namespace DynStack.DataModel.RM {
     int ICraneSchedule.ScheduleNr => ScheduleNr;
     int ICraneSchedule.Tasks => _activities.Count;
 
-    IEnumerable<(int index, int moveId, int craneId, int priority)> ICraneSchedule.TaskSequence =>
-      _activities.OrderBy(x => x.Priority).Select((v, i) => (i, v.MoveId, v.CraneId, v.Priority));
+    IEnumerable<(int index, int moveId, int craneId, int priority, CraneScheduleActivityState state)> ICraneSchedule.TaskSequence =>
+      _activities.OrderBy(x => x.Priority).Select((v, i) => (i, v.MoveId, v.CraneId, v.Priority, v.State));
 
-    int ICraneSchedule.Add(int moveId, int craneId, int priority) {
+    int ICraneSchedule.Add(int moveId, int craneId, int priority, CraneScheduleActivityState state) {
       if (((ICraneSchedule)this).ContainsMove(moveId)) throw new ArgumentException($"{moveId} already contained in schedule.", nameof(moveId));
-      _activities.Add(new CraneScheduleActivity() { MoveId = moveId, CraneId = craneId, Priority = priority });
+      _activities.Add(new CraneScheduleActivity() { MoveId = moveId, CraneId = craneId, Priority = priority, State = state });
       return _activities.Count - 1;
+    }
+    void ICraneSchedule.Insert(int index, int moveId, int craneId, int priority, CraneScheduleActivityState state) {
+      if (index == _activities.Count) ((ICraneSchedule)this).Add(moveId, craneId, priority, state);
+      else {
+        if (((ICraneSchedule)this).ContainsMove(moveId)) throw new ArgumentException($"{moveId} already contained in schedule.", nameof(moveId));
+        _activities.Insert(index, new CraneScheduleActivity() { MoveId = moveId, CraneId = craneId, Priority = priority, State = state });
+      }
     }
 
     void ICraneSchedule.Remove(int moveId) {
@@ -343,6 +350,16 @@ namespace DynStack.DataModel.RM {
           break;
         }
       }
+    }
+
+    void ICraneSchedule.UpdateState(int moveId, CraneScheduleActivityState newState) {
+      var activity = _activities.Single(x => x.MoveId == moveId);
+      activity.State = newState;
+    }
+
+    void ICraneSchedule.UpdateCrane(int moveId, int craneId) {
+      var activity = _activities.Single(x => x.MoveId == moveId);
+      activity.CraneId = craneId;
     }
 
     void ICraneSchedule.Clear() {
@@ -360,6 +377,7 @@ namespace DynStack.DataModel.RM {
     [ProtoMember(1)] public int MoveId { get; set; }
     [ProtoMember(2)] public int CraneId { get; set; }
     [ProtoMember(3)] public int Priority { get; set; }
+    [ProtoMember(4)] public CraneScheduleActivityState State { get; set; }
   }
 
   [ProtoContract]
@@ -388,6 +406,22 @@ namespace DynStack.DataModel.RM {
       set {
         if (value == null) _predecessorIds = new HashSet<int>();
         else _predecessorIds = value;
+      }
+    }
+    private List<int> _movedBlockIds = new List<int>();
+    [ProtoMember(12)]
+    private List<int> ProtobufMovedBlockIds {
+      get => _movedBlockIds.ToList();
+      set {
+        if (value == null) _movedBlockIds = new List<int>();
+        else _movedBlockIds = new List<int>(value);
+      }
+    }
+    public List<int> MovedBlockIds {
+      get => _movedBlockIds;
+      set {
+        if (value == null) _movedBlockIds = new List<int>();
+        else _movedBlockIds = value;
       }
     }
 
@@ -421,6 +455,7 @@ namespace DynStack.DataModel.RM {
     int? IMove.RequiredCraneId => RequiredCraneId;
     ISet<int> IMove.PredecessorIds => PredecessorIds;
     int IMove.Predecessors => Predecessors;
+    IList<int> IMove.MovedBlockIds => MovedBlockIds;
 
     void IMove.RemoveFromPredecessors(int pred) => IsFinished(pred);
     #endregion

@@ -37,7 +37,7 @@ namespace DynStacking.RollingMill.DataModel {
             "MiguRHluU3RhY2tpbmcuUm9sbGluZ01pbGwuRGF0YU1vZGVsLlN0YWNrEhYK",
             "DkdpcmRlclBvc2l0aW9uGAMgASgBEhIKCkhvaXN0TGV2ZWwYBCABKAESFQoN",
             "Q3JhbmVDYXBhY2l0eRgFIAEoBRINCgVXaWR0aBgGIAEoARITCgtNaW5Qb3Np",
-            "dGlvbhgHIAEoARITCgtNYXhQb3NpdGlvbhgIIAEoASLWAgoJQ3JhbmVNb3Zl",
+            "dGlvbhgHIAEoARITCgtNYXhQb3NpdGlvbhgIIAEoASL5AgoJQ3JhbmVNb3Zl",
             "EgoKAklkGAEgASgFEjkKBFR5cGUYAiABKA4yKy5EeW5TdGFja2luZy5Sb2xs",
             "aW5nTWlsbC5EYXRhTW9kZWwuTW92ZVR5cGUSGAoQUGlja3VwTG9jYXRpb25J",
             "ZBgDIAEoBRIZChFEcm9wb2ZmTG9jYXRpb25JZBgEIAEoBRIOCgZBbW91bnQY",
@@ -45,67 +45,71 @@ namespace DynStacking.RollingMill.DataModel {
             "aW5nTWlsbC5EYXRhTW9kZWwuVGltZVN0YW1wEj0KB0R1ZURhdGUYCSABKAsy",
             "LC5EeW5TdGFja2luZy5Sb2xsaW5nTWlsbC5EYXRhTW9kZWwuVGltZVN0YW1w",
             "EhcKD1JlcXVpcmVkQ3JhbmVJZBgKIAEoBRIiChZQcm90b2J1ZlByZWRlY2Vz",
-            "c29ySWRzGAsgAygFQgIQACJxCg1DcmFuZVNjaGVkdWxlEhIKClNjaGVkdWxl",
-            "TnIYASABKAUSTAoKQWN0aXZpdGllcxgCIAMoCzI4LkR5blN0YWNraW5nLlJv",
-            "bGxpbmdNaWxsLkRhdGFNb2RlbC5DcmFuZVNjaGVkdWxlQWN0aXZpdHkiSgoV",
-            "Q3JhbmVTY2hlZHVsZUFjdGl2aXR5Eg4KBk1vdmVJZBgBIAEoBRIPCgdDcmFu",
-            "ZUlkGAIgASgFEhAKCFByaW9yaXR5GAMgASgFIvcBCghMb2NhdGlvbhIKCgJJ",
-            "ZBgBIAEoBRIWCg5HaXJkZXJQb3NpdGlvbhgCIAEoARIRCglNYXhIZWlnaHQY",
-            "AyABKAUSNwoFU3RhY2sYBCABKAsyKC5EeW5TdGFja2luZy5Sb2xsaW5nTWls",
-            "bC5EYXRhTW9kZWwuU3RhY2sSOwoEVHlwZRgFIAEoDjItLkR5blN0YWNraW5n",
-            "LlJvbGxpbmdNaWxsLkRhdGFNb2RlbC5TdGFja1R5cGVzEj4KCE1pbGxUeXBl",
-            "GAYgASgOMiwuRHluU3RhY2tpbmcuUm9sbGluZ01pbGwuRGF0YU1vZGVsLk1p",
-            "bGxUeXBlcyKDAQoLTW92ZVJlcXVlc3QSCgoCSWQYASABKAUSGAoQVGFyZ2V0",
-            "TG9jYXRpb25JZBgCIAEoBRIPCgdCbG9ja0lkGAMgASgFEj0KB0R1ZURhdGUY",
-            "BCABKAsyLC5EeW5TdGFja2luZy5Sb2xsaW5nTWlsbC5EYXRhTW9kZWwuVGlt",
-            "ZVN0YW1wIq4DCgtQZXJmb3JtYW5jZRIaChJDcmFuZU1hbmlwdWxhdGlvbnMY",
-            "ASABKAUSGAoQU2VydmljZUxldmVsTWVhbhgCIAEoARIUCgxMZWFkVGltZU1l",
-            "YW4YAyABKAESFwoPRGVsaXZlcmVkQmxvY2tzGAQgASgFEhkKEVRvdGFsQmxv",
-            "Y2tzT25UaW1lGAUgASgFEhUKDVRhcmRpbmVzc01lYW4YBiABKAESJAocU2h1",
-            "ZmZsZUJ1ZmZlclV0aWxpemF0aW9uTWVhbhgHIAEoARIjChtTb3J0ZWRCdWZm",
-            "ZXJVdGlsaXphdGlvbk1lYW4YCCABKAESIwobU2h1ZmZsZUNyYW5lVXRpbGl6",
-            "YXRpb25NZWFuGAkgASgBEiQKHEhhbmRvdmVyQ3JhbmVVdGlsaXphdGlvbk1l",
-            "YW4YCiABKAESHAoUTWlsbEFVdGlsaXphdGlvbk1lYW4YCyABKAESHAoUTWls",
-            "bEJVdGlsaXphdGlvbk1lYW4YDCABKAESHQoVUm9sbGluZ1Byb2dyYW1NZXNz",
-            "dXBzGA0gASgFEhcKD0Jsb2NrZWRNaWxsVGltZRgOIAEoASJkChFQbGFubmVk",
-            "Q3JhbmVNb3ZlcxISCgpTZXF1ZW5jZU5yGAEgASgFEjsKBU1vdmVzGAIgAygL",
-            "MiwuRHluU3RhY2tpbmcuUm9sbGluZ01pbGwuRGF0YU1vZGVsLkNyYW5lTW92",
-            "ZSJGCgVTdGFjaxI9CgtCb3R0b21Ub1RvcBgBIAMoCzIoLkR5blN0YWNraW5n",
-            "LlJvbGxpbmdNaWxsLkRhdGFNb2RlbC5CbG9jayIhCglUaW1lU3RhbXASFAoM",
-            "TWlsbGlTZWNvbmRzGAEgASgDImkKDVVuY2VydGFpbnRpZXMSHAoQQXJyaXZh",
-            "bEludGVydmFscxgBIAMoAUICEAASGgoOQ3JhbmVNb3ZlVGltZXMYAiADKAFC",
-            "AhAAEh4KEk1pbGxCbG9ja0ludGVydmFscxgDIAMoAUICEAAikgYKBVdvcmxk",
-            "EjkKA05vdxgBIAEoCzIsLkR5blN0YWNraW5nLlJvbGxpbmdNaWxsLkRhdGFN",
-            "b2RlbC5UaW1lU3RhbXASDgoGSGVpZ2h0GAIgASgFEg0KBVdpZHRoGAMgASgB",
-            "Ej4KCUxvY2F0aW9ucxgEIAMoCzIrLkR5blN0YWNraW5nLlJvbGxpbmdNaWxs",
-            "LkRhdGFNb2RlbC5Mb2NhdGlvbhJCChBCbG9ja3NBdFNsYWJZYXJkGAUgAygL",
-            "MiguRHluU3RhY2tpbmcuUm9sbGluZ01pbGwuRGF0YU1vZGVsLkJsb2NrEkgK",
-            "FEFycml2YWxzRnJvbVNsYWJZYXJkGAYgAygLMiouRHluU3RhY2tpbmcuUm9s",
-            "bGluZ01pbGwuRGF0YU1vZGVsLkFycml2YWwSSAoKQ3JhbmVNb3ZlcxgHIAEo",
-            "CzI0LkR5blN0YWNraW5nLlJvbGxpbmdNaWxsLkRhdGFNb2RlbC5QbGFubmVk",
-            "Q3JhbmVNb3ZlcxJECgxNb3ZlUmVxdWVzdHMYCCADKAsyLi5EeW5TdGFja2lu",
-            "Zy5Sb2xsaW5nTWlsbC5EYXRhTW9kZWwuTW92ZVJlcXVlc3QSRwoNQ3JhbmVT",
-            "Y2hlZHVsZRgJIAEoCzIwLkR5blN0YWNraW5nLlJvbGxpbmdNaWxsLkRhdGFN",
-            "b2RlbC5DcmFuZVNjaGVkdWxlEj4KDFNodWZmbGVDcmFuZRgKIAEoCzIoLkR5",
-            "blN0YWNraW5nLlJvbGxpbmdNaWxsLkRhdGFNb2RlbC5DcmFuZRI/Cg1IYW5k",
-            "b3ZlckNyYW5lGAsgASgLMiguRHluU3RhY2tpbmcuUm9sbGluZ01pbGwuRGF0",
-            "YU1vZGVsLkNyYW5lEjwKBEtQSXMYDCABKAsyLi5EeW5TdGFja2luZy5Sb2xs",
-            "aW5nTWlsbC5EYXRhTW9kZWwuUGVyZm9ybWFuY2USSQoPT2JzZXJ2YXRpb25E",
-            "YXRhGA0gASgLMjAuRHluU3RhY2tpbmcuUm9sbGluZ01pbGwuRGF0YU1vZGVs",
-            "LlVuY2VydGFpbnRpZXMqGQoJTWlsbFR5cGVzEgUKAUEQABIFCgFCEAEqMgoI",
-            "TW92ZVR5cGUSEAoMTW92ZVRvUGlja3VwEAASFAoQUGlja3VwQW5kRHJvcG9m",
-            "ZhABKlYKClN0YWNrVHlwZXMSEAoMQXJyaXZhbFN0YWNrEAASEQoNU2h1ZmZs",
-            "ZUJ1ZmZlchABEhAKDFNvcnRlZEJ1ZmZlchACEhEKDUhhbmRvdmVyU3RhY2sQ",
-            "A2IGcHJvdG8z"));
+            "c29ySWRzGAsgAygFQgIQABIhChVQcm90b2J1Zk1vdmVkQmxvY2tJZHMYDCAD",
+            "KAVCAhAAInEKDUNyYW5lU2NoZWR1bGUSEgoKU2NoZWR1bGVOchgBIAEoBRJM",
+            "CgpBY3Rpdml0aWVzGAIgAygLMjguRHluU3RhY2tpbmcuUm9sbGluZ01pbGwu",
+            "RGF0YU1vZGVsLkNyYW5lU2NoZWR1bGVBY3Rpdml0eSKYAQoVQ3JhbmVTY2hl",
+            "ZHVsZUFjdGl2aXR5Eg4KBk1vdmVJZBgBIAEoBRIPCgdDcmFuZUlkGAIgASgF",
+            "EhAKCFByaW9yaXR5GAMgASgFEkwKBVN0YXRlGAQgASgOMj0uRHluU3RhY2tp",
+            "bmcuUm9sbGluZ01pbGwuRGF0YU1vZGVsLkNyYW5lU2NoZWR1bGVBY3Rpdml0",
+            "eVN0YXRlIvcBCghMb2NhdGlvbhIKCgJJZBgBIAEoBRIWCg5HaXJkZXJQb3Np",
+            "dGlvbhgCIAEoARIRCglNYXhIZWlnaHQYAyABKAUSNwoFU3RhY2sYBCABKAsy",
+            "KC5EeW5TdGFja2luZy5Sb2xsaW5nTWlsbC5EYXRhTW9kZWwuU3RhY2sSOwoE",
+            "VHlwZRgFIAEoDjItLkR5blN0YWNraW5nLlJvbGxpbmdNaWxsLkRhdGFNb2Rl",
+            "bC5TdGFja1R5cGVzEj4KCE1pbGxUeXBlGAYgASgOMiwuRHluU3RhY2tpbmcu",
+            "Um9sbGluZ01pbGwuRGF0YU1vZGVsLk1pbGxUeXBlcyKDAQoLTW92ZVJlcXVl",
+            "c3QSCgoCSWQYASABKAUSGAoQVGFyZ2V0TG9jYXRpb25JZBgCIAEoBRIPCgdC",
+            "bG9ja0lkGAMgASgFEj0KB0R1ZURhdGUYBCABKAsyLC5EeW5TdGFja2luZy5S",
+            "b2xsaW5nTWlsbC5EYXRhTW9kZWwuVGltZVN0YW1wIq4DCgtQZXJmb3JtYW5j",
+            "ZRIaChJDcmFuZU1hbmlwdWxhdGlvbnMYASABKAUSGAoQU2VydmljZUxldmVs",
+            "TWVhbhgCIAEoARIUCgxMZWFkVGltZU1lYW4YAyABKAESFwoPRGVsaXZlcmVk",
+            "QmxvY2tzGAQgASgFEhkKEVRvdGFsQmxvY2tzT25UaW1lGAUgASgFEhUKDVRh",
+            "cmRpbmVzc01lYW4YBiABKAESJAocU2h1ZmZsZUJ1ZmZlclV0aWxpemF0aW9u",
+            "TWVhbhgHIAEoARIjChtTb3J0ZWRCdWZmZXJVdGlsaXphdGlvbk1lYW4YCCAB",
+            "KAESIwobU2h1ZmZsZUNyYW5lVXRpbGl6YXRpb25NZWFuGAkgASgBEiQKHEhh",
+            "bmRvdmVyQ3JhbmVVdGlsaXphdGlvbk1lYW4YCiABKAESHAoUTWlsbEFVdGls",
+            "aXphdGlvbk1lYW4YCyABKAESHAoUTWlsbEJVdGlsaXphdGlvbk1lYW4YDCAB",
+            "KAESHQoVUm9sbGluZ1Byb2dyYW1NZXNzdXBzGA0gASgFEhcKD0Jsb2NrZWRN",
+            "aWxsVGltZRgOIAEoASJkChFQbGFubmVkQ3JhbmVNb3ZlcxISCgpTZXF1ZW5j",
+            "ZU5yGAEgASgFEjsKBU1vdmVzGAIgAygLMiwuRHluU3RhY2tpbmcuUm9sbGlu",
+            "Z01pbGwuRGF0YU1vZGVsLkNyYW5lTW92ZSJGCgVTdGFjaxI9CgtCb3R0b21U",
+            "b1RvcBgBIAMoCzIoLkR5blN0YWNraW5nLlJvbGxpbmdNaWxsLkRhdGFNb2Rl",
+            "bC5CbG9jayIhCglUaW1lU3RhbXASFAoMTWlsbGlTZWNvbmRzGAEgASgDImkK",
+            "DVVuY2VydGFpbnRpZXMSHAoQQXJyaXZhbEludGVydmFscxgBIAMoAUICEAAS",
+            "GgoOQ3JhbmVNb3ZlVGltZXMYAiADKAFCAhAAEh4KEk1pbGxCbG9ja0ludGVy",
+            "dmFscxgDIAMoAUICEAAikgYKBVdvcmxkEjkKA05vdxgBIAEoCzIsLkR5blN0",
+            "YWNraW5nLlJvbGxpbmdNaWxsLkRhdGFNb2RlbC5UaW1lU3RhbXASDgoGSGVp",
+            "Z2h0GAIgASgFEg0KBVdpZHRoGAMgASgBEj4KCUxvY2F0aW9ucxgEIAMoCzIr",
+            "LkR5blN0YWNraW5nLlJvbGxpbmdNaWxsLkRhdGFNb2RlbC5Mb2NhdGlvbhJC",
+            "ChBCbG9ja3NBdFNsYWJZYXJkGAUgAygLMiguRHluU3RhY2tpbmcuUm9sbGlu",
+            "Z01pbGwuRGF0YU1vZGVsLkJsb2NrEkgKFEFycml2YWxzRnJvbVNsYWJZYXJk",
+            "GAYgAygLMiouRHluU3RhY2tpbmcuUm9sbGluZ01pbGwuRGF0YU1vZGVsLkFy",
+            "cml2YWwSSAoKQ3JhbmVNb3ZlcxgHIAEoCzI0LkR5blN0YWNraW5nLlJvbGxp",
+            "bmdNaWxsLkRhdGFNb2RlbC5QbGFubmVkQ3JhbmVNb3ZlcxJECgxNb3ZlUmVx",
+            "dWVzdHMYCCADKAsyLi5EeW5TdGFja2luZy5Sb2xsaW5nTWlsbC5EYXRhTW9k",
+            "ZWwuTW92ZVJlcXVlc3QSRwoNQ3JhbmVTY2hlZHVsZRgJIAEoCzIwLkR5blN0",
+            "YWNraW5nLlJvbGxpbmdNaWxsLkRhdGFNb2RlbC5DcmFuZVNjaGVkdWxlEj4K",
+            "DFNodWZmbGVDcmFuZRgKIAEoCzIoLkR5blN0YWNraW5nLlJvbGxpbmdNaWxs",
+            "LkRhdGFNb2RlbC5DcmFuZRI/Cg1IYW5kb3ZlckNyYW5lGAsgASgLMiguRHlu",
+            "U3RhY2tpbmcuUm9sbGluZ01pbGwuRGF0YU1vZGVsLkNyYW5lEjwKBEtQSXMY",
+            "DCABKAsyLi5EeW5TdGFja2luZy5Sb2xsaW5nTWlsbC5EYXRhTW9kZWwuUGVy",
+            "Zm9ybWFuY2USSQoPT2JzZXJ2YXRpb25EYXRhGA0gASgLMjAuRHluU3RhY2tp",
+            "bmcuUm9sbGluZ01pbGwuRGF0YU1vZGVsLlVuY2VydGFpbnRpZXMqRgoaQ3Jh",
+            "bmVTY2hlZHVsZUFjdGl2aXR5U3RhdGUSCwoHQ3JlYXRlZBAAEg8KC0FjdGl2",
+            "YXRhYmxlEAESCgoGQWN0aXZlEAIqGQoJTWlsbFR5cGVzEgUKAUEQABIFCgFC",
+            "EAEqMgoITW92ZVR5cGUSEAoMTW92ZVRvUGlja3VwEAASFAoQUGlja3VwQW5k",
+            "RHJvcG9mZhABKlYKClN0YWNrVHlwZXMSEAoMQXJyaXZhbFN0YWNrEAASEQoN",
+            "U2h1ZmZsZUJ1ZmZlchABEhAKDFNvcnRlZEJ1ZmZlchACEhEKDUhhbmRvdmVy",
+            "U3RhY2sQA2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::DynStacking.RollingMill.DataModel.MillTypes), typeof(global::DynStacking.RollingMill.DataModel.MoveType), typeof(global::DynStacking.RollingMill.DataModel.StackTypes), }, null, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::DynStacking.RollingMill.DataModel.CraneScheduleActivityState), typeof(global::DynStacking.RollingMill.DataModel.MillTypes), typeof(global::DynStacking.RollingMill.DataModel.MoveType), typeof(global::DynStacking.RollingMill.DataModel.StackTypes), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::DynStacking.RollingMill.DataModel.Arrival), global::DynStacking.RollingMill.DataModel.Arrival.Parser, new[]{ "Vehicle", "Load", "ArrivalEstimate" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::DynStacking.RollingMill.DataModel.Block), global::DynStacking.RollingMill.DataModel.Block.Parser, new[]{ "Id", "Sequence", "Type", "ProgramId", "Arrived", "Rolled" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::DynStacking.RollingMill.DataModel.Crane), global::DynStacking.RollingMill.DataModel.Crane.Parser, new[]{ "Id", "Load", "GirderPosition", "HoistLevel", "CraneCapacity", "Width", "MinPosition", "MaxPosition" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::DynStacking.RollingMill.DataModel.CraneMove), global::DynStacking.RollingMill.DataModel.CraneMove.Parser, new[]{ "Id", "Type", "PickupLocationId", "DropoffLocationId", "Amount", "ReleaseTime", "DueDate", "RequiredCraneId", "ProtobufPredecessorIds" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::DynStacking.RollingMill.DataModel.CraneMove), global::DynStacking.RollingMill.DataModel.CraneMove.Parser, new[]{ "Id", "Type", "PickupLocationId", "DropoffLocationId", "Amount", "ReleaseTime", "DueDate", "RequiredCraneId", "ProtobufPredecessorIds", "ProtobufMovedBlockIds" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::DynStacking.RollingMill.DataModel.CraneSchedule), global::DynStacking.RollingMill.DataModel.CraneSchedule.Parser, new[]{ "ScheduleNr", "Activities" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::DynStacking.RollingMill.DataModel.CraneScheduleActivity), global::DynStacking.RollingMill.DataModel.CraneScheduleActivity.Parser, new[]{ "MoveId", "CraneId", "Priority" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::DynStacking.RollingMill.DataModel.CraneScheduleActivity), global::DynStacking.RollingMill.DataModel.CraneScheduleActivity.Parser, new[]{ "MoveId", "CraneId", "Priority", "State" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::DynStacking.RollingMill.DataModel.Location), global::DynStacking.RollingMill.DataModel.Location.Parser, new[]{ "Id", "GirderPosition", "MaxHeight", "Stack", "Type", "MillType" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::DynStacking.RollingMill.DataModel.MoveRequest), global::DynStacking.RollingMill.DataModel.MoveRequest.Parser, new[]{ "Id", "TargetLocationId", "BlockId", "DueDate" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::DynStacking.RollingMill.DataModel.Performance), global::DynStacking.RollingMill.DataModel.Performance.Parser, new[]{ "CraneManipulations", "ServiceLevelMean", "LeadTimeMean", "DeliveredBlocks", "TotalBlocksOnTime", "TardinessMean", "ShuffleBufferUtilizationMean", "SortedBufferUtilizationMean", "ShuffleCraneUtilizationMean", "HandoverCraneUtilizationMean", "MillAUtilizationMean", "MillBUtilizationMean", "RollingProgramMessups", "BlockedMillTime" }, null, null, null, null),
@@ -120,6 +124,12 @@ namespace DynStacking.RollingMill.DataModel {
 
   }
   #region Enums
+  public enum CraneScheduleActivityState {
+    [pbr::OriginalName("Created")] Created = 0,
+    [pbr::OriginalName("Activatable")] Activatable = 1,
+    [pbr::OriginalName("Active")] Active = 2,
+  }
+
   public enum MillTypes {
     [pbr::OriginalName("A")] A = 0,
     [pbr::OriginalName("B")] B = 1,
@@ -148,19 +158,23 @@ namespace DynStacking.RollingMill.DataModel {
     private static readonly pb::MessageParser<Arrival> _parser = new pb::MessageParser<Arrival>(() => new Arrival());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Arrival> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::DynStacking.RollingMill.DataModel.RollingmillModelReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Arrival() {
       OnConstruction();
     }
@@ -168,6 +182,7 @@ namespace DynStacking.RollingMill.DataModel {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Arrival(Arrival other) : this() {
       vehicle_ = other.vehicle_;
       load_ = other.load_ != null ? other.load_.Clone() : null;
@@ -176,6 +191,7 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Arrival Clone() {
       return new Arrival(this);
     }
@@ -184,6 +200,7 @@ namespace DynStacking.RollingMill.DataModel {
     public const int VehicleFieldNumber = 1;
     private int vehicle_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Vehicle {
       get { return vehicle_; }
       set {
@@ -195,6 +212,7 @@ namespace DynStacking.RollingMill.DataModel {
     public const int LoadFieldNumber = 2;
     private global::DynStacking.RollingMill.DataModel.Stack load_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::DynStacking.RollingMill.DataModel.Stack Load {
       get { return load_; }
       set {
@@ -206,6 +224,7 @@ namespace DynStacking.RollingMill.DataModel {
     public const int ArrivalEstimateFieldNumber = 3;
     private global::DynStacking.RollingMill.DataModel.TimeStamp arrivalEstimate_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::DynStacking.RollingMill.DataModel.TimeStamp ArrivalEstimate {
       get { return arrivalEstimate_; }
       set {
@@ -214,11 +233,13 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Arrival);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Arrival other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -233,6 +254,7 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Vehicle != 0) hash ^= Vehicle.GetHashCode();
@@ -245,11 +267,13 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -274,6 +298,7 @@ namespace DynStacking.RollingMill.DataModel {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Vehicle != 0) {
         output.WriteRawTag(8);
@@ -294,6 +319,7 @@ namespace DynStacking.RollingMill.DataModel {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Vehicle != 0) {
@@ -312,6 +338,7 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Arrival other) {
       if (other == null) {
         return;
@@ -335,6 +362,7 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -370,6 +398,7 @@ namespace DynStacking.RollingMill.DataModel {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -410,19 +439,23 @@ namespace DynStacking.RollingMill.DataModel {
     private static readonly pb::MessageParser<Block> _parser = new pb::MessageParser<Block>(() => new Block());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Block> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::DynStacking.RollingMill.DataModel.RollingmillModelReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Block() {
       OnConstruction();
     }
@@ -430,6 +463,7 @@ namespace DynStacking.RollingMill.DataModel {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Block(Block other) : this() {
       id_ = other.id_;
       sequence_ = other.sequence_;
@@ -441,6 +475,7 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Block Clone() {
       return new Block(this);
     }
@@ -449,6 +484,7 @@ namespace DynStacking.RollingMill.DataModel {
     public const int IdFieldNumber = 1;
     private int id_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Id {
       get { return id_; }
       set {
@@ -460,6 +496,7 @@ namespace DynStacking.RollingMill.DataModel {
     public const int SequenceFieldNumber = 2;
     private int sequence_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Sequence {
       get { return sequence_; }
       set {
@@ -471,6 +508,7 @@ namespace DynStacking.RollingMill.DataModel {
     public const int TypeFieldNumber = 3;
     private global::DynStacking.RollingMill.DataModel.MillTypes type_ = global::DynStacking.RollingMill.DataModel.MillTypes.A;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::DynStacking.RollingMill.DataModel.MillTypes Type {
       get { return type_; }
       set {
@@ -482,6 +520,7 @@ namespace DynStacking.RollingMill.DataModel {
     public const int ProgramIdFieldNumber = 4;
     private int programId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int ProgramId {
       get { return programId_; }
       set {
@@ -493,6 +532,7 @@ namespace DynStacking.RollingMill.DataModel {
     public const int ArrivedFieldNumber = 5;
     private global::DynStacking.RollingMill.DataModel.TimeStamp arrived_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::DynStacking.RollingMill.DataModel.TimeStamp Arrived {
       get { return arrived_; }
       set {
@@ -504,6 +544,7 @@ namespace DynStacking.RollingMill.DataModel {
     public const int RolledFieldNumber = 6;
     private bool rolled_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Rolled {
       get { return rolled_; }
       set {
@@ -512,11 +553,13 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Block);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Block other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -534,6 +577,7 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Id != 0) hash ^= Id.GetHashCode();
@@ -549,11 +593,13 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -590,6 +636,7 @@ namespace DynStacking.RollingMill.DataModel {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Id != 0) {
         output.WriteRawTag(8);
@@ -622,6 +669,7 @@ namespace DynStacking.RollingMill.DataModel {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Id != 0) {
@@ -649,6 +697,7 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Block other) {
       if (other == null) {
         return;
@@ -678,6 +727,7 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -722,6 +772,7 @@ namespace DynStacking.RollingMill.DataModel {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -771,19 +822,23 @@ namespace DynStacking.RollingMill.DataModel {
     private static readonly pb::MessageParser<Crane> _parser = new pb::MessageParser<Crane>(() => new Crane());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Crane> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::DynStacking.RollingMill.DataModel.RollingmillModelReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Crane() {
       OnConstruction();
     }
@@ -791,6 +846,7 @@ namespace DynStacking.RollingMill.DataModel {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Crane(Crane other) : this() {
       id_ = other.id_;
       load_ = other.load_ != null ? other.load_.Clone() : null;
@@ -804,6 +860,7 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Crane Clone() {
       return new Crane(this);
     }
@@ -812,6 +869,7 @@ namespace DynStacking.RollingMill.DataModel {
     public const int IdFieldNumber = 1;
     private int id_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Id {
       get { return id_; }
       set {
@@ -823,6 +881,7 @@ namespace DynStacking.RollingMill.DataModel {
     public const int LoadFieldNumber = 2;
     private global::DynStacking.RollingMill.DataModel.Stack load_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::DynStacking.RollingMill.DataModel.Stack Load {
       get { return load_; }
       set {
@@ -834,6 +893,7 @@ namespace DynStacking.RollingMill.DataModel {
     public const int GirderPositionFieldNumber = 3;
     private double girderPosition_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double GirderPosition {
       get { return girderPosition_; }
       set {
@@ -845,6 +905,7 @@ namespace DynStacking.RollingMill.DataModel {
     public const int HoistLevelFieldNumber = 4;
     private double hoistLevel_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double HoistLevel {
       get { return hoistLevel_; }
       set {
@@ -856,6 +917,7 @@ namespace DynStacking.RollingMill.DataModel {
     public const int CraneCapacityFieldNumber = 5;
     private int craneCapacity_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CraneCapacity {
       get { return craneCapacity_; }
       set {
@@ -867,6 +929,7 @@ namespace DynStacking.RollingMill.DataModel {
     public const int WidthFieldNumber = 6;
     private double width_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double Width {
       get { return width_; }
       set {
@@ -878,6 +941,7 @@ namespace DynStacking.RollingMill.DataModel {
     public const int MinPositionFieldNumber = 7;
     private double minPosition_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double MinPosition {
       get { return minPosition_; }
       set {
@@ -889,6 +953,7 @@ namespace DynStacking.RollingMill.DataModel {
     public const int MaxPositionFieldNumber = 8;
     private double maxPosition_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double MaxPosition {
       get { return maxPosition_; }
       set {
@@ -897,11 +962,13 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Crane);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Crane other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -921,6 +988,7 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Id != 0) hash ^= Id.GetHashCode();
@@ -938,11 +1006,13 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -987,6 +1057,7 @@ namespace DynStacking.RollingMill.DataModel {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Id != 0) {
         output.WriteRawTag(8);
@@ -1027,6 +1098,7 @@ namespace DynStacking.RollingMill.DataModel {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Id != 0) {
@@ -1060,6 +1132,7 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Crane other) {
       if (other == null) {
         return;
@@ -1095,6 +1168,7 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1147,6 +1221,7 @@ namespace DynStacking.RollingMill.DataModel {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1204,19 +1279,23 @@ namespace DynStacking.RollingMill.DataModel {
     private static readonly pb::MessageParser<CraneMove> _parser = new pb::MessageParser<CraneMove>(() => new CraneMove());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<CraneMove> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::DynStacking.RollingMill.DataModel.RollingmillModelReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CraneMove() {
       OnConstruction();
     }
@@ -1224,6 +1303,7 @@ namespace DynStacking.RollingMill.DataModel {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CraneMove(CraneMove other) : this() {
       id_ = other.id_;
       type_ = other.type_;
@@ -1234,10 +1314,12 @@ namespace DynStacking.RollingMill.DataModel {
       dueDate_ = other.dueDate_ != null ? other.dueDate_.Clone() : null;
       requiredCraneId_ = other.requiredCraneId_;
       protobufPredecessorIds_ = other.protobufPredecessorIds_.Clone();
+      protobufMovedBlockIds_ = other.protobufMovedBlockIds_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CraneMove Clone() {
       return new CraneMove(this);
     }
@@ -1246,6 +1328,7 @@ namespace DynStacking.RollingMill.DataModel {
     public const int IdFieldNumber = 1;
     private int id_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Id {
       get { return id_; }
       set {
@@ -1257,6 +1340,7 @@ namespace DynStacking.RollingMill.DataModel {
     public const int TypeFieldNumber = 2;
     private global::DynStacking.RollingMill.DataModel.MoveType type_ = global::DynStacking.RollingMill.DataModel.MoveType.MoveToPickup;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::DynStacking.RollingMill.DataModel.MoveType Type {
       get { return type_; }
       set {
@@ -1268,6 +1352,7 @@ namespace DynStacking.RollingMill.DataModel {
     public const int PickupLocationIdFieldNumber = 3;
     private int pickupLocationId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int PickupLocationId {
       get { return pickupLocationId_; }
       set {
@@ -1279,6 +1364,7 @@ namespace DynStacking.RollingMill.DataModel {
     public const int DropoffLocationIdFieldNumber = 4;
     private int dropoffLocationId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int DropoffLocationId {
       get { return dropoffLocationId_; }
       set {
@@ -1290,6 +1376,7 @@ namespace DynStacking.RollingMill.DataModel {
     public const int AmountFieldNumber = 7;
     private int amount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Amount {
       get { return amount_; }
       set {
@@ -1301,6 +1388,7 @@ namespace DynStacking.RollingMill.DataModel {
     public const int ReleaseTimeFieldNumber = 8;
     private global::DynStacking.RollingMill.DataModel.TimeStamp releaseTime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::DynStacking.RollingMill.DataModel.TimeStamp ReleaseTime {
       get { return releaseTime_; }
       set {
@@ -1312,6 +1400,7 @@ namespace DynStacking.RollingMill.DataModel {
     public const int DueDateFieldNumber = 9;
     private global::DynStacking.RollingMill.DataModel.TimeStamp dueDate_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::DynStacking.RollingMill.DataModel.TimeStamp DueDate {
       get { return dueDate_; }
       set {
@@ -1323,6 +1412,7 @@ namespace DynStacking.RollingMill.DataModel {
     public const int RequiredCraneIdFieldNumber = 10;
     private int requiredCraneId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int RequiredCraneId {
       get { return requiredCraneId_; }
       set {
@@ -1336,16 +1426,30 @@ namespace DynStacking.RollingMill.DataModel {
         = pb::FieldCodec.ForInt32(88);
     private readonly pbc::RepeatedField<int> protobufPredecessorIds_ = new pbc::RepeatedField<int>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<int> ProtobufPredecessorIds {
       get { return protobufPredecessorIds_; }
     }
 
+    /// <summary>Field number for the "ProtobufMovedBlockIds" field.</summary>
+    public const int ProtobufMovedBlockIdsFieldNumber = 12;
+    private static readonly pb::FieldCodec<int> _repeated_protobufMovedBlockIds_codec
+        = pb::FieldCodec.ForInt32(96);
+    private readonly pbc::RepeatedField<int> protobufMovedBlockIds_ = new pbc::RepeatedField<int>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<int> ProtobufMovedBlockIds {
+      get { return protobufMovedBlockIds_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as CraneMove);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(CraneMove other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1362,10 +1466,12 @@ namespace DynStacking.RollingMill.DataModel {
       if (!object.Equals(DueDate, other.DueDate)) return false;
       if (RequiredCraneId != other.RequiredCraneId) return false;
       if(!protobufPredecessorIds_.Equals(other.protobufPredecessorIds_)) return false;
+      if(!protobufMovedBlockIds_.Equals(other.protobufMovedBlockIds_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Id != 0) hash ^= Id.GetHashCode();
@@ -1377,6 +1483,7 @@ namespace DynStacking.RollingMill.DataModel {
       if (dueDate_ != null) hash ^= DueDate.GetHashCode();
       if (RequiredCraneId != 0) hash ^= RequiredCraneId.GetHashCode();
       hash ^= protobufPredecessorIds_.GetHashCode();
+      hash ^= protobufMovedBlockIds_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1384,11 +1491,13 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1426,6 +1535,7 @@ namespace DynStacking.RollingMill.DataModel {
         output.WriteInt32(RequiredCraneId);
       }
       protobufPredecessorIds_.WriteTo(output, _repeated_protobufPredecessorIds_codec);
+      protobufMovedBlockIds_.WriteTo(output, _repeated_protobufMovedBlockIds_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1434,6 +1544,7 @@ namespace DynStacking.RollingMill.DataModel {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Id != 0) {
         output.WriteRawTag(8);
@@ -1468,6 +1579,7 @@ namespace DynStacking.RollingMill.DataModel {
         output.WriteInt32(RequiredCraneId);
       }
       protobufPredecessorIds_.WriteTo(ref output, _repeated_protobufPredecessorIds_codec);
+      protobufMovedBlockIds_.WriteTo(ref output, _repeated_protobufMovedBlockIds_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1475,6 +1587,7 @@ namespace DynStacking.RollingMill.DataModel {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Id != 0) {
@@ -1502,6 +1615,7 @@ namespace DynStacking.RollingMill.DataModel {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(RequiredCraneId);
       }
       size += protobufPredecessorIds_.CalculateSize(_repeated_protobufPredecessorIds_codec);
+      size += protobufMovedBlockIds_.CalculateSize(_repeated_protobufMovedBlockIds_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1509,6 +1623,7 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(CraneMove other) {
       if (other == null) {
         return;
@@ -1544,10 +1659,12 @@ namespace DynStacking.RollingMill.DataModel {
         RequiredCraneId = other.RequiredCraneId;
       }
       protobufPredecessorIds_.Add(other.protobufPredecessorIds_);
+      protobufMovedBlockIds_.Add(other.protobufMovedBlockIds_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1601,6 +1718,11 @@ namespace DynStacking.RollingMill.DataModel {
             protobufPredecessorIds_.AddEntriesFrom(input, _repeated_protobufPredecessorIds_codec);
             break;
           }
+          case 98:
+          case 96: {
+            protobufMovedBlockIds_.AddEntriesFrom(input, _repeated_protobufMovedBlockIds_codec);
+            break;
+          }
         }
       }
     #endif
@@ -1608,6 +1730,7 @@ namespace DynStacking.RollingMill.DataModel {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1658,6 +1781,11 @@ namespace DynStacking.RollingMill.DataModel {
             protobufPredecessorIds_.AddEntriesFrom(ref input, _repeated_protobufPredecessorIds_codec);
             break;
           }
+          case 98:
+          case 96: {
+            protobufMovedBlockIds_.AddEntriesFrom(ref input, _repeated_protobufMovedBlockIds_codec);
+            break;
+          }
         }
       }
     }
@@ -1673,19 +1801,23 @@ namespace DynStacking.RollingMill.DataModel {
     private static readonly pb::MessageParser<CraneSchedule> _parser = new pb::MessageParser<CraneSchedule>(() => new CraneSchedule());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<CraneSchedule> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::DynStacking.RollingMill.DataModel.RollingmillModelReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CraneSchedule() {
       OnConstruction();
     }
@@ -1693,6 +1825,7 @@ namespace DynStacking.RollingMill.DataModel {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CraneSchedule(CraneSchedule other) : this() {
       scheduleNr_ = other.scheduleNr_;
       activities_ = other.activities_.Clone();
@@ -1700,6 +1833,7 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CraneSchedule Clone() {
       return new CraneSchedule(this);
     }
@@ -1708,6 +1842,7 @@ namespace DynStacking.RollingMill.DataModel {
     public const int ScheduleNrFieldNumber = 1;
     private int scheduleNr_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int ScheduleNr {
       get { return scheduleNr_; }
       set {
@@ -1721,16 +1856,19 @@ namespace DynStacking.RollingMill.DataModel {
         = pb::FieldCodec.ForMessage(18, global::DynStacking.RollingMill.DataModel.CraneScheduleActivity.Parser);
     private readonly pbc::RepeatedField<global::DynStacking.RollingMill.DataModel.CraneScheduleActivity> activities_ = new pbc::RepeatedField<global::DynStacking.RollingMill.DataModel.CraneScheduleActivity>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::DynStacking.RollingMill.DataModel.CraneScheduleActivity> Activities {
       get { return activities_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as CraneSchedule);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(CraneSchedule other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1744,6 +1882,7 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (ScheduleNr != 0) hash ^= ScheduleNr.GetHashCode();
@@ -1755,11 +1894,13 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1777,6 +1918,7 @@ namespace DynStacking.RollingMill.DataModel {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ScheduleNr != 0) {
         output.WriteRawTag(8);
@@ -1790,6 +1932,7 @@ namespace DynStacking.RollingMill.DataModel {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (ScheduleNr != 0) {
@@ -1803,6 +1946,7 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(CraneSchedule other) {
       if (other == null) {
         return;
@@ -1815,6 +1959,7 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1840,6 +1985,7 @@ namespace DynStacking.RollingMill.DataModel {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1870,19 +2016,23 @@ namespace DynStacking.RollingMill.DataModel {
     private static readonly pb::MessageParser<CraneScheduleActivity> _parser = new pb::MessageParser<CraneScheduleActivity>(() => new CraneScheduleActivity());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<CraneScheduleActivity> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::DynStacking.RollingMill.DataModel.RollingmillModelReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CraneScheduleActivity() {
       OnConstruction();
     }
@@ -1890,14 +2040,17 @@ namespace DynStacking.RollingMill.DataModel {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CraneScheduleActivity(CraneScheduleActivity other) : this() {
       moveId_ = other.moveId_;
       craneId_ = other.craneId_;
       priority_ = other.priority_;
+      state_ = other.state_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CraneScheduleActivity Clone() {
       return new CraneScheduleActivity(this);
     }
@@ -1906,6 +2059,7 @@ namespace DynStacking.RollingMill.DataModel {
     public const int MoveIdFieldNumber = 1;
     private int moveId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int MoveId {
       get { return moveId_; }
       set {
@@ -1917,6 +2071,7 @@ namespace DynStacking.RollingMill.DataModel {
     public const int CraneIdFieldNumber = 2;
     private int craneId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CraneId {
       get { return craneId_; }
       set {
@@ -1928,6 +2083,7 @@ namespace DynStacking.RollingMill.DataModel {
     public const int PriorityFieldNumber = 3;
     private int priority_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Priority {
       get { return priority_; }
       set {
@@ -1935,12 +2091,26 @@ namespace DynStacking.RollingMill.DataModel {
       }
     }
 
+    /// <summary>Field number for the "State" field.</summary>
+    public const int StateFieldNumber = 4;
+    private global::DynStacking.RollingMill.DataModel.CraneScheduleActivityState state_ = global::DynStacking.RollingMill.DataModel.CraneScheduleActivityState.Created;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::DynStacking.RollingMill.DataModel.CraneScheduleActivityState State {
+      get { return state_; }
+      set {
+        state_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as CraneScheduleActivity);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(CraneScheduleActivity other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1951,15 +2121,18 @@ namespace DynStacking.RollingMill.DataModel {
       if (MoveId != other.MoveId) return false;
       if (CraneId != other.CraneId) return false;
       if (Priority != other.Priority) return false;
+      if (State != other.State) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (MoveId != 0) hash ^= MoveId.GetHashCode();
       if (CraneId != 0) hash ^= CraneId.GetHashCode();
       if (Priority != 0) hash ^= Priority.GetHashCode();
+      if (State != global::DynStacking.RollingMill.DataModel.CraneScheduleActivityState.Created) hash ^= State.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1967,11 +2140,13 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1988,6 +2163,10 @@ namespace DynStacking.RollingMill.DataModel {
         output.WriteRawTag(24);
         output.WriteInt32(Priority);
       }
+      if (State != global::DynStacking.RollingMill.DataModel.CraneScheduleActivityState.Created) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) State);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1996,6 +2175,7 @@ namespace DynStacking.RollingMill.DataModel {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (MoveId != 0) {
         output.WriteRawTag(8);
@@ -2009,6 +2189,10 @@ namespace DynStacking.RollingMill.DataModel {
         output.WriteRawTag(24);
         output.WriteInt32(Priority);
       }
+      if (State != global::DynStacking.RollingMill.DataModel.CraneScheduleActivityState.Created) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) State);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2016,6 +2200,7 @@ namespace DynStacking.RollingMill.DataModel {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (MoveId != 0) {
@@ -2027,6 +2212,9 @@ namespace DynStacking.RollingMill.DataModel {
       if (Priority != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Priority);
       }
+      if (State != global::DynStacking.RollingMill.DataModel.CraneScheduleActivityState.Created) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2034,6 +2222,7 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(CraneScheduleActivity other) {
       if (other == null) {
         return;
@@ -2047,10 +2236,14 @@ namespace DynStacking.RollingMill.DataModel {
       if (other.Priority != 0) {
         Priority = other.Priority;
       }
+      if (other.State != global::DynStacking.RollingMill.DataModel.CraneScheduleActivityState.Created) {
+        State = other.State;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2073,6 +2266,10 @@ namespace DynStacking.RollingMill.DataModel {
             Priority = input.ReadInt32();
             break;
           }
+          case 32: {
+            State = (global::DynStacking.RollingMill.DataModel.CraneScheduleActivityState) input.ReadEnum();
+            break;
+          }
         }
       }
     #endif
@@ -2080,6 +2277,7 @@ namespace DynStacking.RollingMill.DataModel {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2099,6 +2297,10 @@ namespace DynStacking.RollingMill.DataModel {
             Priority = input.ReadInt32();
             break;
           }
+          case 32: {
+            State = (global::DynStacking.RollingMill.DataModel.CraneScheduleActivityState) input.ReadEnum();
+            break;
+          }
         }
       }
     }
@@ -2114,19 +2316,23 @@ namespace DynStacking.RollingMill.DataModel {
     private static readonly pb::MessageParser<Location> _parser = new pb::MessageParser<Location>(() => new Location());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Location> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::DynStacking.RollingMill.DataModel.RollingmillModelReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Location() {
       OnConstruction();
     }
@@ -2134,6 +2340,7 @@ namespace DynStacking.RollingMill.DataModel {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Location(Location other) : this() {
       id_ = other.id_;
       girderPosition_ = other.girderPosition_;
@@ -2145,6 +2352,7 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Location Clone() {
       return new Location(this);
     }
@@ -2153,6 +2361,7 @@ namespace DynStacking.RollingMill.DataModel {
     public const int IdFieldNumber = 1;
     private int id_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Id {
       get { return id_; }
       set {
@@ -2164,6 +2373,7 @@ namespace DynStacking.RollingMill.DataModel {
     public const int GirderPositionFieldNumber = 2;
     private double girderPosition_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double GirderPosition {
       get { return girderPosition_; }
       set {
@@ -2175,6 +2385,7 @@ namespace DynStacking.RollingMill.DataModel {
     public const int MaxHeightFieldNumber = 3;
     private int maxHeight_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int MaxHeight {
       get { return maxHeight_; }
       set {
@@ -2186,6 +2397,7 @@ namespace DynStacking.RollingMill.DataModel {
     public const int StackFieldNumber = 4;
     private global::DynStacking.RollingMill.DataModel.Stack stack_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::DynStacking.RollingMill.DataModel.Stack Stack {
       get { return stack_; }
       set {
@@ -2197,6 +2409,7 @@ namespace DynStacking.RollingMill.DataModel {
     public const int TypeFieldNumber = 5;
     private global::DynStacking.RollingMill.DataModel.StackTypes type_ = global::DynStacking.RollingMill.DataModel.StackTypes.ArrivalStack;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::DynStacking.RollingMill.DataModel.StackTypes Type {
       get { return type_; }
       set {
@@ -2208,6 +2421,7 @@ namespace DynStacking.RollingMill.DataModel {
     public const int MillTypeFieldNumber = 6;
     private global::DynStacking.RollingMill.DataModel.MillTypes millType_ = global::DynStacking.RollingMill.DataModel.MillTypes.A;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::DynStacking.RollingMill.DataModel.MillTypes MillType {
       get { return millType_; }
       set {
@@ -2216,11 +2430,13 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Location);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Location other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2238,6 +2454,7 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Id != 0) hash ^= Id.GetHashCode();
@@ -2253,11 +2470,13 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2294,6 +2513,7 @@ namespace DynStacking.RollingMill.DataModel {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Id != 0) {
         output.WriteRawTag(8);
@@ -2326,6 +2546,7 @@ namespace DynStacking.RollingMill.DataModel {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Id != 0) {
@@ -2353,6 +2574,7 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Location other) {
       if (other == null) {
         return;
@@ -2382,6 +2604,7 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2426,6 +2649,7 @@ namespace DynStacking.RollingMill.DataModel {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2475,19 +2699,23 @@ namespace DynStacking.RollingMill.DataModel {
     private static readonly pb::MessageParser<MoveRequest> _parser = new pb::MessageParser<MoveRequest>(() => new MoveRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<MoveRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::DynStacking.RollingMill.DataModel.RollingmillModelReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MoveRequest() {
       OnConstruction();
     }
@@ -2495,6 +2723,7 @@ namespace DynStacking.RollingMill.DataModel {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MoveRequest(MoveRequest other) : this() {
       id_ = other.id_;
       targetLocationId_ = other.targetLocationId_;
@@ -2504,6 +2733,7 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MoveRequest Clone() {
       return new MoveRequest(this);
     }
@@ -2512,6 +2742,7 @@ namespace DynStacking.RollingMill.DataModel {
     public const int IdFieldNumber = 1;
     private int id_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Id {
       get { return id_; }
       set {
@@ -2523,6 +2754,7 @@ namespace DynStacking.RollingMill.DataModel {
     public const int TargetLocationIdFieldNumber = 2;
     private int targetLocationId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int TargetLocationId {
       get { return targetLocationId_; }
       set {
@@ -2534,6 +2766,7 @@ namespace DynStacking.RollingMill.DataModel {
     public const int BlockIdFieldNumber = 3;
     private int blockId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int BlockId {
       get { return blockId_; }
       set {
@@ -2545,6 +2778,7 @@ namespace DynStacking.RollingMill.DataModel {
     public const int DueDateFieldNumber = 4;
     private global::DynStacking.RollingMill.DataModel.TimeStamp dueDate_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::DynStacking.RollingMill.DataModel.TimeStamp DueDate {
       get { return dueDate_; }
       set {
@@ -2553,11 +2787,13 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as MoveRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(MoveRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2573,6 +2809,7 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Id != 0) hash ^= Id.GetHashCode();
@@ -2586,11 +2823,13 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2619,6 +2858,7 @@ namespace DynStacking.RollingMill.DataModel {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Id != 0) {
         output.WriteRawTag(8);
@@ -2643,6 +2883,7 @@ namespace DynStacking.RollingMill.DataModel {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Id != 0) {
@@ -2664,6 +2905,7 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(MoveRequest other) {
       if (other == null) {
         return;
@@ -2687,6 +2929,7 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2723,6 +2966,7 @@ namespace DynStacking.RollingMill.DataModel {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2764,19 +3008,23 @@ namespace DynStacking.RollingMill.DataModel {
     private static readonly pb::MessageParser<Performance> _parser = new pb::MessageParser<Performance>(() => new Performance());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Performance> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::DynStacking.RollingMill.DataModel.RollingmillModelReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Performance() {
       OnConstruction();
     }
@@ -2784,6 +3032,7 @@ namespace DynStacking.RollingMill.DataModel {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Performance(Performance other) : this() {
       craneManipulations_ = other.craneManipulations_;
       serviceLevelMean_ = other.serviceLevelMean_;
@@ -2803,6 +3052,7 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Performance Clone() {
       return new Performance(this);
     }
@@ -2811,6 +3061,7 @@ namespace DynStacking.RollingMill.DataModel {
     public const int CraneManipulationsFieldNumber = 1;
     private int craneManipulations_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CraneManipulations {
       get { return craneManipulations_; }
       set {
@@ -2822,6 +3073,7 @@ namespace DynStacking.RollingMill.DataModel {
     public const int ServiceLevelMeanFieldNumber = 2;
     private double serviceLevelMean_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double ServiceLevelMean {
       get { return serviceLevelMean_; }
       set {
@@ -2833,6 +3085,7 @@ namespace DynStacking.RollingMill.DataModel {
     public const int LeadTimeMeanFieldNumber = 3;
     private double leadTimeMean_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double LeadTimeMean {
       get { return leadTimeMean_; }
       set {
@@ -2844,6 +3097,7 @@ namespace DynStacking.RollingMill.DataModel {
     public const int DeliveredBlocksFieldNumber = 4;
     private int deliveredBlocks_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int DeliveredBlocks {
       get { return deliveredBlocks_; }
       set {
@@ -2855,6 +3109,7 @@ namespace DynStacking.RollingMill.DataModel {
     public const int TotalBlocksOnTimeFieldNumber = 5;
     private int totalBlocksOnTime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int TotalBlocksOnTime {
       get { return totalBlocksOnTime_; }
       set {
@@ -2866,6 +3121,7 @@ namespace DynStacking.RollingMill.DataModel {
     public const int TardinessMeanFieldNumber = 6;
     private double tardinessMean_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double TardinessMean {
       get { return tardinessMean_; }
       set {
@@ -2877,6 +3133,7 @@ namespace DynStacking.RollingMill.DataModel {
     public const int ShuffleBufferUtilizationMeanFieldNumber = 7;
     private double shuffleBufferUtilizationMean_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double ShuffleBufferUtilizationMean {
       get { return shuffleBufferUtilizationMean_; }
       set {
@@ -2888,6 +3145,7 @@ namespace DynStacking.RollingMill.DataModel {
     public const int SortedBufferUtilizationMeanFieldNumber = 8;
     private double sortedBufferUtilizationMean_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double SortedBufferUtilizationMean {
       get { return sortedBufferUtilizationMean_; }
       set {
@@ -2899,6 +3157,7 @@ namespace DynStacking.RollingMill.DataModel {
     public const int ShuffleCraneUtilizationMeanFieldNumber = 9;
     private double shuffleCraneUtilizationMean_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double ShuffleCraneUtilizationMean {
       get { return shuffleCraneUtilizationMean_; }
       set {
@@ -2910,6 +3169,7 @@ namespace DynStacking.RollingMill.DataModel {
     public const int HandoverCraneUtilizationMeanFieldNumber = 10;
     private double handoverCraneUtilizationMean_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double HandoverCraneUtilizationMean {
       get { return handoverCraneUtilizationMean_; }
       set {
@@ -2921,6 +3181,7 @@ namespace DynStacking.RollingMill.DataModel {
     public const int MillAUtilizationMeanFieldNumber = 11;
     private double millAUtilizationMean_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double MillAUtilizationMean {
       get { return millAUtilizationMean_; }
       set {
@@ -2932,6 +3193,7 @@ namespace DynStacking.RollingMill.DataModel {
     public const int MillBUtilizationMeanFieldNumber = 12;
     private double millBUtilizationMean_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double MillBUtilizationMean {
       get { return millBUtilizationMean_; }
       set {
@@ -2943,6 +3205,7 @@ namespace DynStacking.RollingMill.DataModel {
     public const int RollingProgramMessupsFieldNumber = 13;
     private int rollingProgramMessups_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int RollingProgramMessups {
       get { return rollingProgramMessups_; }
       set {
@@ -2954,6 +3217,7 @@ namespace DynStacking.RollingMill.DataModel {
     public const int BlockedMillTimeFieldNumber = 14;
     private double blockedMillTime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double BlockedMillTime {
       get { return blockedMillTime_; }
       set {
@@ -2962,11 +3226,13 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Performance);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Performance other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2992,6 +3258,7 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (CraneManipulations != 0) hash ^= CraneManipulations.GetHashCode();
@@ -3015,11 +3282,13 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3088,6 +3357,7 @@ namespace DynStacking.RollingMill.DataModel {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (CraneManipulations != 0) {
         output.WriteRawTag(8);
@@ -3152,6 +3422,7 @@ namespace DynStacking.RollingMill.DataModel {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (CraneManipulations != 0) {
@@ -3203,6 +3474,7 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Performance other) {
       if (other == null) {
         return;
@@ -3253,6 +3525,7 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3326,6 +3599,7 @@ namespace DynStacking.RollingMill.DataModel {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3404,19 +3678,23 @@ namespace DynStacking.RollingMill.DataModel {
     private static readonly pb::MessageParser<PlannedCraneMoves> _parser = new pb::MessageParser<PlannedCraneMoves>(() => new PlannedCraneMoves());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<PlannedCraneMoves> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::DynStacking.RollingMill.DataModel.RollingmillModelReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PlannedCraneMoves() {
       OnConstruction();
     }
@@ -3424,6 +3702,7 @@ namespace DynStacking.RollingMill.DataModel {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PlannedCraneMoves(PlannedCraneMoves other) : this() {
       sequenceNr_ = other.sequenceNr_;
       moves_ = other.moves_.Clone();
@@ -3431,6 +3710,7 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PlannedCraneMoves Clone() {
       return new PlannedCraneMoves(this);
     }
@@ -3439,6 +3719,7 @@ namespace DynStacking.RollingMill.DataModel {
     public const int SequenceNrFieldNumber = 1;
     private int sequenceNr_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int SequenceNr {
       get { return sequenceNr_; }
       set {
@@ -3452,16 +3733,19 @@ namespace DynStacking.RollingMill.DataModel {
         = pb::FieldCodec.ForMessage(18, global::DynStacking.RollingMill.DataModel.CraneMove.Parser);
     private readonly pbc::RepeatedField<global::DynStacking.RollingMill.DataModel.CraneMove> moves_ = new pbc::RepeatedField<global::DynStacking.RollingMill.DataModel.CraneMove>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::DynStacking.RollingMill.DataModel.CraneMove> Moves {
       get { return moves_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as PlannedCraneMoves);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(PlannedCraneMoves other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3475,6 +3759,7 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (SequenceNr != 0) hash ^= SequenceNr.GetHashCode();
@@ -3486,11 +3771,13 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3508,6 +3795,7 @@ namespace DynStacking.RollingMill.DataModel {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (SequenceNr != 0) {
         output.WriteRawTag(8);
@@ -3521,6 +3809,7 @@ namespace DynStacking.RollingMill.DataModel {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (SequenceNr != 0) {
@@ -3534,6 +3823,7 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(PlannedCraneMoves other) {
       if (other == null) {
         return;
@@ -3546,6 +3836,7 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3571,6 +3862,7 @@ namespace DynStacking.RollingMill.DataModel {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3601,19 +3893,23 @@ namespace DynStacking.RollingMill.DataModel {
     private static readonly pb::MessageParser<Stack> _parser = new pb::MessageParser<Stack>(() => new Stack());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Stack> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::DynStacking.RollingMill.DataModel.RollingmillModelReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Stack() {
       OnConstruction();
     }
@@ -3621,12 +3917,14 @@ namespace DynStacking.RollingMill.DataModel {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Stack(Stack other) : this() {
       bottomToTop_ = other.bottomToTop_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Stack Clone() {
       return new Stack(this);
     }
@@ -3637,16 +3935,19 @@ namespace DynStacking.RollingMill.DataModel {
         = pb::FieldCodec.ForMessage(10, global::DynStacking.RollingMill.DataModel.Block.Parser);
     private readonly pbc::RepeatedField<global::DynStacking.RollingMill.DataModel.Block> bottomToTop_ = new pbc::RepeatedField<global::DynStacking.RollingMill.DataModel.Block>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::DynStacking.RollingMill.DataModel.Block> BottomToTop {
       get { return bottomToTop_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Stack);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Stack other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3659,6 +3960,7 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= bottomToTop_.GetHashCode();
@@ -3669,11 +3971,13 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3687,6 +3991,7 @@ namespace DynStacking.RollingMill.DataModel {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       bottomToTop_.WriteTo(ref output, _repeated_bottomToTop_codec);
       if (_unknownFields != null) {
@@ -3696,6 +4001,7 @@ namespace DynStacking.RollingMill.DataModel {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += bottomToTop_.CalculateSize(_repeated_bottomToTop_codec);
@@ -3706,6 +4012,7 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Stack other) {
       if (other == null) {
         return;
@@ -3715,6 +4022,7 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3736,6 +4044,7 @@ namespace DynStacking.RollingMill.DataModel {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3762,19 +4071,23 @@ namespace DynStacking.RollingMill.DataModel {
     private static readonly pb::MessageParser<TimeStamp> _parser = new pb::MessageParser<TimeStamp>(() => new TimeStamp());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<TimeStamp> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::DynStacking.RollingMill.DataModel.RollingmillModelReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TimeStamp() {
       OnConstruction();
     }
@@ -3782,12 +4095,14 @@ namespace DynStacking.RollingMill.DataModel {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TimeStamp(TimeStamp other) : this() {
       milliSeconds_ = other.milliSeconds_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TimeStamp Clone() {
       return new TimeStamp(this);
     }
@@ -3796,6 +4111,7 @@ namespace DynStacking.RollingMill.DataModel {
     public const int MilliSecondsFieldNumber = 1;
     private long milliSeconds_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long MilliSeconds {
       get { return milliSeconds_; }
       set {
@@ -3804,11 +4120,13 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as TimeStamp);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(TimeStamp other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3821,6 +4139,7 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (MilliSeconds != 0L) hash ^= MilliSeconds.GetHashCode();
@@ -3831,11 +4150,13 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3852,6 +4173,7 @@ namespace DynStacking.RollingMill.DataModel {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (MilliSeconds != 0L) {
         output.WriteRawTag(8);
@@ -3864,6 +4186,7 @@ namespace DynStacking.RollingMill.DataModel {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (MilliSeconds != 0L) {
@@ -3876,6 +4199,7 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(TimeStamp other) {
       if (other == null) {
         return;
@@ -3887,6 +4211,7 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3908,6 +4233,7 @@ namespace DynStacking.RollingMill.DataModel {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3934,19 +4260,23 @@ namespace DynStacking.RollingMill.DataModel {
     private static readonly pb::MessageParser<Uncertainties> _parser = new pb::MessageParser<Uncertainties>(() => new Uncertainties());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Uncertainties> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::DynStacking.RollingMill.DataModel.RollingmillModelReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Uncertainties() {
       OnConstruction();
     }
@@ -3954,6 +4284,7 @@ namespace DynStacking.RollingMill.DataModel {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Uncertainties(Uncertainties other) : this() {
       arrivalIntervals_ = other.arrivalIntervals_.Clone();
       craneMoveTimes_ = other.craneMoveTimes_.Clone();
@@ -3962,6 +4293,7 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Uncertainties Clone() {
       return new Uncertainties(this);
     }
@@ -3972,6 +4304,7 @@ namespace DynStacking.RollingMill.DataModel {
         = pb::FieldCodec.ForDouble(9);
     private readonly pbc::RepeatedField<double> arrivalIntervals_ = new pbc::RepeatedField<double>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<double> ArrivalIntervals {
       get { return arrivalIntervals_; }
     }
@@ -3982,6 +4315,7 @@ namespace DynStacking.RollingMill.DataModel {
         = pb::FieldCodec.ForDouble(17);
     private readonly pbc::RepeatedField<double> craneMoveTimes_ = new pbc::RepeatedField<double>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<double> CraneMoveTimes {
       get { return craneMoveTimes_; }
     }
@@ -3992,16 +4326,19 @@ namespace DynStacking.RollingMill.DataModel {
         = pb::FieldCodec.ForDouble(25);
     private readonly pbc::RepeatedField<double> millBlockIntervals_ = new pbc::RepeatedField<double>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<double> MillBlockIntervals {
       get { return millBlockIntervals_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Uncertainties);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Uncertainties other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4016,6 +4353,7 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= arrivalIntervals_.GetHashCode();
@@ -4028,11 +4366,13 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -4048,6 +4388,7 @@ namespace DynStacking.RollingMill.DataModel {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       arrivalIntervals_.WriteTo(ref output, _repeated_arrivalIntervals_codec);
       craneMoveTimes_.WriteTo(ref output, _repeated_craneMoveTimes_codec);
@@ -4059,6 +4400,7 @@ namespace DynStacking.RollingMill.DataModel {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += arrivalIntervals_.CalculateSize(_repeated_arrivalIntervals_codec);
@@ -4071,6 +4413,7 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Uncertainties other) {
       if (other == null) {
         return;
@@ -4082,6 +4425,7 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -4114,6 +4458,7 @@ namespace DynStacking.RollingMill.DataModel {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -4151,19 +4496,23 @@ namespace DynStacking.RollingMill.DataModel {
     private static readonly pb::MessageParser<World> _parser = new pb::MessageParser<World>(() => new World());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<World> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::DynStacking.RollingMill.DataModel.RollingmillModelReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public World() {
       OnConstruction();
     }
@@ -4171,6 +4520,7 @@ namespace DynStacking.RollingMill.DataModel {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public World(World other) : this() {
       now_ = other.now_ != null ? other.now_.Clone() : null;
       height_ = other.height_;
@@ -4189,6 +4539,7 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public World Clone() {
       return new World(this);
     }
@@ -4197,6 +4548,7 @@ namespace DynStacking.RollingMill.DataModel {
     public const int NowFieldNumber = 1;
     private global::DynStacking.RollingMill.DataModel.TimeStamp now_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::DynStacking.RollingMill.DataModel.TimeStamp Now {
       get { return now_; }
       set {
@@ -4208,6 +4560,7 @@ namespace DynStacking.RollingMill.DataModel {
     public const int HeightFieldNumber = 2;
     private int height_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Height {
       get { return height_; }
       set {
@@ -4219,6 +4572,7 @@ namespace DynStacking.RollingMill.DataModel {
     public const int WidthFieldNumber = 3;
     private double width_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double Width {
       get { return width_; }
       set {
@@ -4232,6 +4586,7 @@ namespace DynStacking.RollingMill.DataModel {
         = pb::FieldCodec.ForMessage(34, global::DynStacking.RollingMill.DataModel.Location.Parser);
     private readonly pbc::RepeatedField<global::DynStacking.RollingMill.DataModel.Location> locations_ = new pbc::RepeatedField<global::DynStacking.RollingMill.DataModel.Location>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::DynStacking.RollingMill.DataModel.Location> Locations {
       get { return locations_; }
     }
@@ -4242,6 +4597,7 @@ namespace DynStacking.RollingMill.DataModel {
         = pb::FieldCodec.ForMessage(42, global::DynStacking.RollingMill.DataModel.Block.Parser);
     private readonly pbc::RepeatedField<global::DynStacking.RollingMill.DataModel.Block> blocksAtSlabYard_ = new pbc::RepeatedField<global::DynStacking.RollingMill.DataModel.Block>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::DynStacking.RollingMill.DataModel.Block> BlocksAtSlabYard {
       get { return blocksAtSlabYard_; }
     }
@@ -4252,6 +4608,7 @@ namespace DynStacking.RollingMill.DataModel {
         = pb::FieldCodec.ForMessage(50, global::DynStacking.RollingMill.DataModel.Arrival.Parser);
     private readonly pbc::RepeatedField<global::DynStacking.RollingMill.DataModel.Arrival> arrivalsFromSlabYard_ = new pbc::RepeatedField<global::DynStacking.RollingMill.DataModel.Arrival>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::DynStacking.RollingMill.DataModel.Arrival> ArrivalsFromSlabYard {
       get { return arrivalsFromSlabYard_; }
     }
@@ -4260,6 +4617,7 @@ namespace DynStacking.RollingMill.DataModel {
     public const int CraneMovesFieldNumber = 7;
     private global::DynStacking.RollingMill.DataModel.PlannedCraneMoves craneMoves_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::DynStacking.RollingMill.DataModel.PlannedCraneMoves CraneMoves {
       get { return craneMoves_; }
       set {
@@ -4273,6 +4631,7 @@ namespace DynStacking.RollingMill.DataModel {
         = pb::FieldCodec.ForMessage(66, global::DynStacking.RollingMill.DataModel.MoveRequest.Parser);
     private readonly pbc::RepeatedField<global::DynStacking.RollingMill.DataModel.MoveRequest> moveRequests_ = new pbc::RepeatedField<global::DynStacking.RollingMill.DataModel.MoveRequest>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::DynStacking.RollingMill.DataModel.MoveRequest> MoveRequests {
       get { return moveRequests_; }
     }
@@ -4281,6 +4640,7 @@ namespace DynStacking.RollingMill.DataModel {
     public const int CraneScheduleFieldNumber = 9;
     private global::DynStacking.RollingMill.DataModel.CraneSchedule craneSchedule_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::DynStacking.RollingMill.DataModel.CraneSchedule CraneSchedule {
       get { return craneSchedule_; }
       set {
@@ -4292,6 +4652,7 @@ namespace DynStacking.RollingMill.DataModel {
     public const int ShuffleCraneFieldNumber = 10;
     private global::DynStacking.RollingMill.DataModel.Crane shuffleCrane_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::DynStacking.RollingMill.DataModel.Crane ShuffleCrane {
       get { return shuffleCrane_; }
       set {
@@ -4303,6 +4664,7 @@ namespace DynStacking.RollingMill.DataModel {
     public const int HandoverCraneFieldNumber = 11;
     private global::DynStacking.RollingMill.DataModel.Crane handoverCrane_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::DynStacking.RollingMill.DataModel.Crane HandoverCrane {
       get { return handoverCrane_; }
       set {
@@ -4314,6 +4676,7 @@ namespace DynStacking.RollingMill.DataModel {
     public const int KPIsFieldNumber = 12;
     private global::DynStacking.RollingMill.DataModel.Performance kPIs_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::DynStacking.RollingMill.DataModel.Performance KPIs {
       get { return kPIs_; }
       set {
@@ -4325,6 +4688,7 @@ namespace DynStacking.RollingMill.DataModel {
     public const int ObservationDataFieldNumber = 13;
     private global::DynStacking.RollingMill.DataModel.Uncertainties observationData_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::DynStacking.RollingMill.DataModel.Uncertainties ObservationData {
       get { return observationData_; }
       set {
@@ -4333,11 +4697,13 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as World);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(World other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4362,6 +4728,7 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (now_ != null) hash ^= Now.GetHashCode();
@@ -4384,11 +4751,13 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -4441,6 +4810,7 @@ namespace DynStacking.RollingMill.DataModel {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (now_ != null) {
         output.WriteRawTag(10);
@@ -4489,6 +4859,7 @@ namespace DynStacking.RollingMill.DataModel {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (now_ != null) {
@@ -4529,6 +4900,7 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(World other) {
       if (other == null) {
         return;
@@ -4589,6 +4961,7 @@ namespace DynStacking.RollingMill.DataModel {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -4679,6 +5052,7 @@ namespace DynStacking.RollingMill.DataModel {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {

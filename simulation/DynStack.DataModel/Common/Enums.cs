@@ -1,7 +1,9 @@
 ﻿using ProtoBuf;
 
 namespace DynStack.DataModel {
-  [ProtoContract] public enum MoveType {[ProtoEnum] MoveToPickup, [ProtoEnum] PickupAndDropoff }
+  [ProtoContract] public enum CraneScheduleActivityState { [ProtoEnum] Created, [ProtoEnum] Activatable, [ProtoEnum] Active }
+  [ProtoContract] public enum MoveType { [ProtoEnum] MoveToPickup, [ProtoEnum] PickupAndDropoff }
+  [ProtoContract] public enum CraneMoveTermination { [ProtoEnum] Obsolete, [ProtoEnum] Invalid, [ProtoEnum] Success }
 }
 
 namespace DynStack.DataModel.Common {

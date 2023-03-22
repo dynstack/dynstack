@@ -523,8 +523,9 @@ namespace DynStack.Simulation.HS {
       while (true) {
         // uncomment if you prefer world updates only for changes
         //if (_worldChanged) {
+
         if (World.PolicyTime > 0) {
-          // Simulate that the policy took a certain time to calculate
+          // Simulate that the policy took a certain to calculate
           World.PolicyTime = Math.Max(World.PolicyTime - updateInterval, 0L); // milliseconds
         }
 
@@ -534,17 +535,17 @@ namespace DynStack.Simulation.HS {
         World.KPIs.UpstreamUtilizationMean = UpstreamUtilization.Mean;
         World.KPIs.BlockedArrivalTime = (1 - UpstreamUtilization.Mean) * (sim.Now - sim.StartDate).TotalSeconds;
 
-
         if (World.PolicyTime == 0) {
           var sw = Stopwatch.StartNew();
           var schedule = policy?.GetSchedule(World);
           sw.Stop();
           World.PolicyTime = SimulateAsync ? sw.ElapsedMilliseconds : 1L;
-          
-          if (schedule != null) {
+
+          if (schedule != null)
             sim.Process(Crane(schedule, World.PolicyTime));
-          }
+
         }
+
         WorldChanged?.Invoke(this, EventArgs.Empty);
         World.InvalidMoves.Clear();
         _worldChanged = false;

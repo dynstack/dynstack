@@ -26,3 +26,6 @@ Run the model based solver with for hotstorage problem:
 
 Run the starterkit for the rollingmill problem
 > cargo run tcp://1.2.3.4:8080 fbc6b6ab-9786-4068-986d-b0f5da49fa85 RM
+
+Run the starterkit for the cranescheduling problem
+> cargo run tcp://1.2.3.4:8080 fbc6b6ab-9786-4068-986d-b0f5da49fa85 CS

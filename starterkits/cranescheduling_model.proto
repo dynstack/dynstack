@@ -1,0 +1,107 @@
+syntax = "proto3";
+package DynStacking.CraneScheduling.DataModel;
+
+message Block {
+int32 Id = 1;
+int32 Class = 2;
+}
+message Crane {
+int32 Id = 1;
+Stack Load = 2;
+double GirderPosition = 3;
+double HoistLevel = 4;
+int32 CraneCapacity = 5;
+double Width = 6;
+double MinPosition = 7;
+double MaxPosition = 8;
+}
+message CraneMove {
+int32 Id = 1;
+MoveType Type = 2;
+int32 PickupLocationId = 3;
+double PickupGirderPosition = 4;
+int32 DropoffLocationId = 5;
+double DropoffGirderPosition = 6;
+int32 Amount = 7;
+TimeStamp ReleaseTime = 8;
+TimeStamp DueDate = 9;
+int32 RequiredCraneId = 10;
+repeated int32 ProtobufPredecessorIds = 12 [packed = false];
+repeated int32 ProtobufMovedBlockIds = 13 [packed = false];
+}
+message CraneSchedule {
+int32 ScheduleNr = 1;
+repeated CraneScheduleActivity Activities = 2;
+}
+message CraneScheduleActivity {
+int32 MoveId = 1;
+int32 CraneId = 2;
+int32 Priority = 3;
+CraneScheduleActivityState State = 4;
+}
+enum CraneScheduleActivityState {
+Created = 0;
+Activatable = 1;
+Active = 2;
+}
+message CraneSchedulingSolution {
+repeated CraneMove CustomMoves = 1;
+CraneSchedule Schedule = 2;
+}
+message Location {
+int32 Id = 1;
+double GirderPosition = 2;
+int32 MaxHeight = 3;
+Stack Stack = 4;
+StackTypes Type = 5;
+int32 Class = 6;
+}
+message MoveRequest {
+int32 Id = 1;
+int32 TargetLocationId = 2;
+int32 BlockId = 3;
+TimeStamp DueDate = 4;
+}
+enum MoveType {
+MoveToPickup = 0;
+PickupAndDropoff = 1;
+}
+message Performance {
+int32 CraneManipulations = 1;
+int32 UpstreamBlocks = 2;
+int32 DownstreamBlocks = 3;
+int32 DeliveryErrors = 4;
+double TotalGirderDistance = 5;
+double TotalHoistDistance = 6;
+int32 ServicedUpstreamVehicles = 7;
+int32 ServicedDownstreamVehicles = 8;
+double UpstreamServiceTime = 9;
+double DownstreamServiceTime = 10;
+int32 ParkingUpstreamVehicles = 11;
+int32 ParkingDownstreamVehicles = 12;
+double UpstreamParkingTime = 13;
+double DownstreamParkingTime = 14;
+double MaxParkingDuration = 15;
+}
+message Stack {
+repeated Block BottomToTop = 1;
+}
+enum StackTypes {
+ArrivalStack = 0;
+Buffer = 1;
+HandoverStack = 2;
+}
+message TimeStamp {
+int64 MilliSeconds = 1;
+}
+message World {
+TimeStamp Now = 1;
+int32 Height = 2;
+double Width = 3;
+repeated Location Locations = 4;
+repeated CraneMove CraneMoves = 5;
+repeated Crane Cranes = 6;
+repeated MoveRequest MoveRequests = 7;
+CraneSchedule CraneSchedule = 8;
+Performance KPIs = 9;
+}

@@ -44,6 +44,10 @@ namespace DynStack.DataModel {
     /// This is only used when <see cref="Type"/> is set to PickupAndDropoff.
     /// </remarks>
     int Amount { get; }
+    /// <summary>
+    /// The block ids that are manipulated, if any.
+    /// </summary>
+    IList<int> MovedBlockIds { get; }
 
     /// <summary>
     /// The release time, when this move can be performed at the earliest.

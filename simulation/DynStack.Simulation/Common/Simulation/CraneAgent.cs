@@ -11,6 +11,7 @@ namespace DynStack.Simulation {
     int Capacity { get; }
 
     double Width { get; }
+    double HoistLevel { get; }
     CraneAgentState State { get; }
     CraneAgentMode Mode { get; }
     CraneAgentDirection Direction { get; }
@@ -21,6 +22,8 @@ namespace DynStack.Simulation {
     double GoalPosition1 { get; }
     double GoalPosition2 { get; }
     double GetGirderPosition();
+    double GetGirderDistance();
+    double GetHoistDistance();
     bool CanReach(double girderPosition);
 
     void Cancel();
@@ -35,17 +38,25 @@ namespace DynStack.Simulation {
   public enum CraneAgentMode { Idle, Dodge, Work }
 
   public class CraneAgent : ICraneAgent {
-    private IStackingEnvironment _world;
-    private ICrane _crane;
-    private Process _mainProcess;
-    private bool _interruptible;
-    private CraneAgentMode _pendingMode;
-    private double? _pendingPrio;
-    private double _dodgePosition;
+    private readonly Process _mainProcess;
+
+    protected IStackingEnvironment _world;
+    protected ICrane _crane;
+    protected bool _interruptible;
+    protected CraneAgentMode _pendingMode;
+    protected double? _pendingPrio;
+    protected double _dodgePosition;
+    protected double _targetGirderPosition;
+    protected double _girderSpeed;
+    protected double _hoistSpeed;
+    protected double _girderDistance;
+    protected double _hoistDistance;
+    protected TimeStamp _lastUpdate;
 
     public int Id => _crane.Id;
     public int Capacity => _crane.Capacity;
     public double Width => _crane.Width;
+    public double HoistLevel => _crane.HoistLevel;
     public IDistribution<double> GirderSpeed { get; private set; }
     public IDistribution<double> HoistSpeed { get; private set; }
     public IDistribution<double> ManipulationTime { get; private set; }
@@ -61,13 +72,21 @@ namespace DynStack.Simulation {
     }
 
     public double TargetPosition => _targetGirderPosition;
-    public double GoalPosition1 { get; private set; }
-    public double GoalPosition2 { get; private set; }
-    public double? Priority { get; private set; }
+    public double GoalPosition1 { get; protected set; }
+    public double GoalPosition2 { get; protected set; }
+    public double? Priority { get; protected set; }
 
     public double GetGirderPosition() {
       UpdatePosition();
       return _crane.GirderPosition;
+    }
+    public double GetGirderDistance() {
+      UpdatePosition();
+      return _girderDistance;
+    }
+    public double GetHoistDistance() {
+      UpdatePosition();
+      return _hoistDistance;
     }
     public double GetHoistLevel() {
       UpdatePosition();
@@ -136,7 +155,7 @@ namespace DynStack.Simulation {
       }
     }
 
-    private IEnumerable<Event> Main() {
+    protected virtual IEnumerable<Event> Main() {
       while (true) {
         Priority = _pendingPrio;
         Mode = _pendingMode;
@@ -168,9 +187,9 @@ namespace DynStack.Simulation {
             _interruptible = true;
             yield return workingProcess;
             if (_world.Environment.ActiveProcess.HandleFault()) {
-              workingProcess.Interrupt();
+              if (workingProcess.IsAlive) workingProcess.Interrupt();
               _interruptible = false;
-              yield return workingProcess;
+              if (workingProcess.IsAlive) yield return workingProcess;
               continue;
             }
             break;
@@ -179,17 +198,19 @@ namespace DynStack.Simulation {
       }
     }
 
-    private IEnumerable<Event> Working() {
+    protected virtual IEnumerable<Event> Working() {
       State = CraneAgentState.Waiting;
       Utilization?.UpdateTo(0);
       Priority = null;
-      var next = _world.CraneScheduleStore.Get(this);
+      var next = _world.CraneScheduleStore.Get(this, _world);
       _interruptible = true;
       yield return next;
       if (_world.Environment.ActiveProcess.HandleFault()) {
-        _world.CraneScheduleStore.CancelWaiting(next);
+        _world.CraneScheduleStore.Cancel(next);
         yield break;
       }
+
+      if (_pendingMode != CraneAgentMode.Work) yield break;
 
       var move = next.Move;
       if (move.Amount < 0) {
@@ -205,6 +226,8 @@ namespace DynStack.Simulation {
         yield break;
       }
 
+      _world.Environment.Log($"Crane {Id} got move {move.Id} (move blocks [{string.Join(", ", move.MovedBlocks)}] from {move.PickupLocation} to {move.DropoffLocation}).");
+
       if (move.ReleaseTime > _world.Now) {
         // TODO: Throw, ignore, log, wait, ... !?
         yield return _world.Environment.Timeout(move.ReleaseTime - _world.Now);
@@ -213,7 +236,7 @@ namespace DynStack.Simulation {
         }
       }
 
-      Priority = move.Id;
+      Priority = next.Priority;
       State = CraneAgentState.Moving;
       Utilization?.UpdateTo(1);
 
@@ -223,13 +246,18 @@ namespace DynStack.Simulation {
 
       Process doMove;
       yield return (doMove = _world.Environment.Process(MoveCrane(move.PickupGirderPosition, move.DropoffGirderPosition)));
+      GoalPosition1 = GoalPosition2;
 
       if (_world.Environment.ActiveProcess.HandleFault()) {
         doMove.Interrupt();
+        _world.Environment.Log($"Crane {Id} interrupted.");
+        move.Started.Fail();
+        move.Finished.Fail();
         yield break;
       }
 
       if (move.Type == MoveType.MoveToPickup) {
+        move.Started.Succeed();
         move.Finished.Succeed();
         yield break;
       }
@@ -237,11 +265,13 @@ namespace DynStack.Simulation {
       var pickupLoc = _world.LocationResources.Single(x => x.Id == move.PickupLocation);
       if (pickupLoc.Height + _crane.Load.Size < move.Amount) { // any load will first be dropped when picking up blocks
         _world.Environment.Log($"Cannot pickup {move.Amount} blocks from {move.PickupLocation}, only {pickupLoc.Height} blocks there.");
+        move.Started.Fail();
         move.Finished.Fail();
         yield break;
       }
       State = CraneAgentState.Picking;
       _interruptible = false;
+      move.Started.Succeed();
       yield return _world.Environment.Process(MoveHoist(pickupLoc.Height));
       yield return _world.Environment.Process(DoPickupDropoff(pickupLoc, move.Amount));
       yield return _world.Environment.Process(MoveHoist(_world.Height - _crane.Capacity));
@@ -262,7 +292,9 @@ namespace DynStack.Simulation {
         yield return _world.Environment.Process(DoPickupDropoff(dropoffLoc, 0));
       }
 
+      GoalPosition1 = GoalPosition2 = _crane.GirderPosition;
       move.Finished.Succeed();
+      _world.Environment.Log($"Crane {Id} finished move {move.Id} (move blocks [{string.Join(", ", move.MovedBlocks)}] from {move.PickupLocation} to {move.DropoffLocation}).");
 
       if (move.RaiseHoistAfterService) {
         yield return _world.Environment.Process(MoveHoist(_world.Height - _crane.Capacity));
@@ -271,7 +303,7 @@ namespace DynStack.Simulation {
       _interruptible = true;
     }
 
-    private IEnumerable<Event> DoPickupDropoff(ILocationResource loc, int pickupSize) {
+    protected IEnumerable<Event> DoPickupDropoff(ILocationResource loc, int pickupSize) {
       if (_crane.Load.Size > 0) {
         // first drop-off everything
         var time = ManipulationTime.GetValue();
@@ -295,11 +327,7 @@ namespace DynStack.Simulation {
       TriggerWhenPickupOrDropoff();
     }
 
-
-    private double _targetGirderPosition, _girderSpeed, _hoistSpeed;
-    private TimeStamp _lastUpdate;
-
-    private IEnumerable<Event> MoveCrane(double targetPosition, double goalPos2) {
+    protected virtual IEnumerable<Event> MoveCrane(double targetPosition, double goalPos2) {
       UpdatePosition();
       GoalPosition1 = targetPosition;
       GoalPosition2 = goalPos2;
@@ -317,8 +345,15 @@ namespace DynStack.Simulation {
           var sftDist = _crane.Width / 2;
           if (_crane.GirderPosition < _targetGirderPosition) sftDist = -sftDist;
           var stackHeight = _world.HeightBetween(_crane.GirderPosition + sftDist, targetPosition - sftDist);
+
+          Process hoist = null;
           if (_crane.HoistLevel < stackHeight + 1)
-            yield return _world.Environment.Process(MoveHoist(stackHeight + 1));
+            yield return hoist = _world.Environment.Process(MoveHoist(stackHeight + 1));
+
+          if (hoist != null && _world.Environment.ActiveProcess.HandleFault()) {
+            hoist.Interrupt();
+            break;
+          }
 
           _girderSpeed = _targetGirderPosition < _crane.GirderPosition ? -speed : speed;
           var timeout = _world.Environment.Timeout(TimeSpan.FromSeconds(Math.Abs(_targetGirderPosition - _crane.GirderPosition) / Math.Abs(_girderSpeed)));
@@ -340,12 +375,21 @@ namespace DynStack.Simulation {
               _targetGirderPosition = _world.ZoneControl.GetClosestToTarget(this, targetPosition < _crane.GirderPosition
                 ? collider.GetGirderPosition() + collider.Width / 2 + Width / 2
                 : collider.GetGirderPosition() - collider.Width / 2 - Width / 2);
-
+              if (_crane.GirderPosition < targetPosition && _targetGirderPosition > targetPosition
+                || _crane.GirderPosition > targetPosition && _targetGirderPosition < targetPosition)
+                _targetGirderPosition = targetPosition; // don't move past our target
               var sftDist = _crane.Width / 2;
               if (_crane.GirderPosition < _targetGirderPosition) sftDist = -sftDist;
               var stackHeight = _world.HeightBetween(_crane.GirderPosition + sftDist, targetPosition - sftDist);
+
+              Process hoist = null;
               if (_crane.HoistLevel < stackHeight + 1)
-                yield return _world.Environment.Process(MoveHoist(stackHeight + 1));
+                yield return hoist = _world.Environment.Process(MoveHoist(stackHeight + 1));
+
+              if (hoist != null && _world.Environment.ActiveProcess.HandleFault()) {
+                hoist.Interrupt();
+                break;
+              }
 
               _girderSpeed = _targetGirderPosition < _crane.GirderPosition ? -speed : speed;
               var timeout = _world.Environment.Timeout(TimeSpan.FromSeconds(Math.Abs(_targetGirderPosition - _crane.GirderPosition) / Math.Abs(_girderSpeed)));
@@ -362,12 +406,12 @@ namespace DynStack.Simulation {
             var dodgePoint = targetPosition < _crane.GirderPosition ? Math.Max(Math.Max(Math.Max(collider.GetGirderPosition(), collider.GoalPosition1), collider.GoalPosition2), collider.TargetPosition) + collider.Width / 2 + Width / 2
                                                                     : Math.Min(Math.Min(Math.Min(collider.GetGirderPosition(), collider.GoalPosition1), collider.GoalPosition2), collider.TargetPosition) - collider.Width / 2 - Width / 2;
             if (Priority > collider.Priority) {
-              var tgt = _crane.GirderPosition < collider.GetGirderPosition() ? Math.Min(dodgePoint, targetPosition) - 1e-7: Math.Max(dodgePoint, targetPosition) + 1e-7;
+              var tgt = _crane.GirderPosition < collider.GetGirderPosition() ? Math.Min(dodgePoint, targetPosition) - 1e-7 : Math.Max(dodgePoint, targetPosition) + 1e-7;
               if (Math.Abs(tgt - _crane.GirderPosition) > 1e-5) {
                 var oldPrio = Priority;
                 // to propagate priority onto dodgers e.g. 4 -> 4.5 -> 4.75 -> 4.875
                 // this is necessary so that a dodger is able to cause further cranes to dodge
-                Priority = (collider.Priority + Math.Ceiling((collider.Priority ?? 0) + 1e-7)) / 2.0;
+                Priority = ((collider.Priority ?? 0) + Math.Floor((collider.Priority ?? 0) + 1)) / 2.0;
                 if (Math.Abs(_crane.GirderPosition - tgt) < 1e-5) {
                   Utilization?.UpdateTo(0);
                   yield return _world.ReactionTime();
@@ -391,8 +435,15 @@ namespace DynStack.Simulation {
               var sftDist = _crane.Width / 2;
               if (_crane.GirderPosition < _targetGirderPosition) sftDist = -sftDist;
               var stackHeight = _world.HeightBetween(_crane.GirderPosition + sftDist, targetPosition - sftDist);
+
+              Process hoist = null;
               if (_crane.HoistLevel < stackHeight + 1)
-                yield return _world.Environment.Process(MoveHoist(stackHeight + 1));
+                yield return hoist = _world.Environment.Process(MoveHoist(stackHeight + 1));
+
+              if (hoist != null && _world.Environment.ActiveProcess.HandleFault()) {
+                hoist.Interrupt();
+                break;
+              }
 
               _girderSpeed = _targetGirderPosition < _crane.GirderPosition ? -speed : speed;
               var timeout = _world.Environment.Timeout(TimeSpan.FromSeconds(Math.Abs(_targetGirderPosition - _crane.GirderPosition) / Math.Abs(_girderSpeed)));
@@ -404,6 +455,10 @@ namespace DynStack.Simulation {
         }
 
         UpdatePosition();
+
+        if (_world.Environment.ActiveProcess.HandleFault()) {
+          break;
+        }
       }
 
       StopCrane();
@@ -438,7 +493,7 @@ namespace DynStack.Simulation {
       return false;
     }
 
-    private IEnumerable<Event> MoveHoist(double targetLevel) {
+    protected IEnumerable<Event> MoveHoist(double targetLevel) {
       UpdatePosition();
       _hoistSpeed = targetLevel < _crane.HoistLevel ? -HoistSpeed.GetValue() : HoistSpeed.GetValue();
       var duration = TimeSpan.FromSeconds(Math.Abs(targetLevel - _crane.HoistLevel) / Math.Abs(_hoistSpeed));
@@ -447,25 +502,25 @@ namespace DynStack.Simulation {
       UpdatePosition();
       _hoistSpeed = 0;
       _crane.HoistLevel = targetLevel;
+      _world.Environment.ActiveProcess.HandleFault();
     }
 
-    private void StopCrane() {
+    protected void StopCrane() {
       UpdatePosition();
-      GoalPosition1 = GoalPosition2 = _targetGirderPosition = _crane.GirderPosition;
+      _targetGirderPosition = _crane.GirderPosition;
       _girderSpeed = 0;
     }
 
-    private void StopHoist() {
-      UpdatePosition();
-      _hoistSpeed = 0;
-    }
-
-    private void UpdatePosition() {
+    protected void UpdatePosition() {
       var now = _world.Now;
       if (_lastUpdate == now) return;
       var duration = now - _lastUpdate;
-      _crane.GirderPosition += _girderSpeed * duration.TotalSeconds;
-      _crane.HoistLevel += _hoistSpeed * duration.TotalSeconds;
+      var girderDelta = _girderSpeed * duration.TotalSeconds;
+      _crane.GirderPosition += girderDelta;
+      var hoistDelta = _hoistSpeed * duration.TotalSeconds;
+      _crane.HoistLevel += hoistDelta;
+      _girderDistance += Math.Abs(girderDelta);
+      _hoistDistance += Math.Abs(hoistDelta);
       _lastUpdate = now;
     }
 

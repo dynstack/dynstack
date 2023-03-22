@@ -14,466 +14,462 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
-extern PROTOBUF_INTERNAL_EXPORT_rollingmill_5fmodel_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_Arrival_rollingmill_5fmodel_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_rollingmill_5fmodel_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_Block_rollingmill_5fmodel_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_rollingmill_5fmodel_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_Crane_rollingmill_5fmodel_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_rollingmill_5fmodel_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_CraneMove_rollingmill_5fmodel_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_rollingmill_5fmodel_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_CraneSchedule_rollingmill_5fmodel_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_rollingmill_5fmodel_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_CraneScheduleActivity_rollingmill_5fmodel_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_rollingmill_5fmodel_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_Location_rollingmill_5fmodel_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_rollingmill_5fmodel_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_MoveRequest_rollingmill_5fmodel_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_rollingmill_5fmodel_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Performance_rollingmill_5fmodel_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_rollingmill_5fmodel_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_PlannedCraneMoves_rollingmill_5fmodel_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_rollingmill_5fmodel_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_Stack_rollingmill_5fmodel_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_rollingmill_5fmodel_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_TimeStamp_rollingmill_5fmodel_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_rollingmill_5fmodel_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Uncertainties_rollingmill_5fmodel_2eproto;
+
+PROTOBUF_PRAGMA_INIT_SEG
+
+namespace _pb = ::PROTOBUF_NAMESPACE_ID;
+namespace _pbi = _pb::internal;
+
 namespace DynStacking {
 namespace RollingMill {
 namespace DataModel {
-class ArrivalDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Arrival> _instance;
-} _Arrival_default_instance_;
-class BlockDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Block> _instance;
-} _Block_default_instance_;
-class CraneDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Crane> _instance;
-} _Crane_default_instance_;
-class CraneMoveDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<CraneMove> _instance;
-} _CraneMove_default_instance_;
-class CraneScheduleDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<CraneSchedule> _instance;
-} _CraneSchedule_default_instance_;
-class CraneScheduleActivityDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<CraneScheduleActivity> _instance;
-} _CraneScheduleActivity_default_instance_;
-class LocationDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Location> _instance;
-} _Location_default_instance_;
-class MoveRequestDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<MoveRequest> _instance;
-} _MoveRequest_default_instance_;
-class PerformanceDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Performance> _instance;
-} _Performance_default_instance_;
-class PlannedCraneMovesDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<PlannedCraneMoves> _instance;
-} _PlannedCraneMoves_default_instance_;
-class StackDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Stack> _instance;
-} _Stack_default_instance_;
-class TimeStampDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<TimeStamp> _instance;
-} _TimeStamp_default_instance_;
-class UncertaintiesDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Uncertainties> _instance;
-} _Uncertainties_default_instance_;
-class WorldDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<World> _instance;
-} _World_default_instance_;
+PROTOBUF_CONSTEXPR Arrival::Arrival(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.load_)*/nullptr
+  , /*decltype(_impl_.arrivalestimate_)*/nullptr
+  , /*decltype(_impl_.vehicle_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct ArrivalDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR ArrivalDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~ArrivalDefaultTypeInternal() {}
+  union {
+    Arrival _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ArrivalDefaultTypeInternal _Arrival_default_instance_;
+PROTOBUF_CONSTEXPR Block::Block(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.arrived_)*/nullptr
+  , /*decltype(_impl_.id_)*/0
+  , /*decltype(_impl_.sequence_)*/0
+  , /*decltype(_impl_.type_)*/0
+  , /*decltype(_impl_.programid_)*/0
+  , /*decltype(_impl_.rolled_)*/false
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct BlockDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR BlockDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~BlockDefaultTypeInternal() {}
+  union {
+    Block _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 BlockDefaultTypeInternal _Block_default_instance_;
+PROTOBUF_CONSTEXPR Crane::Crane(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.load_)*/nullptr
+  , /*decltype(_impl_.girderposition_)*/0
+  , /*decltype(_impl_.id_)*/0
+  , /*decltype(_impl_.cranecapacity_)*/0
+  , /*decltype(_impl_.hoistlevel_)*/0
+  , /*decltype(_impl_.width_)*/0
+  , /*decltype(_impl_.minposition_)*/0
+  , /*decltype(_impl_.maxposition_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct CraneDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR CraneDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~CraneDefaultTypeInternal() {}
+  union {
+    Crane _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CraneDefaultTypeInternal _Crane_default_instance_;
+PROTOBUF_CONSTEXPR CraneMove::CraneMove(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.protobufpredecessorids_)*/{}
+  , /*decltype(_impl_.protobufmovedblockids_)*/{}
+  , /*decltype(_impl_.releasetime_)*/nullptr
+  , /*decltype(_impl_.duedate_)*/nullptr
+  , /*decltype(_impl_.id_)*/0
+  , /*decltype(_impl_.type_)*/0
+  , /*decltype(_impl_.pickuplocationid_)*/0
+  , /*decltype(_impl_.dropofflocationid_)*/0
+  , /*decltype(_impl_.amount_)*/0
+  , /*decltype(_impl_.requiredcraneid_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct CraneMoveDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR CraneMoveDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~CraneMoveDefaultTypeInternal() {}
+  union {
+    CraneMove _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CraneMoveDefaultTypeInternal _CraneMove_default_instance_;
+PROTOBUF_CONSTEXPR CraneSchedule::CraneSchedule(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.activities_)*/{}
+  , /*decltype(_impl_.schedulenr_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct CraneScheduleDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR CraneScheduleDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~CraneScheduleDefaultTypeInternal() {}
+  union {
+    CraneSchedule _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CraneScheduleDefaultTypeInternal _CraneSchedule_default_instance_;
+PROTOBUF_CONSTEXPR CraneScheduleActivity::CraneScheduleActivity(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.moveid_)*/0
+  , /*decltype(_impl_.craneid_)*/0
+  , /*decltype(_impl_.priority_)*/0
+  , /*decltype(_impl_.state_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct CraneScheduleActivityDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR CraneScheduleActivityDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~CraneScheduleActivityDefaultTypeInternal() {}
+  union {
+    CraneScheduleActivity _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CraneScheduleActivityDefaultTypeInternal _CraneScheduleActivity_default_instance_;
+PROTOBUF_CONSTEXPR Location::Location(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.stack_)*/nullptr
+  , /*decltype(_impl_.girderposition_)*/0
+  , /*decltype(_impl_.id_)*/0
+  , /*decltype(_impl_.maxheight_)*/0
+  , /*decltype(_impl_.type_)*/0
+  , /*decltype(_impl_.milltype_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct LocationDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR LocationDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~LocationDefaultTypeInternal() {}
+  union {
+    Location _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 LocationDefaultTypeInternal _Location_default_instance_;
+PROTOBUF_CONSTEXPR MoveRequest::MoveRequest(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.duedate_)*/nullptr
+  , /*decltype(_impl_.id_)*/0
+  , /*decltype(_impl_.targetlocationid_)*/0
+  , /*decltype(_impl_.blockid_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct MoveRequestDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR MoveRequestDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~MoveRequestDefaultTypeInternal() {}
+  union {
+    MoveRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 MoveRequestDefaultTypeInternal _MoveRequest_default_instance_;
+PROTOBUF_CONSTEXPR Performance::Performance(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.servicelevelmean_)*/0
+  , /*decltype(_impl_.cranemanipulations_)*/0
+  , /*decltype(_impl_.deliveredblocks_)*/0
+  , /*decltype(_impl_.leadtimemean_)*/0
+  , /*decltype(_impl_.tardinessmean_)*/0
+  , /*decltype(_impl_.shufflebufferutilizationmean_)*/0
+  , /*decltype(_impl_.sortedbufferutilizationmean_)*/0
+  , /*decltype(_impl_.shufflecraneutilizationmean_)*/0
+  , /*decltype(_impl_.totalblocksontime_)*/0
+  , /*decltype(_impl_.rollingprogrammessups_)*/0
+  , /*decltype(_impl_.handovercraneutilizationmean_)*/0
+  , /*decltype(_impl_.millautilizationmean_)*/0
+  , /*decltype(_impl_.millbutilizationmean_)*/0
+  , /*decltype(_impl_.blockedmilltime_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct PerformanceDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR PerformanceDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~PerformanceDefaultTypeInternal() {}
+  union {
+    Performance _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PerformanceDefaultTypeInternal _Performance_default_instance_;
+PROTOBUF_CONSTEXPR PlannedCraneMoves::PlannedCraneMoves(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.moves_)*/{}
+  , /*decltype(_impl_.sequencenr_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct PlannedCraneMovesDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR PlannedCraneMovesDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~PlannedCraneMovesDefaultTypeInternal() {}
+  union {
+    PlannedCraneMoves _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PlannedCraneMovesDefaultTypeInternal _PlannedCraneMoves_default_instance_;
+PROTOBUF_CONSTEXPR Stack::Stack(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.bottomtotop_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct StackDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR StackDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~StackDefaultTypeInternal() {}
+  union {
+    Stack _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 StackDefaultTypeInternal _Stack_default_instance_;
+PROTOBUF_CONSTEXPR TimeStamp::TimeStamp(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.milliseconds_)*/int64_t{0}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct TimeStampDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR TimeStampDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~TimeStampDefaultTypeInternal() {}
+  union {
+    TimeStamp _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 TimeStampDefaultTypeInternal _TimeStamp_default_instance_;
+PROTOBUF_CONSTEXPR Uncertainties::Uncertainties(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.arrivalintervals_)*/{}
+  , /*decltype(_impl_.cranemovetimes_)*/{}
+  , /*decltype(_impl_.millblockintervals_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct UncertaintiesDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR UncertaintiesDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~UncertaintiesDefaultTypeInternal() {}
+  union {
+    Uncertainties _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 UncertaintiesDefaultTypeInternal _Uncertainties_default_instance_;
+PROTOBUF_CONSTEXPR World::World(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.locations_)*/{}
+  , /*decltype(_impl_.blocksatslabyard_)*/{}
+  , /*decltype(_impl_.arrivalsfromslabyard_)*/{}
+  , /*decltype(_impl_.moverequests_)*/{}
+  , /*decltype(_impl_.now_)*/nullptr
+  , /*decltype(_impl_.cranemoves_)*/nullptr
+  , /*decltype(_impl_.craneschedule_)*/nullptr
+  , /*decltype(_impl_.shufflecrane_)*/nullptr
+  , /*decltype(_impl_.handovercrane_)*/nullptr
+  , /*decltype(_impl_.kpis_)*/nullptr
+  , /*decltype(_impl_.observationdata_)*/nullptr
+  , /*decltype(_impl_.width_)*/0
+  , /*decltype(_impl_.height_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct WorldDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR WorldDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~WorldDefaultTypeInternal() {}
+  union {
+    World _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 WorldDefaultTypeInternal _World_default_instance_;
 }  // namespace DataModel
 }  // namespace RollingMill
 }  // namespace DynStacking
-static void InitDefaultsscc_info_Arrival_rollingmill_5fmodel_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
+static ::_pb::Metadata file_level_metadata_rollingmill_5fmodel_2eproto[14];
+static const ::_pb::EnumDescriptor* file_level_enum_descriptors_rollingmill_5fmodel_2eproto[4];
+static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_rollingmill_5fmodel_2eproto = nullptr;
 
-  {
-    void* ptr = &::DynStacking::RollingMill::DataModel::_Arrival_default_instance_;
-    new (ptr) ::DynStacking::RollingMill::DataModel::Arrival();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_Arrival_rollingmill_5fmodel_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, 0, InitDefaultsscc_info_Arrival_rollingmill_5fmodel_2eproto}, {
-      &scc_info_Stack_rollingmill_5fmodel_2eproto.base,
-      &scc_info_TimeStamp_rollingmill_5fmodel_2eproto.base,}};
-
-static void InitDefaultsscc_info_Block_rollingmill_5fmodel_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::DynStacking::RollingMill::DataModel::_Block_default_instance_;
-    new (ptr) ::DynStacking::RollingMill::DataModel::Block();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_Block_rollingmill_5fmodel_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_Block_rollingmill_5fmodel_2eproto}, {
-      &scc_info_TimeStamp_rollingmill_5fmodel_2eproto.base,}};
-
-static void InitDefaultsscc_info_Crane_rollingmill_5fmodel_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::DynStacking::RollingMill::DataModel::_Crane_default_instance_;
-    new (ptr) ::DynStacking::RollingMill::DataModel::Crane();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_Crane_rollingmill_5fmodel_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_Crane_rollingmill_5fmodel_2eproto}, {
-      &scc_info_Stack_rollingmill_5fmodel_2eproto.base,}};
-
-static void InitDefaultsscc_info_CraneMove_rollingmill_5fmodel_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::DynStacking::RollingMill::DataModel::_CraneMove_default_instance_;
-    new (ptr) ::DynStacking::RollingMill::DataModel::CraneMove();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_CraneMove_rollingmill_5fmodel_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_CraneMove_rollingmill_5fmodel_2eproto}, {
-      &scc_info_TimeStamp_rollingmill_5fmodel_2eproto.base,}};
-
-static void InitDefaultsscc_info_CraneSchedule_rollingmill_5fmodel_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::DynStacking::RollingMill::DataModel::_CraneSchedule_default_instance_;
-    new (ptr) ::DynStacking::RollingMill::DataModel::CraneSchedule();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_CraneSchedule_rollingmill_5fmodel_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_CraneSchedule_rollingmill_5fmodel_2eproto}, {
-      &scc_info_CraneScheduleActivity_rollingmill_5fmodel_2eproto.base,}};
-
-static void InitDefaultsscc_info_CraneScheduleActivity_rollingmill_5fmodel_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::DynStacking::RollingMill::DataModel::_CraneScheduleActivity_default_instance_;
-    new (ptr) ::DynStacking::RollingMill::DataModel::CraneScheduleActivity();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_CraneScheduleActivity_rollingmill_5fmodel_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_CraneScheduleActivity_rollingmill_5fmodel_2eproto}, {}};
-
-static void InitDefaultsscc_info_Location_rollingmill_5fmodel_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::DynStacking::RollingMill::DataModel::_Location_default_instance_;
-    new (ptr) ::DynStacking::RollingMill::DataModel::Location();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_Location_rollingmill_5fmodel_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_Location_rollingmill_5fmodel_2eproto}, {
-      &scc_info_Stack_rollingmill_5fmodel_2eproto.base,}};
-
-static void InitDefaultsscc_info_MoveRequest_rollingmill_5fmodel_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::DynStacking::RollingMill::DataModel::_MoveRequest_default_instance_;
-    new (ptr) ::DynStacking::RollingMill::DataModel::MoveRequest();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_MoveRequest_rollingmill_5fmodel_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_MoveRequest_rollingmill_5fmodel_2eproto}, {
-      &scc_info_TimeStamp_rollingmill_5fmodel_2eproto.base,}};
-
-static void InitDefaultsscc_info_Performance_rollingmill_5fmodel_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::DynStacking::RollingMill::DataModel::_Performance_default_instance_;
-    new (ptr) ::DynStacking::RollingMill::DataModel::Performance();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Performance_rollingmill_5fmodel_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_Performance_rollingmill_5fmodel_2eproto}, {}};
-
-static void InitDefaultsscc_info_PlannedCraneMoves_rollingmill_5fmodel_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::DynStacking::RollingMill::DataModel::_PlannedCraneMoves_default_instance_;
-    new (ptr) ::DynStacking::RollingMill::DataModel::PlannedCraneMoves();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_PlannedCraneMoves_rollingmill_5fmodel_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_PlannedCraneMoves_rollingmill_5fmodel_2eproto}, {
-      &scc_info_CraneMove_rollingmill_5fmodel_2eproto.base,}};
-
-static void InitDefaultsscc_info_Stack_rollingmill_5fmodel_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::DynStacking::RollingMill::DataModel::_Stack_default_instance_;
-    new (ptr) ::DynStacking::RollingMill::DataModel::Stack();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_Stack_rollingmill_5fmodel_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_Stack_rollingmill_5fmodel_2eproto}, {
-      &scc_info_Block_rollingmill_5fmodel_2eproto.base,}};
-
-static void InitDefaultsscc_info_TimeStamp_rollingmill_5fmodel_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::DynStacking::RollingMill::DataModel::_TimeStamp_default_instance_;
-    new (ptr) ::DynStacking::RollingMill::DataModel::TimeStamp();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_TimeStamp_rollingmill_5fmodel_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_TimeStamp_rollingmill_5fmodel_2eproto}, {}};
-
-static void InitDefaultsscc_info_Uncertainties_rollingmill_5fmodel_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::DynStacking::RollingMill::DataModel::_Uncertainties_default_instance_;
-    new (ptr) ::DynStacking::RollingMill::DataModel::Uncertainties();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Uncertainties_rollingmill_5fmodel_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_Uncertainties_rollingmill_5fmodel_2eproto}, {}};
-
-static void InitDefaultsscc_info_World_rollingmill_5fmodel_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::DynStacking::RollingMill::DataModel::_World_default_instance_;
-    new (ptr) ::DynStacking::RollingMill::DataModel::World();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<10> scc_info_World_rollingmill_5fmodel_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 10, 0, InitDefaultsscc_info_World_rollingmill_5fmodel_2eproto}, {
-      &scc_info_TimeStamp_rollingmill_5fmodel_2eproto.base,
-      &scc_info_Location_rollingmill_5fmodel_2eproto.base,
-      &scc_info_Block_rollingmill_5fmodel_2eproto.base,
-      &scc_info_Arrival_rollingmill_5fmodel_2eproto.base,
-      &scc_info_PlannedCraneMoves_rollingmill_5fmodel_2eproto.base,
-      &scc_info_MoveRequest_rollingmill_5fmodel_2eproto.base,
-      &scc_info_CraneSchedule_rollingmill_5fmodel_2eproto.base,
-      &scc_info_Crane_rollingmill_5fmodel_2eproto.base,
-      &scc_info_Performance_rollingmill_5fmodel_2eproto.base,
-      &scc_info_Uncertainties_rollingmill_5fmodel_2eproto.base,}};
-
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_rollingmill_5fmodel_2eproto[14];
-static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_rollingmill_5fmodel_2eproto[3];
-static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_rollingmill_5fmodel_2eproto = nullptr;
-
-const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_rollingmill_5fmodel_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+const uint32_t TableStruct_rollingmill_5fmodel_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Arrival, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Arrival, vehicle_),
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Arrival, load_),
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Arrival, arrivalestimate_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Arrival, _impl_.vehicle_),
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Arrival, _impl_.load_),
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Arrival, _impl_.arrivalestimate_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Block, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Block, id_),
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Block, sequence_),
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Block, type_),
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Block, programid_),
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Block, arrived_),
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Block, rolled_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Block, _impl_.id_),
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Block, _impl_.sequence_),
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Block, _impl_.type_),
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Block, _impl_.programid_),
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Block, _impl_.arrived_),
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Block, _impl_.rolled_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Crane, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Crane, id_),
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Crane, load_),
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Crane, girderposition_),
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Crane, hoistlevel_),
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Crane, cranecapacity_),
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Crane, width_),
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Crane, minposition_),
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Crane, maxposition_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Crane, _impl_.id_),
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Crane, _impl_.load_),
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Crane, _impl_.girderposition_),
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Crane, _impl_.hoistlevel_),
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Crane, _impl_.cranecapacity_),
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Crane, _impl_.width_),
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Crane, _impl_.minposition_),
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Crane, _impl_.maxposition_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::CraneMove, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::CraneMove, id_),
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::CraneMove, type_),
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::CraneMove, pickuplocationid_),
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::CraneMove, dropofflocationid_),
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::CraneMove, amount_),
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::CraneMove, releasetime_),
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::CraneMove, duedate_),
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::CraneMove, requiredcraneid_),
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::CraneMove, protobufpredecessorids_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::CraneMove, _impl_.id_),
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::CraneMove, _impl_.type_),
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::CraneMove, _impl_.pickuplocationid_),
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::CraneMove, _impl_.dropofflocationid_),
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::CraneMove, _impl_.amount_),
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::CraneMove, _impl_.releasetime_),
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::CraneMove, _impl_.duedate_),
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::CraneMove, _impl_.requiredcraneid_),
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::CraneMove, _impl_.protobufpredecessorids_),
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::CraneMove, _impl_.protobufmovedblockids_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::CraneSchedule, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::CraneSchedule, schedulenr_),
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::CraneSchedule, activities_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::CraneSchedule, _impl_.schedulenr_),
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::CraneSchedule, _impl_.activities_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::CraneScheduleActivity, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::CraneScheduleActivity, moveid_),
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::CraneScheduleActivity, craneid_),
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::CraneScheduleActivity, priority_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::CraneScheduleActivity, _impl_.moveid_),
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::CraneScheduleActivity, _impl_.craneid_),
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::CraneScheduleActivity, _impl_.priority_),
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::CraneScheduleActivity, _impl_.state_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Location, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Location, id_),
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Location, girderposition_),
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Location, maxheight_),
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Location, stack_),
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Location, type_),
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Location, milltype_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Location, _impl_.id_),
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Location, _impl_.girderposition_),
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Location, _impl_.maxheight_),
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Location, _impl_.stack_),
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Location, _impl_.type_),
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Location, _impl_.milltype_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::MoveRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::MoveRequest, id_),
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::MoveRequest, targetlocationid_),
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::MoveRequest, blockid_),
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::MoveRequest, duedate_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::MoveRequest, _impl_.id_),
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::MoveRequest, _impl_.targetlocationid_),
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::MoveRequest, _impl_.blockid_),
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::MoveRequest, _impl_.duedate_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Performance, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Performance, cranemanipulations_),
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Performance, servicelevelmean_),
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Performance, leadtimemean_),
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Performance, deliveredblocks_),
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Performance, totalblocksontime_),
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Performance, tardinessmean_),
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Performance, shufflebufferutilizationmean_),
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Performance, sortedbufferutilizationmean_),
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Performance, shufflecraneutilizationmean_),
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Performance, handovercraneutilizationmean_),
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Performance, millautilizationmean_),
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Performance, millbutilizationmean_),
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Performance, rollingprogrammessups_),
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Performance, blockedmilltime_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Performance, _impl_.cranemanipulations_),
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Performance, _impl_.servicelevelmean_),
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Performance, _impl_.leadtimemean_),
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Performance, _impl_.deliveredblocks_),
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Performance, _impl_.totalblocksontime_),
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Performance, _impl_.tardinessmean_),
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Performance, _impl_.shufflebufferutilizationmean_),
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Performance, _impl_.sortedbufferutilizationmean_),
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Performance, _impl_.shufflecraneutilizationmean_),
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Performance, _impl_.handovercraneutilizationmean_),
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Performance, _impl_.millautilizationmean_),
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Performance, _impl_.millbutilizationmean_),
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Performance, _impl_.rollingprogrammessups_),
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Performance, _impl_.blockedmilltime_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::PlannedCraneMoves, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::PlannedCraneMoves, sequencenr_),
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::PlannedCraneMoves, moves_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::PlannedCraneMoves, _impl_.sequencenr_),
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::PlannedCraneMoves, _impl_.moves_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Stack, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Stack, bottomtotop_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Stack, _impl_.bottomtotop_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::TimeStamp, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::TimeStamp, milliseconds_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::TimeStamp, _impl_.milliseconds_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Uncertainties, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Uncertainties, arrivalintervals_),
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Uncertainties, cranemovetimes_),
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Uncertainties, millblockintervals_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Uncertainties, _impl_.arrivalintervals_),
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Uncertainties, _impl_.cranemovetimes_),
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::Uncertainties, _impl_.millblockintervals_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::World, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::World, now_),
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::World, height_),
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::World, width_),
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::World, locations_),
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::World, blocksatslabyard_),
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::World, arrivalsfromslabyard_),
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::World, cranemoves_),
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::World, moverequests_),
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::World, craneschedule_),
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::World, shufflecrane_),
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::World, handovercrane_),
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::World, kpis_),
-  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::World, observationdata_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::World, _impl_.now_),
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::World, _impl_.height_),
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::World, _impl_.width_),
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::World, _impl_.locations_),
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::World, _impl_.blocksatslabyard_),
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::World, _impl_.arrivalsfromslabyard_),
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::World, _impl_.cranemoves_),
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::World, _impl_.moverequests_),
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::World, _impl_.craneschedule_),
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::World, _impl_.shufflecrane_),
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::World, _impl_.handovercrane_),
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::World, _impl_.kpis_),
+  PROTOBUF_FIELD_OFFSET(::DynStacking::RollingMill::DataModel::World, _impl_.observationdata_),
 };
-static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::DynStacking::RollingMill::DataModel::Arrival)},
-  { 8, -1, sizeof(::DynStacking::RollingMill::DataModel::Block)},
-  { 19, -1, sizeof(::DynStacking::RollingMill::DataModel::Crane)},
-  { 32, -1, sizeof(::DynStacking::RollingMill::DataModel::CraneMove)},
-  { 46, -1, sizeof(::DynStacking::RollingMill::DataModel::CraneSchedule)},
-  { 53, -1, sizeof(::DynStacking::RollingMill::DataModel::CraneScheduleActivity)},
-  { 61, -1, sizeof(::DynStacking::RollingMill::DataModel::Location)},
-  { 72, -1, sizeof(::DynStacking::RollingMill::DataModel::MoveRequest)},
-  { 81, -1, sizeof(::DynStacking::RollingMill::DataModel::Performance)},
-  { 100, -1, sizeof(::DynStacking::RollingMill::DataModel::PlannedCraneMoves)},
-  { 107, -1, sizeof(::DynStacking::RollingMill::DataModel::Stack)},
-  { 113, -1, sizeof(::DynStacking::RollingMill::DataModel::TimeStamp)},
-  { 119, -1, sizeof(::DynStacking::RollingMill::DataModel::Uncertainties)},
-  { 127, -1, sizeof(::DynStacking::RollingMill::DataModel::World)},
+static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, -1, -1, sizeof(::DynStacking::RollingMill::DataModel::Arrival)},
+  { 9, -1, -1, sizeof(::DynStacking::RollingMill::DataModel::Block)},
+  { 21, -1, -1, sizeof(::DynStacking::RollingMill::DataModel::Crane)},
+  { 35, -1, -1, sizeof(::DynStacking::RollingMill::DataModel::CraneMove)},
+  { 51, -1, -1, sizeof(::DynStacking::RollingMill::DataModel::CraneSchedule)},
+  { 59, -1, -1, sizeof(::DynStacking::RollingMill::DataModel::CraneScheduleActivity)},
+  { 69, -1, -1, sizeof(::DynStacking::RollingMill::DataModel::Location)},
+  { 81, -1, -1, sizeof(::DynStacking::RollingMill::DataModel::MoveRequest)},
+  { 91, -1, -1, sizeof(::DynStacking::RollingMill::DataModel::Performance)},
+  { 111, -1, -1, sizeof(::DynStacking::RollingMill::DataModel::PlannedCraneMoves)},
+  { 119, -1, -1, sizeof(::DynStacking::RollingMill::DataModel::Stack)},
+  { 126, -1, -1, sizeof(::DynStacking::RollingMill::DataModel::TimeStamp)},
+  { 133, -1, -1, sizeof(::DynStacking::RollingMill::DataModel::Uncertainties)},
+  { 142, -1, -1, sizeof(::DynStacking::RollingMill::DataModel::World)},
 };
 
-static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::DynStacking::RollingMill::DataModel::_Arrival_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::DynStacking::RollingMill::DataModel::_Block_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::DynStacking::RollingMill::DataModel::_Crane_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::DynStacking::RollingMill::DataModel::_CraneMove_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::DynStacking::RollingMill::DataModel::_CraneSchedule_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::DynStacking::RollingMill::DataModel::_CraneScheduleActivity_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::DynStacking::RollingMill::DataModel::_Location_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::DynStacking::RollingMill::DataModel::_MoveRequest_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::DynStacking::RollingMill::DataModel::_Performance_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::DynStacking::RollingMill::DataModel::_PlannedCraneMoves_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::DynStacking::RollingMill::DataModel::_Stack_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::DynStacking::RollingMill::DataModel::_TimeStamp_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::DynStacking::RollingMill::DataModel::_Uncertainties_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::DynStacking::RollingMill::DataModel::_World_default_instance_),
+static const ::_pb::Message* const file_default_instances[] = {
+  &::DynStacking::RollingMill::DataModel::_Arrival_default_instance_._instance,
+  &::DynStacking::RollingMill::DataModel::_Block_default_instance_._instance,
+  &::DynStacking::RollingMill::DataModel::_Crane_default_instance_._instance,
+  &::DynStacking::RollingMill::DataModel::_CraneMove_default_instance_._instance,
+  &::DynStacking::RollingMill::DataModel::_CraneSchedule_default_instance_._instance,
+  &::DynStacking::RollingMill::DataModel::_CraneScheduleActivity_default_instance_._instance,
+  &::DynStacking::RollingMill::DataModel::_Location_default_instance_._instance,
+  &::DynStacking::RollingMill::DataModel::_MoveRequest_default_instance_._instance,
+  &::DynStacking::RollingMill::DataModel::_Performance_default_instance_._instance,
+  &::DynStacking::RollingMill::DataModel::_PlannedCraneMoves_default_instance_._instance,
+  &::DynStacking::RollingMill::DataModel::_Stack_default_instance_._instance,
+  &::DynStacking::RollingMill::DataModel::_TimeStamp_default_instance_._instance,
+  &::DynStacking::RollingMill::DataModel::_Uncertainties_default_instance_._instance,
+  &::DynStacking::RollingMill::DataModel::_World_default_instance_._instance,
 };
 
 const char descriptor_table_protodef_rollingmill_5fmodel_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
@@ -492,7 +488,7 @@ const char descriptor_table_protodef_rollingmill_5fmodel_2eproto[] PROTOBUF_SECT
   "aModel.Stack\022\026\n\016GirderPosition\030\003 \001(\001\022\022\n\n"
   "HoistLevel\030\004 \001(\001\022\025\n\rCraneCapacity\030\005 \001(\005\022"
   "\r\n\005Width\030\006 \001(\001\022\023\n\013MinPosition\030\007 \001(\001\022\023\n\013M"
-  "axPosition\030\010 \001(\001\"\326\002\n\tCraneMove\022\n\n\002Id\030\001 \001"
+  "axPosition\030\010 \001(\001\"\371\002\n\tCraneMove\022\n\n\002Id\030\001 \001"
   "(\005\0229\n\004Type\030\002 \001(\0162+.DynStacking.RollingMi"
   "ll.DataModel.MoveType\022\030\n\020PickupLocationI"
   "d\030\003 \001(\005\022\031\n\021DropoffLocationId\030\004 \001(\005\022\016\n\006Am"
@@ -501,99 +497,105 @@ const char descriptor_table_protodef_rollingmill_5fmodel_2eproto[] PROTOBUF_SECT
   "\007DueDate\030\t \001(\0132,.DynStacking.RollingMill"
   ".DataModel.TimeStamp\022\027\n\017RequiredCraneId\030"
   "\n \001(\005\022\"\n\026ProtobufPredecessorIds\030\013 \003(\005B\002\020"
-  "\000\"q\n\rCraneSchedule\022\022\n\nScheduleNr\030\001 \001(\005\022L"
-  "\n\nActivities\030\002 \003(\01328.DynStacking.Rolling"
-  "Mill.DataModel.CraneScheduleActivity\"J\n\025"
-  "CraneScheduleActivity\022\016\n\006MoveId\030\001 \001(\005\022\017\n"
-  "\007CraneId\030\002 \001(\005\022\020\n\010Priority\030\003 \001(\005\"\367\001\n\010Loc"
-  "ation\022\n\n\002Id\030\001 \001(\005\022\026\n\016GirderPosition\030\002 \001("
-  "\001\022\021\n\tMaxHeight\030\003 \001(\005\0227\n\005Stack\030\004 \001(\0132(.Dy"
-  "nStacking.RollingMill.DataModel.Stack\022;\n"
-  "\004Type\030\005 \001(\0162-.DynStacking.RollingMill.Da"
-  "taModel.StackTypes\022>\n\010MillType\030\006 \001(\0162,.D"
-  "ynStacking.RollingMill.DataModel.MillTyp"
-  "es\"\203\001\n\013MoveRequest\022\n\n\002Id\030\001 \001(\005\022\030\n\020Target"
-  "LocationId\030\002 \001(\005\022\017\n\007BlockId\030\003 \001(\005\022=\n\007Due"
-  "Date\030\004 \001(\0132,.DynStacking.RollingMill.Dat"
-  "aModel.TimeStamp\"\256\003\n\013Performance\022\032\n\022Cran"
-  "eManipulations\030\001 \001(\005\022\030\n\020ServiceLevelMean"
-  "\030\002 \001(\001\022\024\n\014LeadTimeMean\030\003 \001(\001\022\027\n\017Delivere"
-  "dBlocks\030\004 \001(\005\022\031\n\021TotalBlocksOnTime\030\005 \001(\005"
-  "\022\025\n\rTardinessMean\030\006 \001(\001\022$\n\034ShuffleBuffer"
-  "UtilizationMean\030\007 \001(\001\022#\n\033SortedBufferUti"
-  "lizationMean\030\010 \001(\001\022#\n\033ShuffleCraneUtiliz"
-  "ationMean\030\t \001(\001\022$\n\034HandoverCraneUtilizat"
-  "ionMean\030\n \001(\001\022\034\n\024MillAUtilizationMean\030\013 "
-  "\001(\001\022\034\n\024MillBUtilizationMean\030\014 \001(\001\022\035\n\025Rol"
-  "lingProgramMessups\030\r \001(\005\022\027\n\017BlockedMillT"
-  "ime\030\016 \001(\001\"d\n\021PlannedCraneMoves\022\022\n\nSequen"
-  "ceNr\030\001 \001(\005\022;\n\005Moves\030\002 \003(\0132,.DynStacking."
-  "RollingMill.DataModel.CraneMove\"F\n\005Stack"
-  "\022=\n\013BottomToTop\030\001 \003(\0132(.DynStacking.Roll"
-  "ingMill.DataModel.Block\"!\n\tTimeStamp\022\024\n\014"
-  "MilliSeconds\030\001 \001(\003\"i\n\rUncertainties\022\034\n\020A"
-  "rrivalIntervals\030\001 \003(\001B\002\020\000\022\032\n\016CraneMoveTi"
-  "mes\030\002 \003(\001B\002\020\000\022\036\n\022MillBlockIntervals\030\003 \003("
-  "\001B\002\020\000\"\222\006\n\005World\0229\n\003Now\030\001 \001(\0132,.DynStacki"
-  "ng.RollingMill.DataModel.TimeStamp\022\016\n\006He"
-  "ight\030\002 \001(\005\022\r\n\005Width\030\003 \001(\001\022>\n\tLocations\030\004"
-  " \003(\0132+.DynStacking.RollingMill.DataModel"
-  ".Location\022B\n\020BlocksAtSlabYard\030\005 \003(\0132(.Dy"
-  "nStacking.RollingMill.DataModel.Block\022H\n"
-  "\024ArrivalsFromSlabYard\030\006 \003(\0132*.DynStackin"
-  "g.RollingMill.DataModel.Arrival\022H\n\nCrane"
-  "Moves\030\007 \001(\01324.DynStacking.RollingMill.Da"
-  "taModel.PlannedCraneMoves\022D\n\014MoveRequest"
-  "s\030\010 \003(\0132..DynStacking.RollingMill.DataMo"
-  "del.MoveRequest\022G\n\rCraneSchedule\030\t \001(\01320"
-  ".DynStacking.RollingMill.DataModel.Crane"
-  "Schedule\022>\n\014ShuffleCrane\030\n \001(\0132(.DynStac"
-  "king.RollingMill.DataModel.Crane\022\?\n\rHand"
-  "overCrane\030\013 \001(\0132(.DynStacking.RollingMil"
-  "l.DataModel.Crane\022<\n\004KPIs\030\014 \001(\0132..DynSta"
-  "cking.RollingMill.DataModel.Performance\022"
-  "I\n\017ObservationData\030\r \001(\01320.DynStacking.R"
-  "ollingMill.DataModel.Uncertainties*\031\n\tMi"
-  "llTypes\022\005\n\001A\020\000\022\005\n\001B\020\001*2\n\010MoveType\022\020\n\014Mov"
-  "eToPickup\020\000\022\024\n\020PickupAndDropoff\020\001*V\n\nSta"
-  "ckTypes\022\020\n\014ArrivalStack\020\000\022\021\n\rShuffleBuff"
-  "er\020\001\022\020\n\014SortedBuffer\020\002\022\021\n\rHandoverStack\020"
-  "\003b\006proto3"
+  "\000\022!\n\025ProtobufMovedBlockIds\030\014 \003(\005B\002\020\000\"q\n\r"
+  "CraneSchedule\022\022\n\nScheduleNr\030\001 \001(\005\022L\n\nAct"
+  "ivities\030\002 \003(\01328.DynStacking.RollingMill."
+  "DataModel.CraneScheduleActivity\"\230\001\n\025Cran"
+  "eScheduleActivity\022\016\n\006MoveId\030\001 \001(\005\022\017\n\007Cra"
+  "neId\030\002 \001(\005\022\020\n\010Priority\030\003 \001(\005\022L\n\005State\030\004 "
+  "\001(\0162=.DynStacking.RollingMill.DataModel."
+  "CraneScheduleActivityState\"\367\001\n\010Location\022"
+  "\n\n\002Id\030\001 \001(\005\022\026\n\016GirderPosition\030\002 \001(\001\022\021\n\tM"
+  "axHeight\030\003 \001(\005\0227\n\005Stack\030\004 \001(\0132(.DynStack"
+  "ing.RollingMill.DataModel.Stack\022;\n\004Type\030"
+  "\005 \001(\0162-.DynStacking.RollingMill.DataMode"
+  "l.StackTypes\022>\n\010MillType\030\006 \001(\0162,.DynStac"
+  "king.RollingMill.DataModel.MillTypes\"\203\001\n"
+  "\013MoveRequest\022\n\n\002Id\030\001 \001(\005\022\030\n\020TargetLocati"
+  "onId\030\002 \001(\005\022\017\n\007BlockId\030\003 \001(\005\022=\n\007DueDate\030\004"
+  " \001(\0132,.DynStacking.RollingMill.DataModel"
+  ".TimeStamp\"\256\003\n\013Performance\022\032\n\022CraneManip"
+  "ulations\030\001 \001(\005\022\030\n\020ServiceLevelMean\030\002 \001(\001"
+  "\022\024\n\014LeadTimeMean\030\003 \001(\001\022\027\n\017DeliveredBlock"
+  "s\030\004 \001(\005\022\031\n\021TotalBlocksOnTime\030\005 \001(\005\022\025\n\rTa"
+  "rdinessMean\030\006 \001(\001\022$\n\034ShuffleBufferUtiliz"
+  "ationMean\030\007 \001(\001\022#\n\033SortedBufferUtilizati"
+  "onMean\030\010 \001(\001\022#\n\033ShuffleCraneUtilizationM"
+  "ean\030\t \001(\001\022$\n\034HandoverCraneUtilizationMea"
+  "n\030\n \001(\001\022\034\n\024MillAUtilizationMean\030\013 \001(\001\022\034\n"
+  "\024MillBUtilizationMean\030\014 \001(\001\022\035\n\025RollingPr"
+  "ogramMessups\030\r \001(\005\022\027\n\017BlockedMillTime\030\016 "
+  "\001(\001\"d\n\021PlannedCraneMoves\022\022\n\nSequenceNr\030\001"
+  " \001(\005\022;\n\005Moves\030\002 \003(\0132,.DynStacking.Rollin"
+  "gMill.DataModel.CraneMove\"F\n\005Stack\022=\n\013Bo"
+  "ttomToTop\030\001 \003(\0132(.DynStacking.RollingMil"
+  "l.DataModel.Block\"!\n\tTimeStamp\022\024\n\014MilliS"
+  "econds\030\001 \001(\003\"i\n\rUncertainties\022\034\n\020Arrival"
+  "Intervals\030\001 \003(\001B\002\020\000\022\032\n\016CraneMoveTimes\030\002 "
+  "\003(\001B\002\020\000\022\036\n\022MillBlockIntervals\030\003 \003(\001B\002\020\000\""
+  "\222\006\n\005World\0229\n\003Now\030\001 \001(\0132,.DynStacking.Rol"
+  "lingMill.DataModel.TimeStamp\022\016\n\006Height\030\002"
+  " \001(\005\022\r\n\005Width\030\003 \001(\001\022>\n\tLocations\030\004 \003(\0132+"
+  ".DynStacking.RollingMill.DataModel.Locat"
+  "ion\022B\n\020BlocksAtSlabYard\030\005 \003(\0132(.DynStack"
+  "ing.RollingMill.DataModel.Block\022H\n\024Arriv"
+  "alsFromSlabYard\030\006 \003(\0132*.DynStacking.Roll"
+  "ingMill.DataModel.Arrival\022H\n\nCraneMoves\030"
+  "\007 \001(\01324.DynStacking.RollingMill.DataMode"
+  "l.PlannedCraneMoves\022D\n\014MoveRequests\030\010 \003("
+  "\0132..DynStacking.RollingMill.DataModel.Mo"
+  "veRequest\022G\n\rCraneSchedule\030\t \001(\01320.DynSt"
+  "acking.RollingMill.DataModel.CraneSchedu"
+  "le\022>\n\014ShuffleCrane\030\n \001(\0132(.DynStacking.R"
+  "ollingMill.DataModel.Crane\022\?\n\rHandoverCr"
+  "ane\030\013 \001(\0132(.DynStacking.RollingMill.Data"
+  "Model.Crane\022<\n\004KPIs\030\014 \001(\0132..DynStacking."
+  "RollingMill.DataModel.Performance\022I\n\017Obs"
+  "ervationData\030\r \001(\01320.DynStacking.Rolling"
+  "Mill.DataModel.Uncertainties*F\n\032CraneSch"
+  "eduleActivityState\022\013\n\007Created\020\000\022\017\n\013Activ"
+  "atable\020\001\022\n\n\006Active\020\002*\031\n\tMillTypes\022\005\n\001A\020\000"
+  "\022\005\n\001B\020\001*2\n\010MoveType\022\020\n\014MoveToPickup\020\000\022\024\n"
+  "\020PickupAndDropoff\020\001*V\n\nStackTypes\022\020\n\014Arr"
+  "ivalStack\020\000\022\021\n\rShuffleBuffer\020\001\022\020\n\014Sorted"
+  "Buffer\020\002\022\021\n\rHandoverStack\020\003b\006proto3"
   ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_rollingmill_5fmodel_2eproto_deps[1] = {
+static ::_pbi::once_flag descriptor_table_rollingmill_5fmodel_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_rollingmill_5fmodel_2eproto = {
+    false, false, 3435, descriptor_table_protodef_rollingmill_5fmodel_2eproto,
+    "rollingmill_model.proto",
+    &descriptor_table_rollingmill_5fmodel_2eproto_once, nullptr, 0, 14,
+    schemas, file_default_instances, TableStruct_rollingmill_5fmodel_2eproto::offsets,
+    file_level_metadata_rollingmill_5fmodel_2eproto, file_level_enum_descriptors_rollingmill_5fmodel_2eproto,
+    file_level_service_descriptors_rollingmill_5fmodel_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_rollingmill_5fmodel_2eproto_sccs[14] = {
-  &scc_info_Arrival_rollingmill_5fmodel_2eproto.base,
-  &scc_info_Block_rollingmill_5fmodel_2eproto.base,
-  &scc_info_Crane_rollingmill_5fmodel_2eproto.base,
-  &scc_info_CraneMove_rollingmill_5fmodel_2eproto.base,
-  &scc_info_CraneSchedule_rollingmill_5fmodel_2eproto.base,
-  &scc_info_CraneScheduleActivity_rollingmill_5fmodel_2eproto.base,
-  &scc_info_Location_rollingmill_5fmodel_2eproto.base,
-  &scc_info_MoveRequest_rollingmill_5fmodel_2eproto.base,
-  &scc_info_Performance_rollingmill_5fmodel_2eproto.base,
-  &scc_info_PlannedCraneMoves_rollingmill_5fmodel_2eproto.base,
-  &scc_info_Stack_rollingmill_5fmodel_2eproto.base,
-  &scc_info_TimeStamp_rollingmill_5fmodel_2eproto.base,
-  &scc_info_Uncertainties_rollingmill_5fmodel_2eproto.base,
-  &scc_info_World_rollingmill_5fmodel_2eproto.base,
-};
-static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_rollingmill_5fmodel_2eproto_once;
-const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_rollingmill_5fmodel_2eproto = {
-  false, false, descriptor_table_protodef_rollingmill_5fmodel_2eproto, "rollingmill_model.proto", 3249,
-  &descriptor_table_rollingmill_5fmodel_2eproto_once, descriptor_table_rollingmill_5fmodel_2eproto_sccs, descriptor_table_rollingmill_5fmodel_2eproto_deps, 14, 0,
-  schemas, file_default_instances, TableStruct_rollingmill_5fmodel_2eproto::offsets,
-  file_level_metadata_rollingmill_5fmodel_2eproto, 14, file_level_enum_descriptors_rollingmill_5fmodel_2eproto, file_level_service_descriptors_rollingmill_5fmodel_2eproto,
-};
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_rollingmill_5fmodel_2eproto_getter() {
+  return &descriptor_table_rollingmill_5fmodel_2eproto;
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_rollingmill_5fmodel_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_rollingmill_5fmodel_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_rollingmill_5fmodel_2eproto(&descriptor_table_rollingmill_5fmodel_2eproto);
 namespace DynStacking {
 namespace RollingMill {
 namespace DataModel {
-const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* MillTypes_descriptor() {
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* CraneScheduleActivityState_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_rollingmill_5fmodel_2eproto);
   return file_level_enum_descriptors_rollingmill_5fmodel_2eproto[0];
+}
+bool CraneScheduleActivityState_IsValid(int value) {
+  switch (value) {
+    case 0:
+    case 1:
+    case 2:
+      return true;
+    default:
+      return false;
+  }
+}
+
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* MillTypes_descriptor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_rollingmill_5fmodel_2eproto);
+  return file_level_enum_descriptors_rollingmill_5fmodel_2eproto[1];
 }
 bool MillTypes_IsValid(int value) {
   switch (value) {
@@ -607,7 +609,7 @@ bool MillTypes_IsValid(int value) {
 
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* MoveType_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_rollingmill_5fmodel_2eproto);
-  return file_level_enum_descriptors_rollingmill_5fmodel_2eproto[1];
+  return file_level_enum_descriptors_rollingmill_5fmodel_2eproto[2];
 }
 bool MoveType_IsValid(int value) {
   switch (value) {
@@ -621,7 +623,7 @@ bool MoveType_IsValid(int value) {
 
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* StackTypes_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_rollingmill_5fmodel_2eproto);
-  return file_level_enum_descriptors_rollingmill_5fmodel_2eproto[2];
+  return file_level_enum_descriptors_rollingmill_5fmodel_2eproto[3];
 }
 bool StackTypes_IsValid(int value) {
   switch (value) {
@@ -646,168 +648,168 @@ class Arrival::_Internal {
 
 const ::DynStacking::RollingMill::DataModel::Stack&
 Arrival::_Internal::load(const Arrival* msg) {
-  return *msg->load_;
+  return *msg->_impl_.load_;
 }
 const ::DynStacking::RollingMill::DataModel::TimeStamp&
 Arrival::_Internal::arrivalestimate(const Arrival* msg) {
-  return *msg->arrivalestimate_;
+  return *msg->_impl_.arrivalestimate_;
 }
-Arrival::Arrival(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+Arrival::Arrival(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:DynStacking.RollingMill.DataModel.Arrival)
 }
 Arrival::Arrival(const Arrival& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  Arrival* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.load_){nullptr}
+    , decltype(_impl_.arrivalestimate_){nullptr}
+    , decltype(_impl_.vehicle_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_load()) {
-    load_ = new ::DynStacking::RollingMill::DataModel::Stack(*from.load_);
-  } else {
-    load_ = nullptr;
+    _this->_impl_.load_ = new ::DynStacking::RollingMill::DataModel::Stack(*from._impl_.load_);
   }
   if (from._internal_has_arrivalestimate()) {
-    arrivalestimate_ = new ::DynStacking::RollingMill::DataModel::TimeStamp(*from.arrivalestimate_);
-  } else {
-    arrivalestimate_ = nullptr;
+    _this->_impl_.arrivalestimate_ = new ::DynStacking::RollingMill::DataModel::TimeStamp(*from._impl_.arrivalestimate_);
   }
-  vehicle_ = from.vehicle_;
+  _this->_impl_.vehicle_ = from._impl_.vehicle_;
   // @@protoc_insertion_point(copy_constructor:DynStacking.RollingMill.DataModel.Arrival)
 }
 
-void Arrival::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_Arrival_rollingmill_5fmodel_2eproto.base);
-  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-      reinterpret_cast<char*>(&load_) - reinterpret_cast<char*>(this)),
-      0, static_cast<size_t>(reinterpret_cast<char*>(&vehicle_) -
-      reinterpret_cast<char*>(&load_)) + sizeof(vehicle_));
+inline void Arrival::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.load_){nullptr}
+    , decltype(_impl_.arrivalestimate_){nullptr}
+    , decltype(_impl_.vehicle_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 Arrival::~Arrival() {
   // @@protoc_insertion_point(destructor:DynStacking.RollingMill.DataModel.Arrival)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void Arrival::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete load_;
-  if (this != internal_default_instance()) delete arrivalestimate_;
+inline void Arrival::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.load_;
+  if (this != internal_default_instance()) delete _impl_.arrivalestimate_;
 }
 
-void Arrival::ArenaDtor(void* object) {
-  Arrival* _this = reinterpret_cast< Arrival* >(object);
-  (void)_this;
-}
-void Arrival::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void Arrival::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const Arrival& Arrival::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_Arrival_rollingmill_5fmodel_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void Arrival::Clear() {
 // @@protoc_insertion_point(message_clear_start:DynStacking.RollingMill.DataModel.Arrival)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && load_ != nullptr) {
-    delete load_;
+  if (GetArenaForAllocation() == nullptr && _impl_.load_ != nullptr) {
+    delete _impl_.load_;
   }
-  load_ = nullptr;
-  if (GetArena() == nullptr && arrivalestimate_ != nullptr) {
-    delete arrivalestimate_;
+  _impl_.load_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.arrivalestimate_ != nullptr) {
+    delete _impl_.arrivalestimate_;
   }
-  arrivalestimate_ = nullptr;
-  vehicle_ = 0;
+  _impl_.arrivalestimate_ = nullptr;
+  _impl_.vehicle_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* Arrival::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* Arrival::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // int32 Vehicle = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
-          vehicle_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _impl_.vehicle_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // .DynStacking.RollingMill.DataModel.Stack Load = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_load(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // .DynStacking.RollingMill.DataModel.TimeStamp ArrivalEstimate = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_arrivalestimate(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* Arrival::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+uint8_t* Arrival::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:DynStacking.RollingMill.DataModel.Arrival)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // int32 Vehicle = 1;
-  if (this->vehicle() != 0) {
+  if (this->_internal_vehicle() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1, this->_internal_vehicle(), target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_vehicle(), target);
   }
 
   // .DynStacking.RollingMill.DataModel.Stack Load = 2;
-  if (this->has_load()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_load()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::load(this), target, stream);
+      InternalWriteMessage(2, _Internal::load(this),
+        _Internal::load(this).GetCachedSize(), target, stream);
   }
 
   // .DynStacking.RollingMill.DataModel.TimeStamp ArrivalEstimate = 3;
-  if (this->has_arrivalestimate()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_arrivalestimate()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::arrivalestimate(this), target, stream);
+      InternalWriteMessage(3, _Internal::arrivalestimate(this),
+        _Internal::arrivalestimate(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:DynStacking.RollingMill.DataModel.Arrival)
@@ -818,78 +820,59 @@ size_t Arrival::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:DynStacking.RollingMill.DataModel.Arrival)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .DynStacking.RollingMill.DataModel.Stack Load = 2;
-  if (this->has_load()) {
+  if (this->_internal_has_load()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *load_);
+        *_impl_.load_);
   }
 
   // .DynStacking.RollingMill.DataModel.TimeStamp ArrivalEstimate = 3;
-  if (this->has_arrivalestimate()) {
+  if (this->_internal_has_arrivalestimate()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *arrivalestimate_);
+        *_impl_.arrivalestimate_);
   }
 
   // int32 Vehicle = 1;
-  if (this->vehicle() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->_internal_vehicle());
+  if (this->_internal_vehicle() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_vehicle());
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void Arrival::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:DynStacking.RollingMill.DataModel.Arrival)
-  GOOGLE_DCHECK_NE(&from, this);
-  const Arrival* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<Arrival>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:DynStacking.RollingMill.DataModel.Arrival)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:DynStacking.RollingMill.DataModel.Arrival)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Arrival::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    Arrival::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Arrival::GetClassData() const { return &_class_data_; }
 
-void Arrival::MergeFrom(const Arrival& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:DynStacking.RollingMill.DataModel.Arrival)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void Arrival::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<Arrival*>(&to_msg);
+  auto& from = static_cast<const Arrival&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:DynStacking.RollingMill.DataModel.Arrival)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_load()) {
-    _internal_mutable_load()->::DynStacking::RollingMill::DataModel::Stack::MergeFrom(from._internal_load());
+  if (from._internal_has_load()) {
+    _this->_internal_mutable_load()->::DynStacking::RollingMill::DataModel::Stack::MergeFrom(
+        from._internal_load());
   }
-  if (from.has_arrivalestimate()) {
-    _internal_mutable_arrivalestimate()->::DynStacking::RollingMill::DataModel::TimeStamp::MergeFrom(from._internal_arrivalestimate());
+  if (from._internal_has_arrivalestimate()) {
+    _this->_internal_mutable_arrivalestimate()->::DynStacking::RollingMill::DataModel::TimeStamp::MergeFrom(
+        from._internal_arrivalestimate());
   }
-  if (from.vehicle() != 0) {
-    _internal_set_vehicle(from._internal_vehicle());
+  if (from._internal_vehicle() != 0) {
+    _this->_internal_set_vehicle(from._internal_vehicle());
   }
-}
-
-void Arrival::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:DynStacking.RollingMill.DataModel.Arrival)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void Arrival::CopyFrom(const Arrival& from) {
@@ -905,19 +888,20 @@ bool Arrival::IsInitialized() const {
 
 void Arrival::InternalSwap(Arrival* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(Arrival, vehicle_)
-      + sizeof(Arrival::vehicle_)
-      - PROTOBUF_FIELD_OFFSET(Arrival, load_)>(
-          reinterpret_cast<char*>(&load_),
-          reinterpret_cast<char*>(&other->load_));
+      PROTOBUF_FIELD_OFFSET(Arrival, _impl_.vehicle_)
+      + sizeof(Arrival::_impl_.vehicle_)
+      - PROTOBUF_FIELD_OFFSET(Arrival, _impl_.load_)>(
+          reinterpret_cast<char*>(&_impl_.load_),
+          reinterpret_cast<char*>(&other->_impl_.load_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata Arrival::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_rollingmill_5fmodel_2eproto_getter, &descriptor_table_rollingmill_5fmodel_2eproto_once,
+      file_level_metadata_rollingmill_5fmodel_2eproto[0]);
 }
-
 
 // ===================================================================
 
@@ -928,197 +912,209 @@ class Block::_Internal {
 
 const ::DynStacking::RollingMill::DataModel::TimeStamp&
 Block::_Internal::arrived(const Block* msg) {
-  return *msg->arrived_;
+  return *msg->_impl_.arrived_;
 }
-Block::Block(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+Block::Block(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:DynStacking.RollingMill.DataModel.Block)
 }
 Block::Block(const Block& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  Block* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.arrived_){nullptr}
+    , decltype(_impl_.id_){}
+    , decltype(_impl_.sequence_){}
+    , decltype(_impl_.type_){}
+    , decltype(_impl_.programid_){}
+    , decltype(_impl_.rolled_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_arrived()) {
-    arrived_ = new ::DynStacking::RollingMill::DataModel::TimeStamp(*from.arrived_);
-  } else {
-    arrived_ = nullptr;
+    _this->_impl_.arrived_ = new ::DynStacking::RollingMill::DataModel::TimeStamp(*from._impl_.arrived_);
   }
-  ::memcpy(&id_, &from.id_,
-    static_cast<size_t>(reinterpret_cast<char*>(&rolled_) -
-    reinterpret_cast<char*>(&id_)) + sizeof(rolled_));
+  ::memcpy(&_impl_.id_, &from._impl_.id_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.rolled_) -
+    reinterpret_cast<char*>(&_impl_.id_)) + sizeof(_impl_.rolled_));
   // @@protoc_insertion_point(copy_constructor:DynStacking.RollingMill.DataModel.Block)
 }
 
-void Block::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_Block_rollingmill_5fmodel_2eproto.base);
-  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-      reinterpret_cast<char*>(&arrived_) - reinterpret_cast<char*>(this)),
-      0, static_cast<size_t>(reinterpret_cast<char*>(&rolled_) -
-      reinterpret_cast<char*>(&arrived_)) + sizeof(rolled_));
+inline void Block::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.arrived_){nullptr}
+    , decltype(_impl_.id_){0}
+    , decltype(_impl_.sequence_){0}
+    , decltype(_impl_.type_){0}
+    , decltype(_impl_.programid_){0}
+    , decltype(_impl_.rolled_){false}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 Block::~Block() {
   // @@protoc_insertion_point(destructor:DynStacking.RollingMill.DataModel.Block)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void Block::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete arrived_;
+inline void Block::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.arrived_;
 }
 
-void Block::ArenaDtor(void* object) {
-  Block* _this = reinterpret_cast< Block* >(object);
-  (void)_this;
-}
-void Block::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void Block::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const Block& Block::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_Block_rollingmill_5fmodel_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void Block::Clear() {
 // @@protoc_insertion_point(message_clear_start:DynStacking.RollingMill.DataModel.Block)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && arrived_ != nullptr) {
-    delete arrived_;
+  if (GetArenaForAllocation() == nullptr && _impl_.arrived_ != nullptr) {
+    delete _impl_.arrived_;
   }
-  arrived_ = nullptr;
-  ::memset(&id_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&rolled_) -
-      reinterpret_cast<char*>(&id_)) + sizeof(rolled_));
+  _impl_.arrived_ = nullptr;
+  ::memset(&_impl_.id_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.rolled_) -
+      reinterpret_cast<char*>(&_impl_.id_)) + sizeof(_impl_.rolled_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* Block::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* Block::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // int32 Id = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
-          id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _impl_.id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // int32 Sequence = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
-          sequence_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _impl_.sequence_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // .DynStacking.RollingMill.DataModel.MillTypes Type = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24)) {
-          ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
           _internal_set_type(static_cast<::DynStacking::RollingMill::DataModel::MillTypes>(val));
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // int32 ProgramId = 4;
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 32)) {
-          programid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
+          _impl_.programid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // .DynStacking.RollingMill.DataModel.TimeStamp Arrived = 5;
       case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           ptr = ctx->ParseMessage(_internal_mutable_arrived(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // bool Rolled = 6;
       case 6:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 48)) {
-          rolled_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 48)) {
+          _impl_.rolled_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* Block::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+uint8_t* Block::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:DynStacking.RollingMill.DataModel.Block)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // int32 Id = 1;
-  if (this->id() != 0) {
+  if (this->_internal_id() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1, this->_internal_id(), target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_id(), target);
   }
 
   // int32 Sequence = 2;
-  if (this->sequence() != 0) {
+  if (this->_internal_sequence() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(2, this->_internal_sequence(), target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_sequence(), target);
   }
 
   // .DynStacking.RollingMill.DataModel.MillTypes Type = 3;
-  if (this->type() != 0) {
+  if (this->_internal_type() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
       3, this->_internal_type(), target);
   }
 
   // int32 ProgramId = 4;
-  if (this->programid() != 0) {
+  if (this->_internal_programid() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(4, this->_internal_programid(), target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(4, this->_internal_programid(), target);
   }
 
   // .DynStacking.RollingMill.DataModel.TimeStamp Arrived = 5;
-  if (this->has_arrived()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_arrived()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        5, _Internal::arrived(this), target, stream);
+      InternalWriteMessage(5, _Internal::arrived(this),
+        _Internal::arrived(this).GetCachedSize(), target, stream);
   }
 
   // bool Rolled = 6;
-  if (this->rolled() != 0) {
+  if (this->_internal_rolled() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(6, this->_internal_rolled(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(6, this->_internal_rolled(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:DynStacking.RollingMill.DataModel.Block)
@@ -1129,105 +1125,81 @@ size_t Block::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:DynStacking.RollingMill.DataModel.Block)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .DynStacking.RollingMill.DataModel.TimeStamp Arrived = 5;
-  if (this->has_arrived()) {
+  if (this->_internal_has_arrived()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *arrived_);
+        *_impl_.arrived_);
   }
 
   // int32 Id = 1;
-  if (this->id() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->_internal_id());
+  if (this->_internal_id() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_id());
   }
 
   // int32 Sequence = 2;
-  if (this->sequence() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->_internal_sequence());
+  if (this->_internal_sequence() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_sequence());
   }
 
   // .DynStacking.RollingMill.DataModel.MillTypes Type = 3;
-  if (this->type() != 0) {
+  if (this->_internal_type() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_type());
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_type());
   }
 
   // int32 ProgramId = 4;
-  if (this->programid() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->_internal_programid());
+  if (this->_internal_programid() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_programid());
   }
 
   // bool Rolled = 6;
-  if (this->rolled() != 0) {
+  if (this->_internal_rolled() != 0) {
     total_size += 1 + 1;
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void Block::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:DynStacking.RollingMill.DataModel.Block)
-  GOOGLE_DCHECK_NE(&from, this);
-  const Block* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<Block>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:DynStacking.RollingMill.DataModel.Block)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:DynStacking.RollingMill.DataModel.Block)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Block::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    Block::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Block::GetClassData() const { return &_class_data_; }
 
-void Block::MergeFrom(const Block& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:DynStacking.RollingMill.DataModel.Block)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void Block::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<Block*>(&to_msg);
+  auto& from = static_cast<const Block&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:DynStacking.RollingMill.DataModel.Block)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_arrived()) {
-    _internal_mutable_arrived()->::DynStacking::RollingMill::DataModel::TimeStamp::MergeFrom(from._internal_arrived());
+  if (from._internal_has_arrived()) {
+    _this->_internal_mutable_arrived()->::DynStacking::RollingMill::DataModel::TimeStamp::MergeFrom(
+        from._internal_arrived());
   }
-  if (from.id() != 0) {
-    _internal_set_id(from._internal_id());
+  if (from._internal_id() != 0) {
+    _this->_internal_set_id(from._internal_id());
   }
-  if (from.sequence() != 0) {
-    _internal_set_sequence(from._internal_sequence());
+  if (from._internal_sequence() != 0) {
+    _this->_internal_set_sequence(from._internal_sequence());
   }
-  if (from.type() != 0) {
-    _internal_set_type(from._internal_type());
+  if (from._internal_type() != 0) {
+    _this->_internal_set_type(from._internal_type());
   }
-  if (from.programid() != 0) {
-    _internal_set_programid(from._internal_programid());
+  if (from._internal_programid() != 0) {
+    _this->_internal_set_programid(from._internal_programid());
   }
-  if (from.rolled() != 0) {
-    _internal_set_rolled(from._internal_rolled());
+  if (from._internal_rolled() != 0) {
+    _this->_internal_set_rolled(from._internal_rolled());
   }
-}
-
-void Block::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:DynStacking.RollingMill.DataModel.Block)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void Block::CopyFrom(const Block& from) {
@@ -1243,19 +1215,20 @@ bool Block::IsInitialized() const {
 
 void Block::InternalSwap(Block* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(Block, rolled_)
-      + sizeof(Block::rolled_)
-      - PROTOBUF_FIELD_OFFSET(Block, arrived_)>(
-          reinterpret_cast<char*>(&arrived_),
-          reinterpret_cast<char*>(&other->arrived_));
+      PROTOBUF_FIELD_OFFSET(Block, _impl_.rolled_)
+      + sizeof(Block::_impl_.rolled_)
+      - PROTOBUF_FIELD_OFFSET(Block, _impl_.arrived_)>(
+          reinterpret_cast<char*>(&_impl_.arrived_),
+          reinterpret_cast<char*>(&other->_impl_.arrived_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata Block::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_rollingmill_5fmodel_2eproto_getter, &descriptor_table_rollingmill_5fmodel_2eproto_once,
+      file_level_metadata_rollingmill_5fmodel_2eproto[1]);
 }
-
 
 // ===================================================================
 
@@ -1266,221 +1239,259 @@ class Crane::_Internal {
 
 const ::DynStacking::RollingMill::DataModel::Stack&
 Crane::_Internal::load(const Crane* msg) {
-  return *msg->load_;
+  return *msg->_impl_.load_;
 }
-Crane::Crane(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+Crane::Crane(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:DynStacking.RollingMill.DataModel.Crane)
 }
 Crane::Crane(const Crane& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  Crane* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.load_){nullptr}
+    , decltype(_impl_.girderposition_){}
+    , decltype(_impl_.id_){}
+    , decltype(_impl_.cranecapacity_){}
+    , decltype(_impl_.hoistlevel_){}
+    , decltype(_impl_.width_){}
+    , decltype(_impl_.minposition_){}
+    , decltype(_impl_.maxposition_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_load()) {
-    load_ = new ::DynStacking::RollingMill::DataModel::Stack(*from.load_);
-  } else {
-    load_ = nullptr;
+    _this->_impl_.load_ = new ::DynStacking::RollingMill::DataModel::Stack(*from._impl_.load_);
   }
-  ::memcpy(&girderposition_, &from.girderposition_,
-    static_cast<size_t>(reinterpret_cast<char*>(&maxposition_) -
-    reinterpret_cast<char*>(&girderposition_)) + sizeof(maxposition_));
+  ::memcpy(&_impl_.girderposition_, &from._impl_.girderposition_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.maxposition_) -
+    reinterpret_cast<char*>(&_impl_.girderposition_)) + sizeof(_impl_.maxposition_));
   // @@protoc_insertion_point(copy_constructor:DynStacking.RollingMill.DataModel.Crane)
 }
 
-void Crane::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_Crane_rollingmill_5fmodel_2eproto.base);
-  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-      reinterpret_cast<char*>(&load_) - reinterpret_cast<char*>(this)),
-      0, static_cast<size_t>(reinterpret_cast<char*>(&maxposition_) -
-      reinterpret_cast<char*>(&load_)) + sizeof(maxposition_));
+inline void Crane::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.load_){nullptr}
+    , decltype(_impl_.girderposition_){0}
+    , decltype(_impl_.id_){0}
+    , decltype(_impl_.cranecapacity_){0}
+    , decltype(_impl_.hoistlevel_){0}
+    , decltype(_impl_.width_){0}
+    , decltype(_impl_.minposition_){0}
+    , decltype(_impl_.maxposition_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 Crane::~Crane() {
   // @@protoc_insertion_point(destructor:DynStacking.RollingMill.DataModel.Crane)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void Crane::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete load_;
+inline void Crane::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.load_;
 }
 
-void Crane::ArenaDtor(void* object) {
-  Crane* _this = reinterpret_cast< Crane* >(object);
-  (void)_this;
-}
-void Crane::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void Crane::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const Crane& Crane::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_Crane_rollingmill_5fmodel_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void Crane::Clear() {
 // @@protoc_insertion_point(message_clear_start:DynStacking.RollingMill.DataModel.Crane)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && load_ != nullptr) {
-    delete load_;
+  if (GetArenaForAllocation() == nullptr && _impl_.load_ != nullptr) {
+    delete _impl_.load_;
   }
-  load_ = nullptr;
-  ::memset(&girderposition_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&maxposition_) -
-      reinterpret_cast<char*>(&girderposition_)) + sizeof(maxposition_));
+  _impl_.load_ = nullptr;
+  ::memset(&_impl_.girderposition_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.maxposition_) -
+      reinterpret_cast<char*>(&_impl_.girderposition_)) + sizeof(_impl_.maxposition_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* Crane::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* Crane::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // int32 Id = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
-          id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _impl_.id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // .DynStacking.RollingMill.DataModel.Stack Load = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_load(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // double GirderPosition = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 25)) {
-          girderposition_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 25)) {
+          _impl_.girderposition_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // double HoistLevel = 4;
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 33)) {
-          hoistlevel_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 33)) {
+          _impl_.hoistlevel_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // int32 CraneCapacity = 5;
       case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 40)) {
-          cranecapacity_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
+          _impl_.cranecapacity_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // double Width = 6;
       case 6:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 49)) {
-          width_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 49)) {
+          _impl_.width_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // double MinPosition = 7;
       case 7:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 57)) {
-          minposition_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 57)) {
+          _impl_.minposition_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // double MaxPosition = 8;
       case 8:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 65)) {
-          maxposition_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 65)) {
+          _impl_.maxposition_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* Crane::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+uint8_t* Crane::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:DynStacking.RollingMill.DataModel.Crane)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // int32 Id = 1;
-  if (this->id() != 0) {
+  if (this->_internal_id() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1, this->_internal_id(), target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_id(), target);
   }
 
   // .DynStacking.RollingMill.DataModel.Stack Load = 2;
-  if (this->has_load()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_load()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::load(this), target, stream);
+      InternalWriteMessage(2, _Internal::load(this),
+        _Internal::load(this).GetCachedSize(), target, stream);
   }
 
   // double GirderPosition = 3;
-  if (!(this->girderposition() <= 0 && this->girderposition() >= 0)) {
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_girderposition = this->_internal_girderposition();
+  uint64_t raw_girderposition;
+  memcpy(&raw_girderposition, &tmp_girderposition, sizeof(tmp_girderposition));
+  if (raw_girderposition != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(3, this->_internal_girderposition(), target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(3, this->_internal_girderposition(), target);
   }
 
   // double HoistLevel = 4;
-  if (!(this->hoistlevel() <= 0 && this->hoistlevel() >= 0)) {
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_hoistlevel = this->_internal_hoistlevel();
+  uint64_t raw_hoistlevel;
+  memcpy(&raw_hoistlevel, &tmp_hoistlevel, sizeof(tmp_hoistlevel));
+  if (raw_hoistlevel != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(4, this->_internal_hoistlevel(), target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(4, this->_internal_hoistlevel(), target);
   }
 
   // int32 CraneCapacity = 5;
-  if (this->cranecapacity() != 0) {
+  if (this->_internal_cranecapacity() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(5, this->_internal_cranecapacity(), target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(5, this->_internal_cranecapacity(), target);
   }
 
   // double Width = 6;
-  if (!(this->width() <= 0 && this->width() >= 0)) {
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_width = this->_internal_width();
+  uint64_t raw_width;
+  memcpy(&raw_width, &tmp_width, sizeof(tmp_width));
+  if (raw_width != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(6, this->_internal_width(), target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(6, this->_internal_width(), target);
   }
 
   // double MinPosition = 7;
-  if (!(this->minposition() <= 0 && this->minposition() >= 0)) {
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_minposition = this->_internal_minposition();
+  uint64_t raw_minposition;
+  memcpy(&raw_minposition, &tmp_minposition, sizeof(tmp_minposition));
+  if (raw_minposition != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(7, this->_internal_minposition(), target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(7, this->_internal_minposition(), target);
   }
 
   // double MaxPosition = 8;
-  if (!(this->maxposition() <= 0 && this->maxposition() >= 0)) {
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_maxposition = this->_internal_maxposition();
+  uint64_t raw_maxposition;
+  memcpy(&raw_maxposition, &tmp_maxposition, sizeof(tmp_maxposition));
+  if (raw_maxposition != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(8, this->_internal_maxposition(), target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(8, this->_internal_maxposition(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:DynStacking.RollingMill.DataModel.Crane)
@@ -1491,118 +1502,136 @@ size_t Crane::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:DynStacking.RollingMill.DataModel.Crane)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .DynStacking.RollingMill.DataModel.Stack Load = 2;
-  if (this->has_load()) {
+  if (this->_internal_has_load()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *load_);
+        *_impl_.load_);
   }
 
   // double GirderPosition = 3;
-  if (!(this->girderposition() <= 0 && this->girderposition() >= 0)) {
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_girderposition = this->_internal_girderposition();
+  uint64_t raw_girderposition;
+  memcpy(&raw_girderposition, &tmp_girderposition, sizeof(tmp_girderposition));
+  if (raw_girderposition != 0) {
     total_size += 1 + 8;
   }
 
   // int32 Id = 1;
-  if (this->id() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->_internal_id());
+  if (this->_internal_id() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_id());
   }
 
   // int32 CraneCapacity = 5;
-  if (this->cranecapacity() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->_internal_cranecapacity());
+  if (this->_internal_cranecapacity() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_cranecapacity());
   }
 
   // double HoistLevel = 4;
-  if (!(this->hoistlevel() <= 0 && this->hoistlevel() >= 0)) {
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_hoistlevel = this->_internal_hoistlevel();
+  uint64_t raw_hoistlevel;
+  memcpy(&raw_hoistlevel, &tmp_hoistlevel, sizeof(tmp_hoistlevel));
+  if (raw_hoistlevel != 0) {
     total_size += 1 + 8;
   }
 
   // double Width = 6;
-  if (!(this->width() <= 0 && this->width() >= 0)) {
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_width = this->_internal_width();
+  uint64_t raw_width;
+  memcpy(&raw_width, &tmp_width, sizeof(tmp_width));
+  if (raw_width != 0) {
     total_size += 1 + 8;
   }
 
   // double MinPosition = 7;
-  if (!(this->minposition() <= 0 && this->minposition() >= 0)) {
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_minposition = this->_internal_minposition();
+  uint64_t raw_minposition;
+  memcpy(&raw_minposition, &tmp_minposition, sizeof(tmp_minposition));
+  if (raw_minposition != 0) {
     total_size += 1 + 8;
   }
 
   // double MaxPosition = 8;
-  if (!(this->maxposition() <= 0 && this->maxposition() >= 0)) {
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_maxposition = this->_internal_maxposition();
+  uint64_t raw_maxposition;
+  memcpy(&raw_maxposition, &tmp_maxposition, sizeof(tmp_maxposition));
+  if (raw_maxposition != 0) {
     total_size += 1 + 8;
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void Crane::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:DynStacking.RollingMill.DataModel.Crane)
-  GOOGLE_DCHECK_NE(&from, this);
-  const Crane* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<Crane>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:DynStacking.RollingMill.DataModel.Crane)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:DynStacking.RollingMill.DataModel.Crane)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Crane::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    Crane::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Crane::GetClassData() const { return &_class_data_; }
 
-void Crane::MergeFrom(const Crane& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:DynStacking.RollingMill.DataModel.Crane)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void Crane::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<Crane*>(&to_msg);
+  auto& from = static_cast<const Crane&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:DynStacking.RollingMill.DataModel.Crane)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_load()) {
-    _internal_mutable_load()->::DynStacking::RollingMill::DataModel::Stack::MergeFrom(from._internal_load());
+  if (from._internal_has_load()) {
+    _this->_internal_mutable_load()->::DynStacking::RollingMill::DataModel::Stack::MergeFrom(
+        from._internal_load());
   }
-  if (!(from.girderposition() <= 0 && from.girderposition() >= 0)) {
-    _internal_set_girderposition(from._internal_girderposition());
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_girderposition = from._internal_girderposition();
+  uint64_t raw_girderposition;
+  memcpy(&raw_girderposition, &tmp_girderposition, sizeof(tmp_girderposition));
+  if (raw_girderposition != 0) {
+    _this->_internal_set_girderposition(from._internal_girderposition());
   }
-  if (from.id() != 0) {
-    _internal_set_id(from._internal_id());
+  if (from._internal_id() != 0) {
+    _this->_internal_set_id(from._internal_id());
   }
-  if (from.cranecapacity() != 0) {
-    _internal_set_cranecapacity(from._internal_cranecapacity());
+  if (from._internal_cranecapacity() != 0) {
+    _this->_internal_set_cranecapacity(from._internal_cranecapacity());
   }
-  if (!(from.hoistlevel() <= 0 && from.hoistlevel() >= 0)) {
-    _internal_set_hoistlevel(from._internal_hoistlevel());
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_hoistlevel = from._internal_hoistlevel();
+  uint64_t raw_hoistlevel;
+  memcpy(&raw_hoistlevel, &tmp_hoistlevel, sizeof(tmp_hoistlevel));
+  if (raw_hoistlevel != 0) {
+    _this->_internal_set_hoistlevel(from._internal_hoistlevel());
   }
-  if (!(from.width() <= 0 && from.width() >= 0)) {
-    _internal_set_width(from._internal_width());
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_width = from._internal_width();
+  uint64_t raw_width;
+  memcpy(&raw_width, &tmp_width, sizeof(tmp_width));
+  if (raw_width != 0) {
+    _this->_internal_set_width(from._internal_width());
   }
-  if (!(from.minposition() <= 0 && from.minposition() >= 0)) {
-    _internal_set_minposition(from._internal_minposition());
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_minposition = from._internal_minposition();
+  uint64_t raw_minposition;
+  memcpy(&raw_minposition, &tmp_minposition, sizeof(tmp_minposition));
+  if (raw_minposition != 0) {
+    _this->_internal_set_minposition(from._internal_minposition());
   }
-  if (!(from.maxposition() <= 0 && from.maxposition() >= 0)) {
-    _internal_set_maxposition(from._internal_maxposition());
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_maxposition = from._internal_maxposition();
+  uint64_t raw_maxposition;
+  memcpy(&raw_maxposition, &tmp_maxposition, sizeof(tmp_maxposition));
+  if (raw_maxposition != 0) {
+    _this->_internal_set_maxposition(from._internal_maxposition());
   }
-}
-
-void Crane::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:DynStacking.RollingMill.DataModel.Crane)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void Crane::CopyFrom(const Crane& from) {
@@ -1618,19 +1647,20 @@ bool Crane::IsInitialized() const {
 
 void Crane::InternalSwap(Crane* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(Crane, maxposition_)
-      + sizeof(Crane::maxposition_)
-      - PROTOBUF_FIELD_OFFSET(Crane, load_)>(
-          reinterpret_cast<char*>(&load_),
-          reinterpret_cast<char*>(&other->load_));
+      PROTOBUF_FIELD_OFFSET(Crane, _impl_.maxposition_)
+      + sizeof(Crane::_impl_.maxposition_)
+      - PROTOBUF_FIELD_OFFSET(Crane, _impl_.load_)>(
+          reinterpret_cast<char*>(&_impl_.load_),
+          reinterpret_cast<char*>(&other->_impl_.load_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata Crane::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_rollingmill_5fmodel_2eproto_getter, &descriptor_table_rollingmill_5fmodel_2eproto_once,
+      file_level_metadata_rollingmill_5fmodel_2eproto[2]);
 }
-
 
 // ===================================================================
 
@@ -1642,263 +1672,306 @@ class CraneMove::_Internal {
 
 const ::DynStacking::RollingMill::DataModel::TimeStamp&
 CraneMove::_Internal::releasetime(const CraneMove* msg) {
-  return *msg->releasetime_;
+  return *msg->_impl_.releasetime_;
 }
 const ::DynStacking::RollingMill::DataModel::TimeStamp&
 CraneMove::_Internal::duedate(const CraneMove* msg) {
-  return *msg->duedate_;
+  return *msg->_impl_.duedate_;
 }
-CraneMove::CraneMove(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena),
-  protobufpredecessorids_(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+CraneMove::CraneMove(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:DynStacking.RollingMill.DataModel.CraneMove)
 }
 CraneMove::CraneMove(const CraneMove& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
-      protobufpredecessorids_(from.protobufpredecessorids_) {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CraneMove* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.protobufpredecessorids_){from._impl_.protobufpredecessorids_}
+    , decltype(_impl_.protobufmovedblockids_){from._impl_.protobufmovedblockids_}
+    , decltype(_impl_.releasetime_){nullptr}
+    , decltype(_impl_.duedate_){nullptr}
+    , decltype(_impl_.id_){}
+    , decltype(_impl_.type_){}
+    , decltype(_impl_.pickuplocationid_){}
+    , decltype(_impl_.dropofflocationid_){}
+    , decltype(_impl_.amount_){}
+    , decltype(_impl_.requiredcraneid_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_releasetime()) {
-    releasetime_ = new ::DynStacking::RollingMill::DataModel::TimeStamp(*from.releasetime_);
-  } else {
-    releasetime_ = nullptr;
+    _this->_impl_.releasetime_ = new ::DynStacking::RollingMill::DataModel::TimeStamp(*from._impl_.releasetime_);
   }
   if (from._internal_has_duedate()) {
-    duedate_ = new ::DynStacking::RollingMill::DataModel::TimeStamp(*from.duedate_);
-  } else {
-    duedate_ = nullptr;
+    _this->_impl_.duedate_ = new ::DynStacking::RollingMill::DataModel::TimeStamp(*from._impl_.duedate_);
   }
-  ::memcpy(&id_, &from.id_,
-    static_cast<size_t>(reinterpret_cast<char*>(&requiredcraneid_) -
-    reinterpret_cast<char*>(&id_)) + sizeof(requiredcraneid_));
+  ::memcpy(&_impl_.id_, &from._impl_.id_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.requiredcraneid_) -
+    reinterpret_cast<char*>(&_impl_.id_)) + sizeof(_impl_.requiredcraneid_));
   // @@protoc_insertion_point(copy_constructor:DynStacking.RollingMill.DataModel.CraneMove)
 }
 
-void CraneMove::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_CraneMove_rollingmill_5fmodel_2eproto.base);
-  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-      reinterpret_cast<char*>(&releasetime_) - reinterpret_cast<char*>(this)),
-      0, static_cast<size_t>(reinterpret_cast<char*>(&requiredcraneid_) -
-      reinterpret_cast<char*>(&releasetime_)) + sizeof(requiredcraneid_));
+inline void CraneMove::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.protobufpredecessorids_){arena}
+    , decltype(_impl_.protobufmovedblockids_){arena}
+    , decltype(_impl_.releasetime_){nullptr}
+    , decltype(_impl_.duedate_){nullptr}
+    , decltype(_impl_.id_){0}
+    , decltype(_impl_.type_){0}
+    , decltype(_impl_.pickuplocationid_){0}
+    , decltype(_impl_.dropofflocationid_){0}
+    , decltype(_impl_.amount_){0}
+    , decltype(_impl_.requiredcraneid_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 CraneMove::~CraneMove() {
   // @@protoc_insertion_point(destructor:DynStacking.RollingMill.DataModel.CraneMove)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void CraneMove::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete releasetime_;
-  if (this != internal_default_instance()) delete duedate_;
+inline void CraneMove::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.protobufpredecessorids_.~RepeatedField();
+  _impl_.protobufmovedblockids_.~RepeatedField();
+  if (this != internal_default_instance()) delete _impl_.releasetime_;
+  if (this != internal_default_instance()) delete _impl_.duedate_;
 }
 
-void CraneMove::ArenaDtor(void* object) {
-  CraneMove* _this = reinterpret_cast< CraneMove* >(object);
-  (void)_this;
-}
-void CraneMove::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void CraneMove::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const CraneMove& CraneMove::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_CraneMove_rollingmill_5fmodel_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void CraneMove::Clear() {
 // @@protoc_insertion_point(message_clear_start:DynStacking.RollingMill.DataModel.CraneMove)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  protobufpredecessorids_.Clear();
-  if (GetArena() == nullptr && releasetime_ != nullptr) {
-    delete releasetime_;
+  _impl_.protobufpredecessorids_.Clear();
+  _impl_.protobufmovedblockids_.Clear();
+  if (GetArenaForAllocation() == nullptr && _impl_.releasetime_ != nullptr) {
+    delete _impl_.releasetime_;
   }
-  releasetime_ = nullptr;
-  if (GetArena() == nullptr && duedate_ != nullptr) {
-    delete duedate_;
+  _impl_.releasetime_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.duedate_ != nullptr) {
+    delete _impl_.duedate_;
   }
-  duedate_ = nullptr;
-  ::memset(&id_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&requiredcraneid_) -
-      reinterpret_cast<char*>(&id_)) + sizeof(requiredcraneid_));
+  _impl_.duedate_ = nullptr;
+  ::memset(&_impl_.id_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.requiredcraneid_) -
+      reinterpret_cast<char*>(&_impl_.id_)) + sizeof(_impl_.requiredcraneid_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* CraneMove::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* CraneMove::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // int32 Id = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
-          id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _impl_.id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // .DynStacking.RollingMill.DataModel.MoveType Type = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
-          ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
           _internal_set_type(static_cast<::DynStacking::RollingMill::DataModel::MoveType>(val));
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // int32 PickupLocationId = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24)) {
-          pickuplocationid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          _impl_.pickuplocationid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // int32 DropoffLocationId = 4;
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 32)) {
-          dropofflocationid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
+          _impl_.dropofflocationid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // int32 Amount = 7;
       case 7:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 56)) {
-          amount_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 56)) {
+          _impl_.amount_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // .DynStacking.RollingMill.DataModel.TimeStamp ReleaseTime = 8;
       case 8:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 66)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 66)) {
           ptr = ctx->ParseMessage(_internal_mutable_releasetime(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // .DynStacking.RollingMill.DataModel.TimeStamp DueDate = 9;
       case 9:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 74)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 74)) {
           ptr = ctx->ParseMessage(_internal_mutable_duedate(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // int32 RequiredCraneId = 10;
       case 10:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 80)) {
-          requiredcraneid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 80)) {
+          _impl_.requiredcraneid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // repeated int32 ProtobufPredecessorIds = 11 [packed = false];
       case 11:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 88)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 88)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_protobufpredecessorids(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr));
+            _internal_add_protobufpredecessorids(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<88>(ptr));
-        } else if (static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 90) {
+        } else if (static_cast<uint8_t>(tag) == 90) {
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedInt32Parser(_internal_mutable_protobufpredecessorids(), ptr, ctx);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
+      // repeated int32 ProtobufMovedBlockIds = 12 [packed = false];
+      case 12:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 96)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            _internal_add_protobufmovedblockids(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<96>(ptr));
+        } else if (static_cast<uint8_t>(tag) == 98) {
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedInt32Parser(_internal_mutable_protobufmovedblockids(), ptr, ctx);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* CraneMove::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+uint8_t* CraneMove::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:DynStacking.RollingMill.DataModel.CraneMove)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // int32 Id = 1;
-  if (this->id() != 0) {
+  if (this->_internal_id() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1, this->_internal_id(), target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_id(), target);
   }
 
   // .DynStacking.RollingMill.DataModel.MoveType Type = 2;
-  if (this->type() != 0) {
+  if (this->_internal_type() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
       2, this->_internal_type(), target);
   }
 
   // int32 PickupLocationId = 3;
-  if (this->pickuplocationid() != 0) {
+  if (this->_internal_pickuplocationid() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(3, this->_internal_pickuplocationid(), target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(3, this->_internal_pickuplocationid(), target);
   }
 
   // int32 DropoffLocationId = 4;
-  if (this->dropofflocationid() != 0) {
+  if (this->_internal_dropofflocationid() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(4, this->_internal_dropofflocationid(), target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(4, this->_internal_dropofflocationid(), target);
   }
 
   // int32 Amount = 7;
-  if (this->amount() != 0) {
+  if (this->_internal_amount() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(7, this->_internal_amount(), target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(7, this->_internal_amount(), target);
   }
 
   // .DynStacking.RollingMill.DataModel.TimeStamp ReleaseTime = 8;
-  if (this->has_releasetime()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_releasetime()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        8, _Internal::releasetime(this), target, stream);
+      InternalWriteMessage(8, _Internal::releasetime(this),
+        _Internal::releasetime(this).GetCachedSize(), target, stream);
   }
 
   // .DynStacking.RollingMill.DataModel.TimeStamp DueDate = 9;
-  if (this->has_duedate()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_duedate()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        9, _Internal::duedate(this), target, stream);
+      InternalWriteMessage(9, _Internal::duedate(this),
+        _Internal::duedate(this).GetCachedSize(), target, stream);
   }
 
   // int32 RequiredCraneId = 10;
-  if (this->requiredcraneid() != 0) {
+  if (this->_internal_requiredcraneid() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(10, this->_internal_requiredcraneid(), target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(10, this->_internal_requiredcraneid(), target);
   }
 
   // repeated int32 ProtobufPredecessorIds = 11 [packed = false];
   for (int i = 0, n = this->_internal_protobufpredecessorids_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(11, this->_internal_protobufpredecessorids(i), target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(11, this->_internal_protobufpredecessorids(i), target);
+  }
+
+  // repeated int32 ProtobufMovedBlockIds = 12 [packed = false];
+  for (int i = 0, n = this->_internal_protobufmovedblockids_size(); i < n; i++) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(12, this->_internal_protobufmovedblockids(i), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:DynStacking.RollingMill.DataModel.CraneMove)
@@ -1909,137 +1982,120 @@ size_t CraneMove::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:DynStacking.RollingMill.DataModel.CraneMove)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated int32 ProtobufPredecessorIds = 11 [packed = false];
   {
-    size_t data_size = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      Int32Size(this->protobufpredecessorids_);
+    size_t data_size = ::_pbi::WireFormatLite::
+      Int32Size(this->_impl_.protobufpredecessorids_);
     total_size += 1 *
-                  ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(this->_internal_protobufpredecessorids_size());
+                  ::_pbi::FromIntSize(this->_internal_protobufpredecessorids_size());
+    total_size += data_size;
+  }
+
+  // repeated int32 ProtobufMovedBlockIds = 12 [packed = false];
+  {
+    size_t data_size = ::_pbi::WireFormatLite::
+      Int32Size(this->_impl_.protobufmovedblockids_);
+    total_size += 1 *
+                  ::_pbi::FromIntSize(this->_internal_protobufmovedblockids_size());
     total_size += data_size;
   }
 
   // .DynStacking.RollingMill.DataModel.TimeStamp ReleaseTime = 8;
-  if (this->has_releasetime()) {
+  if (this->_internal_has_releasetime()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *releasetime_);
+        *_impl_.releasetime_);
   }
 
   // .DynStacking.RollingMill.DataModel.TimeStamp DueDate = 9;
-  if (this->has_duedate()) {
+  if (this->_internal_has_duedate()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *duedate_);
+        *_impl_.duedate_);
   }
 
   // int32 Id = 1;
-  if (this->id() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->_internal_id());
+  if (this->_internal_id() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_id());
   }
 
   // .DynStacking.RollingMill.DataModel.MoveType Type = 2;
-  if (this->type() != 0) {
+  if (this->_internal_type() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_type());
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_type());
   }
 
   // int32 PickupLocationId = 3;
-  if (this->pickuplocationid() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->_internal_pickuplocationid());
+  if (this->_internal_pickuplocationid() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_pickuplocationid());
   }
 
   // int32 DropoffLocationId = 4;
-  if (this->dropofflocationid() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->_internal_dropofflocationid());
+  if (this->_internal_dropofflocationid() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_dropofflocationid());
   }
 
   // int32 Amount = 7;
-  if (this->amount() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->_internal_amount());
+  if (this->_internal_amount() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_amount());
   }
 
   // int32 RequiredCraneId = 10;
-  if (this->requiredcraneid() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->_internal_requiredcraneid());
+  if (this->_internal_requiredcraneid() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_requiredcraneid());
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void CraneMove::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:DynStacking.RollingMill.DataModel.CraneMove)
-  GOOGLE_DCHECK_NE(&from, this);
-  const CraneMove* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<CraneMove>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:DynStacking.RollingMill.DataModel.CraneMove)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:DynStacking.RollingMill.DataModel.CraneMove)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CraneMove::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    CraneMove::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CraneMove::GetClassData() const { return &_class_data_; }
 
-void CraneMove::MergeFrom(const CraneMove& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:DynStacking.RollingMill.DataModel.CraneMove)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void CraneMove::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<CraneMove*>(&to_msg);
+  auto& from = static_cast<const CraneMove&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:DynStacking.RollingMill.DataModel.CraneMove)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  protobufpredecessorids_.MergeFrom(from.protobufpredecessorids_);
-  if (from.has_releasetime()) {
-    _internal_mutable_releasetime()->::DynStacking::RollingMill::DataModel::TimeStamp::MergeFrom(from._internal_releasetime());
+  _this->_impl_.protobufpredecessorids_.MergeFrom(from._impl_.protobufpredecessorids_);
+  _this->_impl_.protobufmovedblockids_.MergeFrom(from._impl_.protobufmovedblockids_);
+  if (from._internal_has_releasetime()) {
+    _this->_internal_mutable_releasetime()->::DynStacking::RollingMill::DataModel::TimeStamp::MergeFrom(
+        from._internal_releasetime());
   }
-  if (from.has_duedate()) {
-    _internal_mutable_duedate()->::DynStacking::RollingMill::DataModel::TimeStamp::MergeFrom(from._internal_duedate());
+  if (from._internal_has_duedate()) {
+    _this->_internal_mutable_duedate()->::DynStacking::RollingMill::DataModel::TimeStamp::MergeFrom(
+        from._internal_duedate());
   }
-  if (from.id() != 0) {
-    _internal_set_id(from._internal_id());
+  if (from._internal_id() != 0) {
+    _this->_internal_set_id(from._internal_id());
   }
-  if (from.type() != 0) {
-    _internal_set_type(from._internal_type());
+  if (from._internal_type() != 0) {
+    _this->_internal_set_type(from._internal_type());
   }
-  if (from.pickuplocationid() != 0) {
-    _internal_set_pickuplocationid(from._internal_pickuplocationid());
+  if (from._internal_pickuplocationid() != 0) {
+    _this->_internal_set_pickuplocationid(from._internal_pickuplocationid());
   }
-  if (from.dropofflocationid() != 0) {
-    _internal_set_dropofflocationid(from._internal_dropofflocationid());
+  if (from._internal_dropofflocationid() != 0) {
+    _this->_internal_set_dropofflocationid(from._internal_dropofflocationid());
   }
-  if (from.amount() != 0) {
-    _internal_set_amount(from._internal_amount());
+  if (from._internal_amount() != 0) {
+    _this->_internal_set_amount(from._internal_amount());
   }
-  if (from.requiredcraneid() != 0) {
-    _internal_set_requiredcraneid(from._internal_requiredcraneid());
+  if (from._internal_requiredcraneid() != 0) {
+    _this->_internal_set_requiredcraneid(from._internal_requiredcraneid());
   }
-}
-
-void CraneMove::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:DynStacking.RollingMill.DataModel.CraneMove)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void CraneMove::CopyFrom(const CraneMove& from) {
@@ -2055,20 +2111,22 @@ bool CraneMove::IsInitialized() const {
 
 void CraneMove::InternalSwap(CraneMove* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  protobufpredecessorids_.InternalSwap(&other->protobufpredecessorids_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  _impl_.protobufpredecessorids_.InternalSwap(&other->_impl_.protobufpredecessorids_);
+  _impl_.protobufmovedblockids_.InternalSwap(&other->_impl_.protobufmovedblockids_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(CraneMove, requiredcraneid_)
-      + sizeof(CraneMove::requiredcraneid_)
-      - PROTOBUF_FIELD_OFFSET(CraneMove, releasetime_)>(
-          reinterpret_cast<char*>(&releasetime_),
-          reinterpret_cast<char*>(&other->releasetime_));
+      PROTOBUF_FIELD_OFFSET(CraneMove, _impl_.requiredcraneid_)
+      + sizeof(CraneMove::_impl_.requiredcraneid_)
+      - PROTOBUF_FIELD_OFFSET(CraneMove, _impl_.releasetime_)>(
+          reinterpret_cast<char*>(&_impl_.releasetime_),
+          reinterpret_cast<char*>(&other->_impl_.releasetime_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CraneMove::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_rollingmill_5fmodel_2eproto_getter, &descriptor_table_rollingmill_5fmodel_2eproto_once,
+      file_level_metadata_rollingmill_5fmodel_2eproto[3]);
 }
-
 
 // ===================================================================
 
@@ -2076,79 +2134,82 @@ class CraneSchedule::_Internal {
  public:
 };
 
-CraneSchedule::CraneSchedule(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena),
-  activities_(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+CraneSchedule::CraneSchedule(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:DynStacking.RollingMill.DataModel.CraneSchedule)
 }
 CraneSchedule::CraneSchedule(const CraneSchedule& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
-      activities_(from.activities_) {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CraneSchedule* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.activities_){from._impl_.activities_}
+    , decltype(_impl_.schedulenr_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  schedulenr_ = from.schedulenr_;
+  _this->_impl_.schedulenr_ = from._impl_.schedulenr_;
   // @@protoc_insertion_point(copy_constructor:DynStacking.RollingMill.DataModel.CraneSchedule)
 }
 
-void CraneSchedule::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_CraneSchedule_rollingmill_5fmodel_2eproto.base);
-  schedulenr_ = 0;
+inline void CraneSchedule::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.activities_){arena}
+    , decltype(_impl_.schedulenr_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 CraneSchedule::~CraneSchedule() {
   // @@protoc_insertion_point(destructor:DynStacking.RollingMill.DataModel.CraneSchedule)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void CraneSchedule::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+inline void CraneSchedule::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.activities_.~RepeatedPtrField();
 }
 
-void CraneSchedule::ArenaDtor(void* object) {
-  CraneSchedule* _this = reinterpret_cast< CraneSchedule* >(object);
-  (void)_this;
-}
-void CraneSchedule::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void CraneSchedule::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const CraneSchedule& CraneSchedule::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_CraneSchedule_rollingmill_5fmodel_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void CraneSchedule::Clear() {
 // @@protoc_insertion_point(message_clear_start:DynStacking.RollingMill.DataModel.CraneSchedule)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  activities_.Clear();
-  schedulenr_ = 0;
+  _impl_.activities_.Clear();
+  _impl_.schedulenr_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* CraneSchedule::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* CraneSchedule::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // int32 ScheduleNr = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
-          schedulenr_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _impl_.schedulenr_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // repeated .DynStacking.RollingMill.DataModel.CraneScheduleActivity Activities = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr -= 1;
           do {
             ptr += 1;
@@ -2156,52 +2217,54 @@ const char* CraneSchedule::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<18>(ptr));
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* CraneSchedule::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+uint8_t* CraneSchedule::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:DynStacking.RollingMill.DataModel.CraneSchedule)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // int32 ScheduleNr = 1;
-  if (this->schedulenr() != 0) {
+  if (this->_internal_schedulenr() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1, this->_internal_schedulenr(), target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_schedulenr(), target);
   }
 
   // repeated .DynStacking.RollingMill.DataModel.CraneScheduleActivity Activities = 2;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->_internal_activities_size()); i < n; i++) {
-    target = stream->EnsureSpace(target);
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_activities_size()); i < n; i++) {
+    const auto& repfield = this->_internal_activities(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(2, this->_internal_activities(i), target, stream);
+        InternalWriteMessage(2, repfield, repfield.GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:DynStacking.RollingMill.DataModel.CraneSchedule)
@@ -2212,66 +2275,45 @@ size_t CraneSchedule::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:DynStacking.RollingMill.DataModel.CraneSchedule)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated .DynStacking.RollingMill.DataModel.CraneScheduleActivity Activities = 2;
   total_size += 1UL * this->_internal_activities_size();
-  for (const auto& msg : this->activities_) {
+  for (const auto& msg : this->_impl_.activities_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // int32 ScheduleNr = 1;
-  if (this->schedulenr() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->_internal_schedulenr());
+  if (this->_internal_schedulenr() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_schedulenr());
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void CraneSchedule::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:DynStacking.RollingMill.DataModel.CraneSchedule)
-  GOOGLE_DCHECK_NE(&from, this);
-  const CraneSchedule* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<CraneSchedule>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:DynStacking.RollingMill.DataModel.CraneSchedule)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:DynStacking.RollingMill.DataModel.CraneSchedule)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CraneSchedule::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    CraneSchedule::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CraneSchedule::GetClassData() const { return &_class_data_; }
 
-void CraneSchedule::MergeFrom(const CraneSchedule& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:DynStacking.RollingMill.DataModel.CraneSchedule)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void CraneSchedule::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<CraneSchedule*>(&to_msg);
+  auto& from = static_cast<const CraneSchedule&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:DynStacking.RollingMill.DataModel.CraneSchedule)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  activities_.MergeFrom(from.activities_);
-  if (from.schedulenr() != 0) {
-    _internal_set_schedulenr(from._internal_schedulenr());
+  _this->_impl_.activities_.MergeFrom(from._impl_.activities_);
+  if (from._internal_schedulenr() != 0) {
+    _this->_internal_set_schedulenr(from._internal_schedulenr());
   }
-}
-
-void CraneSchedule::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:DynStacking.RollingMill.DataModel.CraneSchedule)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void CraneSchedule::CopyFrom(const CraneSchedule& from) {
@@ -2287,15 +2329,16 @@ bool CraneSchedule::IsInitialized() const {
 
 void CraneSchedule::InternalSwap(CraneSchedule* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  activities_.InternalSwap(&other->activities_);
-  swap(schedulenr_, other->schedulenr_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  _impl_.activities_.InternalSwap(&other->_impl_.activities_);
+  swap(_impl_.schedulenr_, other->_impl_.schedulenr_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CraneSchedule::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_rollingmill_5fmodel_2eproto_getter, &descriptor_table_rollingmill_5fmodel_2eproto_once,
+      file_level_metadata_rollingmill_5fmodel_2eproto[4]);
 }
-
 
 // ===================================================================
 
@@ -2303,141 +2346,166 @@ class CraneScheduleActivity::_Internal {
  public:
 };
 
-CraneScheduleActivity::CraneScheduleActivity(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+CraneScheduleActivity::CraneScheduleActivity(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:DynStacking.RollingMill.DataModel.CraneScheduleActivity)
 }
 CraneScheduleActivity::CraneScheduleActivity(const CraneScheduleActivity& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CraneScheduleActivity* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.moveid_){}
+    , decltype(_impl_.craneid_){}
+    , decltype(_impl_.priority_){}
+    , decltype(_impl_.state_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::memcpy(&moveid_, &from.moveid_,
-    static_cast<size_t>(reinterpret_cast<char*>(&priority_) -
-    reinterpret_cast<char*>(&moveid_)) + sizeof(priority_));
+  ::memcpy(&_impl_.moveid_, &from._impl_.moveid_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.state_) -
+    reinterpret_cast<char*>(&_impl_.moveid_)) + sizeof(_impl_.state_));
   // @@protoc_insertion_point(copy_constructor:DynStacking.RollingMill.DataModel.CraneScheduleActivity)
 }
 
-void CraneScheduleActivity::SharedCtor() {
-  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-      reinterpret_cast<char*>(&moveid_) - reinterpret_cast<char*>(this)),
-      0, static_cast<size_t>(reinterpret_cast<char*>(&priority_) -
-      reinterpret_cast<char*>(&moveid_)) + sizeof(priority_));
+inline void CraneScheduleActivity::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.moveid_){0}
+    , decltype(_impl_.craneid_){0}
+    , decltype(_impl_.priority_){0}
+    , decltype(_impl_.state_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 CraneScheduleActivity::~CraneScheduleActivity() {
   // @@protoc_insertion_point(destructor:DynStacking.RollingMill.DataModel.CraneScheduleActivity)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void CraneScheduleActivity::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+inline void CraneScheduleActivity::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
-void CraneScheduleActivity::ArenaDtor(void* object) {
-  CraneScheduleActivity* _this = reinterpret_cast< CraneScheduleActivity* >(object);
-  (void)_this;
-}
-void CraneScheduleActivity::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void CraneScheduleActivity::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const CraneScheduleActivity& CraneScheduleActivity::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_CraneScheduleActivity_rollingmill_5fmodel_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void CraneScheduleActivity::Clear() {
 // @@protoc_insertion_point(message_clear_start:DynStacking.RollingMill.DataModel.CraneScheduleActivity)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  ::memset(&moveid_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&priority_) -
-      reinterpret_cast<char*>(&moveid_)) + sizeof(priority_));
+  ::memset(&_impl_.moveid_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.state_) -
+      reinterpret_cast<char*>(&_impl_.moveid_)) + sizeof(_impl_.state_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* CraneScheduleActivity::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* CraneScheduleActivity::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // int32 MoveId = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
-          moveid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _impl_.moveid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // int32 CraneId = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
-          craneid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _impl_.craneid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // int32 Priority = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24)) {
-          priority_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          _impl_.priority_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
+      // .DynStacking.RollingMill.DataModel.CraneScheduleActivityState State = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+          _internal_set_state(static_cast<::DynStacking::RollingMill::DataModel::CraneScheduleActivityState>(val));
+        } else
+          goto handle_unusual;
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* CraneScheduleActivity::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+uint8_t* CraneScheduleActivity::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:DynStacking.RollingMill.DataModel.CraneScheduleActivity)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // int32 MoveId = 1;
-  if (this->moveid() != 0) {
+  if (this->_internal_moveid() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1, this->_internal_moveid(), target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_moveid(), target);
   }
 
   // int32 CraneId = 2;
-  if (this->craneid() != 0) {
+  if (this->_internal_craneid() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(2, this->_internal_craneid(), target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_craneid(), target);
   }
 
   // int32 Priority = 3;
-  if (this->priority() != 0) {
+  if (this->_internal_priority() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(3, this->_internal_priority(), target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(3, this->_internal_priority(), target);
+  }
+
+  // .DynStacking.RollingMill.DataModel.CraneScheduleActivityState State = 4;
+  if (this->_internal_state() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      4, this->_internal_state(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:DynStacking.RollingMill.DataModel.CraneScheduleActivity)
@@ -2448,78 +2516,62 @@ size_t CraneScheduleActivity::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:DynStacking.RollingMill.DataModel.CraneScheduleActivity)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // int32 MoveId = 1;
-  if (this->moveid() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->_internal_moveid());
+  if (this->_internal_moveid() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_moveid());
   }
 
   // int32 CraneId = 2;
-  if (this->craneid() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->_internal_craneid());
+  if (this->_internal_craneid() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_craneid());
   }
 
   // int32 Priority = 3;
-  if (this->priority() != 0) {
+  if (this->_internal_priority() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_priority());
+  }
+
+  // .DynStacking.RollingMill.DataModel.CraneScheduleActivityState State = 4;
+  if (this->_internal_state() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->_internal_priority());
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_state());
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void CraneScheduleActivity::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:DynStacking.RollingMill.DataModel.CraneScheduleActivity)
-  GOOGLE_DCHECK_NE(&from, this);
-  const CraneScheduleActivity* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<CraneScheduleActivity>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:DynStacking.RollingMill.DataModel.CraneScheduleActivity)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:DynStacking.RollingMill.DataModel.CraneScheduleActivity)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CraneScheduleActivity::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    CraneScheduleActivity::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CraneScheduleActivity::GetClassData() const { return &_class_data_; }
 
-void CraneScheduleActivity::MergeFrom(const CraneScheduleActivity& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:DynStacking.RollingMill.DataModel.CraneScheduleActivity)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void CraneScheduleActivity::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<CraneScheduleActivity*>(&to_msg);
+  auto& from = static_cast<const CraneScheduleActivity&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:DynStacking.RollingMill.DataModel.CraneScheduleActivity)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.moveid() != 0) {
-    _internal_set_moveid(from._internal_moveid());
+  if (from._internal_moveid() != 0) {
+    _this->_internal_set_moveid(from._internal_moveid());
   }
-  if (from.craneid() != 0) {
-    _internal_set_craneid(from._internal_craneid());
+  if (from._internal_craneid() != 0) {
+    _this->_internal_set_craneid(from._internal_craneid());
   }
-  if (from.priority() != 0) {
-    _internal_set_priority(from._internal_priority());
+  if (from._internal_priority() != 0) {
+    _this->_internal_set_priority(from._internal_priority());
   }
-}
-
-void CraneScheduleActivity::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:DynStacking.RollingMill.DataModel.CraneScheduleActivity)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  if (from._internal_state() != 0) {
+    _this->_internal_set_state(from._internal_state());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void CraneScheduleActivity::CopyFrom(const CraneScheduleActivity& from) {
@@ -2535,19 +2587,20 @@ bool CraneScheduleActivity::IsInitialized() const {
 
 void CraneScheduleActivity::InternalSwap(CraneScheduleActivity* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(CraneScheduleActivity, priority_)
-      + sizeof(CraneScheduleActivity::priority_)
-      - PROTOBUF_FIELD_OFFSET(CraneScheduleActivity, moveid_)>(
-          reinterpret_cast<char*>(&moveid_),
-          reinterpret_cast<char*>(&other->moveid_));
+      PROTOBUF_FIELD_OFFSET(CraneScheduleActivity, _impl_.state_)
+      + sizeof(CraneScheduleActivity::_impl_.state_)
+      - PROTOBUF_FIELD_OFFSET(CraneScheduleActivity, _impl_.moveid_)>(
+          reinterpret_cast<char*>(&_impl_.moveid_),
+          reinterpret_cast<char*>(&other->_impl_.moveid_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CraneScheduleActivity::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_rollingmill_5fmodel_2eproto_getter, &descriptor_table_rollingmill_5fmodel_2eproto_once,
+      file_level_metadata_rollingmill_5fmodel_2eproto[5]);
 }
-
 
 // ===================================================================
 
@@ -2558,199 +2611,215 @@ class Location::_Internal {
 
 const ::DynStacking::RollingMill::DataModel::Stack&
 Location::_Internal::stack(const Location* msg) {
-  return *msg->stack_;
+  return *msg->_impl_.stack_;
 }
-Location::Location(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+Location::Location(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:DynStacking.RollingMill.DataModel.Location)
 }
 Location::Location(const Location& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  Location* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.stack_){nullptr}
+    , decltype(_impl_.girderposition_){}
+    , decltype(_impl_.id_){}
+    , decltype(_impl_.maxheight_){}
+    , decltype(_impl_.type_){}
+    , decltype(_impl_.milltype_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_stack()) {
-    stack_ = new ::DynStacking::RollingMill::DataModel::Stack(*from.stack_);
-  } else {
-    stack_ = nullptr;
+    _this->_impl_.stack_ = new ::DynStacking::RollingMill::DataModel::Stack(*from._impl_.stack_);
   }
-  ::memcpy(&girderposition_, &from.girderposition_,
-    static_cast<size_t>(reinterpret_cast<char*>(&milltype_) -
-    reinterpret_cast<char*>(&girderposition_)) + sizeof(milltype_));
+  ::memcpy(&_impl_.girderposition_, &from._impl_.girderposition_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.milltype_) -
+    reinterpret_cast<char*>(&_impl_.girderposition_)) + sizeof(_impl_.milltype_));
   // @@protoc_insertion_point(copy_constructor:DynStacking.RollingMill.DataModel.Location)
 }
 
-void Location::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_Location_rollingmill_5fmodel_2eproto.base);
-  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-      reinterpret_cast<char*>(&stack_) - reinterpret_cast<char*>(this)),
-      0, static_cast<size_t>(reinterpret_cast<char*>(&milltype_) -
-      reinterpret_cast<char*>(&stack_)) + sizeof(milltype_));
+inline void Location::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.stack_){nullptr}
+    , decltype(_impl_.girderposition_){0}
+    , decltype(_impl_.id_){0}
+    , decltype(_impl_.maxheight_){0}
+    , decltype(_impl_.type_){0}
+    , decltype(_impl_.milltype_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 Location::~Location() {
   // @@protoc_insertion_point(destructor:DynStacking.RollingMill.DataModel.Location)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void Location::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete stack_;
+inline void Location::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.stack_;
 }
 
-void Location::ArenaDtor(void* object) {
-  Location* _this = reinterpret_cast< Location* >(object);
-  (void)_this;
-}
-void Location::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void Location::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const Location& Location::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_Location_rollingmill_5fmodel_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void Location::Clear() {
 // @@protoc_insertion_point(message_clear_start:DynStacking.RollingMill.DataModel.Location)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && stack_ != nullptr) {
-    delete stack_;
+  if (GetArenaForAllocation() == nullptr && _impl_.stack_ != nullptr) {
+    delete _impl_.stack_;
   }
-  stack_ = nullptr;
-  ::memset(&girderposition_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&milltype_) -
-      reinterpret_cast<char*>(&girderposition_)) + sizeof(milltype_));
+  _impl_.stack_ = nullptr;
+  ::memset(&_impl_.girderposition_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.milltype_) -
+      reinterpret_cast<char*>(&_impl_.girderposition_)) + sizeof(_impl_.milltype_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* Location::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* Location::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // int32 Id = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
-          id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _impl_.id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // double GirderPosition = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 17)) {
-          girderposition_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 17)) {
+          _impl_.girderposition_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // int32 MaxHeight = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24)) {
-          maxheight_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          _impl_.maxheight_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // .DynStacking.RollingMill.DataModel.Stack Stack = 4;
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           ptr = ctx->ParseMessage(_internal_mutable_stack(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // .DynStacking.RollingMill.DataModel.StackTypes Type = 5;
       case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 40)) {
-          ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
           _internal_set_type(static_cast<::DynStacking::RollingMill::DataModel::StackTypes>(val));
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // .DynStacking.RollingMill.DataModel.MillTypes MillType = 6;
       case 6:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 48)) {
-          ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 48)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
           _internal_set_milltype(static_cast<::DynStacking::RollingMill::DataModel::MillTypes>(val));
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* Location::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+uint8_t* Location::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:DynStacking.RollingMill.DataModel.Location)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // int32 Id = 1;
-  if (this->id() != 0) {
+  if (this->_internal_id() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1, this->_internal_id(), target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_id(), target);
   }
 
   // double GirderPosition = 2;
-  if (!(this->girderposition() <= 0 && this->girderposition() >= 0)) {
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_girderposition = this->_internal_girderposition();
+  uint64_t raw_girderposition;
+  memcpy(&raw_girderposition, &tmp_girderposition, sizeof(tmp_girderposition));
+  if (raw_girderposition != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(2, this->_internal_girderposition(), target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(2, this->_internal_girderposition(), target);
   }
 
   // int32 MaxHeight = 3;
-  if (this->maxheight() != 0) {
+  if (this->_internal_maxheight() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(3, this->_internal_maxheight(), target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(3, this->_internal_maxheight(), target);
   }
 
   // .DynStacking.RollingMill.DataModel.Stack Stack = 4;
-  if (this->has_stack()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_stack()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        4, _Internal::stack(this), target, stream);
+      InternalWriteMessage(4, _Internal::stack(this),
+        _Internal::stack(this).GetCachedSize(), target, stream);
   }
 
   // .DynStacking.RollingMill.DataModel.StackTypes Type = 5;
-  if (this->type() != 0) {
+  if (this->_internal_type() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
       5, this->_internal_type(), target);
   }
 
   // .DynStacking.RollingMill.DataModel.MillTypes MillType = 6;
-  if (this->milltype() != 0) {
+  if (this->_internal_milltype() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
       6, this->_internal_milltype(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:DynStacking.RollingMill.DataModel.Location)
@@ -2761,104 +2830,90 @@ size_t Location::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:DynStacking.RollingMill.DataModel.Location)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .DynStacking.RollingMill.DataModel.Stack Stack = 4;
-  if (this->has_stack()) {
+  if (this->_internal_has_stack()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *stack_);
+        *_impl_.stack_);
   }
 
   // double GirderPosition = 2;
-  if (!(this->girderposition() <= 0 && this->girderposition() >= 0)) {
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_girderposition = this->_internal_girderposition();
+  uint64_t raw_girderposition;
+  memcpy(&raw_girderposition, &tmp_girderposition, sizeof(tmp_girderposition));
+  if (raw_girderposition != 0) {
     total_size += 1 + 8;
   }
 
   // int32 Id = 1;
-  if (this->id() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->_internal_id());
+  if (this->_internal_id() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_id());
   }
 
   // int32 MaxHeight = 3;
-  if (this->maxheight() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->_internal_maxheight());
+  if (this->_internal_maxheight() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_maxheight());
   }
 
   // .DynStacking.RollingMill.DataModel.StackTypes Type = 5;
-  if (this->type() != 0) {
+  if (this->_internal_type() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_type());
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_type());
   }
 
   // .DynStacking.RollingMill.DataModel.MillTypes MillType = 6;
-  if (this->milltype() != 0) {
+  if (this->_internal_milltype() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_milltype());
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_milltype());
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void Location::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:DynStacking.RollingMill.DataModel.Location)
-  GOOGLE_DCHECK_NE(&from, this);
-  const Location* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<Location>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:DynStacking.RollingMill.DataModel.Location)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:DynStacking.RollingMill.DataModel.Location)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Location::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    Location::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Location::GetClassData() const { return &_class_data_; }
 
-void Location::MergeFrom(const Location& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:DynStacking.RollingMill.DataModel.Location)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void Location::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<Location*>(&to_msg);
+  auto& from = static_cast<const Location&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:DynStacking.RollingMill.DataModel.Location)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_stack()) {
-    _internal_mutable_stack()->::DynStacking::RollingMill::DataModel::Stack::MergeFrom(from._internal_stack());
+  if (from._internal_has_stack()) {
+    _this->_internal_mutable_stack()->::DynStacking::RollingMill::DataModel::Stack::MergeFrom(
+        from._internal_stack());
   }
-  if (!(from.girderposition() <= 0 && from.girderposition() >= 0)) {
-    _internal_set_girderposition(from._internal_girderposition());
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_girderposition = from._internal_girderposition();
+  uint64_t raw_girderposition;
+  memcpy(&raw_girderposition, &tmp_girderposition, sizeof(tmp_girderposition));
+  if (raw_girderposition != 0) {
+    _this->_internal_set_girderposition(from._internal_girderposition());
   }
-  if (from.id() != 0) {
-    _internal_set_id(from._internal_id());
+  if (from._internal_id() != 0) {
+    _this->_internal_set_id(from._internal_id());
   }
-  if (from.maxheight() != 0) {
-    _internal_set_maxheight(from._internal_maxheight());
+  if (from._internal_maxheight() != 0) {
+    _this->_internal_set_maxheight(from._internal_maxheight());
   }
-  if (from.type() != 0) {
-    _internal_set_type(from._internal_type());
+  if (from._internal_type() != 0) {
+    _this->_internal_set_type(from._internal_type());
   }
-  if (from.milltype() != 0) {
-    _internal_set_milltype(from._internal_milltype());
+  if (from._internal_milltype() != 0) {
+    _this->_internal_set_milltype(from._internal_milltype());
   }
-}
-
-void Location::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:DynStacking.RollingMill.DataModel.Location)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void Location::CopyFrom(const Location& from) {
@@ -2874,19 +2929,20 @@ bool Location::IsInitialized() const {
 
 void Location::InternalSwap(Location* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(Location, milltype_)
-      + sizeof(Location::milltype_)
-      - PROTOBUF_FIELD_OFFSET(Location, stack_)>(
-          reinterpret_cast<char*>(&stack_),
-          reinterpret_cast<char*>(&other->stack_));
+      PROTOBUF_FIELD_OFFSET(Location, _impl_.milltype_)
+      + sizeof(Location::_impl_.milltype_)
+      - PROTOBUF_FIELD_OFFSET(Location, _impl_.stack_)>(
+          reinterpret_cast<char*>(&_impl_.stack_),
+          reinterpret_cast<char*>(&other->_impl_.stack_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata Location::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_rollingmill_5fmodel_2eproto_getter, &descriptor_table_rollingmill_5fmodel_2eproto_once,
+      file_level_metadata_rollingmill_5fmodel_2eproto[6]);
 }
-
 
 // ===================================================================
 
@@ -2897,169 +2953,175 @@ class MoveRequest::_Internal {
 
 const ::DynStacking::RollingMill::DataModel::TimeStamp&
 MoveRequest::_Internal::duedate(const MoveRequest* msg) {
-  return *msg->duedate_;
+  return *msg->_impl_.duedate_;
 }
-MoveRequest::MoveRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+MoveRequest::MoveRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:DynStacking.RollingMill.DataModel.MoveRequest)
 }
 MoveRequest::MoveRequest(const MoveRequest& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  MoveRequest* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.duedate_){nullptr}
+    , decltype(_impl_.id_){}
+    , decltype(_impl_.targetlocationid_){}
+    , decltype(_impl_.blockid_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_duedate()) {
-    duedate_ = new ::DynStacking::RollingMill::DataModel::TimeStamp(*from.duedate_);
-  } else {
-    duedate_ = nullptr;
+    _this->_impl_.duedate_ = new ::DynStacking::RollingMill::DataModel::TimeStamp(*from._impl_.duedate_);
   }
-  ::memcpy(&id_, &from.id_,
-    static_cast<size_t>(reinterpret_cast<char*>(&blockid_) -
-    reinterpret_cast<char*>(&id_)) + sizeof(blockid_));
+  ::memcpy(&_impl_.id_, &from._impl_.id_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.blockid_) -
+    reinterpret_cast<char*>(&_impl_.id_)) + sizeof(_impl_.blockid_));
   // @@protoc_insertion_point(copy_constructor:DynStacking.RollingMill.DataModel.MoveRequest)
 }
 
-void MoveRequest::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_MoveRequest_rollingmill_5fmodel_2eproto.base);
-  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-      reinterpret_cast<char*>(&duedate_) - reinterpret_cast<char*>(this)),
-      0, static_cast<size_t>(reinterpret_cast<char*>(&blockid_) -
-      reinterpret_cast<char*>(&duedate_)) + sizeof(blockid_));
+inline void MoveRequest::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.duedate_){nullptr}
+    , decltype(_impl_.id_){0}
+    , decltype(_impl_.targetlocationid_){0}
+    , decltype(_impl_.blockid_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 MoveRequest::~MoveRequest() {
   // @@protoc_insertion_point(destructor:DynStacking.RollingMill.DataModel.MoveRequest)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void MoveRequest::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete duedate_;
+inline void MoveRequest::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.duedate_;
 }
 
-void MoveRequest::ArenaDtor(void* object) {
-  MoveRequest* _this = reinterpret_cast< MoveRequest* >(object);
-  (void)_this;
-}
-void MoveRequest::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void MoveRequest::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const MoveRequest& MoveRequest::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_MoveRequest_rollingmill_5fmodel_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void MoveRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:DynStacking.RollingMill.DataModel.MoveRequest)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && duedate_ != nullptr) {
-    delete duedate_;
+  if (GetArenaForAllocation() == nullptr && _impl_.duedate_ != nullptr) {
+    delete _impl_.duedate_;
   }
-  duedate_ = nullptr;
-  ::memset(&id_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&blockid_) -
-      reinterpret_cast<char*>(&id_)) + sizeof(blockid_));
+  _impl_.duedate_ = nullptr;
+  ::memset(&_impl_.id_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.blockid_) -
+      reinterpret_cast<char*>(&_impl_.id_)) + sizeof(_impl_.blockid_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* MoveRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* MoveRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // int32 Id = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
-          id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _impl_.id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // int32 TargetLocationId = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
-          targetlocationid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _impl_.targetlocationid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // int32 BlockId = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24)) {
-          blockid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          _impl_.blockid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // .DynStacking.RollingMill.DataModel.TimeStamp DueDate = 4;
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           ptr = ctx->ParseMessage(_internal_mutable_duedate(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* MoveRequest::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+uint8_t* MoveRequest::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:DynStacking.RollingMill.DataModel.MoveRequest)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // int32 Id = 1;
-  if (this->id() != 0) {
+  if (this->_internal_id() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1, this->_internal_id(), target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_id(), target);
   }
 
   // int32 TargetLocationId = 2;
-  if (this->targetlocationid() != 0) {
+  if (this->_internal_targetlocationid() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(2, this->_internal_targetlocationid(), target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_targetlocationid(), target);
   }
 
   // int32 BlockId = 3;
-  if (this->blockid() != 0) {
+  if (this->_internal_blockid() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(3, this->_internal_blockid(), target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(3, this->_internal_blockid(), target);
   }
 
   // .DynStacking.RollingMill.DataModel.TimeStamp DueDate = 4;
-  if (this->has_duedate()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_duedate()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        4, _Internal::duedate(this), target, stream);
+      InternalWriteMessage(4, _Internal::duedate(this),
+        _Internal::duedate(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:DynStacking.RollingMill.DataModel.MoveRequest)
@@ -3070,88 +3132,64 @@ size_t MoveRequest::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:DynStacking.RollingMill.DataModel.MoveRequest)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .DynStacking.RollingMill.DataModel.TimeStamp DueDate = 4;
-  if (this->has_duedate()) {
+  if (this->_internal_has_duedate()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *duedate_);
+        *_impl_.duedate_);
   }
 
   // int32 Id = 1;
-  if (this->id() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->_internal_id());
+  if (this->_internal_id() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_id());
   }
 
   // int32 TargetLocationId = 2;
-  if (this->targetlocationid() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->_internal_targetlocationid());
+  if (this->_internal_targetlocationid() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_targetlocationid());
   }
 
   // int32 BlockId = 3;
-  if (this->blockid() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->_internal_blockid());
+  if (this->_internal_blockid() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_blockid());
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void MoveRequest::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:DynStacking.RollingMill.DataModel.MoveRequest)
-  GOOGLE_DCHECK_NE(&from, this);
-  const MoveRequest* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<MoveRequest>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:DynStacking.RollingMill.DataModel.MoveRequest)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:DynStacking.RollingMill.DataModel.MoveRequest)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData MoveRequest::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    MoveRequest::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*MoveRequest::GetClassData() const { return &_class_data_; }
 
-void MoveRequest::MergeFrom(const MoveRequest& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:DynStacking.RollingMill.DataModel.MoveRequest)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void MoveRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<MoveRequest*>(&to_msg);
+  auto& from = static_cast<const MoveRequest&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:DynStacking.RollingMill.DataModel.MoveRequest)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_duedate()) {
-    _internal_mutable_duedate()->::DynStacking::RollingMill::DataModel::TimeStamp::MergeFrom(from._internal_duedate());
+  if (from._internal_has_duedate()) {
+    _this->_internal_mutable_duedate()->::DynStacking::RollingMill::DataModel::TimeStamp::MergeFrom(
+        from._internal_duedate());
   }
-  if (from.id() != 0) {
-    _internal_set_id(from._internal_id());
+  if (from._internal_id() != 0) {
+    _this->_internal_set_id(from._internal_id());
   }
-  if (from.targetlocationid() != 0) {
-    _internal_set_targetlocationid(from._internal_targetlocationid());
+  if (from._internal_targetlocationid() != 0) {
+    _this->_internal_set_targetlocationid(from._internal_targetlocationid());
   }
-  if (from.blockid() != 0) {
-    _internal_set_blockid(from._internal_blockid());
+  if (from._internal_blockid() != 0) {
+    _this->_internal_set_blockid(from._internal_blockid());
   }
-}
-
-void MoveRequest::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:DynStacking.RollingMill.DataModel.MoveRequest)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void MoveRequest::CopyFrom(const MoveRequest& from) {
@@ -3167,19 +3205,20 @@ bool MoveRequest::IsInitialized() const {
 
 void MoveRequest::InternalSwap(MoveRequest* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(MoveRequest, blockid_)
-      + sizeof(MoveRequest::blockid_)
-      - PROTOBUF_FIELD_OFFSET(MoveRequest, duedate_)>(
-          reinterpret_cast<char*>(&duedate_),
-          reinterpret_cast<char*>(&other->duedate_));
+      PROTOBUF_FIELD_OFFSET(MoveRequest, _impl_.blockid_)
+      + sizeof(MoveRequest::_impl_.blockid_)
+      - PROTOBUF_FIELD_OFFSET(MoveRequest, _impl_.duedate_)>(
+          reinterpret_cast<char*>(&_impl_.duedate_),
+          reinterpret_cast<char*>(&other->_impl_.duedate_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata MoveRequest::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_rollingmill_5fmodel_2eproto_getter, &descriptor_table_rollingmill_5fmodel_2eproto_once,
+      file_level_metadata_rollingmill_5fmodel_2eproto[7]);
 }
-
 
 // ===================================================================
 
@@ -3187,284 +3226,364 @@ class Performance::_Internal {
  public:
 };
 
-Performance::Performance(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+Performance::Performance(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:DynStacking.RollingMill.DataModel.Performance)
 }
 Performance::Performance(const Performance& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  Performance* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.servicelevelmean_){}
+    , decltype(_impl_.cranemanipulations_){}
+    , decltype(_impl_.deliveredblocks_){}
+    , decltype(_impl_.leadtimemean_){}
+    , decltype(_impl_.tardinessmean_){}
+    , decltype(_impl_.shufflebufferutilizationmean_){}
+    , decltype(_impl_.sortedbufferutilizationmean_){}
+    , decltype(_impl_.shufflecraneutilizationmean_){}
+    , decltype(_impl_.totalblocksontime_){}
+    , decltype(_impl_.rollingprogrammessups_){}
+    , decltype(_impl_.handovercraneutilizationmean_){}
+    , decltype(_impl_.millautilizationmean_){}
+    , decltype(_impl_.millbutilizationmean_){}
+    , decltype(_impl_.blockedmilltime_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::memcpy(&servicelevelmean_, &from.servicelevelmean_,
-    static_cast<size_t>(reinterpret_cast<char*>(&blockedmilltime_) -
-    reinterpret_cast<char*>(&servicelevelmean_)) + sizeof(blockedmilltime_));
+  ::memcpy(&_impl_.servicelevelmean_, &from._impl_.servicelevelmean_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.blockedmilltime_) -
+    reinterpret_cast<char*>(&_impl_.servicelevelmean_)) + sizeof(_impl_.blockedmilltime_));
   // @@protoc_insertion_point(copy_constructor:DynStacking.RollingMill.DataModel.Performance)
 }
 
-void Performance::SharedCtor() {
-  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-      reinterpret_cast<char*>(&servicelevelmean_) - reinterpret_cast<char*>(this)),
-      0, static_cast<size_t>(reinterpret_cast<char*>(&blockedmilltime_) -
-      reinterpret_cast<char*>(&servicelevelmean_)) + sizeof(blockedmilltime_));
+inline void Performance::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.servicelevelmean_){0}
+    , decltype(_impl_.cranemanipulations_){0}
+    , decltype(_impl_.deliveredblocks_){0}
+    , decltype(_impl_.leadtimemean_){0}
+    , decltype(_impl_.tardinessmean_){0}
+    , decltype(_impl_.shufflebufferutilizationmean_){0}
+    , decltype(_impl_.sortedbufferutilizationmean_){0}
+    , decltype(_impl_.shufflecraneutilizationmean_){0}
+    , decltype(_impl_.totalblocksontime_){0}
+    , decltype(_impl_.rollingprogrammessups_){0}
+    , decltype(_impl_.handovercraneutilizationmean_){0}
+    , decltype(_impl_.millautilizationmean_){0}
+    , decltype(_impl_.millbutilizationmean_){0}
+    , decltype(_impl_.blockedmilltime_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 Performance::~Performance() {
   // @@protoc_insertion_point(destructor:DynStacking.RollingMill.DataModel.Performance)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void Performance::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+inline void Performance::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
-void Performance::ArenaDtor(void* object) {
-  Performance* _this = reinterpret_cast< Performance* >(object);
-  (void)_this;
-}
-void Performance::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void Performance::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const Performance& Performance::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_Performance_rollingmill_5fmodel_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void Performance::Clear() {
 // @@protoc_insertion_point(message_clear_start:DynStacking.RollingMill.DataModel.Performance)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  ::memset(&servicelevelmean_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&blockedmilltime_) -
-      reinterpret_cast<char*>(&servicelevelmean_)) + sizeof(blockedmilltime_));
+  ::memset(&_impl_.servicelevelmean_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.blockedmilltime_) -
+      reinterpret_cast<char*>(&_impl_.servicelevelmean_)) + sizeof(_impl_.blockedmilltime_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* Performance::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* Performance::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // int32 CraneManipulations = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
-          cranemanipulations_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _impl_.cranemanipulations_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // double ServiceLevelMean = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 17)) {
-          servicelevelmean_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 17)) {
+          _impl_.servicelevelmean_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // double LeadTimeMean = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 25)) {
-          leadtimemean_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 25)) {
+          _impl_.leadtimemean_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // int32 DeliveredBlocks = 4;
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 32)) {
-          deliveredblocks_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
+          _impl_.deliveredblocks_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // int32 TotalBlocksOnTime = 5;
       case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 40)) {
-          totalblocksontime_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
+          _impl_.totalblocksontime_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // double TardinessMean = 6;
       case 6:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 49)) {
-          tardinessmean_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 49)) {
+          _impl_.tardinessmean_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // double ShuffleBufferUtilizationMean = 7;
       case 7:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 57)) {
-          shufflebufferutilizationmean_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 57)) {
+          _impl_.shufflebufferutilizationmean_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // double SortedBufferUtilizationMean = 8;
       case 8:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 65)) {
-          sortedbufferutilizationmean_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 65)) {
+          _impl_.sortedbufferutilizationmean_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // double ShuffleCraneUtilizationMean = 9;
       case 9:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 73)) {
-          shufflecraneutilizationmean_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 73)) {
+          _impl_.shufflecraneutilizationmean_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // double HandoverCraneUtilizationMean = 10;
       case 10:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 81)) {
-          handovercraneutilizationmean_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 81)) {
+          _impl_.handovercraneutilizationmean_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // double MillAUtilizationMean = 11;
       case 11:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 89)) {
-          millautilizationmean_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 89)) {
+          _impl_.millautilizationmean_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // double MillBUtilizationMean = 12;
       case 12:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 97)) {
-          millbutilizationmean_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 97)) {
+          _impl_.millbutilizationmean_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // int32 RollingProgramMessups = 13;
       case 13:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 104)) {
-          rollingprogrammessups_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 104)) {
+          _impl_.rollingprogrammessups_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // double BlockedMillTime = 14;
       case 14:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 113)) {
-          blockedmilltime_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 113)) {
+          _impl_.blockedmilltime_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* Performance::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+uint8_t* Performance::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:DynStacking.RollingMill.DataModel.Performance)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // int32 CraneManipulations = 1;
-  if (this->cranemanipulations() != 0) {
+  if (this->_internal_cranemanipulations() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1, this->_internal_cranemanipulations(), target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_cranemanipulations(), target);
   }
 
   // double ServiceLevelMean = 2;
-  if (!(this->servicelevelmean() <= 0 && this->servicelevelmean() >= 0)) {
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_servicelevelmean = this->_internal_servicelevelmean();
+  uint64_t raw_servicelevelmean;
+  memcpy(&raw_servicelevelmean, &tmp_servicelevelmean, sizeof(tmp_servicelevelmean));
+  if (raw_servicelevelmean != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(2, this->_internal_servicelevelmean(), target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(2, this->_internal_servicelevelmean(), target);
   }
 
   // double LeadTimeMean = 3;
-  if (!(this->leadtimemean() <= 0 && this->leadtimemean() >= 0)) {
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_leadtimemean = this->_internal_leadtimemean();
+  uint64_t raw_leadtimemean;
+  memcpy(&raw_leadtimemean, &tmp_leadtimemean, sizeof(tmp_leadtimemean));
+  if (raw_leadtimemean != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(3, this->_internal_leadtimemean(), target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(3, this->_internal_leadtimemean(), target);
   }
 
   // int32 DeliveredBlocks = 4;
-  if (this->deliveredblocks() != 0) {
+  if (this->_internal_deliveredblocks() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(4, this->_internal_deliveredblocks(), target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(4, this->_internal_deliveredblocks(), target);
   }
 
   // int32 TotalBlocksOnTime = 5;
-  if (this->totalblocksontime() != 0) {
+  if (this->_internal_totalblocksontime() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(5, this->_internal_totalblocksontime(), target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(5, this->_internal_totalblocksontime(), target);
   }
 
   // double TardinessMean = 6;
-  if (!(this->tardinessmean() <= 0 && this->tardinessmean() >= 0)) {
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_tardinessmean = this->_internal_tardinessmean();
+  uint64_t raw_tardinessmean;
+  memcpy(&raw_tardinessmean, &tmp_tardinessmean, sizeof(tmp_tardinessmean));
+  if (raw_tardinessmean != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(6, this->_internal_tardinessmean(), target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(6, this->_internal_tardinessmean(), target);
   }
 
   // double ShuffleBufferUtilizationMean = 7;
-  if (!(this->shufflebufferutilizationmean() <= 0 && this->shufflebufferutilizationmean() >= 0)) {
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_shufflebufferutilizationmean = this->_internal_shufflebufferutilizationmean();
+  uint64_t raw_shufflebufferutilizationmean;
+  memcpy(&raw_shufflebufferutilizationmean, &tmp_shufflebufferutilizationmean, sizeof(tmp_shufflebufferutilizationmean));
+  if (raw_shufflebufferutilizationmean != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(7, this->_internal_shufflebufferutilizationmean(), target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(7, this->_internal_shufflebufferutilizationmean(), target);
   }
 
   // double SortedBufferUtilizationMean = 8;
-  if (!(this->sortedbufferutilizationmean() <= 0 && this->sortedbufferutilizationmean() >= 0)) {
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_sortedbufferutilizationmean = this->_internal_sortedbufferutilizationmean();
+  uint64_t raw_sortedbufferutilizationmean;
+  memcpy(&raw_sortedbufferutilizationmean, &tmp_sortedbufferutilizationmean, sizeof(tmp_sortedbufferutilizationmean));
+  if (raw_sortedbufferutilizationmean != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(8, this->_internal_sortedbufferutilizationmean(), target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(8, this->_internal_sortedbufferutilizationmean(), target);
   }
 
   // double ShuffleCraneUtilizationMean = 9;
-  if (!(this->shufflecraneutilizationmean() <= 0 && this->shufflecraneutilizationmean() >= 0)) {
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_shufflecraneutilizationmean = this->_internal_shufflecraneutilizationmean();
+  uint64_t raw_shufflecraneutilizationmean;
+  memcpy(&raw_shufflecraneutilizationmean, &tmp_shufflecraneutilizationmean, sizeof(tmp_shufflecraneutilizationmean));
+  if (raw_shufflecraneutilizationmean != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(9, this->_internal_shufflecraneutilizationmean(), target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(9, this->_internal_shufflecraneutilizationmean(), target);
   }
 
   // double HandoverCraneUtilizationMean = 10;
-  if (!(this->handovercraneutilizationmean() <= 0 && this->handovercraneutilizationmean() >= 0)) {
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_handovercraneutilizationmean = this->_internal_handovercraneutilizationmean();
+  uint64_t raw_handovercraneutilizationmean;
+  memcpy(&raw_handovercraneutilizationmean, &tmp_handovercraneutilizationmean, sizeof(tmp_handovercraneutilizationmean));
+  if (raw_handovercraneutilizationmean != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(10, this->_internal_handovercraneutilizationmean(), target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(10, this->_internal_handovercraneutilizationmean(), target);
   }
 
   // double MillAUtilizationMean = 11;
-  if (!(this->millautilizationmean() <= 0 && this->millautilizationmean() >= 0)) {
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_millautilizationmean = this->_internal_millautilizationmean();
+  uint64_t raw_millautilizationmean;
+  memcpy(&raw_millautilizationmean, &tmp_millautilizationmean, sizeof(tmp_millautilizationmean));
+  if (raw_millautilizationmean != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(11, this->_internal_millautilizationmean(), target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(11, this->_internal_millautilizationmean(), target);
   }
 
   // double MillBUtilizationMean = 12;
-  if (!(this->millbutilizationmean() <= 0 && this->millbutilizationmean() >= 0)) {
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_millbutilizationmean = this->_internal_millbutilizationmean();
+  uint64_t raw_millbutilizationmean;
+  memcpy(&raw_millbutilizationmean, &tmp_millbutilizationmean, sizeof(tmp_millbutilizationmean));
+  if (raw_millbutilizationmean != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(12, this->_internal_millbutilizationmean(), target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(12, this->_internal_millbutilizationmean(), target);
   }
 
   // int32 RollingProgramMessups = 13;
-  if (this->rollingprogrammessups() != 0) {
+  if (this->_internal_rollingprogrammessups() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(13, this->_internal_rollingprogrammessups(), target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(13, this->_internal_rollingprogrammessups(), target);
   }
 
   // double BlockedMillTime = 14;
-  if (!(this->blockedmilltime() <= 0 && this->blockedmilltime() >= 0)) {
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_blockedmilltime = this->_internal_blockedmilltime();
+  uint64_t raw_blockedmilltime;
+  memcpy(&raw_blockedmilltime, &tmp_blockedmilltime, sizeof(tmp_blockedmilltime));
+  if (raw_blockedmilltime != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(14, this->_internal_blockedmilltime(), target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(14, this->_internal_blockedmilltime(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:DynStacking.RollingMill.DataModel.Performance)
@@ -3475,168 +3594,221 @@ size_t Performance::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:DynStacking.RollingMill.DataModel.Performance)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // double ServiceLevelMean = 2;
-  if (!(this->servicelevelmean() <= 0 && this->servicelevelmean() >= 0)) {
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_servicelevelmean = this->_internal_servicelevelmean();
+  uint64_t raw_servicelevelmean;
+  memcpy(&raw_servicelevelmean, &tmp_servicelevelmean, sizeof(tmp_servicelevelmean));
+  if (raw_servicelevelmean != 0) {
     total_size += 1 + 8;
   }
 
   // int32 CraneManipulations = 1;
-  if (this->cranemanipulations() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->_internal_cranemanipulations());
+  if (this->_internal_cranemanipulations() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_cranemanipulations());
   }
 
   // int32 DeliveredBlocks = 4;
-  if (this->deliveredblocks() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->_internal_deliveredblocks());
+  if (this->_internal_deliveredblocks() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_deliveredblocks());
   }
 
   // double LeadTimeMean = 3;
-  if (!(this->leadtimemean() <= 0 && this->leadtimemean() >= 0)) {
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_leadtimemean = this->_internal_leadtimemean();
+  uint64_t raw_leadtimemean;
+  memcpy(&raw_leadtimemean, &tmp_leadtimemean, sizeof(tmp_leadtimemean));
+  if (raw_leadtimemean != 0) {
     total_size += 1 + 8;
   }
 
   // double TardinessMean = 6;
-  if (!(this->tardinessmean() <= 0 && this->tardinessmean() >= 0)) {
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_tardinessmean = this->_internal_tardinessmean();
+  uint64_t raw_tardinessmean;
+  memcpy(&raw_tardinessmean, &tmp_tardinessmean, sizeof(tmp_tardinessmean));
+  if (raw_tardinessmean != 0) {
     total_size += 1 + 8;
   }
 
   // double ShuffleBufferUtilizationMean = 7;
-  if (!(this->shufflebufferutilizationmean() <= 0 && this->shufflebufferutilizationmean() >= 0)) {
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_shufflebufferutilizationmean = this->_internal_shufflebufferutilizationmean();
+  uint64_t raw_shufflebufferutilizationmean;
+  memcpy(&raw_shufflebufferutilizationmean, &tmp_shufflebufferutilizationmean, sizeof(tmp_shufflebufferutilizationmean));
+  if (raw_shufflebufferutilizationmean != 0) {
     total_size += 1 + 8;
   }
 
   // double SortedBufferUtilizationMean = 8;
-  if (!(this->sortedbufferutilizationmean() <= 0 && this->sortedbufferutilizationmean() >= 0)) {
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_sortedbufferutilizationmean = this->_internal_sortedbufferutilizationmean();
+  uint64_t raw_sortedbufferutilizationmean;
+  memcpy(&raw_sortedbufferutilizationmean, &tmp_sortedbufferutilizationmean, sizeof(tmp_sortedbufferutilizationmean));
+  if (raw_sortedbufferutilizationmean != 0) {
     total_size += 1 + 8;
   }
 
   // double ShuffleCraneUtilizationMean = 9;
-  if (!(this->shufflecraneutilizationmean() <= 0 && this->shufflecraneutilizationmean() >= 0)) {
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_shufflecraneutilizationmean = this->_internal_shufflecraneutilizationmean();
+  uint64_t raw_shufflecraneutilizationmean;
+  memcpy(&raw_shufflecraneutilizationmean, &tmp_shufflecraneutilizationmean, sizeof(tmp_shufflecraneutilizationmean));
+  if (raw_shufflecraneutilizationmean != 0) {
     total_size += 1 + 8;
   }
 
   // int32 TotalBlocksOnTime = 5;
-  if (this->totalblocksontime() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->_internal_totalblocksontime());
+  if (this->_internal_totalblocksontime() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_totalblocksontime());
   }
 
   // int32 RollingProgramMessups = 13;
-  if (this->rollingprogrammessups() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->_internal_rollingprogrammessups());
+  if (this->_internal_rollingprogrammessups() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_rollingprogrammessups());
   }
 
   // double HandoverCraneUtilizationMean = 10;
-  if (!(this->handovercraneutilizationmean() <= 0 && this->handovercraneutilizationmean() >= 0)) {
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_handovercraneutilizationmean = this->_internal_handovercraneutilizationmean();
+  uint64_t raw_handovercraneutilizationmean;
+  memcpy(&raw_handovercraneutilizationmean, &tmp_handovercraneutilizationmean, sizeof(tmp_handovercraneutilizationmean));
+  if (raw_handovercraneutilizationmean != 0) {
     total_size += 1 + 8;
   }
 
   // double MillAUtilizationMean = 11;
-  if (!(this->millautilizationmean() <= 0 && this->millautilizationmean() >= 0)) {
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_millautilizationmean = this->_internal_millautilizationmean();
+  uint64_t raw_millautilizationmean;
+  memcpy(&raw_millautilizationmean, &tmp_millautilizationmean, sizeof(tmp_millautilizationmean));
+  if (raw_millautilizationmean != 0) {
     total_size += 1 + 8;
   }
 
   // double MillBUtilizationMean = 12;
-  if (!(this->millbutilizationmean() <= 0 && this->millbutilizationmean() >= 0)) {
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_millbutilizationmean = this->_internal_millbutilizationmean();
+  uint64_t raw_millbutilizationmean;
+  memcpy(&raw_millbutilizationmean, &tmp_millbutilizationmean, sizeof(tmp_millbutilizationmean));
+  if (raw_millbutilizationmean != 0) {
     total_size += 1 + 8;
   }
 
   // double BlockedMillTime = 14;
-  if (!(this->blockedmilltime() <= 0 && this->blockedmilltime() >= 0)) {
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_blockedmilltime = this->_internal_blockedmilltime();
+  uint64_t raw_blockedmilltime;
+  memcpy(&raw_blockedmilltime, &tmp_blockedmilltime, sizeof(tmp_blockedmilltime));
+  if (raw_blockedmilltime != 0) {
     total_size += 1 + 8;
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void Performance::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:DynStacking.RollingMill.DataModel.Performance)
-  GOOGLE_DCHECK_NE(&from, this);
-  const Performance* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<Performance>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:DynStacking.RollingMill.DataModel.Performance)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:DynStacking.RollingMill.DataModel.Performance)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Performance::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    Performance::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Performance::GetClassData() const { return &_class_data_; }
 
-void Performance::MergeFrom(const Performance& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:DynStacking.RollingMill.DataModel.Performance)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void Performance::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<Performance*>(&to_msg);
+  auto& from = static_cast<const Performance&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:DynStacking.RollingMill.DataModel.Performance)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!(from.servicelevelmean() <= 0 && from.servicelevelmean() >= 0)) {
-    _internal_set_servicelevelmean(from._internal_servicelevelmean());
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_servicelevelmean = from._internal_servicelevelmean();
+  uint64_t raw_servicelevelmean;
+  memcpy(&raw_servicelevelmean, &tmp_servicelevelmean, sizeof(tmp_servicelevelmean));
+  if (raw_servicelevelmean != 0) {
+    _this->_internal_set_servicelevelmean(from._internal_servicelevelmean());
   }
-  if (from.cranemanipulations() != 0) {
-    _internal_set_cranemanipulations(from._internal_cranemanipulations());
+  if (from._internal_cranemanipulations() != 0) {
+    _this->_internal_set_cranemanipulations(from._internal_cranemanipulations());
   }
-  if (from.deliveredblocks() != 0) {
-    _internal_set_deliveredblocks(from._internal_deliveredblocks());
+  if (from._internal_deliveredblocks() != 0) {
+    _this->_internal_set_deliveredblocks(from._internal_deliveredblocks());
   }
-  if (!(from.leadtimemean() <= 0 && from.leadtimemean() >= 0)) {
-    _internal_set_leadtimemean(from._internal_leadtimemean());
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_leadtimemean = from._internal_leadtimemean();
+  uint64_t raw_leadtimemean;
+  memcpy(&raw_leadtimemean, &tmp_leadtimemean, sizeof(tmp_leadtimemean));
+  if (raw_leadtimemean != 0) {
+    _this->_internal_set_leadtimemean(from._internal_leadtimemean());
   }
-  if (!(from.tardinessmean() <= 0 && from.tardinessmean() >= 0)) {
-    _internal_set_tardinessmean(from._internal_tardinessmean());
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_tardinessmean = from._internal_tardinessmean();
+  uint64_t raw_tardinessmean;
+  memcpy(&raw_tardinessmean, &tmp_tardinessmean, sizeof(tmp_tardinessmean));
+  if (raw_tardinessmean != 0) {
+    _this->_internal_set_tardinessmean(from._internal_tardinessmean());
   }
-  if (!(from.shufflebufferutilizationmean() <= 0 && from.shufflebufferutilizationmean() >= 0)) {
-    _internal_set_shufflebufferutilizationmean(from._internal_shufflebufferutilizationmean());
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_shufflebufferutilizationmean = from._internal_shufflebufferutilizationmean();
+  uint64_t raw_shufflebufferutilizationmean;
+  memcpy(&raw_shufflebufferutilizationmean, &tmp_shufflebufferutilizationmean, sizeof(tmp_shufflebufferutilizationmean));
+  if (raw_shufflebufferutilizationmean != 0) {
+    _this->_internal_set_shufflebufferutilizationmean(from._internal_shufflebufferutilizationmean());
   }
-  if (!(from.sortedbufferutilizationmean() <= 0 && from.sortedbufferutilizationmean() >= 0)) {
-    _internal_set_sortedbufferutilizationmean(from._internal_sortedbufferutilizationmean());
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_sortedbufferutilizationmean = from._internal_sortedbufferutilizationmean();
+  uint64_t raw_sortedbufferutilizationmean;
+  memcpy(&raw_sortedbufferutilizationmean, &tmp_sortedbufferutilizationmean, sizeof(tmp_sortedbufferutilizationmean));
+  if (raw_sortedbufferutilizationmean != 0) {
+    _this->_internal_set_sortedbufferutilizationmean(from._internal_sortedbufferutilizationmean());
   }
-  if (!(from.shufflecraneutilizationmean() <= 0 && from.shufflecraneutilizationmean() >= 0)) {
-    _internal_set_shufflecraneutilizationmean(from._internal_shufflecraneutilizationmean());
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_shufflecraneutilizationmean = from._internal_shufflecraneutilizationmean();
+  uint64_t raw_shufflecraneutilizationmean;
+  memcpy(&raw_shufflecraneutilizationmean, &tmp_shufflecraneutilizationmean, sizeof(tmp_shufflecraneutilizationmean));
+  if (raw_shufflecraneutilizationmean != 0) {
+    _this->_internal_set_shufflecraneutilizationmean(from._internal_shufflecraneutilizationmean());
   }
-  if (from.totalblocksontime() != 0) {
-    _internal_set_totalblocksontime(from._internal_totalblocksontime());
+  if (from._internal_totalblocksontime() != 0) {
+    _this->_internal_set_totalblocksontime(from._internal_totalblocksontime());
   }
-  if (from.rollingprogrammessups() != 0) {
-    _internal_set_rollingprogrammessups(from._internal_rollingprogrammessups());
+  if (from._internal_rollingprogrammessups() != 0) {
+    _this->_internal_set_rollingprogrammessups(from._internal_rollingprogrammessups());
   }
-  if (!(from.handovercraneutilizationmean() <= 0 && from.handovercraneutilizationmean() >= 0)) {
-    _internal_set_handovercraneutilizationmean(from._internal_handovercraneutilizationmean());
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_handovercraneutilizationmean = from._internal_handovercraneutilizationmean();
+  uint64_t raw_handovercraneutilizationmean;
+  memcpy(&raw_handovercraneutilizationmean, &tmp_handovercraneutilizationmean, sizeof(tmp_handovercraneutilizationmean));
+  if (raw_handovercraneutilizationmean != 0) {
+    _this->_internal_set_handovercraneutilizationmean(from._internal_handovercraneutilizationmean());
   }
-  if (!(from.millautilizationmean() <= 0 && from.millautilizationmean() >= 0)) {
-    _internal_set_millautilizationmean(from._internal_millautilizationmean());
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_millautilizationmean = from._internal_millautilizationmean();
+  uint64_t raw_millautilizationmean;
+  memcpy(&raw_millautilizationmean, &tmp_millautilizationmean, sizeof(tmp_millautilizationmean));
+  if (raw_millautilizationmean != 0) {
+    _this->_internal_set_millautilizationmean(from._internal_millautilizationmean());
   }
-  if (!(from.millbutilizationmean() <= 0 && from.millbutilizationmean() >= 0)) {
-    _internal_set_millbutilizationmean(from._internal_millbutilizationmean());
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_millbutilizationmean = from._internal_millbutilizationmean();
+  uint64_t raw_millbutilizationmean;
+  memcpy(&raw_millbutilizationmean, &tmp_millbutilizationmean, sizeof(tmp_millbutilizationmean));
+  if (raw_millbutilizationmean != 0) {
+    _this->_internal_set_millbutilizationmean(from._internal_millbutilizationmean());
   }
-  if (!(from.blockedmilltime() <= 0 && from.blockedmilltime() >= 0)) {
-    _internal_set_blockedmilltime(from._internal_blockedmilltime());
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_blockedmilltime = from._internal_blockedmilltime();
+  uint64_t raw_blockedmilltime;
+  memcpy(&raw_blockedmilltime, &tmp_blockedmilltime, sizeof(tmp_blockedmilltime));
+  if (raw_blockedmilltime != 0) {
+    _this->_internal_set_blockedmilltime(from._internal_blockedmilltime());
   }
-}
-
-void Performance::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:DynStacking.RollingMill.DataModel.Performance)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void Performance::CopyFrom(const Performance& from) {
@@ -3652,19 +3824,20 @@ bool Performance::IsInitialized() const {
 
 void Performance::InternalSwap(Performance* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(Performance, blockedmilltime_)
-      + sizeof(Performance::blockedmilltime_)
-      - PROTOBUF_FIELD_OFFSET(Performance, servicelevelmean_)>(
-          reinterpret_cast<char*>(&servicelevelmean_),
-          reinterpret_cast<char*>(&other->servicelevelmean_));
+      PROTOBUF_FIELD_OFFSET(Performance, _impl_.blockedmilltime_)
+      + sizeof(Performance::_impl_.blockedmilltime_)
+      - PROTOBUF_FIELD_OFFSET(Performance, _impl_.servicelevelmean_)>(
+          reinterpret_cast<char*>(&_impl_.servicelevelmean_),
+          reinterpret_cast<char*>(&other->_impl_.servicelevelmean_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata Performance::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_rollingmill_5fmodel_2eproto_getter, &descriptor_table_rollingmill_5fmodel_2eproto_once,
+      file_level_metadata_rollingmill_5fmodel_2eproto[8]);
 }
-
 
 // ===================================================================
 
@@ -3672,79 +3845,82 @@ class PlannedCraneMoves::_Internal {
  public:
 };
 
-PlannedCraneMoves::PlannedCraneMoves(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena),
-  moves_(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+PlannedCraneMoves::PlannedCraneMoves(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:DynStacking.RollingMill.DataModel.PlannedCraneMoves)
 }
 PlannedCraneMoves::PlannedCraneMoves(const PlannedCraneMoves& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
-      moves_(from.moves_) {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  PlannedCraneMoves* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.moves_){from._impl_.moves_}
+    , decltype(_impl_.sequencenr_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  sequencenr_ = from.sequencenr_;
+  _this->_impl_.sequencenr_ = from._impl_.sequencenr_;
   // @@protoc_insertion_point(copy_constructor:DynStacking.RollingMill.DataModel.PlannedCraneMoves)
 }
 
-void PlannedCraneMoves::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_PlannedCraneMoves_rollingmill_5fmodel_2eproto.base);
-  sequencenr_ = 0;
+inline void PlannedCraneMoves::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.moves_){arena}
+    , decltype(_impl_.sequencenr_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 PlannedCraneMoves::~PlannedCraneMoves() {
   // @@protoc_insertion_point(destructor:DynStacking.RollingMill.DataModel.PlannedCraneMoves)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void PlannedCraneMoves::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+inline void PlannedCraneMoves::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.moves_.~RepeatedPtrField();
 }
 
-void PlannedCraneMoves::ArenaDtor(void* object) {
-  PlannedCraneMoves* _this = reinterpret_cast< PlannedCraneMoves* >(object);
-  (void)_this;
-}
-void PlannedCraneMoves::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void PlannedCraneMoves::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const PlannedCraneMoves& PlannedCraneMoves::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_PlannedCraneMoves_rollingmill_5fmodel_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void PlannedCraneMoves::Clear() {
 // @@protoc_insertion_point(message_clear_start:DynStacking.RollingMill.DataModel.PlannedCraneMoves)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  moves_.Clear();
-  sequencenr_ = 0;
+  _impl_.moves_.Clear();
+  _impl_.sequencenr_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* PlannedCraneMoves::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* PlannedCraneMoves::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // int32 SequenceNr = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
-          sequencenr_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _impl_.sequencenr_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // repeated .DynStacking.RollingMill.DataModel.CraneMove Moves = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr -= 1;
           do {
             ptr += 1;
@@ -3752,52 +3928,54 @@ const char* PlannedCraneMoves::_InternalParse(const char* ptr, ::PROTOBUF_NAMESP
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<18>(ptr));
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* PlannedCraneMoves::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+uint8_t* PlannedCraneMoves::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:DynStacking.RollingMill.DataModel.PlannedCraneMoves)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // int32 SequenceNr = 1;
-  if (this->sequencenr() != 0) {
+  if (this->_internal_sequencenr() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1, this->_internal_sequencenr(), target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_sequencenr(), target);
   }
 
   // repeated .DynStacking.RollingMill.DataModel.CraneMove Moves = 2;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->_internal_moves_size()); i < n; i++) {
-    target = stream->EnsureSpace(target);
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_moves_size()); i < n; i++) {
+    const auto& repfield = this->_internal_moves(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(2, this->_internal_moves(i), target, stream);
+        InternalWriteMessage(2, repfield, repfield.GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:DynStacking.RollingMill.DataModel.PlannedCraneMoves)
@@ -3808,66 +3986,45 @@ size_t PlannedCraneMoves::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:DynStacking.RollingMill.DataModel.PlannedCraneMoves)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated .DynStacking.RollingMill.DataModel.CraneMove Moves = 2;
   total_size += 1UL * this->_internal_moves_size();
-  for (const auto& msg : this->moves_) {
+  for (const auto& msg : this->_impl_.moves_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // int32 SequenceNr = 1;
-  if (this->sequencenr() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->_internal_sequencenr());
+  if (this->_internal_sequencenr() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_sequencenr());
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void PlannedCraneMoves::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:DynStacking.RollingMill.DataModel.PlannedCraneMoves)
-  GOOGLE_DCHECK_NE(&from, this);
-  const PlannedCraneMoves* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<PlannedCraneMoves>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:DynStacking.RollingMill.DataModel.PlannedCraneMoves)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:DynStacking.RollingMill.DataModel.PlannedCraneMoves)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData PlannedCraneMoves::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    PlannedCraneMoves::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*PlannedCraneMoves::GetClassData() const { return &_class_data_; }
 
-void PlannedCraneMoves::MergeFrom(const PlannedCraneMoves& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:DynStacking.RollingMill.DataModel.PlannedCraneMoves)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void PlannedCraneMoves::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<PlannedCraneMoves*>(&to_msg);
+  auto& from = static_cast<const PlannedCraneMoves&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:DynStacking.RollingMill.DataModel.PlannedCraneMoves)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  moves_.MergeFrom(from.moves_);
-  if (from.sequencenr() != 0) {
-    _internal_set_sequencenr(from._internal_sequencenr());
+  _this->_impl_.moves_.MergeFrom(from._impl_.moves_);
+  if (from._internal_sequencenr() != 0) {
+    _this->_internal_set_sequencenr(from._internal_sequencenr());
   }
-}
-
-void PlannedCraneMoves::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:DynStacking.RollingMill.DataModel.PlannedCraneMoves)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void PlannedCraneMoves::CopyFrom(const PlannedCraneMoves& from) {
@@ -3883,15 +4040,16 @@ bool PlannedCraneMoves::IsInitialized() const {
 
 void PlannedCraneMoves::InternalSwap(PlannedCraneMoves* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  moves_.InternalSwap(&other->moves_);
-  swap(sequencenr_, other->sequencenr_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  _impl_.moves_.InternalSwap(&other->_impl_.moves_);
+  swap(_impl_.sequencenr_, other->_impl_.sequencenr_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata PlannedCraneMoves::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_rollingmill_5fmodel_2eproto_getter, &descriptor_table_rollingmill_5fmodel_2eproto_once,
+      file_level_metadata_rollingmill_5fmodel_2eproto[9]);
 }
-
 
 // ===================================================================
 
@@ -3899,69 +4057,70 @@ class Stack::_Internal {
  public:
 };
 
-Stack::Stack(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena),
-  bottomtotop_(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+Stack::Stack(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:DynStacking.RollingMill.DataModel.Stack)
 }
 Stack::Stack(const Stack& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
-      bottomtotop_(from.bottomtotop_) {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  Stack* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.bottomtotop_){from._impl_.bottomtotop_}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:DynStacking.RollingMill.DataModel.Stack)
 }
 
-void Stack::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_Stack_rollingmill_5fmodel_2eproto.base);
+inline void Stack::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.bottomtotop_){arena}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 Stack::~Stack() {
   // @@protoc_insertion_point(destructor:DynStacking.RollingMill.DataModel.Stack)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void Stack::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+inline void Stack::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.bottomtotop_.~RepeatedPtrField();
 }
 
-void Stack::ArenaDtor(void* object) {
-  Stack* _this = reinterpret_cast< Stack* >(object);
-  (void)_this;
-}
-void Stack::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void Stack::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const Stack& Stack::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_Stack_rollingmill_5fmodel_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void Stack::Clear() {
 // @@protoc_insertion_point(message_clear_start:DynStacking.RollingMill.DataModel.Stack)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  bottomtotop_.Clear();
+  _impl_.bottomtotop_.Clear();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* Stack::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* Stack::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // repeated .DynStacking.RollingMill.DataModel.Block BottomToTop = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr -= 1;
           do {
             ptr += 1;
@@ -3969,46 +4128,48 @@ const char* Stack::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::inte
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* Stack::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+uint8_t* Stack::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:DynStacking.RollingMill.DataModel.Stack)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // repeated .DynStacking.RollingMill.DataModel.Block BottomToTop = 1;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->_internal_bottomtotop_size()); i < n; i++) {
-    target = stream->EnsureSpace(target);
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_bottomtotop_size()); i < n; i++) {
+    const auto& repfield = this->_internal_bottomtotop(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, this->_internal_bottomtotop(i), target, stream);
+        InternalWriteMessage(1, repfield, repfield.GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:DynStacking.RollingMill.DataModel.Stack)
@@ -4019,56 +4180,37 @@ size_t Stack::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:DynStacking.RollingMill.DataModel.Stack)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated .DynStacking.RollingMill.DataModel.Block BottomToTop = 1;
   total_size += 1UL * this->_internal_bottomtotop_size();
-  for (const auto& msg : this->bottomtotop_) {
+  for (const auto& msg : this->_impl_.bottomtotop_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void Stack::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:DynStacking.RollingMill.DataModel.Stack)
-  GOOGLE_DCHECK_NE(&from, this);
-  const Stack* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<Stack>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:DynStacking.RollingMill.DataModel.Stack)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:DynStacking.RollingMill.DataModel.Stack)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Stack::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    Stack::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Stack::GetClassData() const { return &_class_data_; }
 
-void Stack::MergeFrom(const Stack& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:DynStacking.RollingMill.DataModel.Stack)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void Stack::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<Stack*>(&to_msg);
+  auto& from = static_cast<const Stack&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:DynStacking.RollingMill.DataModel.Stack)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  bottomtotop_.MergeFrom(from.bottomtotop_);
-}
-
-void Stack::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:DynStacking.RollingMill.DataModel.Stack)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_impl_.bottomtotop_.MergeFrom(from._impl_.bottomtotop_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void Stack::CopyFrom(const Stack& from) {
@@ -4084,14 +4226,15 @@ bool Stack::IsInitialized() const {
 
 void Stack::InternalSwap(Stack* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  bottomtotop_.InternalSwap(&other->bottomtotop_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  _impl_.bottomtotop_.InternalSwap(&other->_impl_.bottomtotop_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata Stack::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_rollingmill_5fmodel_2eproto_getter, &descriptor_table_rollingmill_5fmodel_2eproto_once,
+      file_level_metadata_rollingmill_5fmodel_2eproto[10]);
 }
-
 
 // ===================================================================
 
@@ -4099,108 +4242,112 @@ class TimeStamp::_Internal {
  public:
 };
 
-TimeStamp::TimeStamp(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+TimeStamp::TimeStamp(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:DynStacking.RollingMill.DataModel.TimeStamp)
 }
 TimeStamp::TimeStamp(const TimeStamp& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  TimeStamp* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.milliseconds_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  milliseconds_ = from.milliseconds_;
+  _this->_impl_.milliseconds_ = from._impl_.milliseconds_;
   // @@protoc_insertion_point(copy_constructor:DynStacking.RollingMill.DataModel.TimeStamp)
 }
 
-void TimeStamp::SharedCtor() {
-  milliseconds_ = PROTOBUF_LONGLONG(0);
+inline void TimeStamp::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.milliseconds_){int64_t{0}}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 TimeStamp::~TimeStamp() {
   // @@protoc_insertion_point(destructor:DynStacking.RollingMill.DataModel.TimeStamp)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void TimeStamp::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+inline void TimeStamp::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
-void TimeStamp::ArenaDtor(void* object) {
-  TimeStamp* _this = reinterpret_cast< TimeStamp* >(object);
-  (void)_this;
-}
-void TimeStamp::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void TimeStamp::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const TimeStamp& TimeStamp::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_TimeStamp_rollingmill_5fmodel_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void TimeStamp::Clear() {
 // @@protoc_insertion_point(message_clear_start:DynStacking.RollingMill.DataModel.TimeStamp)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  milliseconds_ = PROTOBUF_LONGLONG(0);
+  _impl_.milliseconds_ = int64_t{0};
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* TimeStamp::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* TimeStamp::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // int64 MilliSeconds = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
-          milliseconds_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _impl_.milliseconds_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* TimeStamp::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+uint8_t* TimeStamp::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:DynStacking.RollingMill.DataModel.TimeStamp)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // int64 MilliSeconds = 1;
-  if (this->milliseconds() != 0) {
+  if (this->_internal_milliseconds() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(1, this->_internal_milliseconds(), target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_milliseconds(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:DynStacking.RollingMill.DataModel.TimeStamp)
@@ -4211,58 +4358,37 @@ size_t TimeStamp::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:DynStacking.RollingMill.DataModel.TimeStamp)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // int64 MilliSeconds = 1;
-  if (this->milliseconds() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
-        this->_internal_milliseconds());
+  if (this->_internal_milliseconds() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_milliseconds());
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void TimeStamp::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:DynStacking.RollingMill.DataModel.TimeStamp)
-  GOOGLE_DCHECK_NE(&from, this);
-  const TimeStamp* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<TimeStamp>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:DynStacking.RollingMill.DataModel.TimeStamp)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:DynStacking.RollingMill.DataModel.TimeStamp)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData TimeStamp::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    TimeStamp::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*TimeStamp::GetClassData() const { return &_class_data_; }
 
-void TimeStamp::MergeFrom(const TimeStamp& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:DynStacking.RollingMill.DataModel.TimeStamp)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void TimeStamp::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<TimeStamp*>(&to_msg);
+  auto& from = static_cast<const TimeStamp&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:DynStacking.RollingMill.DataModel.TimeStamp)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.milliseconds() != 0) {
-    _internal_set_milliseconds(from._internal_milliseconds());
+  if (from._internal_milliseconds() != 0) {
+    _this->_internal_set_milliseconds(from._internal_milliseconds());
   }
-}
-
-void TimeStamp::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:DynStacking.RollingMill.DataModel.TimeStamp)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void TimeStamp::CopyFrom(const TimeStamp& from) {
@@ -4278,14 +4404,15 @@ bool TimeStamp::IsInitialized() const {
 
 void TimeStamp::InternalSwap(TimeStamp* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  swap(milliseconds_, other->milliseconds_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_.milliseconds_, other->_impl_.milliseconds_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata TimeStamp::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_rollingmill_5fmodel_2eproto_getter, &descriptor_table_rollingmill_5fmodel_2eproto_once,
+      file_level_metadata_rollingmill_5fmodel_2eproto[11]);
 }
-
 
 // ===================================================================
 
@@ -4293,74 +4420,78 @@ class Uncertainties::_Internal {
  public:
 };
 
-Uncertainties::Uncertainties(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena),
-  arrivalintervals_(arena),
-  cranemovetimes_(arena),
-  millblockintervals_(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+Uncertainties::Uncertainties(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:DynStacking.RollingMill.DataModel.Uncertainties)
 }
 Uncertainties::Uncertainties(const Uncertainties& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
-      arrivalintervals_(from.arrivalintervals_),
-      cranemovetimes_(from.cranemovetimes_),
-      millblockintervals_(from.millblockintervals_) {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  Uncertainties* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.arrivalintervals_){from._impl_.arrivalintervals_}
+    , decltype(_impl_.cranemovetimes_){from._impl_.cranemovetimes_}
+    , decltype(_impl_.millblockintervals_){from._impl_.millblockintervals_}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:DynStacking.RollingMill.DataModel.Uncertainties)
 }
 
-void Uncertainties::SharedCtor() {
+inline void Uncertainties::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.arrivalintervals_){arena}
+    , decltype(_impl_.cranemovetimes_){arena}
+    , decltype(_impl_.millblockintervals_){arena}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 Uncertainties::~Uncertainties() {
   // @@protoc_insertion_point(destructor:DynStacking.RollingMill.DataModel.Uncertainties)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void Uncertainties::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+inline void Uncertainties::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.arrivalintervals_.~RepeatedField();
+  _impl_.cranemovetimes_.~RepeatedField();
+  _impl_.millblockintervals_.~RepeatedField();
 }
 
-void Uncertainties::ArenaDtor(void* object) {
-  Uncertainties* _this = reinterpret_cast< Uncertainties* >(object);
-  (void)_this;
-}
-void Uncertainties::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void Uncertainties::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const Uncertainties& Uncertainties::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_Uncertainties_rollingmill_5fmodel_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void Uncertainties::Clear() {
 // @@protoc_insertion_point(message_clear_start:DynStacking.RollingMill.DataModel.Uncertainties)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  arrivalintervals_.Clear();
-  cranemovetimes_.Clear();
-  millblockintervals_.Clear();
+  _impl_.arrivalintervals_.Clear();
+  _impl_.cranemovetimes_.Clear();
+  _impl_.millblockintervals_.Clear();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* Uncertainties::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* Uncertainties::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // repeated double ArrivalIntervals = 1 [packed = false];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 9)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 9)) {
           ptr -= 1;
           do {
             ptr += 1;
@@ -4368,14 +4499,15 @@ const char* Uncertainties::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_
             ptr += sizeof(double);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<9>(ptr));
-        } else if (static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10) {
+        } else if (static_cast<uint8_t>(tag) == 10) {
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedDoubleParser(_internal_mutable_arrivalintervals(), ptr, ctx);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // repeated double CraneMoveTimes = 2 [packed = false];
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 17)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 17)) {
           ptr -= 1;
           do {
             ptr += 1;
@@ -4383,14 +4515,15 @@ const char* Uncertainties::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_
             ptr += sizeof(double);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<17>(ptr));
-        } else if (static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18) {
+        } else if (static_cast<uint8_t>(tag) == 18) {
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedDoubleParser(_internal_mutable_cranemovetimes(), ptr, ctx);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // repeated double MillBlockIntervals = 3 [packed = false];
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 25)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 25)) {
           ptr -= 1;
           do {
             ptr += 1;
@@ -4398,59 +4531,61 @@ const char* Uncertainties::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_
             ptr += sizeof(double);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<25>(ptr));
-        } else if (static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26) {
+        } else if (static_cast<uint8_t>(tag) == 26) {
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedDoubleParser(_internal_mutable_millblockintervals(), ptr, ctx);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* Uncertainties::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+uint8_t* Uncertainties::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:DynStacking.RollingMill.DataModel.Uncertainties)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // repeated double ArrivalIntervals = 1 [packed = false];
   for (int i = 0, n = this->_internal_arrivalintervals_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(1, this->_internal_arrivalintervals(i), target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(1, this->_internal_arrivalintervals(i), target);
   }
 
   // repeated double CraneMoveTimes = 2 [packed = false];
   for (int i = 0, n = this->_internal_cranemovetimes_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(2, this->_internal_cranemovetimes(i), target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(2, this->_internal_cranemovetimes(i), target);
   }
 
   // repeated double MillBlockIntervals = 3 [packed = false];
   for (int i = 0, n = this->_internal_millblockintervals_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(3, this->_internal_millblockintervals(i), target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(3, this->_internal_millblockintervals(i), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:DynStacking.RollingMill.DataModel.Uncertainties)
@@ -4461,7 +4596,7 @@ size_t Uncertainties::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:DynStacking.RollingMill.DataModel.Uncertainties)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
@@ -4470,7 +4605,7 @@ size_t Uncertainties::ByteSizeLong() const {
     unsigned int count = static_cast<unsigned int>(this->_internal_arrivalintervals_size());
     size_t data_size = 8UL * count;
     total_size += 1 *
-                  ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(this->_internal_arrivalintervals_size());
+                  ::_pbi::FromIntSize(this->_internal_arrivalintervals_size());
     total_size += data_size;
   }
 
@@ -4479,7 +4614,7 @@ size_t Uncertainties::ByteSizeLong() const {
     unsigned int count = static_cast<unsigned int>(this->_internal_cranemovetimes_size());
     size_t data_size = 8UL * count;
     total_size += 1 *
-                  ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(this->_internal_cranemovetimes_size());
+                  ::_pbi::FromIntSize(this->_internal_cranemovetimes_size());
     total_size += data_size;
   }
 
@@ -4488,51 +4623,32 @@ size_t Uncertainties::ByteSizeLong() const {
     unsigned int count = static_cast<unsigned int>(this->_internal_millblockintervals_size());
     size_t data_size = 8UL * count;
     total_size += 1 *
-                  ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(this->_internal_millblockintervals_size());
+                  ::_pbi::FromIntSize(this->_internal_millblockintervals_size());
     total_size += data_size;
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void Uncertainties::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:DynStacking.RollingMill.DataModel.Uncertainties)
-  GOOGLE_DCHECK_NE(&from, this);
-  const Uncertainties* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<Uncertainties>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:DynStacking.RollingMill.DataModel.Uncertainties)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:DynStacking.RollingMill.DataModel.Uncertainties)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Uncertainties::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    Uncertainties::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Uncertainties::GetClassData() const { return &_class_data_; }
 
-void Uncertainties::MergeFrom(const Uncertainties& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:DynStacking.RollingMill.DataModel.Uncertainties)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void Uncertainties::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<Uncertainties*>(&to_msg);
+  auto& from = static_cast<const Uncertainties&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:DynStacking.RollingMill.DataModel.Uncertainties)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  arrivalintervals_.MergeFrom(from.arrivalintervals_);
-  cranemovetimes_.MergeFrom(from.cranemovetimes_);
-  millblockintervals_.MergeFrom(from.millblockintervals_);
-}
-
-void Uncertainties::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:DynStacking.RollingMill.DataModel.Uncertainties)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_impl_.arrivalintervals_.MergeFrom(from._impl_.arrivalintervals_);
+  _this->_impl_.cranemovetimes_.MergeFrom(from._impl_.cranemovetimes_);
+  _this->_impl_.millblockintervals_.MergeFrom(from._impl_.millblockintervals_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void Uncertainties::CopyFrom(const Uncertainties& from) {
@@ -4548,16 +4664,17 @@ bool Uncertainties::IsInitialized() const {
 
 void Uncertainties::InternalSwap(Uncertainties* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  arrivalintervals_.InternalSwap(&other->arrivalintervals_);
-  cranemovetimes_.InternalSwap(&other->cranemovetimes_);
-  millblockintervals_.InternalSwap(&other->millblockintervals_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  _impl_.arrivalintervals_.InternalSwap(&other->_impl_.arrivalintervals_);
+  _impl_.cranemovetimes_.InternalSwap(&other->_impl_.cranemovetimes_);
+  _impl_.millblockintervals_.InternalSwap(&other->_impl_.millblockintervals_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata Uncertainties::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_rollingmill_5fmodel_2eproto_getter, &descriptor_table_rollingmill_5fmodel_2eproto_once,
+      file_level_metadata_rollingmill_5fmodel_2eproto[12]);
 }
-
 
 // ===================================================================
 
@@ -4574,205 +4691,212 @@ class World::_Internal {
 
 const ::DynStacking::RollingMill::DataModel::TimeStamp&
 World::_Internal::now(const World* msg) {
-  return *msg->now_;
+  return *msg->_impl_.now_;
 }
 const ::DynStacking::RollingMill::DataModel::PlannedCraneMoves&
 World::_Internal::cranemoves(const World* msg) {
-  return *msg->cranemoves_;
+  return *msg->_impl_.cranemoves_;
 }
 const ::DynStacking::RollingMill::DataModel::CraneSchedule&
 World::_Internal::craneschedule(const World* msg) {
-  return *msg->craneschedule_;
+  return *msg->_impl_.craneschedule_;
 }
 const ::DynStacking::RollingMill::DataModel::Crane&
 World::_Internal::shufflecrane(const World* msg) {
-  return *msg->shufflecrane_;
+  return *msg->_impl_.shufflecrane_;
 }
 const ::DynStacking::RollingMill::DataModel::Crane&
 World::_Internal::handovercrane(const World* msg) {
-  return *msg->handovercrane_;
+  return *msg->_impl_.handovercrane_;
 }
 const ::DynStacking::RollingMill::DataModel::Performance&
 World::_Internal::kpis(const World* msg) {
-  return *msg->kpis_;
+  return *msg->_impl_.kpis_;
 }
 const ::DynStacking::RollingMill::DataModel::Uncertainties&
 World::_Internal::observationdata(const World* msg) {
-  return *msg->observationdata_;
+  return *msg->_impl_.observationdata_;
 }
-World::World(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena),
-  locations_(arena),
-  blocksatslabyard_(arena),
-  arrivalsfromslabyard_(arena),
-  moverequests_(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+World::World(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:DynStacking.RollingMill.DataModel.World)
 }
 World::World(const World& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
-      locations_(from.locations_),
-      blocksatslabyard_(from.blocksatslabyard_),
-      arrivalsfromslabyard_(from.arrivalsfromslabyard_),
-      moverequests_(from.moverequests_) {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  World* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.locations_){from._impl_.locations_}
+    , decltype(_impl_.blocksatslabyard_){from._impl_.blocksatslabyard_}
+    , decltype(_impl_.arrivalsfromslabyard_){from._impl_.arrivalsfromslabyard_}
+    , decltype(_impl_.moverequests_){from._impl_.moverequests_}
+    , decltype(_impl_.now_){nullptr}
+    , decltype(_impl_.cranemoves_){nullptr}
+    , decltype(_impl_.craneschedule_){nullptr}
+    , decltype(_impl_.shufflecrane_){nullptr}
+    , decltype(_impl_.handovercrane_){nullptr}
+    , decltype(_impl_.kpis_){nullptr}
+    , decltype(_impl_.observationdata_){nullptr}
+    , decltype(_impl_.width_){}
+    , decltype(_impl_.height_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_now()) {
-    now_ = new ::DynStacking::RollingMill::DataModel::TimeStamp(*from.now_);
-  } else {
-    now_ = nullptr;
+    _this->_impl_.now_ = new ::DynStacking::RollingMill::DataModel::TimeStamp(*from._impl_.now_);
   }
   if (from._internal_has_cranemoves()) {
-    cranemoves_ = new ::DynStacking::RollingMill::DataModel::PlannedCraneMoves(*from.cranemoves_);
-  } else {
-    cranemoves_ = nullptr;
+    _this->_impl_.cranemoves_ = new ::DynStacking::RollingMill::DataModel::PlannedCraneMoves(*from._impl_.cranemoves_);
   }
   if (from._internal_has_craneschedule()) {
-    craneschedule_ = new ::DynStacking::RollingMill::DataModel::CraneSchedule(*from.craneschedule_);
-  } else {
-    craneschedule_ = nullptr;
+    _this->_impl_.craneschedule_ = new ::DynStacking::RollingMill::DataModel::CraneSchedule(*from._impl_.craneschedule_);
   }
   if (from._internal_has_shufflecrane()) {
-    shufflecrane_ = new ::DynStacking::RollingMill::DataModel::Crane(*from.shufflecrane_);
-  } else {
-    shufflecrane_ = nullptr;
+    _this->_impl_.shufflecrane_ = new ::DynStacking::RollingMill::DataModel::Crane(*from._impl_.shufflecrane_);
   }
   if (from._internal_has_handovercrane()) {
-    handovercrane_ = new ::DynStacking::RollingMill::DataModel::Crane(*from.handovercrane_);
-  } else {
-    handovercrane_ = nullptr;
+    _this->_impl_.handovercrane_ = new ::DynStacking::RollingMill::DataModel::Crane(*from._impl_.handovercrane_);
   }
   if (from._internal_has_kpis()) {
-    kpis_ = new ::DynStacking::RollingMill::DataModel::Performance(*from.kpis_);
-  } else {
-    kpis_ = nullptr;
+    _this->_impl_.kpis_ = new ::DynStacking::RollingMill::DataModel::Performance(*from._impl_.kpis_);
   }
   if (from._internal_has_observationdata()) {
-    observationdata_ = new ::DynStacking::RollingMill::DataModel::Uncertainties(*from.observationdata_);
-  } else {
-    observationdata_ = nullptr;
+    _this->_impl_.observationdata_ = new ::DynStacking::RollingMill::DataModel::Uncertainties(*from._impl_.observationdata_);
   }
-  ::memcpy(&width_, &from.width_,
-    static_cast<size_t>(reinterpret_cast<char*>(&height_) -
-    reinterpret_cast<char*>(&width_)) + sizeof(height_));
+  ::memcpy(&_impl_.width_, &from._impl_.width_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.height_) -
+    reinterpret_cast<char*>(&_impl_.width_)) + sizeof(_impl_.height_));
   // @@protoc_insertion_point(copy_constructor:DynStacking.RollingMill.DataModel.World)
 }
 
-void World::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_World_rollingmill_5fmodel_2eproto.base);
-  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-      reinterpret_cast<char*>(&now_) - reinterpret_cast<char*>(this)),
-      0, static_cast<size_t>(reinterpret_cast<char*>(&height_) -
-      reinterpret_cast<char*>(&now_)) + sizeof(height_));
+inline void World::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.locations_){arena}
+    , decltype(_impl_.blocksatslabyard_){arena}
+    , decltype(_impl_.arrivalsfromslabyard_){arena}
+    , decltype(_impl_.moverequests_){arena}
+    , decltype(_impl_.now_){nullptr}
+    , decltype(_impl_.cranemoves_){nullptr}
+    , decltype(_impl_.craneschedule_){nullptr}
+    , decltype(_impl_.shufflecrane_){nullptr}
+    , decltype(_impl_.handovercrane_){nullptr}
+    , decltype(_impl_.kpis_){nullptr}
+    , decltype(_impl_.observationdata_){nullptr}
+    , decltype(_impl_.width_){0}
+    , decltype(_impl_.height_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 World::~World() {
   // @@protoc_insertion_point(destructor:DynStacking.RollingMill.DataModel.World)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void World::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete now_;
-  if (this != internal_default_instance()) delete cranemoves_;
-  if (this != internal_default_instance()) delete craneschedule_;
-  if (this != internal_default_instance()) delete shufflecrane_;
-  if (this != internal_default_instance()) delete handovercrane_;
-  if (this != internal_default_instance()) delete kpis_;
-  if (this != internal_default_instance()) delete observationdata_;
+inline void World::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.locations_.~RepeatedPtrField();
+  _impl_.blocksatslabyard_.~RepeatedPtrField();
+  _impl_.arrivalsfromslabyard_.~RepeatedPtrField();
+  _impl_.moverequests_.~RepeatedPtrField();
+  if (this != internal_default_instance()) delete _impl_.now_;
+  if (this != internal_default_instance()) delete _impl_.cranemoves_;
+  if (this != internal_default_instance()) delete _impl_.craneschedule_;
+  if (this != internal_default_instance()) delete _impl_.shufflecrane_;
+  if (this != internal_default_instance()) delete _impl_.handovercrane_;
+  if (this != internal_default_instance()) delete _impl_.kpis_;
+  if (this != internal_default_instance()) delete _impl_.observationdata_;
 }
 
-void World::ArenaDtor(void* object) {
-  World* _this = reinterpret_cast< World* >(object);
-  (void)_this;
-}
-void World::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void World::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const World& World::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_World_rollingmill_5fmodel_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void World::Clear() {
 // @@protoc_insertion_point(message_clear_start:DynStacking.RollingMill.DataModel.World)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  locations_.Clear();
-  blocksatslabyard_.Clear();
-  arrivalsfromslabyard_.Clear();
-  moverequests_.Clear();
-  if (GetArena() == nullptr && now_ != nullptr) {
-    delete now_;
+  _impl_.locations_.Clear();
+  _impl_.blocksatslabyard_.Clear();
+  _impl_.arrivalsfromslabyard_.Clear();
+  _impl_.moverequests_.Clear();
+  if (GetArenaForAllocation() == nullptr && _impl_.now_ != nullptr) {
+    delete _impl_.now_;
   }
-  now_ = nullptr;
-  if (GetArena() == nullptr && cranemoves_ != nullptr) {
-    delete cranemoves_;
+  _impl_.now_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.cranemoves_ != nullptr) {
+    delete _impl_.cranemoves_;
   }
-  cranemoves_ = nullptr;
-  if (GetArena() == nullptr && craneschedule_ != nullptr) {
-    delete craneschedule_;
+  _impl_.cranemoves_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.craneschedule_ != nullptr) {
+    delete _impl_.craneschedule_;
   }
-  craneschedule_ = nullptr;
-  if (GetArena() == nullptr && shufflecrane_ != nullptr) {
-    delete shufflecrane_;
+  _impl_.craneschedule_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.shufflecrane_ != nullptr) {
+    delete _impl_.shufflecrane_;
   }
-  shufflecrane_ = nullptr;
-  if (GetArena() == nullptr && handovercrane_ != nullptr) {
-    delete handovercrane_;
+  _impl_.shufflecrane_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.handovercrane_ != nullptr) {
+    delete _impl_.handovercrane_;
   }
-  handovercrane_ = nullptr;
-  if (GetArena() == nullptr && kpis_ != nullptr) {
-    delete kpis_;
+  _impl_.handovercrane_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.kpis_ != nullptr) {
+    delete _impl_.kpis_;
   }
-  kpis_ = nullptr;
-  if (GetArena() == nullptr && observationdata_ != nullptr) {
-    delete observationdata_;
+  _impl_.kpis_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.observationdata_ != nullptr) {
+    delete _impl_.observationdata_;
   }
-  observationdata_ = nullptr;
-  ::memset(&width_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&height_) -
-      reinterpret_cast<char*>(&width_)) + sizeof(height_));
+  _impl_.observationdata_ = nullptr;
+  ::memset(&_impl_.width_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.height_) -
+      reinterpret_cast<char*>(&_impl_.width_)) + sizeof(_impl_.height_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* World::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* World::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .DynStacking.RollingMill.DataModel.TimeStamp Now = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_now(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // int32 Height = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
-          height_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _impl_.height_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // double Width = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 25)) {
-          width_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 25)) {
+          _impl_.width_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // repeated .DynStacking.RollingMill.DataModel.Location Locations = 4;
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           ptr -= 1;
           do {
             ptr += 1;
@@ -4780,11 +4904,12 @@ const char* World::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::inte
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<34>(ptr));
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // repeated .DynStacking.RollingMill.DataModel.Block BlocksAtSlabYard = 5;
       case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           ptr -= 1;
           do {
             ptr += 1;
@@ -4792,11 +4917,12 @@ const char* World::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::inte
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<42>(ptr));
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // repeated .DynStacking.RollingMill.DataModel.Arrival ArrivalsFromSlabYard = 6;
       case 6:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
           ptr -= 1;
           do {
             ptr += 1;
@@ -4804,18 +4930,20 @@ const char* World::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::inte
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<50>(ptr));
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // .DynStacking.RollingMill.DataModel.PlannedCraneMoves CraneMoves = 7;
       case 7:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 58)) {
           ptr = ctx->ParseMessage(_internal_mutable_cranemoves(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // repeated .DynStacking.RollingMill.DataModel.MoveRequest MoveRequests = 8;
       case 8:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 66)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 66)) {
           ptr -= 1;
           do {
             ptr += 1;
@@ -4823,173 +4951,177 @@ const char* World::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::inte
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<66>(ptr));
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // .DynStacking.RollingMill.DataModel.CraneSchedule CraneSchedule = 9;
       case 9:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 74)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 74)) {
           ptr = ctx->ParseMessage(_internal_mutable_craneschedule(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // .DynStacking.RollingMill.DataModel.Crane ShuffleCrane = 10;
       case 10:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 82)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 82)) {
           ptr = ctx->ParseMessage(_internal_mutable_shufflecrane(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // .DynStacking.RollingMill.DataModel.Crane HandoverCrane = 11;
       case 11:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 90)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 90)) {
           ptr = ctx->ParseMessage(_internal_mutable_handovercrane(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // .DynStacking.RollingMill.DataModel.Performance KPIs = 12;
       case 12:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 98)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 98)) {
           ptr = ctx->ParseMessage(_internal_mutable_kpis(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // .DynStacking.RollingMill.DataModel.Uncertainties ObservationData = 13;
       case 13:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 106)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 106)) {
           ptr = ctx->ParseMessage(_internal_mutable_observationdata(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* World::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+uint8_t* World::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:DynStacking.RollingMill.DataModel.World)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .DynStacking.RollingMill.DataModel.TimeStamp Now = 1;
-  if (this->has_now()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_now()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::now(this), target, stream);
+      InternalWriteMessage(1, _Internal::now(this),
+        _Internal::now(this).GetCachedSize(), target, stream);
   }
 
   // int32 Height = 2;
-  if (this->height() != 0) {
+  if (this->_internal_height() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(2, this->_internal_height(), target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_height(), target);
   }
 
   // double Width = 3;
-  if (!(this->width() <= 0 && this->width() >= 0)) {
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_width = this->_internal_width();
+  uint64_t raw_width;
+  memcpy(&raw_width, &tmp_width, sizeof(tmp_width));
+  if (raw_width != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(3, this->_internal_width(), target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(3, this->_internal_width(), target);
   }
 
   // repeated .DynStacking.RollingMill.DataModel.Location Locations = 4;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->_internal_locations_size()); i < n; i++) {
-    target = stream->EnsureSpace(target);
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_locations_size()); i < n; i++) {
+    const auto& repfield = this->_internal_locations(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(4, this->_internal_locations(i), target, stream);
+        InternalWriteMessage(4, repfield, repfield.GetCachedSize(), target, stream);
   }
 
   // repeated .DynStacking.RollingMill.DataModel.Block BlocksAtSlabYard = 5;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->_internal_blocksatslabyard_size()); i < n; i++) {
-    target = stream->EnsureSpace(target);
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_blocksatslabyard_size()); i < n; i++) {
+    const auto& repfield = this->_internal_blocksatslabyard(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(5, this->_internal_blocksatslabyard(i), target, stream);
+        InternalWriteMessage(5, repfield, repfield.GetCachedSize(), target, stream);
   }
 
   // repeated .DynStacking.RollingMill.DataModel.Arrival ArrivalsFromSlabYard = 6;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->_internal_arrivalsfromslabyard_size()); i < n; i++) {
-    target = stream->EnsureSpace(target);
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_arrivalsfromslabyard_size()); i < n; i++) {
+    const auto& repfield = this->_internal_arrivalsfromslabyard(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(6, this->_internal_arrivalsfromslabyard(i), target, stream);
+        InternalWriteMessage(6, repfield, repfield.GetCachedSize(), target, stream);
   }
 
   // .DynStacking.RollingMill.DataModel.PlannedCraneMoves CraneMoves = 7;
-  if (this->has_cranemoves()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_cranemoves()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        7, _Internal::cranemoves(this), target, stream);
+      InternalWriteMessage(7, _Internal::cranemoves(this),
+        _Internal::cranemoves(this).GetCachedSize(), target, stream);
   }
 
   // repeated .DynStacking.RollingMill.DataModel.MoveRequest MoveRequests = 8;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->_internal_moverequests_size()); i < n; i++) {
-    target = stream->EnsureSpace(target);
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_moverequests_size()); i < n; i++) {
+    const auto& repfield = this->_internal_moverequests(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(8, this->_internal_moverequests(i), target, stream);
+        InternalWriteMessage(8, repfield, repfield.GetCachedSize(), target, stream);
   }
 
   // .DynStacking.RollingMill.DataModel.CraneSchedule CraneSchedule = 9;
-  if (this->has_craneschedule()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_craneschedule()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        9, _Internal::craneschedule(this), target, stream);
+      InternalWriteMessage(9, _Internal::craneschedule(this),
+        _Internal::craneschedule(this).GetCachedSize(), target, stream);
   }
 
   // .DynStacking.RollingMill.DataModel.Crane ShuffleCrane = 10;
-  if (this->has_shufflecrane()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_shufflecrane()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        10, _Internal::shufflecrane(this), target, stream);
+      InternalWriteMessage(10, _Internal::shufflecrane(this),
+        _Internal::shufflecrane(this).GetCachedSize(), target, stream);
   }
 
   // .DynStacking.RollingMill.DataModel.Crane HandoverCrane = 11;
-  if (this->has_handovercrane()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_handovercrane()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        11, _Internal::handovercrane(this), target, stream);
+      InternalWriteMessage(11, _Internal::handovercrane(this),
+        _Internal::handovercrane(this).GetCachedSize(), target, stream);
   }
 
   // .DynStacking.RollingMill.DataModel.Performance KPIs = 12;
-  if (this->has_kpis()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_kpis()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        12, _Internal::kpis(this), target, stream);
+      InternalWriteMessage(12, _Internal::kpis(this),
+        _Internal::kpis(this).GetCachedSize(), target, stream);
   }
 
   // .DynStacking.RollingMill.DataModel.Uncertainties ObservationData = 13;
-  if (this->has_observationdata()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_observationdata()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        13, _Internal::observationdata(this), target, stream);
+      InternalWriteMessage(13, _Internal::observationdata(this),
+        _Internal::observationdata(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:DynStacking.RollingMill.DataModel.World)
@@ -5000,168 +5132,162 @@ size_t World::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:DynStacking.RollingMill.DataModel.World)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated .DynStacking.RollingMill.DataModel.Location Locations = 4;
   total_size += 1UL * this->_internal_locations_size();
-  for (const auto& msg : this->locations_) {
+  for (const auto& msg : this->_impl_.locations_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // repeated .DynStacking.RollingMill.DataModel.Block BlocksAtSlabYard = 5;
   total_size += 1UL * this->_internal_blocksatslabyard_size();
-  for (const auto& msg : this->blocksatslabyard_) {
+  for (const auto& msg : this->_impl_.blocksatslabyard_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // repeated .DynStacking.RollingMill.DataModel.Arrival ArrivalsFromSlabYard = 6;
   total_size += 1UL * this->_internal_arrivalsfromslabyard_size();
-  for (const auto& msg : this->arrivalsfromslabyard_) {
+  for (const auto& msg : this->_impl_.arrivalsfromslabyard_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // repeated .DynStacking.RollingMill.DataModel.MoveRequest MoveRequests = 8;
   total_size += 1UL * this->_internal_moverequests_size();
-  for (const auto& msg : this->moverequests_) {
+  for (const auto& msg : this->_impl_.moverequests_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // .DynStacking.RollingMill.DataModel.TimeStamp Now = 1;
-  if (this->has_now()) {
+  if (this->_internal_has_now()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *now_);
+        *_impl_.now_);
   }
 
   // .DynStacking.RollingMill.DataModel.PlannedCraneMoves CraneMoves = 7;
-  if (this->has_cranemoves()) {
+  if (this->_internal_has_cranemoves()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *cranemoves_);
+        *_impl_.cranemoves_);
   }
 
   // .DynStacking.RollingMill.DataModel.CraneSchedule CraneSchedule = 9;
-  if (this->has_craneschedule()) {
+  if (this->_internal_has_craneschedule()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *craneschedule_);
+        *_impl_.craneschedule_);
   }
 
   // .DynStacking.RollingMill.DataModel.Crane ShuffleCrane = 10;
-  if (this->has_shufflecrane()) {
+  if (this->_internal_has_shufflecrane()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *shufflecrane_);
+        *_impl_.shufflecrane_);
   }
 
   // .DynStacking.RollingMill.DataModel.Crane HandoverCrane = 11;
-  if (this->has_handovercrane()) {
+  if (this->_internal_has_handovercrane()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *handovercrane_);
+        *_impl_.handovercrane_);
   }
 
   // .DynStacking.RollingMill.DataModel.Performance KPIs = 12;
-  if (this->has_kpis()) {
+  if (this->_internal_has_kpis()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *kpis_);
+        *_impl_.kpis_);
   }
 
   // .DynStacking.RollingMill.DataModel.Uncertainties ObservationData = 13;
-  if (this->has_observationdata()) {
+  if (this->_internal_has_observationdata()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *observationdata_);
+        *_impl_.observationdata_);
   }
 
   // double Width = 3;
-  if (!(this->width() <= 0 && this->width() >= 0)) {
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_width = this->_internal_width();
+  uint64_t raw_width;
+  memcpy(&raw_width, &tmp_width, sizeof(tmp_width));
+  if (raw_width != 0) {
     total_size += 1 + 8;
   }
 
   // int32 Height = 2;
-  if (this->height() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->_internal_height());
+  if (this->_internal_height() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_height());
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void World::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:DynStacking.RollingMill.DataModel.World)
-  GOOGLE_DCHECK_NE(&from, this);
-  const World* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<World>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:DynStacking.RollingMill.DataModel.World)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:DynStacking.RollingMill.DataModel.World)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData World::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    World::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*World::GetClassData() const { return &_class_data_; }
 
-void World::MergeFrom(const World& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:DynStacking.RollingMill.DataModel.World)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void World::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<World*>(&to_msg);
+  auto& from = static_cast<const World&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:DynStacking.RollingMill.DataModel.World)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  locations_.MergeFrom(from.locations_);
-  blocksatslabyard_.MergeFrom(from.blocksatslabyard_);
-  arrivalsfromslabyard_.MergeFrom(from.arrivalsfromslabyard_);
-  moverequests_.MergeFrom(from.moverequests_);
-  if (from.has_now()) {
-    _internal_mutable_now()->::DynStacking::RollingMill::DataModel::TimeStamp::MergeFrom(from._internal_now());
+  _this->_impl_.locations_.MergeFrom(from._impl_.locations_);
+  _this->_impl_.blocksatslabyard_.MergeFrom(from._impl_.blocksatslabyard_);
+  _this->_impl_.arrivalsfromslabyard_.MergeFrom(from._impl_.arrivalsfromslabyard_);
+  _this->_impl_.moverequests_.MergeFrom(from._impl_.moverequests_);
+  if (from._internal_has_now()) {
+    _this->_internal_mutable_now()->::DynStacking::RollingMill::DataModel::TimeStamp::MergeFrom(
+        from._internal_now());
   }
-  if (from.has_cranemoves()) {
-    _internal_mutable_cranemoves()->::DynStacking::RollingMill::DataModel::PlannedCraneMoves::MergeFrom(from._internal_cranemoves());
+  if (from._internal_has_cranemoves()) {
+    _this->_internal_mutable_cranemoves()->::DynStacking::RollingMill::DataModel::PlannedCraneMoves::MergeFrom(
+        from._internal_cranemoves());
   }
-  if (from.has_craneschedule()) {
-    _internal_mutable_craneschedule()->::DynStacking::RollingMill::DataModel::CraneSchedule::MergeFrom(from._internal_craneschedule());
+  if (from._internal_has_craneschedule()) {
+    _this->_internal_mutable_craneschedule()->::DynStacking::RollingMill::DataModel::CraneSchedule::MergeFrom(
+        from._internal_craneschedule());
   }
-  if (from.has_shufflecrane()) {
-    _internal_mutable_shufflecrane()->::DynStacking::RollingMill::DataModel::Crane::MergeFrom(from._internal_shufflecrane());
+  if (from._internal_has_shufflecrane()) {
+    _this->_internal_mutable_shufflecrane()->::DynStacking::RollingMill::DataModel::Crane::MergeFrom(
+        from._internal_shufflecrane());
   }
-  if (from.has_handovercrane()) {
-    _internal_mutable_handovercrane()->::DynStacking::RollingMill::DataModel::Crane::MergeFrom(from._internal_handovercrane());
+  if (from._internal_has_handovercrane()) {
+    _this->_internal_mutable_handovercrane()->::DynStacking::RollingMill::DataModel::Crane::MergeFrom(
+        from._internal_handovercrane());
   }
-  if (from.has_kpis()) {
-    _internal_mutable_kpis()->::DynStacking::RollingMill::DataModel::Performance::MergeFrom(from._internal_kpis());
+  if (from._internal_has_kpis()) {
+    _this->_internal_mutable_kpis()->::DynStacking::RollingMill::DataModel::Performance::MergeFrom(
+        from._internal_kpis());
   }
-  if (from.has_observationdata()) {
-    _internal_mutable_observationdata()->::DynStacking::RollingMill::DataModel::Uncertainties::MergeFrom(from._internal_observationdata());
+  if (from._internal_has_observationdata()) {
+    _this->_internal_mutable_observationdata()->::DynStacking::RollingMill::DataModel::Uncertainties::MergeFrom(
+        from._internal_observationdata());
   }
-  if (!(from.width() <= 0 && from.width() >= 0)) {
-    _internal_set_width(from._internal_width());
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_width = from._internal_width();
+  uint64_t raw_width;
+  memcpy(&raw_width, &tmp_width, sizeof(tmp_width));
+  if (raw_width != 0) {
+    _this->_internal_set_width(from._internal_width());
   }
-  if (from.height() != 0) {
-    _internal_set_height(from._internal_height());
+  if (from._internal_height() != 0) {
+    _this->_internal_set_height(from._internal_height());
   }
-}
-
-void World::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:DynStacking.RollingMill.DataModel.World)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void World::CopyFrom(const World& from) {
@@ -5177,69 +5303,84 @@ bool World::IsInitialized() const {
 
 void World::InternalSwap(World* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  locations_.InternalSwap(&other->locations_);
-  blocksatslabyard_.InternalSwap(&other->blocksatslabyard_);
-  arrivalsfromslabyard_.InternalSwap(&other->arrivalsfromslabyard_);
-  moverequests_.InternalSwap(&other->moverequests_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  _impl_.locations_.InternalSwap(&other->_impl_.locations_);
+  _impl_.blocksatslabyard_.InternalSwap(&other->_impl_.blocksatslabyard_);
+  _impl_.arrivalsfromslabyard_.InternalSwap(&other->_impl_.arrivalsfromslabyard_);
+  _impl_.moverequests_.InternalSwap(&other->_impl_.moverequests_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(World, height_)
-      + sizeof(World::height_)
-      - PROTOBUF_FIELD_OFFSET(World, now_)>(
-          reinterpret_cast<char*>(&now_),
-          reinterpret_cast<char*>(&other->now_));
+      PROTOBUF_FIELD_OFFSET(World, _impl_.height_)
+      + sizeof(World::_impl_.height_)
+      - PROTOBUF_FIELD_OFFSET(World, _impl_.now_)>(
+          reinterpret_cast<char*>(&_impl_.now_),
+          reinterpret_cast<char*>(&other->_impl_.now_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata World::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_rollingmill_5fmodel_2eproto_getter, &descriptor_table_rollingmill_5fmodel_2eproto_once,
+      file_level_metadata_rollingmill_5fmodel_2eproto[13]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace DataModel
 }  // namespace RollingMill
 }  // namespace DynStacking
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::DynStacking::RollingMill::DataModel::Arrival* Arena::CreateMaybeMessage< ::DynStacking::RollingMill::DataModel::Arrival >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::DynStacking::RollingMill::DataModel::Arrival*
+Arena::CreateMaybeMessage< ::DynStacking::RollingMill::DataModel::Arrival >(Arena* arena) {
   return Arena::CreateMessageInternal< ::DynStacking::RollingMill::DataModel::Arrival >(arena);
 }
-template<> PROTOBUF_NOINLINE ::DynStacking::RollingMill::DataModel::Block* Arena::CreateMaybeMessage< ::DynStacking::RollingMill::DataModel::Block >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::DynStacking::RollingMill::DataModel::Block*
+Arena::CreateMaybeMessage< ::DynStacking::RollingMill::DataModel::Block >(Arena* arena) {
   return Arena::CreateMessageInternal< ::DynStacking::RollingMill::DataModel::Block >(arena);
 }
-template<> PROTOBUF_NOINLINE ::DynStacking::RollingMill::DataModel::Crane* Arena::CreateMaybeMessage< ::DynStacking::RollingMill::DataModel::Crane >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::DynStacking::RollingMill::DataModel::Crane*
+Arena::CreateMaybeMessage< ::DynStacking::RollingMill::DataModel::Crane >(Arena* arena) {
   return Arena::CreateMessageInternal< ::DynStacking::RollingMill::DataModel::Crane >(arena);
 }
-template<> PROTOBUF_NOINLINE ::DynStacking::RollingMill::DataModel::CraneMove* Arena::CreateMaybeMessage< ::DynStacking::RollingMill::DataModel::CraneMove >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::DynStacking::RollingMill::DataModel::CraneMove*
+Arena::CreateMaybeMessage< ::DynStacking::RollingMill::DataModel::CraneMove >(Arena* arena) {
   return Arena::CreateMessageInternal< ::DynStacking::RollingMill::DataModel::CraneMove >(arena);
 }
-template<> PROTOBUF_NOINLINE ::DynStacking::RollingMill::DataModel::CraneSchedule* Arena::CreateMaybeMessage< ::DynStacking::RollingMill::DataModel::CraneSchedule >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::DynStacking::RollingMill::DataModel::CraneSchedule*
+Arena::CreateMaybeMessage< ::DynStacking::RollingMill::DataModel::CraneSchedule >(Arena* arena) {
   return Arena::CreateMessageInternal< ::DynStacking::RollingMill::DataModel::CraneSchedule >(arena);
 }
-template<> PROTOBUF_NOINLINE ::DynStacking::RollingMill::DataModel::CraneScheduleActivity* Arena::CreateMaybeMessage< ::DynStacking::RollingMill::DataModel::CraneScheduleActivity >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::DynStacking::RollingMill::DataModel::CraneScheduleActivity*
+Arena::CreateMaybeMessage< ::DynStacking::RollingMill::DataModel::CraneScheduleActivity >(Arena* arena) {
   return Arena::CreateMessageInternal< ::DynStacking::RollingMill::DataModel::CraneScheduleActivity >(arena);
 }
-template<> PROTOBUF_NOINLINE ::DynStacking::RollingMill::DataModel::Location* Arena::CreateMaybeMessage< ::DynStacking::RollingMill::DataModel::Location >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::DynStacking::RollingMill::DataModel::Location*
+Arena::CreateMaybeMessage< ::DynStacking::RollingMill::DataModel::Location >(Arena* arena) {
   return Arena::CreateMessageInternal< ::DynStacking::RollingMill::DataModel::Location >(arena);
 }
-template<> PROTOBUF_NOINLINE ::DynStacking::RollingMill::DataModel::MoveRequest* Arena::CreateMaybeMessage< ::DynStacking::RollingMill::DataModel::MoveRequest >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::DynStacking::RollingMill::DataModel::MoveRequest*
+Arena::CreateMaybeMessage< ::DynStacking::RollingMill::DataModel::MoveRequest >(Arena* arena) {
   return Arena::CreateMessageInternal< ::DynStacking::RollingMill::DataModel::MoveRequest >(arena);
 }
-template<> PROTOBUF_NOINLINE ::DynStacking::RollingMill::DataModel::Performance* Arena::CreateMaybeMessage< ::DynStacking::RollingMill::DataModel::Performance >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::DynStacking::RollingMill::DataModel::Performance*
+Arena::CreateMaybeMessage< ::DynStacking::RollingMill::DataModel::Performance >(Arena* arena) {
   return Arena::CreateMessageInternal< ::DynStacking::RollingMill::DataModel::Performance >(arena);
 }
-template<> PROTOBUF_NOINLINE ::DynStacking::RollingMill::DataModel::PlannedCraneMoves* Arena::CreateMaybeMessage< ::DynStacking::RollingMill::DataModel::PlannedCraneMoves >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::DynStacking::RollingMill::DataModel::PlannedCraneMoves*
+Arena::CreateMaybeMessage< ::DynStacking::RollingMill::DataModel::PlannedCraneMoves >(Arena* arena) {
   return Arena::CreateMessageInternal< ::DynStacking::RollingMill::DataModel::PlannedCraneMoves >(arena);
 }
-template<> PROTOBUF_NOINLINE ::DynStacking::RollingMill::DataModel::Stack* Arena::CreateMaybeMessage< ::DynStacking::RollingMill::DataModel::Stack >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::DynStacking::RollingMill::DataModel::Stack*
+Arena::CreateMaybeMessage< ::DynStacking::RollingMill::DataModel::Stack >(Arena* arena) {
   return Arena::CreateMessageInternal< ::DynStacking::RollingMill::DataModel::Stack >(arena);
 }
-template<> PROTOBUF_NOINLINE ::DynStacking::RollingMill::DataModel::TimeStamp* Arena::CreateMaybeMessage< ::DynStacking::RollingMill::DataModel::TimeStamp >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::DynStacking::RollingMill::DataModel::TimeStamp*
+Arena::CreateMaybeMessage< ::DynStacking::RollingMill::DataModel::TimeStamp >(Arena* arena) {
   return Arena::CreateMessageInternal< ::DynStacking::RollingMill::DataModel::TimeStamp >(arena);
 }
-template<> PROTOBUF_NOINLINE ::DynStacking::RollingMill::DataModel::Uncertainties* Arena::CreateMaybeMessage< ::DynStacking::RollingMill::DataModel::Uncertainties >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::DynStacking::RollingMill::DataModel::Uncertainties*
+Arena::CreateMaybeMessage< ::DynStacking::RollingMill::DataModel::Uncertainties >(Arena* arena) {
   return Arena::CreateMessageInternal< ::DynStacking::RollingMill::DataModel::Uncertainties >(arena);
 }
-template<> PROTOBUF_NOINLINE ::DynStacking::RollingMill::DataModel::World* Arena::CreateMaybeMessage< ::DynStacking::RollingMill::DataModel::World >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::DynStacking::RollingMill::DataModel::World*
+Arena::CreateMaybeMessage< ::DynStacking::RollingMill::DataModel::World >(Arena* arena) {
   return Arena::CreateMessageInternal< ::DynStacking::RollingMill::DataModel::World >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE

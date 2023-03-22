@@ -29,6 +29,7 @@ Build the project:
 If you need to regenerate the model classes you can use.
 > protoc .\hotstorage_model.proto --cpp_out=cpp/src/hotstorage
 > protoc .\rollingmill_model.proto --cpp_out=cpp/src/rollingmill
+> protoc .\cranescheduling_model.proto --cpp_out=cpp/src/cranescheduling
 
 
 Running:
@@ -39,4 +40,7 @@ Run the hotstorage solver with for example:
 > .\build\Debug\stacking.exe tcp://1.2.3.4:8080 fbc6b6ab-9786-4068-986d-b0f5da49fa85 HS
  
 Run the rollingmill solver with for example: 
-> .\build\Debug\stacking.exe tcp://1.2.3.4:8080 fbc6b6ab-9786-4068-986d-b0f5da49fa85 RL
+> .\build\Debug\stacking.exe tcp://1.2.3.4:8080 fbc6b6ab-9786-4068-986d-b0f5da49fa85 RM
+
+Run the cranescheduling solver with for example: 
+> .\build\Debug\stacking.exe tcp://1.2.3.4:8080 fbc6b6ab-9786-4068-986d-b0f5da49fa85 CS

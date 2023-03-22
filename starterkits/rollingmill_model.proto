@@ -34,6 +34,7 @@ TimeStamp ReleaseTime = 8;
 TimeStamp DueDate = 9;
 int32 RequiredCraneId = 10;
 repeated int32 ProtobufPredecessorIds = 11 [packed = false];
+repeated int32 ProtobufMovedBlockIds = 12 [packed = false];
 }
 message CraneSchedule {
 int32 ScheduleNr = 1;
@@ -43,6 +44,12 @@ message CraneScheduleActivity {
 int32 MoveId = 1;
 int32 CraneId = 2;
 int32 Priority = 3;
+CraneScheduleActivityState State = 4;
+}
+enum CraneScheduleActivityState {
+Created = 0;
+Activatable = 1;
+Active = 2;
 }
 message Location {
 int32 Id = 1;

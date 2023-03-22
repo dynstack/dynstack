@@ -1098,6 +1098,7 @@ pub struct CraneMove {
     pub DueDate: ::protobuf::SingularPtrField<TimeStamp>,
     pub RequiredCraneId: i32,
     pub ProtobufPredecessorIds: ::std::vec::Vec<i32>,
+    pub ProtobufMovedBlockIds: ::std::vec::Vec<i32>,
     // special fields
     pub unknown_fields: ::protobuf::UnknownFields,
     pub cached_size: ::protobuf::CachedSize,
@@ -1294,6 +1295,31 @@ impl CraneMove {
     pub fn take_ProtobufPredecessorIds(&mut self) -> ::std::vec::Vec<i32> {
         ::std::mem::replace(&mut self.ProtobufPredecessorIds, ::std::vec::Vec::new())
     }
+
+    // repeated int32 ProtobufMovedBlockIds = 12;
+
+
+    pub fn get_ProtobufMovedBlockIds(&self) -> &[i32] {
+        &self.ProtobufMovedBlockIds
+    }
+    pub fn clear_ProtobufMovedBlockIds(&mut self) {
+        self.ProtobufMovedBlockIds.clear();
+    }
+
+    // Param is passed by value, moved
+    pub fn set_ProtobufMovedBlockIds(&mut self, v: ::std::vec::Vec<i32>) {
+        self.ProtobufMovedBlockIds = v;
+    }
+
+    // Mutable pointer to the field.
+    pub fn mut_ProtobufMovedBlockIds(&mut self) -> &mut ::std::vec::Vec<i32> {
+        &mut self.ProtobufMovedBlockIds
+    }
+
+    // Take field
+    pub fn take_ProtobufMovedBlockIds(&mut self) -> ::std::vec::Vec<i32> {
+        ::std::mem::replace(&mut self.ProtobufMovedBlockIds, ::std::vec::Vec::new())
+    }
 }
 
 impl ::protobuf::Message for CraneMove {
@@ -1362,6 +1388,9 @@ impl ::protobuf::Message for CraneMove {
                 11 => {
                     ::protobuf::rt::read_repeated_int32_into(wire_type, is, &mut self.ProtobufPredecessorIds)?;
                 },
+                12 => {
+                    ::protobuf::rt::read_repeated_int32_into(wire_type, is, &mut self.ProtobufMovedBlockIds)?;
+                },
                 _ => {
                     ::protobuf::rt::read_unknown_or_skip_group(field_number, wire_type, is, self.mut_unknown_fields())?;
                 },
@@ -1403,6 +1432,9 @@ impl ::protobuf::Message for CraneMove {
         for value in &self.ProtobufPredecessorIds {
             my_size += ::protobuf::rt::value_size(11, *value, ::protobuf::wire_format::WireTypeVarint);
         };
+        for value in &self.ProtobufMovedBlockIds {
+            my_size += ::protobuf::rt::value_size(12, *value, ::protobuf::wire_format::WireTypeVarint);
+        };
         my_size += ::protobuf::rt::unknown_fields_size(self.get_unknown_fields());
         self.cached_size.set(my_size);
         my_size
@@ -1439,6 +1471,9 @@ impl ::protobuf::Message for CraneMove {
         }
         for v in &self.ProtobufPredecessorIds {
             os.write_int32(11, *v)?;
+        };
+        for v in &self.ProtobufMovedBlockIds {
+            os.write_int32(12, *v)?;
         };
         os.write_unknown_fields(self.get_unknown_fields())?;
         ::std::result::Result::Ok(())
@@ -1527,6 +1562,11 @@ impl ::protobuf::Message for CraneMove {
                     |m: &CraneMove| { &m.ProtobufPredecessorIds },
                     |m: &mut CraneMove| { &mut m.ProtobufPredecessorIds },
                 ));
+                fields.push(::protobuf::reflect::accessor::make_vec_accessor::<_, ::protobuf::types::ProtobufTypeInt32>(
+                    "ProtobufMovedBlockIds",
+                    |m: &CraneMove| { &m.ProtobufMovedBlockIds },
+                    |m: &mut CraneMove| { &mut m.ProtobufMovedBlockIds },
+                ));
                 ::protobuf::reflect::MessageDescriptor::new::<CraneMove>(
                     "CraneMove",
                     fields,
@@ -1558,6 +1598,7 @@ impl ::protobuf::Clear for CraneMove {
         self.DueDate.clear();
         self.RequiredCraneId = 0;
         self.ProtobufPredecessorIds.clear();
+        self.ProtobufMovedBlockIds.clear();
         self.unknown_fields.clear();
     }
 }
@@ -1791,6 +1832,7 @@ pub struct CraneScheduleActivity {
     pub MoveId: i32,
     pub CraneId: i32,
     pub Priority: i32,
+    pub State: CraneScheduleActivityState,
     // special fields
     pub unknown_fields: ::protobuf::UnknownFields,
     pub cached_size: ::protobuf::CachedSize,
@@ -1851,6 +1893,21 @@ impl CraneScheduleActivity {
     pub fn set_Priority(&mut self, v: i32) {
         self.Priority = v;
     }
+
+    // .DynStacking.RollingMill.DataModel.CraneScheduleActivityState State = 4;
+
+
+    pub fn get_State(&self) -> CraneScheduleActivityState {
+        self.State
+    }
+    pub fn clear_State(&mut self) {
+        self.State = CraneScheduleActivityState::Created;
+    }
+
+    // Param is passed by value, moved
+    pub fn set_State(&mut self, v: CraneScheduleActivityState) {
+        self.State = v;
+    }
 }
 
 impl ::protobuf::Message for CraneScheduleActivity {
@@ -1883,6 +1940,9 @@ impl ::protobuf::Message for CraneScheduleActivity {
                     let tmp = is.read_int32()?;
                     self.Priority = tmp;
                 },
+                4 => {
+                    ::protobuf::rt::read_proto3_enum_with_unknown_fields_into(wire_type, is, &mut self.State, 4, &mut self.unknown_fields)?
+                },
                 _ => {
                     ::protobuf::rt::read_unknown_or_skip_group(field_number, wire_type, is, self.mut_unknown_fields())?;
                 },
@@ -1904,6 +1964,9 @@ impl ::protobuf::Message for CraneScheduleActivity {
         if self.Priority != 0 {
             my_size += ::protobuf::rt::value_size(3, self.Priority, ::protobuf::wire_format::WireTypeVarint);
         }
+        if self.State != CraneScheduleActivityState::Created {
+            my_size += ::protobuf::rt::enum_size(4, self.State);
+        }
         my_size += ::protobuf::rt::unknown_fields_size(self.get_unknown_fields());
         self.cached_size.set(my_size);
         my_size
@@ -1918,6 +1981,9 @@ impl ::protobuf::Message for CraneScheduleActivity {
         }
         if self.Priority != 0 {
             os.write_int32(3, self.Priority)?;
+        }
+        if self.State != CraneScheduleActivityState::Created {
+            os.write_enum(4, self.State.value())?;
         }
         os.write_unknown_fields(self.get_unknown_fields())?;
         ::std::result::Result::Ok(())
@@ -1976,6 +2042,11 @@ impl ::protobuf::Message for CraneScheduleActivity {
                     |m: &CraneScheduleActivity| { &m.Priority },
                     |m: &mut CraneScheduleActivity| { &mut m.Priority },
                 ));
+                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeEnum<CraneScheduleActivityState>>(
+                    "State",
+                    |m: &CraneScheduleActivity| { &m.State },
+                    |m: &mut CraneScheduleActivity| { &mut m.State },
+                ));
                 ::protobuf::reflect::MessageDescriptor::new::<CraneScheduleActivity>(
                     "CraneScheduleActivity",
                     fields,
@@ -2001,6 +2072,7 @@ impl ::protobuf::Clear for CraneScheduleActivity {
         self.MoveId = 0;
         self.CraneId = 0;
         self.Priority = 0;
+        self.State = CraneScheduleActivityState::Created;
         self.unknown_fields.clear();
     }
 }
@@ -4860,6 +4932,64 @@ impl ::protobuf::reflect::ProtobufValue for World {
 }
 
 #[derive(Clone,PartialEq,Eq,Debug,Hash)]
+pub enum CraneScheduleActivityState {
+    Created = 0,
+    Activatable = 1,
+    Active = 2,
+}
+
+impl ::protobuf::ProtobufEnum for CraneScheduleActivityState {
+    fn value(&self) -> i32 {
+        *self as i32
+    }
+
+    fn from_i32(value: i32) -> ::std::option::Option<CraneScheduleActivityState> {
+        match value {
+            0 => ::std::option::Option::Some(CraneScheduleActivityState::Created),
+            1 => ::std::option::Option::Some(CraneScheduleActivityState::Activatable),
+            2 => ::std::option::Option::Some(CraneScheduleActivityState::Active),
+            _ => ::std::option::Option::None
+        }
+    }
+
+    fn values() -> &'static [Self] {
+        static values: &'static [CraneScheduleActivityState] = &[
+            CraneScheduleActivityState::Created,
+            CraneScheduleActivityState::Activatable,
+            CraneScheduleActivityState::Active,
+        ];
+        values
+    }
+
+    fn enum_descriptor_static() -> &'static ::protobuf::reflect::EnumDescriptor {
+        static mut descriptor: ::protobuf::lazy::Lazy<::protobuf::reflect::EnumDescriptor> = ::protobuf::lazy::Lazy {
+            lock: ::protobuf::lazy::ONCE_INIT,
+            ptr: 0 as *const ::protobuf::reflect::EnumDescriptor,
+        };
+        unsafe {
+            descriptor.get(|| {
+                ::protobuf::reflect::EnumDescriptor::new("CraneScheduleActivityState", file_descriptor_proto())
+            })
+        }
+    }
+}
+
+impl ::std::marker::Copy for CraneScheduleActivityState {
+}
+
+impl ::std::default::Default for CraneScheduleActivityState {
+    fn default() -> Self {
+        CraneScheduleActivityState::Created
+    }
+}
+
+impl ::protobuf::reflect::ProtobufValue for CraneScheduleActivityState {
+    fn as_ref(&self) -> ::protobuf::reflect::ProtobufValueRef {
+        ::protobuf::reflect::ProtobufValueRef::Enum(self.descriptor())
+    }
+}
+
+#[derive(Clone,PartialEq,Eq,Debug,Hash)]
 pub enum MillTypes {
     A = 0,
     B = 1,
@@ -5048,7 +5178,7 @@ static file_descriptor_proto_data: &'static [u8] = b"\
     vel\x18\x04\x20\x01(\x01R\nHoistLevel\x12$\n\rCraneCapacity\x18\x05\x20\
     \x01(\x05R\rCraneCapacity\x12\x14\n\x05Width\x18\x06\x20\x01(\x01R\x05Wi\
     dth\x12\x20\n\x0bMinPosition\x18\x07\x20\x01(\x01R\x0bMinPosition\x12\
-    \x20\n\x0bMaxPosition\x18\x08\x20\x01(\x01R\x0bMaxPosition\"\xcc\x03\n\t\
+    \x20\n\x0bMaxPosition\x18\x08\x20\x01(\x01R\x0bMaxPosition\"\x86\x04\n\t\
     CraneMove\x12\x0e\n\x02Id\x18\x01\x20\x01(\x05R\x02Id\x12?\n\x04Type\x18\
     \x02\x20\x01(\x0e2+.DynStacking.RollingMill.DataModel.MoveTypeR\x04Type\
     \x12*\n\x10PickupLocationId\x18\x03\x20\x01(\x05R\x10PickupLocationId\
@@ -5058,70 +5188,74 @@ static file_descriptor_proto_data: &'static [u8] = b"\
     \x0bReleaseTime\x12F\n\x07DueDate\x18\t\x20\x01(\x0b2,.DynStacking.Rolli\
     ngMill.DataModel.TimeStampR\x07DueDate\x12(\n\x0fRequiredCraneId\x18\n\
     \x20\x01(\x05R\x0fRequiredCraneId\x12:\n\x16ProtobufPredecessorIds\x18\
-    \x0b\x20\x03(\x05R\x16ProtobufPredecessorIdsB\x02\x10\0\"\x89\x01\n\rCra\
-    neSchedule\x12\x1e\n\nScheduleNr\x18\x01\x20\x01(\x05R\nScheduleNr\x12X\
-    \n\nActivities\x18\x02\x20\x03(\x0b28.DynStacking.RollingMill.DataModel.\
-    CraneScheduleActivityR\nActivities\"e\n\x15CraneScheduleActivity\x12\x16\
-    \n\x06MoveId\x18\x01\x20\x01(\x05R\x06MoveId\x12\x18\n\x07CraneId\x18\
-    \x02\x20\x01(\x05R\x07CraneId\x12\x1a\n\x08Priority\x18\x03\x20\x01(\x05\
-    R\x08Priority\"\xad\x02\n\x08Location\x12\x0e\n\x02Id\x18\x01\x20\x01(\
-    \x05R\x02Id\x12&\n\x0eGirderPosition\x18\x02\x20\x01(\x01R\x0eGirderPosi\
-    tion\x12\x1c\n\tMaxHeight\x18\x03\x20\x01(\x05R\tMaxHeight\x12>\n\x05Sta\
-    ck\x18\x04\x20\x01(\x0b2(.DynStacking.RollingMill.DataModel.StackR\x05St\
-    ack\x12A\n\x04Type\x18\x05\x20\x01(\x0e2-.DynStacking.RollingMill.DataMo\
-    del.StackTypesR\x04Type\x12H\n\x08MillType\x18\x06\x20\x01(\x0e2,.DynSta\
-    cking.RollingMill.DataModel.MillTypesR\x08MillType\"\xab\x01\n\x0bMoveRe\
-    quest\x12\x0e\n\x02Id\x18\x01\x20\x01(\x05R\x02Id\x12*\n\x10TargetLocati\
-    onId\x18\x02\x20\x01(\x05R\x10TargetLocationId\x12\x18\n\x07BlockId\x18\
-    \x03\x20\x01(\x05R\x07BlockId\x12F\n\x07DueDate\x18\x04\x20\x01(\x0b2,.D\
-    ynStacking.RollingMill.DataModel.TimeStampR\x07DueDate\"\xdf\x05\n\x0bPe\
-    rformance\x12.\n\x12CraneManipulations\x18\x01\x20\x01(\x05R\x12CraneMan\
-    ipulations\x12*\n\x10ServiceLevelMean\x18\x02\x20\x01(\x01R\x10ServiceLe\
-    velMean\x12\"\n\x0cLeadTimeMean\x18\x03\x20\x01(\x01R\x0cLeadTimeMean\
-    \x12(\n\x0fDeliveredBlocks\x18\x04\x20\x01(\x05R\x0fDeliveredBlocks\x12,\
-    \n\x11TotalBlocksOnTime\x18\x05\x20\x01(\x05R\x11TotalBlocksOnTime\x12$\
-    \n\rTardinessMean\x18\x06\x20\x01(\x01R\rTardinessMean\x12B\n\x1cShuffle\
-    BufferUtilizationMean\x18\x07\x20\x01(\x01R\x1cShuffleBufferUtilizationM\
-    ean\x12@\n\x1bSortedBufferUtilizationMean\x18\x08\x20\x01(\x01R\x1bSorte\
-    dBufferUtilizationMean\x12@\n\x1bShuffleCraneUtilizationMean\x18\t\x20\
-    \x01(\x01R\x1bShuffleCraneUtilizationMean\x12B\n\x1cHandoverCraneUtiliza\
-    tionMean\x18\n\x20\x01(\x01R\x1cHandoverCraneUtilizationMean\x122\n\x14M\
-    illAUtilizationMean\x18\x0b\x20\x01(\x01R\x14MillAUtilizationMean\x122\n\
-    \x14MillBUtilizationMean\x18\x0c\x20\x01(\x01R\x14MillBUtilizationMean\
-    \x124\n\x15RollingProgramMessups\x18\r\x20\x01(\x05R\x15RollingProgramMe\
-    ssups\x12(\n\x0fBlockedMillTime\x18\x0e\x20\x01(\x01R\x0fBlockedMillTime\
-    \"w\n\x11PlannedCraneMoves\x12\x1e\n\nSequenceNr\x18\x01\x20\x01(\x05R\n\
-    SequenceNr\x12B\n\x05Moves\x18\x02\x20\x03(\x0b2,.DynStacking.RollingMil\
-    l.DataModel.CraneMoveR\x05Moves\"S\n\x05Stack\x12J\n\x0bBottomToTop\x18\
-    \x01\x20\x03(\x0b2(.DynStacking.RollingMill.DataModel.BlockR\x0bBottomTo\
-    Top\"/\n\tTimeStamp\x12\"\n\x0cMilliSeconds\x18\x01\x20\x01(\x03R\x0cMil\
-    liSeconds\"\x9f\x01\n\rUncertainties\x12.\n\x10ArrivalIntervals\x18\x01\
-    \x20\x03(\x01R\x10ArrivalIntervalsB\x02\x10\0\x12*\n\x0eCraneMoveTimes\
-    \x18\x02\x20\x03(\x01R\x0eCraneMoveTimesB\x02\x10\0\x122\n\x12MillBlockI\
-    ntervals\x18\x03\x20\x03(\x01R\x12MillBlockIntervalsB\x02\x10\0\"\xb6\
-    \x07\n\x05World\x12>\n\x03Now\x18\x01\x20\x01(\x0b2,.DynStacking.Rolling\
-    Mill.DataModel.TimeStampR\x03Now\x12\x16\n\x06Height\x18\x02\x20\x01(\
-    \x05R\x06Height\x12\x14\n\x05Width\x18\x03\x20\x01(\x01R\x05Width\x12I\n\
-    \tLocations\x18\x04\x20\x03(\x0b2+.DynStacking.RollingMill.DataModel.Loc\
-    ationR\tLocations\x12T\n\x10BlocksAtSlabYard\x18\x05\x20\x03(\x0b2(.DynS\
-    tacking.RollingMill.DataModel.BlockR\x10BlocksAtSlabYard\x12^\n\x14Arriv\
-    alsFromSlabYard\x18\x06\x20\x03(\x0b2*.DynStacking.RollingMill.DataModel\
-    .ArrivalR\x14ArrivalsFromSlabYard\x12T\n\nCraneMoves\x18\x07\x20\x01(\
-    \x0b24.DynStacking.RollingMill.DataModel.PlannedCraneMovesR\nCraneMoves\
-    \x12R\n\x0cMoveRequests\x18\x08\x20\x03(\x0b2..DynStacking.RollingMill.D\
-    ataModel.MoveRequestR\x0cMoveRequests\x12V\n\rCraneSchedule\x18\t\x20\
-    \x01(\x0b20.DynStacking.RollingMill.DataModel.CraneScheduleR\rCraneSched\
-    ule\x12L\n\x0cShuffleCrane\x18\n\x20\x01(\x0b2(.DynStacking.RollingMill.\
-    DataModel.CraneR\x0cShuffleCrane\x12N\n\rHandoverCrane\x18\x0b\x20\x01(\
-    \x0b2(.DynStacking.RollingMill.DataModel.CraneR\rHandoverCrane\x12B\n\
-    \x04KPIs\x18\x0c\x20\x01(\x0b2..DynStacking.RollingMill.DataModel.Perfor\
-    manceR\x04KPIs\x12Z\n\x0fObservationData\x18\r\x20\x01(\x0b20.DynStackin\
-    g.RollingMill.DataModel.UncertaintiesR\x0fObservationData*\x19\n\tMillTy\
-    pes\x12\x05\n\x01A\x10\0\x12\x05\n\x01B\x10\x01*2\n\x08MoveType\x12\x10\
-    \n\x0cMoveToPickup\x10\0\x12\x14\n\x10PickupAndDropoff\x10\x01*V\n\nStac\
-    kTypes\x12\x10\n\x0cArrivalStack\x10\0\x12\x11\n\rShuffleBuffer\x10\x01\
-    \x12\x10\n\x0cSortedBuffer\x10\x02\x12\x11\n\rHandoverStack\x10\x03b\x06\
-    proto3\
+    \x0b\x20\x03(\x05R\x16ProtobufPredecessorIdsB\x02\x10\0\x128\n\x15Protob\
+    ufMovedBlockIds\x18\x0c\x20\x03(\x05R\x15ProtobufMovedBlockIdsB\x02\x10\
+    \0\"\x89\x01\n\rCraneSchedule\x12\x1e\n\nScheduleNr\x18\x01\x20\x01(\x05\
+    R\nScheduleNr\x12X\n\nActivities\x18\x02\x20\x03(\x0b28.DynStacking.Roll\
+    ingMill.DataModel.CraneScheduleActivityR\nActivities\"\xba\x01\n\x15Cran\
+    eScheduleActivity\x12\x16\n\x06MoveId\x18\x01\x20\x01(\x05R\x06MoveId\
+    \x12\x18\n\x07CraneId\x18\x02\x20\x01(\x05R\x07CraneId\x12\x1a\n\x08Prio\
+    rity\x18\x03\x20\x01(\x05R\x08Priority\x12S\n\x05State\x18\x04\x20\x01(\
+    \x0e2=.DynStacking.RollingMill.DataModel.CraneScheduleActivityStateR\x05\
+    State\"\xad\x02\n\x08Location\x12\x0e\n\x02Id\x18\x01\x20\x01(\x05R\x02I\
+    d\x12&\n\x0eGirderPosition\x18\x02\x20\x01(\x01R\x0eGirderPosition\x12\
+    \x1c\n\tMaxHeight\x18\x03\x20\x01(\x05R\tMaxHeight\x12>\n\x05Stack\x18\
+    \x04\x20\x01(\x0b2(.DynStacking.RollingMill.DataModel.StackR\x05Stack\
+    \x12A\n\x04Type\x18\x05\x20\x01(\x0e2-.DynStacking.RollingMill.DataModel\
+    .StackTypesR\x04Type\x12H\n\x08MillType\x18\x06\x20\x01(\x0e2,.DynStacki\
+    ng.RollingMill.DataModel.MillTypesR\x08MillType\"\xab\x01\n\x0bMoveReque\
+    st\x12\x0e\n\x02Id\x18\x01\x20\x01(\x05R\x02Id\x12*\n\x10TargetLocationI\
+    d\x18\x02\x20\x01(\x05R\x10TargetLocationId\x12\x18\n\x07BlockId\x18\x03\
+    \x20\x01(\x05R\x07BlockId\x12F\n\x07DueDate\x18\x04\x20\x01(\x0b2,.DynSt\
+    acking.RollingMill.DataModel.TimeStampR\x07DueDate\"\xdf\x05\n\x0bPerfor\
+    mance\x12.\n\x12CraneManipulations\x18\x01\x20\x01(\x05R\x12CraneManipul\
+    ations\x12*\n\x10ServiceLevelMean\x18\x02\x20\x01(\x01R\x10ServiceLevelM\
+    ean\x12\"\n\x0cLeadTimeMean\x18\x03\x20\x01(\x01R\x0cLeadTimeMean\x12(\n\
+    \x0fDeliveredBlocks\x18\x04\x20\x01(\x05R\x0fDeliveredBlocks\x12,\n\x11T\
+    otalBlocksOnTime\x18\x05\x20\x01(\x05R\x11TotalBlocksOnTime\x12$\n\rTard\
+    inessMean\x18\x06\x20\x01(\x01R\rTardinessMean\x12B\n\x1cShuffleBufferUt\
+    ilizationMean\x18\x07\x20\x01(\x01R\x1cShuffleBufferUtilizationMean\x12@\
+    \n\x1bSortedBufferUtilizationMean\x18\x08\x20\x01(\x01R\x1bSortedBufferU\
+    tilizationMean\x12@\n\x1bShuffleCraneUtilizationMean\x18\t\x20\x01(\x01R\
+    \x1bShuffleCraneUtilizationMean\x12B\n\x1cHandoverCraneUtilizationMean\
+    \x18\n\x20\x01(\x01R\x1cHandoverCraneUtilizationMean\x122\n\x14MillAUtil\
+    izationMean\x18\x0b\x20\x01(\x01R\x14MillAUtilizationMean\x122\n\x14Mill\
+    BUtilizationMean\x18\x0c\x20\x01(\x01R\x14MillBUtilizationMean\x124\n\
+    \x15RollingProgramMessups\x18\r\x20\x01(\x05R\x15RollingProgramMessups\
+    \x12(\n\x0fBlockedMillTime\x18\x0e\x20\x01(\x01R\x0fBlockedMillTime\"w\n\
+    \x11PlannedCraneMoves\x12\x1e\n\nSequenceNr\x18\x01\x20\x01(\x05R\nSeque\
+    nceNr\x12B\n\x05Moves\x18\x02\x20\x03(\x0b2,.DynStacking.RollingMill.Dat\
+    aModel.CraneMoveR\x05Moves\"S\n\x05Stack\x12J\n\x0bBottomToTop\x18\x01\
+    \x20\x03(\x0b2(.DynStacking.RollingMill.DataModel.BlockR\x0bBottomToTop\
+    \"/\n\tTimeStamp\x12\"\n\x0cMilliSeconds\x18\x01\x20\x01(\x03R\x0cMilliS\
+    econds\"\x9f\x01\n\rUncertainties\x12.\n\x10ArrivalIntervals\x18\x01\x20\
+    \x03(\x01R\x10ArrivalIntervalsB\x02\x10\0\x12*\n\x0eCraneMoveTimes\x18\
+    \x02\x20\x03(\x01R\x0eCraneMoveTimesB\x02\x10\0\x122\n\x12MillBlockInter\
+    vals\x18\x03\x20\x03(\x01R\x12MillBlockIntervalsB\x02\x10\0\"\xb6\x07\n\
+    \x05World\x12>\n\x03Now\x18\x01\x20\x01(\x0b2,.DynStacking.RollingMill.D\
+    ataModel.TimeStampR\x03Now\x12\x16\n\x06Height\x18\x02\x20\x01(\x05R\x06\
+    Height\x12\x14\n\x05Width\x18\x03\x20\x01(\x01R\x05Width\x12I\n\tLocatio\
+    ns\x18\x04\x20\x03(\x0b2+.DynStacking.RollingMill.DataModel.LocationR\tL\
+    ocations\x12T\n\x10BlocksAtSlabYard\x18\x05\x20\x03(\x0b2(.DynStacking.R\
+    ollingMill.DataModel.BlockR\x10BlocksAtSlabYard\x12^\n\x14ArrivalsFromSl\
+    abYard\x18\x06\x20\x03(\x0b2*.DynStacking.RollingMill.DataModel.ArrivalR\
+    \x14ArrivalsFromSlabYard\x12T\n\nCraneMoves\x18\x07\x20\x01(\x0b24.DynSt\
+    acking.RollingMill.DataModel.PlannedCraneMovesR\nCraneMoves\x12R\n\x0cMo\
+    veRequests\x18\x08\x20\x03(\x0b2..DynStacking.RollingMill.DataModel.Move\
+    RequestR\x0cMoveRequests\x12V\n\rCraneSchedule\x18\t\x20\x01(\x0b20.DynS\
+    tacking.RollingMill.DataModel.CraneScheduleR\rCraneSchedule\x12L\n\x0cSh\
+    uffleCrane\x18\n\x20\x01(\x0b2(.DynStacking.RollingMill.DataModel.CraneR\
+    \x0cShuffleCrane\x12N\n\rHandoverCrane\x18\x0b\x20\x01(\x0b2(.DynStackin\
+    g.RollingMill.DataModel.CraneR\rHandoverCrane\x12B\n\x04KPIs\x18\x0c\x20\
+    \x01(\x0b2..DynStacking.RollingMill.DataModel.PerformanceR\x04KPIs\x12Z\
+    \n\x0fObservationData\x18\r\x20\x01(\x0b20.DynStacking.RollingMill.DataM\
+    odel.UncertaintiesR\x0fObservationData*F\n\x1aCraneScheduleActivityState\
+    \x12\x0b\n\x07Created\x10\0\x12\x0f\n\x0bActivatable\x10\x01\x12\n\n\x06\
+    Active\x10\x02*\x19\n\tMillTypes\x12\x05\n\x01A\x10\0\x12\x05\n\x01B\x10\
+    \x01*2\n\x08MoveType\x12\x10\n\x0cMoveToPickup\x10\0\x12\x14\n\x10Pickup\
+    AndDropoff\x10\x01*V\n\nStackTypes\x12\x10\n\x0cArrivalStack\x10\0\x12\
+    \x11\n\rShuffleBuffer\x10\x01\x12\x10\n\x0cSortedBuffer\x10\x02\x12\x11\
+    \n\rHandoverStack\x10\x03b\x06proto3\
 ";
 
 static mut file_descriptor_proto_lazy: ::protobuf::lazy::Lazy<::protobuf::descriptor::FileDescriptorProto> = ::protobuf::lazy::Lazy {
