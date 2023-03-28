@@ -539,6 +539,9 @@ namespace DynStack.Simulation.CS {
       _parkingTimes.Remove(locRes);
       _servicedUpstreamVehicles++;
       _upstreamServiceTime += serviceTime;
+      if (serviceTime.TotalSeconds > World.KPIs.MaxParkingDuration) {
+        World.KPIs.MaxParkingDuration = serviceTime.TotalSeconds;
+      }
 
       yield return Environment.Timeout(timeout);
 
@@ -620,6 +623,9 @@ namespace DynStack.Simulation.CS {
           _parkingTimes.Remove(locRes);
           _servicedDownstreamVehicles++;
           _downstreamServiceTime += serviceTime;
+          if (serviceTime.TotalSeconds > World.KPIs.MaxParkingDuration) {
+            World.KPIs.MaxParkingDuration = serviceTime.TotalSeconds;
+          }
 
           yield return locRes.Pickup(storedAfter.Count);
           yield return Environment.Timeout(timeout);
@@ -755,6 +761,10 @@ namespace DynStack.Simulation.CS {
             downstreamParkingTime += parkingDuration;
             parkingDownstreamVehicles++;
             break;
+        }
+
+        if (parkingDuration.TotalSeconds > World.KPIs.MaxParkingDuration) {
+          World.KPIs.MaxParkingDuration = parkingDuration.TotalSeconds;
         }
       }
 
